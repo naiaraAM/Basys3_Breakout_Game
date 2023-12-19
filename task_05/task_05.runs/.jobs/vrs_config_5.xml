@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="design_1_xbar_0_synth_1" LaunchDir="C:/Users/LIO/Documents/UC/4/Embebidos/task_05/task_05.runs/design_1_xbar_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_task_07_0_0_synth_1" LaunchDir="C:/Users/LIO/Documents/UC/4/Embebidos/task_05/task_05.runs/design_1_task_07_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_vga_control_0_0_synth_1" LaunchDir="C:/Users/LIO/Documents/UC/4/Embebidos/task_05/task_05.runs/design_1_vga_control_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="C:/Users/LIO/Documents/UC/4/Embebidos/task_05/task_05.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="design_1_xbar_0_synth_1"/>
+		<Parent Id="design_1_task_07_0_0_synth_1"/>
+		<Parent Id="design_1_vga_control_0_0_synth_1"/>
+	</Run>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+	</Parameters>
+</Runs>
+

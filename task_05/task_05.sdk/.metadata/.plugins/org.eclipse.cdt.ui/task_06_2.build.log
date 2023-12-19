@@ -1,0 +1,21 @@
+19:00:46 **** Build of configuration Debug for project task_06_2 ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../task_06_2_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: task_06_2.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../task_06_2_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "task_06_2.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: task_06_2.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size task_06_2.elf  |tee "task_06_2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3020	    260	   3120	   6400	   1900	task_06_2.elf
+'Finished building: task_06_2.elf.size'
+' '
+
+19:00:47 Build Finished (took 1s.448ms)
+
