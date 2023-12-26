@@ -80,7 +80,7 @@ int main(){
 			// una de cada 5 veces, mueve la nave en el eje X
 			if(count1==3){
 				count1=0;
-				if ((dir = wait_button()) != 0)
+				if (((dir = wait_button()) != 0) && (dir == 1 || dir == 3))
 					move_bar(dir);
 			} else count1++;
 			// Mueve la bala cada vuelta del ciclo. La bala va 5 veces m�s r�pido que la nave.
