@@ -16,8 +16,6 @@ void paint_object(position_t pos, color_t *object, int height, int width);
 void paint_animation(position_t pos, color_t ***animation, int frames, int period, int rows, int cols);
 void print_background(color_t color);
 
-
-
 // Funci�n que pinta un pixel en pantalla
 // X entre 0 y 159, Y entre 0 y 119,
 // R/G/B: colores - entre 0 y 255 (los cuatro bits menos significativos se ignoran)

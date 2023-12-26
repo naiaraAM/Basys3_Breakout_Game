@@ -15,7 +15,7 @@
 #define BLOCK_LENGTH        12    // by default, 12
 #define BLOCK_HEIGHT        3
 #define SEPARATION          2
-#define BLOCK_COLOR_DIFF    0x14  // decimal: 40
+#define BLOCK_COLOR_DIFF    0x3C  // decimal: 60
 
 // Technical parameters
 #define MAX_COLLISIONS  3
