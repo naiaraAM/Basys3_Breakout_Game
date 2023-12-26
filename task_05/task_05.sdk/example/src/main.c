@@ -195,7 +195,7 @@ game_status_t move_ball()
 				{
 					if (!block.indestructible)
 					{
-						if (block.collisions > 1)
+						if (block.collisions >= 1)
 						{
 							block.collisions--;
 							reprint_block(block);
