@@ -195,16 +195,14 @@ game_status_t move_ball()
 				{
 					if (!block.indestructible)
 					{
-						if (block.collisions >= 1)
-						{
-							block.collisions--;
-							reprint_block(block);
-						}
-						else if (block.collisions == 0)
+						block.collisions--;
+						if (block.collisions == 0)
 						{
 							print_block(block.location, negro);
 							status = block_broken;
 						}
+						else
+							reprint_block(block);
 					}
 				}
 			}
