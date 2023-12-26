@@ -51,11 +51,11 @@ int main(){
 		status = continues;
 		remaining_blocks = N_BLOCKS_X * N_BLOCKS_Y;
 
-		// Prints background
-		print_background(negro);
-
 		// Here it goes loading_screen()
 		level = level_selection();
+
+		// Prints background
+		print_background(negro);
 
 		// Print game borders
 		frames[0].x = INT_X_BORDER; frames[0].y = INT_Y_BORDER;
@@ -576,9 +576,7 @@ levels_t level_selection() {
 	int btn = 0;
 	levels_t level;
 
-	for(int i=0;i<160;i++)
-	    	for(int j=0;j<120;j++)
-	    		paint(i,j,negro);
+	print_background(negro);
 
 	position_t aux = {57, 25};
 	paint_object(aux, choose_level, 5, 47);
