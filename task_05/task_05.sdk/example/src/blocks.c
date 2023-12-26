@@ -42,7 +42,12 @@ void init_map(block_t map[N_BLOCKS_X][N_BLOCKS_Y], levels_t level)
             else
             	map[j][i].indestructible = false;
 
-            if (!map[j][i].indestructible)
+            if (map[j][i].indestructible)
+            {
+                map[j][i].collisions = 0;
+                map[j][i].color = indest_color;
+            }
+            else
             {
                 if (level == second_lvl)
                     collisions = (rand() % 10 < 7) ? 1 : (rand() % 10 < 9) ? 2 : 3;  // 70% chance for 1, 15% chance for 2, 15% chance for 3
@@ -54,11 +59,6 @@ void init_map(block_t map[N_BLOCKS_X][N_BLOCKS_Y], levels_t level)
                 map[j][i].color.r = map_colors[i].r + (collisions - 1) * BLOCK_COLOR_DIFF;
                 map[j][i].color.g = map_colors[i].g + (collisions - 1) * BLOCK_COLOR_DIFF;
                 map[j][i].color.b = map_colors[i].b + (collisions - 1) * BLOCK_COLOR_DIFF;
-            }
-            else
-            {
-                map[j][i].collisions = 0;
-                map[j][i].color = indest_color;
             }
             map[j][i].i = i;
             map[j][i].j = j;
