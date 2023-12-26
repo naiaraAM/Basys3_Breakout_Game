@@ -3,6 +3,7 @@
 #include <stdbool.h>
 #include "main.h"
 #include "blocks.h"
+#include "graphics.h"
 
 #define MAX_LED 		0x8000
 #define BASE_GPIO0 		0x40000000
@@ -29,15 +30,16 @@ color_t pixel(int x, int y){
 }
 
 int main(){
-	int i,j, count1=0, speed_ball=0;
+	int i,j, count1 = 0, speed_ball = 0;
 	init_buttons();
 	int dir;
+	int lifes = 3;
 	game_status_t status = continues;
 
 	// Pinta el fondo negro. Se puede reemplazar por una llamada a rect
-    for(i=0;i<160;i++)
-    	for(j=0;j<120;j++)
-    		paint(i,j,negro);
+	print_background(negro);
+
+	// Aqui va loading_screen()
 
     // Pinta bordes
     frames[0].x = INT_X_BORDER; frames[0].y = INT_Y_BORDER;
@@ -66,40 +68,61 @@ int main(){
     		if ((dir = wait_button()) != 0)
 				move_bar(dir);
     	}else count1++;
-    	// Mueve la bala cada vuelta del ciclo. La bala va 5 veces más rápido que la nave.
+    	// Mueve la bala cada vuelta del ciclo. La bala va 5 veces mï¿½s rï¿½pido que la nave.
     	if(speed_ball == 5){
     		status = move_ball();
     		speed_ball=0;
     	} else speed_ball++;
     	usleep(10000);
 
-    	if (status == game_over)
-    	{
-    		init_ball();
-    		count1 = 0;
-			speed_ball = 0;
-			status = continues;
-    	}
+		switch (status)
+		{
+			case life_lost:
+				count1 = 0;
+				speed_ball = 0;
+				lifes--;
+				if (lifes == 0)
+					status = game_over;
+				else
+					status = continues;
+				// Do not break. game_over must be checked.
+			case game_over:
+				// game_over();
+				break;
+			case win:
+				// win();
+				break;
+			default:
+				break;
+		}
     }
 
 	return 0;
 }
 
-void init_buttons(){
-	gpio0[1] = MASK_BUTTONS; 						// Configurar 4 bits como entrada
+void life_lost()
+{
+	paint_animation(bola.pos, smoke, SMOKE_FRAMES, SMOKE_TIME, SMOKE_WIDTH, SMOKE_HEIGHT);
+	init_ball();
 }
 
-int wait_button(){
+void init_buttons()
+{
+	// Configurar 4 bits como entrada
+	gpio0[1] = MASK_BUTTONS;
+}
+
+int wait_button()
+{
 	int data;
 	char btn = 0;
 
-	if ((data = gpio0[0] & MASK_BUTTONS) != 0) { 	// Espera a que se pulse un boton.
-		if ((data & 0x2) != 0)			// Boton de mover a la izquierda
+	// Espera a que se pulse un boton.
+	if ((data = gpio0[0] & MASK_BUTTONS) != 0) { 	
+		if ((data & 0x2) != 0)		// Boton de mover a la izquierda
 			btn = 1;
-		else if ((data & 0x4) != 0)			// Boton de mover a la derecha
+		else if ((data & 0x4) != 0)	// Boton de mover a la derecha
 			btn = 2;
-		xil_printf("Boton pulsado %d\r", btn);
-
 	}
 	return btn;
 }
@@ -154,7 +177,7 @@ game_status_t move_ball()
 			else if (side == bottom)
 			{
 				paint(bola.x, bola.y, negro);
-				return game_over;
+				return life_lost;
 			}
 			else
 				is_block = false;

@@ -1,5 +1,6 @@
 #ifndef __BLOCKS_H__
 #define __BLOCKS_H__
+
 #define RESOLUTION_X	160
 #define RESOLUTION_Y	120
 
@@ -34,10 +35,11 @@ const color_t cyan = M_CYAN;
 */
 typedef struct color {
 	unsigned char r, g, b;
-}color_t;
+} color_t;
+
 typedef struct position {
 	int x, y;
-}position_t;
+} position_t;
 
 // The block structure defines its current properties
 typedef struct block {

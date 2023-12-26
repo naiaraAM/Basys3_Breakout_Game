@@ -43,7 +43,6 @@ void print_map(struct block map[N_BLOCKS_X][N_BLOCKS_Y])
             pos.x = SEPARATION + j * (BLOCK_LENGTH + SEPARATION) + 2;
 			map[j][i].location.x = pos.x;
 			map[j][i].location.y = pos.y;
-			//xil_printf("map[%d][%d]  x: %d; y: %d\n\r", j, i , map[j][i].location.x, map[j][i].location.y);
             print_block(pos, map[j][i].color);
         }
     }
