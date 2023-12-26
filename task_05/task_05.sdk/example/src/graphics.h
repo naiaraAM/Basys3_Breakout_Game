@@ -1,51 +1,36 @@
 #ifndef GRAPHICS_H
 #define GRAPHICS_H
 
-#define G_GC {0xb4, 0xb4, 0xb4}
-#define G_GO {0x46, 0x46, 0x46}
-#define G_BL {0x00, 0x00, 0x00}
+#include "blocks.h"
+#include "colors.h"
+
+#define VGA_CTRL_BASE 0x44A00000
 
 #define SMOKE_TIME      20000   // microseconds
 #define SMOKE_FRAMES    4       // microseconds
-#define SMOKE_WIDTH     3       // pixels
-#define SMOKE_HEIGHT    6       // pixels
-
-color_t smoke[SMOKE_FRAMES][SMOKE_WIDTH][SMOKE_HEIGHT] = {
-    {
-        {G_BL,G_BL,G_BL},
-        {G_BL,G_BL,G_BL},
-        {G_BL,G_GC,G_BL},
-        {G_BL,G_BL,G_GO},
-        {G_BL,G_GC,G_BL},
-        {G_GO,G_BL,G_GC}
-    },
-    {
-        {G_BL,G_BL,G_BL},
-        {G_BL,G_BL,G_BL},
-        {G_GO,G_BL,G_BL},
-        {G_BL,G_GO,G_GC},
-        {G_GC,G_BL,G_GO},
-        {G_BL,G_BL,G_BL}
-    },
-    {
-        {G_BL,G_BL,G_BL},
-        {G_BL,G_GO,G_BL},
-        {G_BL,G_BL,G_GC},
-        {G_GC,G_BL,G_BL},
-        {G_BL,G_BL,G_BL},
-        {G_BL,G_BL,G_BL}
-    },
-    {
-        {G_BL,G_BL,G_GO},
-        {G_BL,G_BL,G_BL},
-        {G_BL,G_BL,G_BL},
-        {G_BL,G_BL,G_BL},
-        {G_BL,G_BL,G_BL},
-        {G_BL,G_BL,G_BL}
-    }
-};
+#define SMOKE_WIDTH     6       // pixels
+#define SMOKE_HEIGHT    3       // pixels
 
 // Functions
-void paint_object(position_t pos, color_t **object, int height, int width);
+void paint_object(position_t pos, color_t *object, int height, int width);
 void paint_animation(position_t pos, color_t ***animation, int frames, int period, int rows, int cols);
 void print_background(color_t color);
+
+
+
+// Funci�n que pinta un pixel en pantalla
+// X entre 0 y 159, Y entre 0 y 119,
+// R/G/B: colores - entre 0 y 255 (los cuatro bits menos significativos se ignoran)
+void paint(int x, int y, color_t rgb);
+
+// Funci�n que retorna el valor de un pixel en pantalla
+color_t pixel(int x, int y);
+
+// Funci�n que pinta un rect�ngulo de un color
+// Pos: esquina superior izquierda del rectangulo
+// Color: color del rect�ngulo
+// W: anchura, H: altura
+void rect (position_t pos, color_t col, int w, int h);
+
+#endif
+

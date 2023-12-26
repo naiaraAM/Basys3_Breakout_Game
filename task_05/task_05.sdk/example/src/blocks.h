@@ -2,6 +2,7 @@
 #define __BLOCKS_H__
 
 #include <stdbool.h>
+#include "colors.h"
 
 #define RESOLUTION_X	160
 #define RESOLUTION_Y	120
@@ -19,15 +20,14 @@
 // Technical parameters
 #define MAX_COLLISIONS  3
 
-// Available colors exclusive for the map
-#define M_RED       {0xee, 0x48, 0x4c}
-#define M_ORANGE    {0xde, 0x6a, 0x35}
-#define M_YELLOW    {0xf3, 0xc0, 0x01}
-#define M_GREEN     {0x53, 0xbe, 0x42}
-#define M_DBLUE     {0x3f, 0x41, 0xfd}
-#define M_PURPLE    {0x87, 0x48, 0xf1}
-#define M_CYAN      {0x02, 0xf3, 0xf3}
-#define M_DGREY     {0x46, 0x46, 0x46}
+/**
+ * LEVEL DESCRIPTION:
+ * Every level has a different map, and the same lives.
+ * 1. Every block in the map can be broken with one hit.
+ * 2. The same than lvl 1, but random blocks in the map will increase their collision requirements.
+ * 3. The same than lvl 2, plus random indestructible blocks.
+*/
+typedef enum levels {first_lvl, second_lvl, third_lvl} levels_t;
 /*
 const color_t red = M_RED;
 const color_t orange = M_ORANGE;
@@ -37,9 +37,6 @@ const color_t dark_blue = M_DBLUE;
 const color_t purple = M_PURPLE;
 const color_t cyan = M_CYAN;
 */
-typedef struct color {
-	unsigned char r, g, b;
-} color_t;
 
 typedef struct position {
 	int x, y;
@@ -56,7 +53,7 @@ typedef struct block {
 
 // Block/Map printing functions
 void print_block(position_t pos, color_t col);
-void init_map(block_t map[N_BLOCKS_X][N_BLOCKS_Y]);
+void init_map(block_t map[N_BLOCKS_X][N_BLOCKS_Y], levels_t level);
 void print_map(block_t map[N_BLOCKS_X][N_BLOCKS_Y]);
 void reprint_block(block_t block);
 

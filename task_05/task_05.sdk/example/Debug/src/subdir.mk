@@ -8,14 +8,17 @@ LD_SRCS += \
 
 C_SRCS += \
 ../src/blocks.c \
+../src/graphics.c \
 ../src/main.c 
 
 OBJS += \
 ./src/blocks.o \
+./src/graphics.o \
 ./src/main.o 
 
 C_DEPS += \
 ./src/blocks.d \
+./src/graphics.d \
 ./src/main.d 
 
 

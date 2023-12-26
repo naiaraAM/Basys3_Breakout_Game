@@ -21,14 +21,14 @@ void print_block(position_t pos, color_t col)
  */
 void reprint_block(block_t block)
 {
-    block.color.r += (collisions - 1) * BLOCK_COLOR_DIFF;
-    block.color.g += (collisions - 1) * BLOCK_COLOR_DIFF;
-    block.color.b += (collisions - 1) * BLOCK_COLOR_DIFF;
+    block.color.r -= BLOCK_COLOR_DIFF;
+    block.color.g -= BLOCK_COLOR_DIFF;
+    block.color.b -= BLOCK_COLOR_DIFF;
 
     print_block(block.location, block.color);
 }
 
-void init_map(struct block map[N_BLOCKS_X][N_BLOCKS_Y], levels_t level)
+void init_map(block_t map[N_BLOCKS_X][N_BLOCKS_Y], levels_t level)
 {
 	int i, j, collisions;
     color_t indest_color = M_DGREY;
@@ -38,11 +38,11 @@ void init_map(struct block map[N_BLOCKS_X][N_BLOCKS_Y], levels_t level)
 		for(j = 0; j < N_BLOCKS_X; j++)
         {
             if (level == third_lvl)
-                indestructible = (rand() % 4 == 0) ? true : false;  // approx. 25% of indestructible blocks
+            	map[j][i].indestructible = (rand() % 4 == 0) ? true : false;  // approx. 25% of indestructible blocks
             else
-                indestructible = false;
+            	map[j][i].indestructible = false;
 
-            if (!indestructible)
+            if (!map[j][i].indestructible)
             {
                 if (level == second_lvl)
                     collisions = (rand() % 10 < 7) ? 1 : (rand() % 10 < 9) ? 2 : 3;  // 70% chance for 1, 15% chance for 2, 15% chance for 3

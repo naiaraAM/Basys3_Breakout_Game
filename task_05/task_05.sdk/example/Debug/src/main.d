@@ -9,7 +9,7 @@ src/main.o src/main.o: ../src/main.c \
  ../../example_bsp/microblaze_0/include/xil_assert.h \
  ../../example_bsp/microblaze_0/include/xil_exception.h \
  ../../example_bsp/microblaze_0/include/xil_printf.h ../src/main.h \
- ../src/blocks.h
+ ../src/blocks.h ../src/colors.h ../src/graphics.h
 
 ../../example_bsp/microblaze_0/include/sleep.h:
 
@@ -34,3 +34,7 @@ src/main.o src/main.o: ../src/main.c \
 ../src/main.h:
 
 ../src/blocks.h:
+
+../src/colors.h:
+
+../src/graphics.h:

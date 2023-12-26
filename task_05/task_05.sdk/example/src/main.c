@@ -3,13 +3,26 @@
 #include <stdbool.h>
 #include "xil_printf.h"
 #include "main.h"
-#include "blocks.h"
-#include "graphics.h"
 
 #define MAX_LED 		0x8000
 #define BASE_GPIO0 		0x40000000
 #define BASE_GPIO1 		0x40010000
 #define MASK_BUTTONS	0xF
+
+
+
+color_t negro = N;
+color_t blanco = W;
+color_t azul = A;
+color_t azul_claro = B;
+color_t verde = C;
+color_t verde_oscuro = D;
+color_t amarillo = E;
+color_t rojo = F;
+color_t gold = G;
+color_t gris_claro = GC;
+color_t gris_intermedio = GI;
+color_t gris_oscuro = GO;
 
 color_t amar = {255, 255, 0};
 position_t pos_barra={((RESOLUTION_X / 2) - BAR_LENGTH / 2), 100}; //75
@@ -20,18 +33,8 @@ int bola_activa=0;
 
 volatile int *gpio0 = (int*)BASE_GPIO0; // dir base buttons
 
-color_t pixel(int x, int y){
-	color_t col;
-	int *ptr = (int*) VGA_CTRL_BASE;
-	int val = ptr[(y<<8) | x];
-	col.r = (val&0xf)<<4;
-	col.b = (val&0xf0);
-	col.g = (val&0xf00)>>4;
-	return col;
-}
-
 int main(){
-	int i,j, count1, speed_ball;
+	int count1, speed_ball;
 	init_buttons();
 	int dir;
 	int lifes;
@@ -52,35 +55,20 @@ int main(){
 		print_background(negro);
 
 		// Here it goes loading_screen()
-		level = first_lvl;	// should be: level = loading_screen();
+		level = level_selection();
 
 		// Print game borders
 		frames[0].x = INT_X_BORDER; frames[0].y = INT_Y_BORDER;
 		frames[1].x = END_X_BORDER; frames[1].y = INT_Y_BORDER;
 		frames[2].x = INT_X_BORDER; frames[2].y = END_Y_BORDER;
 		frames[3].x = INT_X_BORDER; frames[3].y = INT_Y_BORDER;
-	game_status_t status = continues;
-	int lvl = level_selection();
-
-
-	// Pinta el fondo negro. Se puede reemplazar por una llamada a rect
-    for(i=0;i<160;i++)
-    	for(j=0;j<120;j++)
-    		paint(i,j,negro);
-
-    // Pinta bordes
-    frames[0].x = INT_X_BORDER; frames[0].y = INT_Y_BORDER;
-    frames[1].x = END_X_BORDER; frames[1].y = INT_Y_BORDER;
-    frames[2].x = INT_X_BORDER; frames[2].y = END_Y_BORDER;
-    frames[3].x = INT_X_BORDER; frames[3].y = INT_Y_BORDER;
-
 		rect(frames[0], blanco, END_X_BORDER, BORDER_THICKNESS);
 		rect(frames[1], blanco, BORDER_THICKNESS, END_Y_BORDER);
 		rect(frames[2], blanco, END_X_BORDER, BORDER_THICKNESS);
 		rect(frames[3], blanco, BORDER_THICKNESS, END_Y_BORDER);
 
 		// Print map
-		init_map(map);
+		init_map(map, level);
 		print_map(map);
 
 		// Pos inicial de la nave
@@ -88,7 +76,7 @@ int main(){
 		move_bar(0);
 		bola.mov = 3;
 
-		while (status == continue) {
+		while (status == continues) {
 			// una de cada 5 veces, mueve la nave en el eje X
 			if(count1==3){
 				count1=0;
@@ -102,7 +90,7 @@ int main(){
 			} else speed_ball++;
 			usleep(10000);
 
-			if (status == life_lost)
+			if (status == lost_life)
 			{
 				count1 = 0;
 				speed_ball = 0;
@@ -132,7 +120,8 @@ int main(){
 
 void life_lost()
 {
-	paint_animation(bola.pos, smoke, SMOKE_FRAMES, SMOKE_TIME, SMOKE_WIDTH, SMOKE_HEIGHT);
+	position_t pos = {bola.x, bola.y};
+	paint_animation(pos, smoke, SMOKE_FRAMES, SMOKE_TIME, SMOKE_WIDTH, SMOKE_HEIGHT);
 	init_ball();
 }
 
@@ -222,7 +211,7 @@ game_status_t move_ball()
 			else if (side == bottom)
 			{
 				paint(bola.x, bola.y, negro);
-				return life_lost;
+				return lost_life;
 			}
 			else
 				is_block = false;
@@ -558,23 +547,6 @@ movement_t calculate_rebound(ball_t bola, side_t side, bool is_block, block_t *b
 }
 
 
-
-void paint(int x, int y, color_t rgb){
-	int *ptr = (int *)VGA_CTRL_BASE;
-	int val = (rgb.r>>4) | (rgb.b&0xf0) | ((rgb.g&0xf0)<<4);
-	ptr[(y<<8)| x]=val;
-}
-
-void rect (position_t pos, color_t col, int w, int h){
-	int i,j;
-	for(i=0;i<w;i++){
-		for(j=0;j<h;j++){
-			paint(pos.x+i,pos.y+j,col);
-		}
-	}
-}
-
-
 void move_bar(int dir){
 	static int var = 0;
 	if (dir == 1)
@@ -600,15 +572,9 @@ void init_ball(){
 	paint(bola.x,bola.y,azul_claro);
 }
 
-
-void paint_object(position_t pos, color_t *object, int rows, int cols) {
-    // Process the array elements
-    for (int i = 0; i < rows; i++)
-        for (int j = 0; j < cols; j++)
-			paint(pos.x + j, pos.y + i, object[i * cols + j]);
-}
-
-int level_selection() {
+levels_t level_selection() {
+	int btn = 0;
+	levels_t level;
 
 	for(int i=0;i<160;i++)
 	    	for(int j=0;j<120;j++)
@@ -634,9 +600,24 @@ int level_selection() {
 	aux.x = 5;
 	aux.y = 100;
 	paint_object(aux, authors, 14, 25);
-	int button = 0;
-	while (button == 0)
-		button = wait_button();
-	return button;
+
+	while (btn == 0)
+		btn = wait_button();
+
+	switch (btn) {
+		case 1:
+			level = first_lvl;
+			break;
+		case 2:
+			level = second_lvl;
+			break;
+		case 3:
+			level = third_lvl;
+			break;
+		default:
+			break;
+	}
+
+	return level;
 }
 
