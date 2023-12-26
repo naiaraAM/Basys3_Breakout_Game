@@ -9,7 +9,7 @@ void print_block(position_t pos, color_t col)
 
 	for(i = 0; i < BLOCK_LENGTH; i++)
 		for(j = 0; j < BLOCK_HEIGHT; j++)
-			pinta(pos.x + i, pos.y + j, col);
+			paint(pos.x + i, pos.y + j, col);
 }
 
 void init_map(struct block map[N_BLOCKS_X][N_BLOCKS_Y])

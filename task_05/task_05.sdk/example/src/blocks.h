@@ -8,7 +8,7 @@
 #define N_BLOCKS_Y      7
 
 // Block properties
-#define BLOCK_LENGTH    12    // by default, 10
+#define BLOCK_LENGTH    12    // by default, 12
 #define BLOCK_HEIGHT    3
 #define SEPARATION      2
 

@@ -1,6 +1,238 @@
-20:40:11 **** Incremental Build of configuration Debug for project example ****
+11:05:22 **** Auto Build of configuration Debug for project example ****
 make all 
-make: Nothing to be done for 'all'.
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:4:0:
+../src/main.h:26:11: warning: excess elements in array initializer
+ #define G {0xc2, 0x99, 0x27}
+           ^
+../src/main.h:50:8: note: in expansion of macro 'G'
+   {G,G,G,G,G,G,G,G,G,G,G},
+        ^
+../src/main.h:26:11: note: (near initialization for 'bar[0]')
+ #define G {0xc2, 0x99, 0x27}
+           ^
+../src/main.h:50:8: note: in expansion of macro 'G'
+   {G,G,G,G,G,G,G,G,G,G,G},
+        ^
+../src/main.h:26:11: warning: excess elements in array initializer
+ #define G {0xc2, 0x99, 0x27}
+           ^
+../src/main.h:50:10: note: in expansion of macro 'G'
+   {G,G,G,G,G,G,G,G,G,G,G},
+          ^
+../src/main.h:26:11: note: (near initialization for 'bar[0]')
+ #define G {0xc2, 0x99, 0x27}
+           ^
+../src/main.h:50:10: note: in expansion of macro 'G'
+   {G,G,G,G,G,G,G,G,G,G,G},
+          ^
+../src/main.h:26:11: warning: excess elements in array initializer
+ #define G {0xc2, 0x99, 0x27}
+           ^
+../src/main.h:50:12: note: in expansion of macro 'G'
+   {G,G,G,G,G,G,G,G,G,G,G},
+            ^
+../src/main.h:26:11: note: (near initialization for 'bar[0]')
+ #define G {0xc2, 0x99, 0x27}
+           ^
+../src/main.h:50:12: note: in expansion of macro 'G'
+   {G,G,G,G,G,G,G,G,G,G,G},
+            ^
+../src/main.h:26:11: warning: excess elements in array initializer
+ #define G {0xc2, 0x99, 0x27}
+           ^
+../src/main.h:50:14: note: in expansion of macro 'G'
+   {G,G,G,G,G,G,G,G,G,G,G},
+              ^
+../src/main.h:26:11: note: (near initialization for 'bar[0]')
+ #define G {0xc2, 0x99, 0x27}
+           ^
+../src/main.h:50:14: note: in expansion of macro 'G'
+   {G,G,G,G,G,G,G,G,G,G,G},
+              ^
+../src/main.h:26:11: warning: excess elements in array initializer
+ #define G {0xc2, 0x99, 0x27}
+           ^
+../src/main.h:50:16: note: in expansion of macro 'G'
+   {G,G,G,G,G,G,G,G,G,G,G},
+                ^
+../src/main.h:26:11: note: (near initialization for 'bar[0]')
+ #define G {0xc2, 0x99, 0x27}
+           ^
+../src/main.h:50:16: note: in expansion of macro 'G'
+   {G,G,G,G,G,G,G,G,G,G,G},
+                ^
+../src/main.h:26:11: warning: excess elements in array initializer
+ #define G {0xc2, 0x99, 0x27}
+           ^
+../src/main.h:50:18: note: in expansion of macro 'G'
+   {G,G,G,G,G,G,G,G,G,G,G},
+                  ^
+../src/main.h:26:11: note: (near initialization for 'bar[0]')
+ #define G {0xc2, 0x99, 0x27}
+           ^
+../src/main.h:50:18: note: in expansion of macro 'G'
+   {G,G,G,G,G,G,G,G,G,G,G},
+                  ^
+../src/main.h:26:11: warning: excess elements in array initializer
+ #define G {0xc2, 0x99, 0x27}
+           ^
+../src/main.h:50:20: note: in expansion of macro 'G'
+   {G,G,G,G,G,G,G,G,G,G,G},
+                    ^
+../src/main.h:26:11: note: (near initialization for 'bar[0]')
+ #define G {0xc2, 0x99, 0x27}
+           ^
+../src/main.h:50:20: note: in expansion of macro 'G'
+   {G,G,G,G,G,G,G,G,G,G,G},
+                    ^
+../src/main.h:26:11: warning: excess elements in array initializer
+ #define G {0xc2, 0x99, 0x27}
+           ^
+../src/main.h:50:22: note: in expansion of macro 'G'
+   {G,G,G,G,G,G,G,G,G,G,G},
+                      ^
+../src/main.h:26:11: note: (near initialization for 'bar[0]')
+ #define G {0xc2, 0x99, 0x27}
+           ^
+../src/main.h:50:22: note: in expansion of macro 'G'
+   {G,G,G,G,G,G,G,G,G,G,G},
+                      ^
+../src/main.h:26:11: warning: excess elements in array initializer
+ #define G {0xc2, 0x99, 0x27}
+           ^
+../src/main.h:50:24: note: in expansion of macro 'G'
+   {G,G,G,G,G,G,G,G,G,G,G},
+                        ^
+../src/main.h:26:11: note: (near initialization for 'bar[0]')
+ #define G {0xc2, 0x99, 0x27}
+           ^
+../src/main.h:50:24: note: in expansion of macro 'G'
+   {G,G,G,G,G,G,G,G,G,G,G},
+                        ^
+../src/main.h:26:11: warning: excess elements in array initializer
+ #define G {0xc2, 0x99, 0x27}
+           ^
+../src/main.h:51:8: note: in expansion of macro 'G'
+   {G,G,G,G,G,G,G,G,G,G,G}
+        ^
+../src/main.h:26:11: note: (near initialization for 'bar[1]')
+ #define G {0xc2, 0x99, 0x27}
+           ^
+../src/main.h:51:8: note: in expansion of macro 'G'
+   {G,G,G,G,G,G,G,G,G,G,G}
+        ^
+../src/main.h:26:11: warning: excess elements in array initializer
+ #define G {0xc2, 0x99, 0x27}
+           ^
+../src/main.h:51:10: note: in expansion of macro 'G'
+   {G,G,G,G,G,G,G,G,G,G,G}
+          ^
+../src/main.h:26:11: note: (near initialization for 'bar[1]')
+ #define G {0xc2, 0x99, 0x27}
+           ^
+../src/main.h:51:10: note: in expansion of macro 'G'
+   {G,G,G,G,G,G,G,G,G,G,G}
+          ^
+../src/main.h:26:11: warning: excess elements in array initializer
+ #define G {0xc2, 0x99, 0x27}
+           ^
+../src/main.h:51:12: note: in expansion of macro 'G'
+   {G,G,G,G,G,G,G,G,G,G,G}
+            ^
+../src/main.h:26:11: note: (near initialization for 'bar[1]')
+ #define G {0xc2, 0x99, 0x27}
+           ^
+../src/main.h:51:12: note: in expansion of macro 'G'
+   {G,G,G,G,G,G,G,G,G,G,G}
+            ^
+../src/main.h:26:11: warning: excess elements in array initializer
+ #define G {0xc2, 0x99, 0x27}
+           ^
+../src/main.h:51:14: note: in expansion of macro 'G'
+   {G,G,G,G,G,G,G,G,G,G,G}
+              ^
+../src/main.h:26:11: note: (near initialization for 'bar[1]')
+ #define G {0xc2, 0x99, 0x27}
+           ^
+../src/main.h:51:14: note: in expansion of macro 'G'
+   {G,G,G,G,G,G,G,G,G,G,G}
+              ^
+../src/main.h:26:11: warning: excess elements in array initializer
+ #define G {0xc2, 0x99, 0x27}
+           ^
+../src/main.h:51:16: note: in expansion of macro 'G'
+   {G,G,G,G,G,G,G,G,G,G,G}
+                ^
+../src/main.h:26:11: note: (near initialization for 'bar[1]')
+ #define G {0xc2, 0x99, 0x27}
+           ^
+../src/main.h:51:16: note: in expansion of macro 'G'
+   {G,G,G,G,G,G,G,G,G,G,G}
+                ^
+../src/main.h:26:11: warning: excess elements in array initializer
+ #define G {0xc2, 0x99, 0x27}
+           ^
+../src/main.h:51:18: note: in expansion of macro 'G'
+   {G,G,G,G,G,G,G,G,G,G,G}
+                  ^
+../src/main.h:26:11: note: (near initialization for 'bar[1]')
+ #define G {0xc2, 0x99, 0x27}
+           ^
+../src/main.h:51:18: note: in expansion of macro 'G'
+   {G,G,G,G,G,G,G,G,G,G,G}
+                  ^
+../src/main.h:26:11: warning: excess elements in array initializer
+ #define G {0xc2, 0x99, 0x27}
+           ^
+../src/main.h:51:20: note: in expansion of macro 'G'
+   {G,G,G,G,G,G,G,G,G,G,G}
+                    ^
+../src/main.h:26:11: note: (near initialization for 'bar[1]')
+ #define G {0xc2, 0x99, 0x27}
+           ^
+../src/main.h:51:20: note: in expansion of macro 'G'
+   {G,G,G,G,G,G,G,G,G,G,G}
+                    ^
+../src/main.h:26:11: warning: excess elements in array initializer
+ #define G {0xc2, 0x99, 0x27}
+           ^
+../src/main.h:51:22: note: in expansion of macro 'G'
+   {G,G,G,G,G,G,G,G,G,G,G}
+                      ^
+../src/main.h:26:11: note: (near initialization for 'bar[1]')
+ #define G {0xc2, 0x99, 0x27}
+           ^
+../src/main.h:51:22: note: in expansion of macro 'G'
+   {G,G,G,G,G,G,G,G,G,G,G}
+                      ^
+../src/main.h:26:11: warning: excess elements in array initializer
+ #define G {0xc2, 0x99, 0x27}
+           ^
+../src/main.h:51:24: note: in expansion of macro 'G'
+   {G,G,G,G,G,G,G,G,G,G,G}
+                        ^
+../src/main.h:26:11: note: (near initialization for 'bar[1]')
+ #define G {0xc2, 0x99, 0x27}
+           ^
+../src/main.h:51:24: note: in expansion of macro 'G'
+   {G,G,G,G,G,G,G,G,G,G,G}
+                        ^
+'Finished building: ../src/main.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  13240	    340	   5012	  18592	   48a0	example.elf
+'Finished building: example.elf.size'
+' '
 
-20:40:11 Build Finished (took 216ms)
+11:05:23 Build Finished (took 1s.225ms)
 
