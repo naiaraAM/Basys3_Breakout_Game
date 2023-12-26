@@ -94,7 +94,8 @@ int main(){
 					lifes--;
 					if (lifes == 0)
 						status = game_over;
-					else {
+					else
+					{
 						status = continues;
 						life_lost();
 					}
@@ -123,7 +124,7 @@ int main(){
 
 void life_lost()
 {
-	position_t pos = {bola.x - SMOKE_WIDTH / 2, bola.y - SMOKE_HEIGHT - 1};
+	position_t pos = {bola.x - SMOKE_WIDTH / 2, bola.y - SMOKE_HEIGHT};
 	paint_animation(pos, smoke, SMOKE_FRAMES, SMOKE_TIME, SMOKE_WIDTH, SMOKE_HEIGHT);
 	init_ball();
 }

@@ -121,7 +121,7 @@ color_t authors[14][25]={
 		{M_GREEN,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N}
 };
 
-color_t smoke[SMOKE_FRAMES][SMOKE_WIDTH][SMOKE_HEIGHT] = {
+color_t smoke[SMOKE_FRAMES][SMOKE_HEIGHT][SMOKE_WIDTH] = {
     {
         {G_BL,G_BL,G_BL},
         {G_BL,G_BL,G_BL},

@@ -8,8 +8,8 @@
 
 #define SMOKE_TIME      20000   // microseconds
 #define SMOKE_FRAMES    4       // microseconds
-#define SMOKE_WIDTH     6       // pixels
-#define SMOKE_HEIGHT    3       // pixels
+#define SMOKE_WIDTH     3       // pixels
+#define SMOKE_HEIGHT    6       // pixels
 
 // Functions
 void paint_object(position_t pos, color_t *object, int height, int width);
