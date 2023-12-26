@@ -1,26 +1,6 @@
-17:38:57 **** Incremental Build of configuration Debug for project example ****
+17:53:23 **** Incremental Build of configuration Debug for project example ****
 make all 
-'Building file: ../src/blocks.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/blocks.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/blocks.d" -MT"src/blocks.o" -o "src/blocks.o" "../src/blocks.c"
-../src/blocks.c: In function 'print_block':
-../src/blocks.c:13:4: warning: implicit declaration of function 'paint'; did you mean 'print'? [-Wimplicit-function-declaration]
-    paint(pos.x + i, pos.y + j, col);
-    ^~~~~
-    print
-'Finished building: ../src/blocks.c'
-' '
-'Building target: example.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: example.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size example.elf  |tee "example.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  26572	   5220	   5384	  37176	   9138	example.elf
-'Finished building: example.elf.size'
-' '
+make: Nothing to be done for 'all'.
 
-17:38:58 Build Finished (took 677ms)
+17:53:23 Build Finished (took 164ms)
 

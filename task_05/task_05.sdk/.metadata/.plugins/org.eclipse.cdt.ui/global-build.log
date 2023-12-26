@@ -5600,3 +5600,2635 @@ mb-size example.elf  |tee "example.elf.size"
   26572	   5220	   5384	  37176	   9138	example.elf
 'Finished building: example.elf.size'
 ' '
+17:50:17 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/blocks.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/blocks.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/blocks.d" -MT"src/blocks.o" -o "src/blocks.o" "../src/blocks.c"
+../src/blocks.c: In function 'print_block':
+../src/blocks.c:13:4: warning: implicit declaration of function 'paint'; did you mean 'print'? [-Wimplicit-function-declaration]
+    paint(pos.x + i, pos.y + j, col);
+    ^~~~~
+    print
+'Finished building: ../src/blocks.c'
+' '
+'Building file: ../src/graphics.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/graphics.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/graphics.d" -MT"src/graphics.o" -o "src/graphics.o" "../src/graphics.c"
+../src/graphics.c: In function 'paint_animation':
+../src/graphics.c:23:27: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+         paint_object(pos, animation[f], rows, cols);
+                           ^~~~~~~~~
+../src/graphics.c:11:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t ** {aka struct color **}'
+ void paint_object(position_t pos, color_t *object, int rows, int cols) {
+      ^~~~~~~~~~~~
+../src/graphics.c:24:23: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+     paint_object(pos, animation[frames - 1], rows, cols);
+                       ^~~~~~~~~
+../src/graphics.c:11:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t ** {aka struct color **}'
+ void paint_object(position_t pos, color_t *object, int rows, int cols) {
+      ^~~~~~~~~~~~
+'Finished building: ../src/graphics.c'
+' '
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/blocks.h:5:0,
+                 from ../src/main.h:4,
+                 from ../src/main.c:5:
+../src/colors.h:19:12: warning: excess elements in array initializer
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:73:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:19:12: note: (near initialization for 'number_3[3]')
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:73:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:19:12: warning: excess elements in array initializer
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:74:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:19:12: note: (near initialization for 'number_3[4]')
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:74:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:17:11: warning: excess elements in array initializer
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:75:26: note: in expansion of macro 'N'
+  {N,GI,GI,GI,W,W,W,GC,GI,N},
+                          ^
+../src/colors.h:17:11: note: (near initialization for 'number_3[5]')
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:75:26: note: in expansion of macro 'N'
+  {N,GI,GI,GI,W,W,W,GC,GI,N},
+                          ^
+../src/colors.h:17:11: warning: excess elements in array initializer
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:76:26: note: in expansion of macro 'N'
+  {N,GI,GI,GI,W,W,W,GC,GI,N},
+                          ^
+../src/colors.h:17:11: note: (near initialization for 'number_3[6]')
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:76:26: note: in expansion of macro 'N'
+  {N,GI,GI,GI,W,W,W,GC,GI,N},
+                          ^
+../src/colors.h:19:12: warning: excess elements in array initializer
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:77:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:19:12: note: (near initialization for 'number_3[7]')
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:77:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:18:12: warning: excess elements in array initializer
+ #define GO {0x3d, 0x3d, 0x3d}
+            ^
+../src/main.h:78:26: note: in expansion of macro 'GO'
+  {GO,W,W,GC,GO,GO,W,W,GC,GO},
+                          ^~
+../src/colors.h:18:12: note: (near initialization for 'number_3[8]')
+ #define GO {0x3d, 0x3d, 0x3d}
+            ^
+../src/main.h:78:26: note: in expansion of macro 'GO'
+  {GO,W,W,GC,GO,GO,W,W,GC,GO},
+                          ^~
+../src/colors.h:17:11: warning: excess elements in array initializer
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:80:25: note: in expansion of macro 'N'
+  {N,GO,W,W,W,W,W, GC,GO,N},
+                         ^
+../src/colors.h:17:11: note: (near initialization for 'number_3[10]')
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:80:25: note: in expansion of macro 'N'
+  {N,GO,W,W,W,W,W, GC,GO,N},
+                         ^
+In file included from ../src/main.c:5:0:
+../src/main.h:166:84: error: stray '\302' in program
+   {W,W,W,N, N, W,N,N,W, N, W,W,W,W, N, W,N,N,W, N, W,N,N,W, N, W,W,W,W, N, W,W,W,W, N, N,W,N}
+                                                                                    ^
+../src/main.h:166:85: error: stray '\240' in program
+   {W,W,W,N, N, W,N,N,W, N, W,W,W,W, N, W,N,N,W, N, W,N,N,W, N, W,W,W,W, N, W,W,W,W, N, N,W,N}
+                                                                                     ^
+../src/main.h:166:88: error: stray '\302' in program
+   {W,W,W,N, N, W,N,N,W, N, W,W,W,W, N, W,N,N,W, N, W,N,N,W, N, W,W,W,W, N, W,W,W,W, N, N,W,N}
+                                                                                        ^
+../src/main.h:166:89: error: stray '\240' in program
+   {W,W,W,N, N, W,N,N,W, N, W,W,W,W, N, W,N,N,W, N, W,N,N,W, N, W,W,W,W, N, W,W,W,W, N, N,W,N}
+                                                                                         ^
+../src/main.c: In function 'life_lost':
+../src/main.c:124:23: warning: passing argument 2 of 'paint_animation' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_animation(pos, smoke, SMOKE_FRAMES, SMOKE_TIME, SMOKE_WIDTH, SMOKE_HEIGHT);
+                       ^~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:16:6: note: expected 'color_t *** {aka struct color ***}' but argument is of type 'color_t (*)[6][3] {aka struct color (*)[6][3]}'
+ void paint_animation(position_t pos, color_t ***animation, int frames, int period, int rows, int cols);
+      ^~~~~~~~~~~~~~~
+../src/main.c: In function 'level_selection':
+../src/main.c:582:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, choose_level, 5, 47);
+                    ^~~~~~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[47] {aka struct color (*)[47]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:585:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, number_1, 12, 9);
+                    ^~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[9] {aka struct color (*)[9]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:587:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, button, 10, 9);
+                    ^~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[9] {aka struct color (*)[9]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:590:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, number_2, 12, 10);
+                    ^~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[10] {aka struct color (*)[10]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:592:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, button, 10, 9);
+                    ^~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[9] {aka struct color (*)[9]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:595:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, number_3, 12,9);
+                    ^~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[9] {aka struct color (*)[9]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:597:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, button, 10, 9);
+                    ^~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[9] {aka struct color (*)[9]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:600:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, authors, 14, 25);
+                    ^~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[25] {aka struct color (*)[25]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:603:29: error: stray '\302' in program
+  paint_object(aux, breakout, 7, 38);
+                             ^
+../src/main.c:603:30: error: stray '\240' in program
+  paint_object(aux, breakout, 7, 38);
+                              ^
+../src/main.c:603:33: error: stray '\302' in program
+  paint_object(aux, breakout, 7, 38);
+                                 ^
+../src/main.c:603:34: error: stray '\240' in program
+  paint_object(aux, breakout, 7, 38);
+                                  ^
+../src/main.c:603:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, breakout, 7, 38);
+                    ^~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[38] {aka struct color (*)[38]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+make: *** [src/subdir.mk:29: src/main.o] Error 1
+17:50:19 **** Incremental Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/blocks.h:5:0,
+                 from ../src/main.h:4,
+                 from ../src/main.c:5:
+../src/colors.h:19:12: warning: excess elements in array initializer
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:73:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:19:12: note: (near initialization for 'number_3[3]')
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:73:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:19:12: warning: excess elements in array initializer
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:74:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:19:12: note: (near initialization for 'number_3[4]')
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:74:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:17:11: warning: excess elements in array initializer
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:75:26: note: in expansion of macro 'N'
+  {N,GI,GI,GI,W,W,W,GC,GI,N},
+                          ^
+../src/colors.h:17:11: note: (near initialization for 'number_3[5]')
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:75:26: note: in expansion of macro 'N'
+  {N,GI,GI,GI,W,W,W,GC,GI,N},
+                          ^
+../src/colors.h:17:11: warning: excess elements in array initializer
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:76:26: note: in expansion of macro 'N'
+  {N,GI,GI,GI,W,W,W,GC,GI,N},
+                          ^
+../src/colors.h:17:11: note: (near initialization for 'number_3[6]')
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:76:26: note: in expansion of macro 'N'
+  {N,GI,GI,GI,W,W,W,GC,GI,N},
+                          ^
+../src/colors.h:19:12: warning: excess elements in array initializer
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:77:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:19:12: note: (near initialization for 'number_3[7]')
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:77:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:18:12: warning: excess elements in array initializer
+ #define GO {0x3d, 0x3d, 0x3d}
+            ^
+../src/main.h:78:26: note: in expansion of macro 'GO'
+  {GO,W,W,GC,GO,GO,W,W,GC,GO},
+                          ^~
+../src/colors.h:18:12: note: (near initialization for 'number_3[8]')
+ #define GO {0x3d, 0x3d, 0x3d}
+            ^
+../src/main.h:78:26: note: in expansion of macro 'GO'
+  {GO,W,W,GC,GO,GO,W,W,GC,GO},
+                          ^~
+../src/colors.h:17:11: warning: excess elements in array initializer
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:80:25: note: in expansion of macro 'N'
+  {N,GO,W,W,W,W,W, GC,GO,N},
+                         ^
+../src/colors.h:17:11: note: (near initialization for 'number_3[10]')
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:80:25: note: in expansion of macro 'N'
+  {N,GO,W,W,W,W,W, GC,GO,N},
+                         ^
+In file included from ../src/main.c:5:0:
+../src/main.h:166:84: error: stray '\302' in program
+   {W,W,W,N, N, W,N,N,W, N, W,W,W,W, N, W,N,N,W, N, W,N,N,W, N, W,W,W,W, N, W,W,W,W, N, N,W,N}
+                                                                                    ^
+../src/main.h:166:85: error: stray '\240' in program
+   {W,W,W,N, N, W,N,N,W, N, W,W,W,W, N, W,N,N,W, N, W,N,N,W, N, W,W,W,W, N, W,W,W,W, N, N,W,N}
+                                                                                     ^
+../src/main.h:166:88: error: stray '\302' in program
+   {W,W,W,N, N, W,N,N,W, N, W,W,W,W, N, W,N,N,W, N, W,N,N,W, N, W,W,W,W, N, W,W,W,W, N, N,W,N}
+                                                                                        ^
+../src/main.h:166:89: error: stray '\240' in program
+   {W,W,W,N, N, W,N,N,W, N, W,W,W,W, N, W,N,N,W, N, W,N,N,W, N, W,W,W,W, N, W,W,W,W, N, N,W,N}
+                                                                                         ^
+../src/main.c: In function 'life_lost':
+../src/main.c:124:23: warning: passing argument 2 of 'paint_animation' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_animation(pos, smoke, SMOKE_FRAMES, SMOKE_TIME, SMOKE_WIDTH, SMOKE_HEIGHT);
+                       ^~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:16:6: note: expected 'color_t *** {aka struct color ***}' but argument is of type 'color_t (*)[6][3] {aka struct color (*)[6][3]}'
+ void paint_animation(position_t pos, color_t ***animation, int frames, int period, int rows, int cols);
+      ^~~~~~~~~~~~~~~
+../src/main.c: In function 'level_selection':
+../src/main.c:582:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, choose_level, 5, 47);
+                    ^~~~~~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[47] {aka struct color (*)[47]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:585:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, number_1, 12, 9);
+                    ^~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[9] {aka struct color (*)[9]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:587:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, button, 10, 9);
+                    ^~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[9] {aka struct color (*)[9]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:590:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, number_2, 12, 10);
+                    ^~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[10] {aka struct color (*)[10]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:592:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, button, 10, 9);
+                    ^~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[9] {aka struct color (*)[9]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:595:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, number_3, 12,9);
+                    ^~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[9] {aka struct color (*)[9]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:597:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, button, 10, 9);
+                    ^~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[9] {aka struct color (*)[9]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:600:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, authors, 14, 25);
+                    ^~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[25] {aka struct color (*)[25]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:603:29: error: stray '\302' in program
+  paint_object(aux, breakout, 7, 38);
+                             ^
+../src/main.c:603:30: error: stray '\240' in program
+  paint_object(aux, breakout, 7, 38);
+                              ^
+../src/main.c:603:33: error: stray '\302' in program
+  paint_object(aux, breakout, 7, 38);
+                                 ^
+../src/main.c:603:34: error: stray '\240' in program
+  paint_object(aux, breakout, 7, 38);
+                                  ^
+../src/main.c:603:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, breakout, 7, 38);
+                    ^~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[38] {aka struct color (*)[38]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+make: *** [src/subdir.mk:29: src/main.o] Error 1
+17:50:36 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/blocks.h:5:0,
+                 from ../src/main.h:4,
+                 from ../src/main.c:5:
+../src/colors.h:19:12: warning: excess elements in array initializer
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:73:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:19:12: note: (near initialization for 'number_3[3]')
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:73:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:19:12: warning: excess elements in array initializer
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:74:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:19:12: note: (near initialization for 'number_3[4]')
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:74:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:17:11: warning: excess elements in array initializer
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:75:26: note: in expansion of macro 'N'
+  {N,GI,GI,GI,W,W,W,GC,GI,N},
+                          ^
+../src/colors.h:17:11: note: (near initialization for 'number_3[5]')
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:75:26: note: in expansion of macro 'N'
+  {N,GI,GI,GI,W,W,W,GC,GI,N},
+                          ^
+../src/colors.h:17:11: warning: excess elements in array initializer
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:76:26: note: in expansion of macro 'N'
+  {N,GI,GI,GI,W,W,W,GC,GI,N},
+                          ^
+../src/colors.h:17:11: note: (near initialization for 'number_3[6]')
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:76:26: note: in expansion of macro 'N'
+  {N,GI,GI,GI,W,W,W,GC,GI,N},
+                          ^
+../src/colors.h:19:12: warning: excess elements in array initializer
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:77:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:19:12: note: (near initialization for 'number_3[7]')
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:77:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:18:12: warning: excess elements in array initializer
+ #define GO {0x3d, 0x3d, 0x3d}
+            ^
+../src/main.h:78:26: note: in expansion of macro 'GO'
+  {GO,W,W,GC,GO,GO,W,W,GC,GO},
+                          ^~
+../src/colors.h:18:12: note: (near initialization for 'number_3[8]')
+ #define GO {0x3d, 0x3d, 0x3d}
+            ^
+../src/main.h:78:26: note: in expansion of macro 'GO'
+  {GO,W,W,GC,GO,GO,W,W,GC,GO},
+                          ^~
+../src/colors.h:17:11: warning: excess elements in array initializer
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:80:25: note: in expansion of macro 'N'
+  {N,GO,W,W,W,W,W, GC,GO,N},
+                         ^
+../src/colors.h:17:11: note: (near initialization for 'number_3[10]')
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:80:25: note: in expansion of macro 'N'
+  {N,GO,W,W,W,W,W, GC,GO,N},
+                         ^
+In file included from ../src/main.c:5:0:
+../src/main.h:166:84: error: stray '\302' in program
+   {W,W,W,N, N, W,N,N,W, N, W,W,W,W, N, W,N,N,W, N, W,N,N,W, N, W,W,W,W, N, W,W,W,W, N, N,W,N}
+                                                                                    ^
+../src/main.h:166:85: error: stray '\240' in program
+   {W,W,W,N, N, W,N,N,W, N, W,W,W,W, N, W,N,N,W, N, W,N,N,W, N, W,W,W,W, N, W,W,W,W, N, N,W,N}
+                                                                                     ^
+../src/main.h:166:88: error: stray '\302' in program
+   {W,W,W,N, N, W,N,N,W, N, W,W,W,W, N, W,N,N,W, N, W,N,N,W, N, W,W,W,W, N, W,W,W,W, N, N,W,N}
+                                                                                        ^
+../src/main.h:166:89: error: stray '\240' in program
+   {W,W,W,N, N, W,N,N,W, N, W,W,W,W, N, W,N,N,W, N, W,N,N,W, N, W,W,W,W, N, W,W,W,W, N, N,W,N}
+                                                                                         ^
+../src/main.c: In function 'life_lost':
+../src/main.c:124:23: warning: passing argument 2 of 'paint_animation' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_animation(pos, smoke, SMOKE_FRAMES, SMOKE_TIME, SMOKE_WIDTH, SMOKE_HEIGHT);
+                       ^~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:16:6: note: expected 'color_t *** {aka struct color ***}' but argument is of type 'color_t (*)[6][3] {aka struct color (*)[6][3]}'
+ void paint_animation(position_t pos, color_t ***animation, int frames, int period, int rows, int cols);
+      ^~~~~~~~~~~~~~~
+../src/main.c: In function 'level_selection':
+../src/main.c:582:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, choose_level, 5, 47);
+                    ^~~~~~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[47] {aka struct color (*)[47]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:585:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, number_1, 12, 9);
+                    ^~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[9] {aka struct color (*)[9]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:587:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, button, 10, 9);
+                    ^~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[9] {aka struct color (*)[9]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:590:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, number_2, 12, 10);
+                    ^~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[10] {aka struct color (*)[10]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:592:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, button, 10, 9);
+                    ^~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[9] {aka struct color (*)[9]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:595:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, number_3, 12,9);
+                    ^~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[9] {aka struct color (*)[9]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:597:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, button, 10, 9);
+                    ^~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[9] {aka struct color (*)[9]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:600:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, authors, 14, 25);
+                    ^~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[25] {aka struct color (*)[25]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:603:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, breakout,7,38);
+                    ^~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[38] {aka struct color (*)[38]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+make: *** [src/subdir.mk:29: src/main.o] Error 1
+17:50:41 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/blocks.h:5:0,
+                 from ../src/main.h:4,
+                 from ../src/main.c:5:
+../src/colors.h:19:12: warning: excess elements in array initializer
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:73:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:19:12: note: (near initialization for 'number_3[3]')
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:73:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:19:12: warning: excess elements in array initializer
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:74:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:19:12: note: (near initialization for 'number_3[4]')
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:74:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:17:11: warning: excess elements in array initializer
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:75:26: note: in expansion of macro 'N'
+  {N,GI,GI,GI,W,W,W,GC,GI,N},
+                          ^
+../src/colors.h:17:11: note: (near initialization for 'number_3[5]')
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:75:26: note: in expansion of macro 'N'
+  {N,GI,GI,GI,W,W,W,GC,GI,N},
+                          ^
+../src/colors.h:17:11: warning: excess elements in array initializer
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:76:26: note: in expansion of macro 'N'
+  {N,GI,GI,GI,W,W,W,GC,GI,N},
+                          ^
+../src/colors.h:17:11: note: (near initialization for 'number_3[6]')
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:76:26: note: in expansion of macro 'N'
+  {N,GI,GI,GI,W,W,W,GC,GI,N},
+                          ^
+../src/colors.h:19:12: warning: excess elements in array initializer
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:77:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:19:12: note: (near initialization for 'number_3[7]')
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:77:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:18:12: warning: excess elements in array initializer
+ #define GO {0x3d, 0x3d, 0x3d}
+            ^
+../src/main.h:78:26: note: in expansion of macro 'GO'
+  {GO,W,W,GC,GO,GO,W,W,GC,GO},
+                          ^~
+../src/colors.h:18:12: note: (near initialization for 'number_3[8]')
+ #define GO {0x3d, 0x3d, 0x3d}
+            ^
+../src/main.h:78:26: note: in expansion of macro 'GO'
+  {GO,W,W,GC,GO,GO,W,W,GC,GO},
+                          ^~
+../src/colors.h:17:11: warning: excess elements in array initializer
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:80:25: note: in expansion of macro 'N'
+  {N,GO,W,W,W,W,W, GC,GO,N},
+                         ^
+../src/colors.h:17:11: note: (near initialization for 'number_3[10]')
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:80:25: note: in expansion of macro 'N'
+  {N,GO,W,W,W,W,W, GC,GO,N},
+                         ^
+In file included from ../src/main.c:5:0:
+../src/main.h:166:84: error: stray '\302' in program
+   {W,W,W,N, N, W,N,N,W, N, W,W,W,W, N, W,N,N,W, N, W,N,N,W, N, W,W,W,W, N, W,W,W,W, N, N,W,N}
+                                                                                    ^
+../src/main.h:166:85: error: stray '\240' in program
+   {W,W,W,N, N, W,N,N,W, N, W,W,W,W, N, W,N,N,W, N, W,N,N,W, N, W,W,W,W, N, W,W,W,W, N, N,W,N}
+                                                                                     ^
+../src/main.h:166:88: error: stray '\302' in program
+   {W,W,W,N, N, W,N,N,W, N, W,W,W,W, N, W,N,N,W, N, W,N,N,W, N, W,W,W,W, N, W,W,W,W, N, N,W,N}
+                                                                                        ^
+../src/main.h:166:89: error: stray '\240' in program
+   {W,W,W,N, N, W,N,N,W, N, W,W,W,W, N, W,N,N,W, N, W,N,N,W, N, W,W,W,W, N, W,W,W,W, N, N,W,N}
+                                                                                         ^
+../src/main.c: In function 'life_lost':
+../src/main.c:124:23: warning: passing argument 2 of 'paint_animation' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_animation(pos, smoke, SMOKE_FRAMES, SMOKE_TIME, SMOKE_WIDTH, SMOKE_HEIGHT);
+                       ^~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:16:6: note: expected 'color_t *** {aka struct color ***}' but argument is of type 'color_t (*)[6][3] {aka struct color (*)[6][3]}'
+ void paint_animation(position_t pos, color_t ***animation, int frames, int period, int rows, int cols);
+      ^~~~~~~~~~~~~~~
+../src/main.c: In function 'level_selection':
+../src/main.c:582:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, choose_level, 5, 47);
+                    ^~~~~~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[47] {aka struct color (*)[47]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:585:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, number_1, 12, 9);
+                    ^~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[9] {aka struct color (*)[9]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:587:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, button, 10, 9);
+                    ^~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[9] {aka struct color (*)[9]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:590:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, number_2, 12, 10);
+                    ^~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[10] {aka struct color (*)[10]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:592:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, button, 10, 9);
+                    ^~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[9] {aka struct color (*)[9]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:595:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, number_3, 12,9);
+                    ^~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[9] {aka struct color (*)[9]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:597:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, button, 10, 9);
+                    ^~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[9] {aka struct color (*)[9]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:600:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, authors, 14, 25);
+                    ^~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[25] {aka struct color (*)[25]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:603:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, breakout, 7, 38);
+                    ^~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[38] {aka struct color (*)[38]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+make: *** [src/subdir.mk:29: src/main.o] Error 1
+17:50:44 **** Incremental Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/blocks.h:5:0,
+                 from ../src/main.h:4,
+                 from ../src/main.c:5:
+../src/colors.h:19:12: warning: excess elements in array initializer
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:73:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:19:12: note: (near initialization for 'number_3[3]')
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:73:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:19:12: warning: excess elements in array initializer
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:74:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:19:12: note: (near initialization for 'number_3[4]')
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:74:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:17:11: warning: excess elements in array initializer
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:75:26: note: in expansion of macro 'N'
+  {N,GI,GI,GI,W,W,W,GC,GI,N},
+                          ^
+../src/colors.h:17:11: note: (near initialization for 'number_3[5]')
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:75:26: note: in expansion of macro 'N'
+  {N,GI,GI,GI,W,W,W,GC,GI,N},
+                          ^
+../src/colors.h:17:11: warning: excess elements in array initializer
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:76:26: note: in expansion of macro 'N'
+  {N,GI,GI,GI,W,W,W,GC,GI,N},
+                          ^
+../src/colors.h:17:11: note: (near initialization for 'number_3[6]')
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:76:26: note: in expansion of macro 'N'
+  {N,GI,GI,GI,W,W,W,GC,GI,N},
+                          ^
+../src/colors.h:19:12: warning: excess elements in array initializer
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:77:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:19:12: note: (near initialization for 'number_3[7]')
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:77:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:18:12: warning: excess elements in array initializer
+ #define GO {0x3d, 0x3d, 0x3d}
+            ^
+../src/main.h:78:26: note: in expansion of macro 'GO'
+  {GO,W,W,GC,GO,GO,W,W,GC,GO},
+                          ^~
+../src/colors.h:18:12: note: (near initialization for 'number_3[8]')
+ #define GO {0x3d, 0x3d, 0x3d}
+            ^
+../src/main.h:78:26: note: in expansion of macro 'GO'
+  {GO,W,W,GC,GO,GO,W,W,GC,GO},
+                          ^~
+../src/colors.h:17:11: warning: excess elements in array initializer
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:80:25: note: in expansion of macro 'N'
+  {N,GO,W,W,W,W,W, GC,GO,N},
+                         ^
+../src/colors.h:17:11: note: (near initialization for 'number_3[10]')
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:80:25: note: in expansion of macro 'N'
+  {N,GO,W,W,W,W,W, GC,GO,N},
+                         ^
+In file included from ../src/main.c:5:0:
+../src/main.h:166:84: error: stray '\302' in program
+   {W,W,W,N, N, W,N,N,W, N, W,W,W,W, N, W,N,N,W, N, W,N,N,W, N, W,W,W,W, N, W,W,W,W, N, N,W,N}
+                                                                                    ^
+../src/main.h:166:85: error: stray '\240' in program
+   {W,W,W,N, N, W,N,N,W, N, W,W,W,W, N, W,N,N,W, N, W,N,N,W, N, W,W,W,W, N, W,W,W,W, N, N,W,N}
+                                                                                     ^
+../src/main.h:166:88: error: stray '\302' in program
+   {W,W,W,N, N, W,N,N,W, N, W,W,W,W, N, W,N,N,W, N, W,N,N,W, N, W,W,W,W, N, W,W,W,W, N, N,W,N}
+                                                                                        ^
+../src/main.h:166:89: error: stray '\240' in program
+   {W,W,W,N, N, W,N,N,W, N, W,W,W,W, N, W,N,N,W, N, W,N,N,W, N, W,W,W,W, N, W,W,W,W, N, N,W,N}
+                                                                                         ^
+../src/main.c: In function 'life_lost':
+../src/main.c:124:23: warning: passing argument 2 of 'paint_animation' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_animation(pos, smoke, SMOKE_FRAMES, SMOKE_TIME, SMOKE_WIDTH, SMOKE_HEIGHT);
+                       ^~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:16:6: note: expected 'color_t *** {aka struct color ***}' but argument is of type 'color_t (*)[6][3] {aka struct color (*)[6][3]}'
+ void paint_animation(position_t pos, color_t ***animation, int frames, int period, int rows, int cols);
+      ^~~~~~~~~~~~~~~
+../src/main.c: In function 'level_selection':
+../src/main.c:582:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, choose_level, 5, 47);
+                    ^~~~~~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[47] {aka struct color (*)[47]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:585:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, number_1, 12, 9);
+                    ^~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[9] {aka struct color (*)[9]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:587:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, button, 10, 9);
+                    ^~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[9] {aka struct color (*)[9]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:590:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, number_2, 12, 10);
+                    ^~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[10] {aka struct color (*)[10]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:592:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, button, 10, 9);
+                    ^~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[9] {aka struct color (*)[9]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:595:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, number_3, 12,9);
+                    ^~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[9] {aka struct color (*)[9]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:597:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, button, 10, 9);
+                    ^~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[9] {aka struct color (*)[9]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:600:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, authors, 14, 25);
+                    ^~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[25] {aka struct color (*)[25]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:603:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, breakout, 7, 38);
+                    ^~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[38] {aka struct color (*)[38]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+make: *** [src/subdir.mk:29: src/main.o] Error 1
+17:51:02 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/blocks.h:5:0,
+                 from ../src/main.h:4,
+                 from ../src/main.c:5:
+../src/colors.h:19:12: warning: excess elements in array initializer
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:73:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:19:12: note: (near initialization for 'number_3[3]')
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:73:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:19:12: warning: excess elements in array initializer
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:74:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:19:12: note: (near initialization for 'number_3[4]')
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:74:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:17:11: warning: excess elements in array initializer
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:75:26: note: in expansion of macro 'N'
+  {N,GI,GI,GI,W,W,W,GC,GI,N},
+                          ^
+../src/colors.h:17:11: note: (near initialization for 'number_3[5]')
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:75:26: note: in expansion of macro 'N'
+  {N,GI,GI,GI,W,W,W,GC,GI,N},
+                          ^
+../src/colors.h:17:11: warning: excess elements in array initializer
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:76:26: note: in expansion of macro 'N'
+  {N,GI,GI,GI,W,W,W,GC,GI,N},
+                          ^
+../src/colors.h:17:11: note: (near initialization for 'number_3[6]')
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:76:26: note: in expansion of macro 'N'
+  {N,GI,GI,GI,W,W,W,GC,GI,N},
+                          ^
+../src/colors.h:19:12: warning: excess elements in array initializer
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:77:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:19:12: note: (near initialization for 'number_3[7]')
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:77:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:18:12: warning: excess elements in array initializer
+ #define GO {0x3d, 0x3d, 0x3d}
+            ^
+../src/main.h:78:26: note: in expansion of macro 'GO'
+  {GO,W,W,GC,GO,GO,W,W,GC,GO},
+                          ^~
+../src/colors.h:18:12: note: (near initialization for 'number_3[8]')
+ #define GO {0x3d, 0x3d, 0x3d}
+            ^
+../src/main.h:78:26: note: in expansion of macro 'GO'
+  {GO,W,W,GC,GO,GO,W,W,GC,GO},
+                          ^~
+../src/colors.h:17:11: warning: excess elements in array initializer
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:80:25: note: in expansion of macro 'N'
+  {N,GO,W,W,W,W,W, GC,GO,N},
+                         ^
+../src/colors.h:17:11: note: (near initialization for 'number_3[10]')
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:80:25: note: in expansion of macro 'N'
+  {N,GO,W,W,W,W,W, GC,GO,N},
+                         ^
+In file included from ../src/main.c:5:0:
+../src/main.h:166:84: error: stray '\240' in program
+   {W,W,W,N, N, W,N,N,W, N, W,W,W,W, N, W,N,N,W, N, W,N,N,W, N, W,W,W,W, N, W,W,W,W,�N, N,W,N}
+                                                                                    ^
+../src/main.c: In function 'life_lost':
+../src/main.c:124:23: warning: passing argument 2 of 'paint_animation' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_animation(pos, smoke, SMOKE_FRAMES, SMOKE_TIME, SMOKE_WIDTH, SMOKE_HEIGHT);
+                       ^~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:16:6: note: expected 'color_t *** {aka struct color ***}' but argument is of type 'color_t (*)[6][3] {aka struct color (*)[6][3]}'
+ void paint_animation(position_t pos, color_t ***animation, int frames, int period, int rows, int cols);
+      ^~~~~~~~~~~~~~~
+../src/main.c: In function 'level_selection':
+../src/main.c:582:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, choose_level, 5, 47);
+                    ^~~~~~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[47] {aka struct color (*)[47]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:585:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, number_1, 12, 9);
+                    ^~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[9] {aka struct color (*)[9]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:587:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, button, 10, 9);
+                    ^~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[9] {aka struct color (*)[9]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:590:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, number_2, 12, 10);
+                    ^~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[10] {aka struct color (*)[10]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:592:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, button, 10, 9);
+                    ^~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[9] {aka struct color (*)[9]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:595:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, number_3, 12,9);
+                    ^~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[9] {aka struct color (*)[9]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:597:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, button, 10, 9);
+                    ^~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[9] {aka struct color (*)[9]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:600:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, authors, 14, 25);
+                    ^~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[25] {aka struct color (*)[25]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:603:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, breakout, 7, 38);
+                    ^~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[38] {aka struct color (*)[38]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+make: *** [src/subdir.mk:29: src/main.o] Error 1
+17:51:13 **** Incremental Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/blocks.h:5:0,
+                 from ../src/main.h:4,
+                 from ../src/main.c:5:
+../src/colors.h:19:12: warning: excess elements in array initializer
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:73:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:19:12: note: (near initialization for 'number_3[3]')
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:73:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:19:12: warning: excess elements in array initializer
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:74:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:19:12: note: (near initialization for 'number_3[4]')
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:74:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:17:11: warning: excess elements in array initializer
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:75:26: note: in expansion of macro 'N'
+  {N,GI,GI,GI,W,W,W,GC,GI,N},
+                          ^
+../src/colors.h:17:11: note: (near initialization for 'number_3[5]')
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:75:26: note: in expansion of macro 'N'
+  {N,GI,GI,GI,W,W,W,GC,GI,N},
+                          ^
+../src/colors.h:17:11: warning: excess elements in array initializer
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:76:26: note: in expansion of macro 'N'
+  {N,GI,GI,GI,W,W,W,GC,GI,N},
+                          ^
+../src/colors.h:17:11: note: (near initialization for 'number_3[6]')
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:76:26: note: in expansion of macro 'N'
+  {N,GI,GI,GI,W,W,W,GC,GI,N},
+                          ^
+../src/colors.h:19:12: warning: excess elements in array initializer
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:77:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:19:12: note: (near initialization for 'number_3[7]')
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:77:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:18:12: warning: excess elements in array initializer
+ #define GO {0x3d, 0x3d, 0x3d}
+            ^
+../src/main.h:78:26: note: in expansion of macro 'GO'
+  {GO,W,W,GC,GO,GO,W,W,GC,GO},
+                          ^~
+../src/colors.h:18:12: note: (near initialization for 'number_3[8]')
+ #define GO {0x3d, 0x3d, 0x3d}
+            ^
+../src/main.h:78:26: note: in expansion of macro 'GO'
+  {GO,W,W,GC,GO,GO,W,W,GC,GO},
+                          ^~
+../src/colors.h:17:11: warning: excess elements in array initializer
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:80:25: note: in expansion of macro 'N'
+  {N,GO,W,W,W,W,W, GC,GO,N},
+                         ^
+../src/colors.h:17:11: note: (near initialization for 'number_3[10]')
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:80:25: note: in expansion of macro 'N'
+  {N,GO,W,W,W,W,W, GC,GO,N},
+                         ^
+In file included from ../src/main.c:5:0:
+../src/main.h:166:84: error: stray '\240' in program
+   {W,W,W,N, N, W,N,N,W, N, W,W,W,W, N, W,N,N,W, N, W,N,N,W, N, W,W,W,W, N, W,W,W,W,�N, N,W,N}
+                                                                                    ^
+../src/main.c: In function 'life_lost':
+../src/main.c:124:23: warning: passing argument 2 of 'paint_animation' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_animation(pos, smoke, SMOKE_FRAMES, SMOKE_TIME, SMOKE_WIDTH, SMOKE_HEIGHT);
+                       ^~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:16:6: note: expected 'color_t *** {aka struct color ***}' but argument is of type 'color_t (*)[6][3] {aka struct color (*)[6][3]}'
+ void paint_animation(position_t pos, color_t ***animation, int frames, int period, int rows, int cols);
+      ^~~~~~~~~~~~~~~
+../src/main.c: In function 'level_selection':
+../src/main.c:582:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, choose_level, 5, 47);
+                    ^~~~~~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[47] {aka struct color (*)[47]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:585:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, number_1, 12, 9);
+                    ^~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[9] {aka struct color (*)[9]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:587:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, button, 10, 9);
+                    ^~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[9] {aka struct color (*)[9]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:590:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, number_2, 12, 10);
+                    ^~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[10] {aka struct color (*)[10]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:592:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, button, 10, 9);
+                    ^~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[9] {aka struct color (*)[9]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:595:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, number_3, 12,9);
+                    ^~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[9] {aka struct color (*)[9]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:597:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, button, 10, 9);
+                    ^~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[9] {aka struct color (*)[9]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:600:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, authors, 14, 25);
+                    ^~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[25] {aka struct color (*)[25]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:603:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, breakout, 7, 38);
+                    ^~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[38] {aka struct color (*)[38]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+make: *** [src/subdir.mk:29: src/main.o] Error 1
+17:51:56 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/blocks.h:5:0,
+                 from ../src/main.h:4,
+                 from ../src/main.c:5:
+../src/colors.h:19:12: warning: excess elements in array initializer
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:73:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:19:12: note: (near initialization for 'number_3[3]')
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:73:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:19:12: warning: excess elements in array initializer
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:74:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:19:12: note: (near initialization for 'number_3[4]')
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:74:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:17:11: warning: excess elements in array initializer
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:75:26: note: in expansion of macro 'N'
+  {N,GI,GI,GI,W,W,W,GC,GI,N},
+                          ^
+../src/colors.h:17:11: note: (near initialization for 'number_3[5]')
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:75:26: note: in expansion of macro 'N'
+  {N,GI,GI,GI,W,W,W,GC,GI,N},
+                          ^
+../src/colors.h:17:11: warning: excess elements in array initializer
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:76:26: note: in expansion of macro 'N'
+  {N,GI,GI,GI,W,W,W,GC,GI,N},
+                          ^
+../src/colors.h:17:11: note: (near initialization for 'number_3[6]')
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:76:26: note: in expansion of macro 'N'
+  {N,GI,GI,GI,W,W,W,GC,GI,N},
+                          ^
+../src/colors.h:19:12: warning: excess elements in array initializer
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:77:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:19:12: note: (near initialization for 'number_3[7]')
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:77:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:18:12: warning: excess elements in array initializer
+ #define GO {0x3d, 0x3d, 0x3d}
+            ^
+../src/main.h:78:26: note: in expansion of macro 'GO'
+  {GO,W,W,GC,GO,GO,W,W,GC,GO},
+                          ^~
+../src/colors.h:18:12: note: (near initialization for 'number_3[8]')
+ #define GO {0x3d, 0x3d, 0x3d}
+            ^
+../src/main.h:78:26: note: in expansion of macro 'GO'
+  {GO,W,W,GC,GO,GO,W,W,GC,GO},
+                          ^~
+../src/colors.h:17:11: warning: excess elements in array initializer
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:80:25: note: in expansion of macro 'N'
+  {N,GO,W,W,W,W,W, GC,GO,N},
+                         ^
+../src/colors.h:17:11: note: (near initialization for 'number_3[10]')
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:80:25: note: in expansion of macro 'N'
+  {N,GO,W,W,W,W,W, GC,GO,N},
+                         ^
+In file included from ../src/main.c:5:0:
+../src/main.h:166:86: error: stray '\240' in program
+     {W,W,W,N, N, W,N,N,W, N, W,W,W,W, N, W,N,N,W, N, W,N,N,W, N, W,W,W,W, N, W,W,W,W,�N,�N,W,N}
+                                                                                      ^
+../src/main.h:166:89: error: stray '\240' in program
+     {W,W,W,N, N, W,N,N,W, N, W,W,W,W, N, W,N,N,W, N, W,N,N,W, N, W,W,W,W, N, W,W,W,W,�N,�N,W,N}
+                                                                                         ^
+../src/main.c: In function 'life_lost':
+../src/main.c:124:23: warning: passing argument 2 of 'paint_animation' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_animation(pos, smoke, SMOKE_FRAMES, SMOKE_TIME, SMOKE_WIDTH, SMOKE_HEIGHT);
+                       ^~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:16:6: note: expected 'color_t *** {aka struct color ***}' but argument is of type 'color_t (*)[6][3] {aka struct color (*)[6][3]}'
+ void paint_animation(position_t pos, color_t ***animation, int frames, int period, int rows, int cols);
+      ^~~~~~~~~~~~~~~
+../src/main.c: In function 'level_selection':
+../src/main.c:582:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, choose_level, 5, 47);
+                    ^~~~~~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[47] {aka struct color (*)[47]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:585:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, number_1, 12, 9);
+                    ^~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[9] {aka struct color (*)[9]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:587:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, button, 10, 9);
+                    ^~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[9] {aka struct color (*)[9]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:590:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, number_2, 12, 10);
+                    ^~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[10] {aka struct color (*)[10]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:592:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, button, 10, 9);
+                    ^~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[9] {aka struct color (*)[9]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:595:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, number_3, 12,9);
+                    ^~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[9] {aka struct color (*)[9]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:597:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, button, 10, 9);
+                    ^~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[9] {aka struct color (*)[9]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:600:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, authors, 14, 25);
+                    ^~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[25] {aka struct color (*)[25]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:603:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, breakout, 7, 38);
+                    ^~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[38] {aka struct color (*)[38]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+make: *** [src/subdir.mk:29: src/main.o] Error 1
+17:52:05 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/blocks.h:5:0,
+                 from ../src/main.h:4,
+                 from ../src/main.c:5:
+../src/colors.h:19:12: warning: excess elements in array initializer
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:73:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:19:12: note: (near initialization for 'number_3[3]')
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:73:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:19:12: warning: excess elements in array initializer
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:74:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:19:12: note: (near initialization for 'number_3[4]')
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:74:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:17:11: warning: excess elements in array initializer
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:75:26: note: in expansion of macro 'N'
+  {N,GI,GI,GI,W,W,W,GC,GI,N},
+                          ^
+../src/colors.h:17:11: note: (near initialization for 'number_3[5]')
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:75:26: note: in expansion of macro 'N'
+  {N,GI,GI,GI,W,W,W,GC,GI,N},
+                          ^
+../src/colors.h:17:11: warning: excess elements in array initializer
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:76:26: note: in expansion of macro 'N'
+  {N,GI,GI,GI,W,W,W,GC,GI,N},
+                          ^
+../src/colors.h:17:11: note: (near initialization for 'number_3[6]')
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:76:26: note: in expansion of macro 'N'
+  {N,GI,GI,GI,W,W,W,GC,GI,N},
+                          ^
+../src/colors.h:19:12: warning: excess elements in array initializer
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:77:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:19:12: note: (near initialization for 'number_3[7]')
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:77:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:18:12: warning: excess elements in array initializer
+ #define GO {0x3d, 0x3d, 0x3d}
+            ^
+../src/main.h:78:26: note: in expansion of macro 'GO'
+  {GO,W,W,GC,GO,GO,W,W,GC,GO},
+                          ^~
+../src/colors.h:18:12: note: (near initialization for 'number_3[8]')
+ #define GO {0x3d, 0x3d, 0x3d}
+            ^
+../src/main.h:78:26: note: in expansion of macro 'GO'
+  {GO,W,W,GC,GO,GO,W,W,GC,GO},
+                          ^~
+../src/colors.h:17:11: warning: excess elements in array initializer
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:80:25: note: in expansion of macro 'N'
+  {N,GO,W,W,W,W,W, GC,GO,N},
+                         ^
+../src/colors.h:17:11: note: (near initialization for 'number_3[10]')
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:80:25: note: in expansion of macro 'N'
+  {N,GO,W,W,W,W,W, GC,GO,N},
+                         ^
+In file included from ../src/main.c:5:0:
+../src/main.h:166:84: error: stray '\240' in program
+   {W,W,W,N, N, W,N,N,W, N, W,W,W,W, N, W,N,N,W, N, W,N,N,W, N, W,W,W,W, N, W,W,W,W,�N,�N,W,N}
+                                                                                    ^
+../src/main.h:166:87: error: stray '\240' in program
+   {W,W,W,N, N, W,N,N,W, N, W,W,W,W, N, W,N,N,W, N, W,N,N,W, N, W,W,W,W, N, W,W,W,W,�N,�N,W,N}
+                                                                                       ^
+../src/main.c: In function 'life_lost':
+../src/main.c:124:23: warning: passing argument 2 of 'paint_animation' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_animation(pos, smoke, SMOKE_FRAMES, SMOKE_TIME, SMOKE_WIDTH, SMOKE_HEIGHT);
+                       ^~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:16:6: note: expected 'color_t *** {aka struct color ***}' but argument is of type 'color_t (*)[6][3] {aka struct color (*)[6][3]}'
+ void paint_animation(position_t pos, color_t ***animation, int frames, int period, int rows, int cols);
+      ^~~~~~~~~~~~~~~
+../src/main.c: In function 'level_selection':
+../src/main.c:582:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, choose_level, 5, 47);
+                    ^~~~~~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[47] {aka struct color (*)[47]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:585:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, number_1, 12, 9);
+                    ^~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[9] {aka struct color (*)[9]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:587:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, button, 10, 9);
+                    ^~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[9] {aka struct color (*)[9]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:590:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, number_2, 12, 10);
+                    ^~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[10] {aka struct color (*)[10]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:592:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, button, 10, 9);
+                    ^~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[9] {aka struct color (*)[9]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:595:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, number_3, 12,9);
+                    ^~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[9] {aka struct color (*)[9]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:597:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, button, 10, 9);
+                    ^~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[9] {aka struct color (*)[9]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:600:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, authors, 14, 25);
+                    ^~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[25] {aka struct color (*)[25]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:603:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, breakout, 7, 38);
+                    ^~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[38] {aka struct color (*)[38]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+make: *** [src/subdir.mk:29: src/main.o] Error 1
+17:52:07 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/blocks.h:5:0,
+                 from ../src/main.h:4,
+                 from ../src/main.c:5:
+../src/colors.h:19:12: warning: excess elements in array initializer
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:73:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:19:12: note: (near initialization for 'number_3[3]')
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:73:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:19:12: warning: excess elements in array initializer
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:74:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:19:12: note: (near initialization for 'number_3[4]')
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:74:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:17:11: warning: excess elements in array initializer
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:75:26: note: in expansion of macro 'N'
+  {N,GI,GI,GI,W,W,W,GC,GI,N},
+                          ^
+../src/colors.h:17:11: note: (near initialization for 'number_3[5]')
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:75:26: note: in expansion of macro 'N'
+  {N,GI,GI,GI,W,W,W,GC,GI,N},
+                          ^
+../src/colors.h:17:11: warning: excess elements in array initializer
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:76:26: note: in expansion of macro 'N'
+  {N,GI,GI,GI,W,W,W,GC,GI,N},
+                          ^
+../src/colors.h:17:11: note: (near initialization for 'number_3[6]')
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:76:26: note: in expansion of macro 'N'
+  {N,GI,GI,GI,W,W,W,GC,GI,N},
+                          ^
+../src/colors.h:19:12: warning: excess elements in array initializer
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:77:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:19:12: note: (near initialization for 'number_3[7]')
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:77:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:18:12: warning: excess elements in array initializer
+ #define GO {0x3d, 0x3d, 0x3d}
+            ^
+../src/main.h:78:26: note: in expansion of macro 'GO'
+  {GO,W,W,GC,GO,GO,W,W,GC,GO},
+                          ^~
+../src/colors.h:18:12: note: (near initialization for 'number_3[8]')
+ #define GO {0x3d, 0x3d, 0x3d}
+            ^
+../src/main.h:78:26: note: in expansion of macro 'GO'
+  {GO,W,W,GC,GO,GO,W,W,GC,GO},
+                          ^~
+../src/colors.h:17:11: warning: excess elements in array initializer
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:80:25: note: in expansion of macro 'N'
+  {N,GO,W,W,W,W,W, GC,GO,N},
+                         ^
+../src/colors.h:17:11: note: (near initialization for 'number_3[10]')
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:80:25: note: in expansion of macro 'N'
+  {N,GO,W,W,W,W,W, GC,GO,N},
+                         ^
+In file included from ../src/main.c:5:0:
+../src/main.h:166:84: error: stray '\240' in program
+   {W,W,W,N, N, W,N,N,W, N, W,W,W,W, N, W,N,N,W, N, W,N,N,W, N, W,W,W,W, N, W,W,W,W,�N,�N,W,N}
+                                                                                    ^
+../src/main.h:166:87: error: stray '\240' in program
+   {W,W,W,N, N, W,N,N,W, N, W,W,W,W, N, W,N,N,W, N, W,N,N,W, N, W,W,W,W, N, W,W,W,W,�N,�N,W,N}
+                                                                                       ^
+../src/main.c: In function 'life_lost':
+../src/main.c:124:23: warning: passing argument 2 of 'paint_animation' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_animation(pos, smoke, SMOKE_FRAMES, SMOKE_TIME, SMOKE_WIDTH, SMOKE_HEIGHT);
+                       ^~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:16:6: note: expected 'color_t *** {aka struct color ***}' but argument is of type 'color_t (*)[6][3] {aka struct color (*)[6][3]}'
+ void paint_animation(position_t pos, color_t ***animation, int frames, int period, int rows, int cols);
+      ^~~~~~~~~~~~~~~
+../src/main.c: In function 'level_selection':
+../src/main.c:582:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, choose_level, 5, 47);
+                    ^~~~~~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[47] {aka struct color (*)[47]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:585:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, number_1, 12, 9);
+                    ^~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[9] {aka struct color (*)[9]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:587:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, button, 10, 9);
+                    ^~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[9] {aka struct color (*)[9]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:590:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, number_2, 12, 10);
+                    ^~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[10] {aka struct color (*)[10]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:592:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, button, 10, 9);
+                    ^~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[9] {aka struct color (*)[9]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:595:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, number_3, 12,9);
+                    ^~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[9] {aka struct color (*)[9]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:597:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, button, 10, 9);
+                    ^~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[9] {aka struct color (*)[9]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:600:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, authors, 14, 25);
+                    ^~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[25] {aka struct color (*)[25]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:603:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, breakout, 7, 38);
+                    ^~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[38] {aka struct color (*)[38]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+make: *** [src/subdir.mk:29: src/main.o] Error 1
+17:52:10 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/blocks.h:5:0,
+                 from ../src/main.h:4,
+                 from ../src/main.c:5:
+../src/colors.h:19:12: warning: excess elements in array initializer
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:73:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:19:12: note: (near initialization for 'number_3[3]')
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:73:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:19:12: warning: excess elements in array initializer
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:74:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:19:12: note: (near initialization for 'number_3[4]')
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:74:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:17:11: warning: excess elements in array initializer
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:75:26: note: in expansion of macro 'N'
+  {N,GI,GI,GI,W,W,W,GC,GI,N},
+                          ^
+../src/colors.h:17:11: note: (near initialization for 'number_3[5]')
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:75:26: note: in expansion of macro 'N'
+  {N,GI,GI,GI,W,W,W,GC,GI,N},
+                          ^
+../src/colors.h:17:11: warning: excess elements in array initializer
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:76:26: note: in expansion of macro 'N'
+  {N,GI,GI,GI,W,W,W,GC,GI,N},
+                          ^
+../src/colors.h:17:11: note: (near initialization for 'number_3[6]')
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:76:26: note: in expansion of macro 'N'
+  {N,GI,GI,GI,W,W,W,GC,GI,N},
+                          ^
+../src/colors.h:19:12: warning: excess elements in array initializer
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:77:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:19:12: note: (near initialization for 'number_3[7]')
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:77:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:18:12: warning: excess elements in array initializer
+ #define GO {0x3d, 0x3d, 0x3d}
+            ^
+../src/main.h:78:26: note: in expansion of macro 'GO'
+  {GO,W,W,GC,GO,GO,W,W,GC,GO},
+                          ^~
+../src/colors.h:18:12: note: (near initialization for 'number_3[8]')
+ #define GO {0x3d, 0x3d, 0x3d}
+            ^
+../src/main.h:78:26: note: in expansion of macro 'GO'
+  {GO,W,W,GC,GO,GO,W,W,GC,GO},
+                          ^~
+../src/colors.h:17:11: warning: excess elements in array initializer
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:80:25: note: in expansion of macro 'N'
+  {N,GO,W,W,W,W,W, GC,GO,N},
+                         ^
+../src/colors.h:17:11: note: (near initialization for 'number_3[10]')
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:80:25: note: in expansion of macro 'N'
+  {N,GO,W,W,W,W,W, GC,GO,N},
+                         ^
+In file included from ../src/main.c:5:0:
+../src/main.h:166:84: error: stray '\240' in program
+   {W,W,W,N, N, W,N,N,W, N, W,W,W,W, N, W,N,N,W, N, W,N,N,W, N, W,W,W,W, N, W,W,W,W,�N,�N,W,N}
+                                                                                    ^
+../src/main.h:166:87: error: stray '\240' in program
+   {W,W,W,N, N, W,N,N,W, N, W,W,W,W, N, W,N,N,W, N, W,N,N,W, N, W,W,W,W, N, W,W,W,W,�N,�N,W,N}
+                                                                                       ^
+../src/main.c: In function 'life_lost':
+../src/main.c:124:23: warning: passing argument 2 of 'paint_animation' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_animation(pos, smoke, SMOKE_FRAMES, SMOKE_TIME, SMOKE_WIDTH, SMOKE_HEIGHT);
+                       ^~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:16:6: note: expected 'color_t *** {aka struct color ***}' but argument is of type 'color_t (*)[6][3] {aka struct color (*)[6][3]}'
+ void paint_animation(position_t pos, color_t ***animation, int frames, int period, int rows, int cols);
+      ^~~~~~~~~~~~~~~
+../src/main.c: In function 'level_selection':
+../src/main.c:582:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, choose_level, 5, 47);
+                    ^~~~~~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[47] {aka struct color (*)[47]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:585:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, number_1, 12, 9);
+                    ^~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[9] {aka struct color (*)[9]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:587:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, button, 10, 9);
+                    ^~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[9] {aka struct color (*)[9]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:590:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, number_2, 12, 10);
+                    ^~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[10] {aka struct color (*)[10]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:592:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, button, 10, 9);
+                    ^~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[9] {aka struct color (*)[9]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:595:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, number_3, 12,9);
+                    ^~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[9] {aka struct color (*)[9]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:597:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, button, 10, 9);
+                    ^~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[9] {aka struct color (*)[9]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:600:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, authors, 14, 25);
+                    ^~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[25] {aka struct color (*)[25]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:603:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, breakout, 7, 38);
+                    ^~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[38] {aka struct color (*)[38]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+make: *** [src/subdir.mk:29: src/main.o] Error 1
+17:52:25 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/blocks.h:5:0,
+                 from ../src/main.h:4,
+                 from ../src/main.c:5:
+../src/colors.h:19:12: warning: excess elements in array initializer
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:73:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:19:12: note: (near initialization for 'number_3[3]')
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:73:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:19:12: warning: excess elements in array initializer
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:74:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:19:12: note: (near initialization for 'number_3[4]')
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:74:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:17:11: warning: excess elements in array initializer
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:75:26: note: in expansion of macro 'N'
+  {N,GI,GI,GI,W,W,W,GC,GI,N},
+                          ^
+../src/colors.h:17:11: note: (near initialization for 'number_3[5]')
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:75:26: note: in expansion of macro 'N'
+  {N,GI,GI,GI,W,W,W,GC,GI,N},
+                          ^
+../src/colors.h:17:11: warning: excess elements in array initializer
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:76:26: note: in expansion of macro 'N'
+  {N,GI,GI,GI,W,W,W,GC,GI,N},
+                          ^
+../src/colors.h:17:11: note: (near initialization for 'number_3[6]')
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:76:26: note: in expansion of macro 'N'
+  {N,GI,GI,GI,W,W,W,GC,GI,N},
+                          ^
+../src/colors.h:19:12: warning: excess elements in array initializer
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:77:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:19:12: note: (near initialization for 'number_3[7]')
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:77:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:18:12: warning: excess elements in array initializer
+ #define GO {0x3d, 0x3d, 0x3d}
+            ^
+../src/main.h:78:26: note: in expansion of macro 'GO'
+  {GO,W,W,GC,GO,GO,W,W,GC,GO},
+                          ^~
+../src/colors.h:18:12: note: (near initialization for 'number_3[8]')
+ #define GO {0x3d, 0x3d, 0x3d}
+            ^
+../src/main.h:78:26: note: in expansion of macro 'GO'
+  {GO,W,W,GC,GO,GO,W,W,GC,GO},
+                          ^~
+../src/colors.h:17:11: warning: excess elements in array initializer
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:80:25: note: in expansion of macro 'N'
+  {N,GO,W,W,W,W,W, GC,GO,N},
+                         ^
+../src/colors.h:17:11: note: (near initialization for 'number_3[10]')
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:80:25: note: in expansion of macro 'N'
+  {N,GO,W,W,W,W,W, GC,GO,N},
+                         ^
+In file included from ../src/main.c:5:0:
+../src/main.h:166:84: error: stray '\240' in program
+   {W,W,W,N, N, W,N,N,W, N, W,W,W,W, N, W,N,N,W, N, W,N,N,W, N, W,W,W,W, N, W,W,W,W,�N,�N,W,N}
+                                                                                    ^
+../src/main.h:166:87: error: stray '\240' in program
+   {W,W,W,N, N, W,N,N,W, N, W,W,W,W, N, W,N,N,W, N, W,N,N,W, N, W,W,W,W, N, W,W,W,W,�N,�N,W,N}
+                                                                                       ^
+../src/main.c: In function 'life_lost':
+../src/main.c:124:23: warning: passing argument 2 of 'paint_animation' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_animation(pos, smoke, SMOKE_FRAMES, SMOKE_TIME, SMOKE_WIDTH, SMOKE_HEIGHT);
+                       ^~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:16:6: note: expected 'color_t *** {aka struct color ***}' but argument is of type 'color_t (*)[6][3] {aka struct color (*)[6][3]}'
+ void paint_animation(position_t pos, color_t ***animation, int frames, int period, int rows, int cols);
+      ^~~~~~~~~~~~~~~
+../src/main.c: In function 'level_selection':
+../src/main.c:582:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, choose_level, 5, 47);
+                    ^~~~~~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[47] {aka struct color (*)[47]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:585:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, number_1, 12, 9);
+                    ^~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[9] {aka struct color (*)[9]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:587:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, button, 10, 9);
+                    ^~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[9] {aka struct color (*)[9]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:590:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, number_2, 12, 10);
+                    ^~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[10] {aka struct color (*)[10]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:592:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, button, 10, 9);
+                    ^~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[9] {aka struct color (*)[9]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:595:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, number_3, 12,9);
+                    ^~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[9] {aka struct color (*)[9]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:597:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, button, 10, 9);
+                    ^~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[9] {aka struct color (*)[9]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:600:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, authors, 14, 25);
+                    ^~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[25] {aka struct color (*)[25]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:603:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, breakout, 7, 38);
+                    ^~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[38] {aka struct color (*)[38]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+make: *** [src/subdir.mk:29: src/main.o] Error 1
+17:52:30 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/blocks.h:5:0,
+                 from ../src/main.h:4,
+                 from ../src/main.c:5:
+../src/colors.h:19:12: warning: excess elements in array initializer
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:73:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:19:12: note: (near initialization for 'number_3[3]')
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:73:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:19:12: warning: excess elements in array initializer
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:74:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:19:12: note: (near initialization for 'number_3[4]')
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:74:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:17:11: warning: excess elements in array initializer
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:75:26: note: in expansion of macro 'N'
+  {N,GI,GI,GI,W,W,W,GC,GI,N},
+                          ^
+../src/colors.h:17:11: note: (near initialization for 'number_3[5]')
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:75:26: note: in expansion of macro 'N'
+  {N,GI,GI,GI,W,W,W,GC,GI,N},
+                          ^
+../src/colors.h:17:11: warning: excess elements in array initializer
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:76:26: note: in expansion of macro 'N'
+  {N,GI,GI,GI,W,W,W,GC,GI,N},
+                          ^
+../src/colors.h:17:11: note: (near initialization for 'number_3[6]')
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:76:26: note: in expansion of macro 'N'
+  {N,GI,GI,GI,W,W,W,GC,GI,N},
+                          ^
+../src/colors.h:19:12: warning: excess elements in array initializer
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:77:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:19:12: note: (near initialization for 'number_3[7]')
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:77:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:18:12: warning: excess elements in array initializer
+ #define GO {0x3d, 0x3d, 0x3d}
+            ^
+../src/main.h:78:26: note: in expansion of macro 'GO'
+  {GO,W,W,GC,GO,GO,W,W,GC,GO},
+                          ^~
+../src/colors.h:18:12: note: (near initialization for 'number_3[8]')
+ #define GO {0x3d, 0x3d, 0x3d}
+            ^
+../src/main.h:78:26: note: in expansion of macro 'GO'
+  {GO,W,W,GC,GO,GO,W,W,GC,GO},
+                          ^~
+../src/colors.h:17:11: warning: excess elements in array initializer
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:80:25: note: in expansion of macro 'N'
+  {N,GO,W,W,W,W,W, GC,GO,N},
+                         ^
+../src/colors.h:17:11: note: (near initialization for 'number_3[10]')
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:80:25: note: in expansion of macro 'N'
+  {N,GO,W,W,W,W,W, GC,GO,N},
+                         ^
+In file included from ../src/main.c:5:0:
+../src/main.h:166:84: error: stray '\240' in program
+   {W,W,W,N, N, W,N,N,W, N, W,W,W,W, N, W,N,N,W, N, W,N,N,W, N, W,W,W,W, N, W,W,W,W,�N,�N,W,N}
+                                                                                    ^
+../src/main.h:166:87: error: stray '\240' in program
+   {W,W,W,N, N, W,N,N,W, N, W,W,W,W, N, W,N,N,W, N, W,N,N,W, N, W,W,W,W, N, W,W,W,W,�N,�N,W,N}
+                                                                                       ^
+../src/main.c: In function 'life_lost':
+../src/main.c:124:23: warning: passing argument 2 of 'paint_animation' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_animation(pos, smoke, SMOKE_FRAMES, SMOKE_TIME, SMOKE_WIDTH, SMOKE_HEIGHT);
+                       ^~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:16:6: note: expected 'color_t *** {aka struct color ***}' but argument is of type 'color_t (*)[6][3] {aka struct color (*)[6][3]}'
+ void paint_animation(position_t pos, color_t ***animation, int frames, int period, int rows, int cols);
+      ^~~~~~~~~~~~~~~
+../src/main.c: In function 'level_selection':
+../src/main.c:582:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, choose_level, 5, 47);
+                    ^~~~~~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[47] {aka struct color (*)[47]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:585:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, number_1, 12, 9);
+                    ^~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[9] {aka struct color (*)[9]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:587:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, button, 10, 9);
+                    ^~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[9] {aka struct color (*)[9]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:590:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, number_2, 12, 10);
+                    ^~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[10] {aka struct color (*)[10]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:592:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, button, 10, 9);
+                    ^~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[9] {aka struct color (*)[9]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:595:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, number_3, 12,9);
+                    ^~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[9] {aka struct color (*)[9]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:597:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, button, 10, 9);
+                    ^~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[9] {aka struct color (*)[9]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:600:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, authors, 14, 25);
+                    ^~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[25] {aka struct color (*)[25]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:603:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, breakout, 7, 38);
+                    ^~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[38] {aka struct color (*)[38]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+make: *** [src/subdir.mk:29: src/main.o] Error 1
+17:53:19 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/blocks.h:5:0,
+                 from ../src/main.h:4,
+                 from ../src/main.c:5:
+../src/colors.h:19:12: warning: excess elements in array initializer
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:73:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:19:12: note: (near initialization for 'number_3[3]')
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:73:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:19:12: warning: excess elements in array initializer
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:74:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:19:12: note: (near initialization for 'number_3[4]')
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:74:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:17:11: warning: excess elements in array initializer
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:75:26: note: in expansion of macro 'N'
+  {N,GI,GI,GI,W,W,W,GC,GI,N},
+                          ^
+../src/colors.h:17:11: note: (near initialization for 'number_3[5]')
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:75:26: note: in expansion of macro 'N'
+  {N,GI,GI,GI,W,W,W,GC,GI,N},
+                          ^
+../src/colors.h:17:11: warning: excess elements in array initializer
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:76:26: note: in expansion of macro 'N'
+  {N,GI,GI,GI,W,W,W,GC,GI,N},
+                          ^
+../src/colors.h:17:11: note: (near initialization for 'number_3[6]')
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:76:26: note: in expansion of macro 'N'
+  {N,GI,GI,GI,W,W,W,GC,GI,N},
+                          ^
+../src/colors.h:19:12: warning: excess elements in array initializer
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:77:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:19:12: note: (near initialization for 'number_3[7]')
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:77:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:18:12: warning: excess elements in array initializer
+ #define GO {0x3d, 0x3d, 0x3d}
+            ^
+../src/main.h:78:26: note: in expansion of macro 'GO'
+  {GO,W,W,GC,GO,GO,W,W,GC,GO},
+                          ^~
+../src/colors.h:18:12: note: (near initialization for 'number_3[8]')
+ #define GO {0x3d, 0x3d, 0x3d}
+            ^
+../src/main.h:78:26: note: in expansion of macro 'GO'
+  {GO,W,W,GC,GO,GO,W,W,GC,GO},
+                          ^~
+../src/colors.h:17:11: warning: excess elements in array initializer
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:80:25: note: in expansion of macro 'N'
+  {N,GO,W,W,W,W,W, GC,GO,N},
+                         ^
+../src/colors.h:17:11: note: (near initialization for 'number_3[10]')
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:80:25: note: in expansion of macro 'N'
+  {N,GO,W,W,W,W,W, GC,GO,N},
+                         ^
+../src/main.c: In function 'life_lost':
+../src/main.c:124:23: warning: passing argument 2 of 'paint_animation' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_animation(pos, smoke, SMOKE_FRAMES, SMOKE_TIME, SMOKE_WIDTH, SMOKE_HEIGHT);
+                       ^~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:16:6: note: expected 'color_t *** {aka struct color ***}' but argument is of type 'color_t (*)[6][3] {aka struct color (*)[6][3]}'
+ void paint_animation(position_t pos, color_t ***animation, int frames, int period, int rows, int cols);
+      ^~~~~~~~~~~~~~~
+../src/main.c: In function 'level_selection':
+../src/main.c:582:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, choose_level, 5, 47);
+                    ^~~~~~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[47] {aka struct color (*)[47]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:585:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, number_1, 12, 9);
+                    ^~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[9] {aka struct color (*)[9]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:587:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, button, 10, 9);
+                    ^~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[9] {aka struct color (*)[9]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:590:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, number_2, 12, 10);
+                    ^~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[10] {aka struct color (*)[10]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:592:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, button, 10, 9);
+                    ^~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[9] {aka struct color (*)[9]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:595:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, number_3, 12,9);
+                    ^~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[9] {aka struct color (*)[9]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:597:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, button, 10, 9);
+                    ^~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[9] {aka struct color (*)[9]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:600:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, authors, 14, 25);
+                    ^~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[25] {aka struct color (*)[25]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:603:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, breakout, 7, 38);
+                    ^~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[38] {aka struct color (*)[38]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  26576	   5220	   5380	  37176	   9138	example.elf
+'Finished building: example.elf.size'
+' '
+17:53:23 **** Incremental Build of configuration Debug for project example ****
+make all 
+make: Nothing to be done for 'all'.
