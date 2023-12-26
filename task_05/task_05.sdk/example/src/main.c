@@ -85,8 +85,8 @@ int main(){
 			} else count1++;
 			// Mueve la bala cada vuelta del ciclo. La bala va 5 veces m�s r�pido que la nave.
 			if(speed_ball == 5){
-				status = move_ball();
 				speed_ball=0;
+				status = move_ball();
 				if (status == lost_life)
 				{
 					count1 = 0;
@@ -103,6 +103,8 @@ int main(){
 					xil_printf("Remaining blocks: %d\r", remaining_blocks);
 					if (remaining_blocks == 0)
 						status = win;
+					else
+						status = continues;
 				}
 			} else speed_ball++;
 			usleep(10000);
