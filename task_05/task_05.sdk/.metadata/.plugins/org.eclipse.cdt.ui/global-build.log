@@ -8609,3 +8609,2231 @@ mb-size example.elf  |tee "example.elf.size"
 18:00:00 **** Incremental Build of configuration Debug for project example ****
 make all 
 make: Nothing to be done for 'all'.
+18:19:15 **** Auto Build of configuration Debug for project example ****
+make all 
+make: Nothing to be done for 'all'.
+18:19:17 **** Incremental Build of configuration Debug for project example ****
+make all 
+make: Nothing to be done for 'all'.
+18:20:23 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.h:4:0,
+                 from ../src/main.c:5:
+../src/blocks.h:5:10: fatal error: colors.h: No such file or directory
+ #include "colors.h"
+          ^~~~~~~~~~
+compilation terminated.
+make: *** [src/subdir.mk:29: src/main.o] Error 1
+18:20:26 **** Incremental Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.h:4:0,
+                 from ../src/main.c:5:
+../src/blocks.h:5:10: fatal error: colors.h: No such file or directory
+ #include "colors.h"
+          ^~~~~~~~~~
+compilation terminated.
+make: *** [src/subdir.mk:29: src/main.o] Error 1
+18:21:00 **** Incremental Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.h:4:0,
+                 from ../src/main.c:5:
+../src/blocks.h:5:10: fatal error: colors.h: No such file or directory
+ #include "colors.h"
+          ^~~~~~~~~~
+compilation terminated.
+make: *** [src/subdir.mk:29: src/main.o] Error 1
+18:22:10 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.h:4:0,
+                 from ../src/main.c:5:
+../src/blocks.h:5:10: fatal error: colors.h: No such file or directory
+ #include "colors.h"
+          ^~~~~~~~~~
+compilation terminated.
+make: *** [src/subdir.mk:29: src/main.o] Error 1
+18:48:21 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/blocks.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/blocks.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/blocks.d" -MT"src/blocks.o" -o "src/blocks.o" "../src/blocks.c"
+In file included from ../src/blocks.c:3:0:
+../src/blocks.h:47:2: error: unknown type name 'color_t'
+  color_t color;
+  ^~~~~~~
+../src/blocks.h:55:34: error: unknown type name 'color_t'; did you mean 'caddr_t'?
+ void print_block(position_t pos, color_t col);
+                                  ^~~~~~~
+                                  caddr_t
+../src/blocks.c:5:7: error: unknown type name 'color_t'
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+       ^~~~~~~
+../src/blocks.c:5:41: error: 'M_RED' undeclared here (not in a function)
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+                                         ^~~~~
+../src/blocks.c:5:48: error: 'M_ORANGE' undeclared here (not in a function)
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+                                                ^~~~~~~~
+../src/blocks.c:5:58: error: 'M_YELLOW' undeclared here (not in a function)
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+                                                          ^~~~~~~~
+../src/blocks.c:5:68: error: 'M_GREEN' undeclared here (not in a function); did you mean 'M_RED'?
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+                                                                    ^~~~~~~
+                                                                    M_RED
+../src/blocks.c:5:77: error: 'M_DBLUE' undeclared here (not in a function)
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+                                                                             ^~~~~~~
+../src/blocks.c:5:86: error: 'M_PURPLE' undeclared here (not in a function)
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+                                                                                      ^~~~~~~~
+../src/blocks.c:5:96: error: 'M_CYAN' undeclared here (not in a function)
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+                                                                                                ^~~~~~
+../src/blocks.c:7:34: error: unknown type name 'color_t'; did you mean 'caddr_t'?
+ void print_block(position_t pos, color_t col)
+                                  ^~~~~~~
+                                  caddr_t
+../src/blocks.c: In function 'reprint_block':
+../src/blocks.c:24:16: error: request for member 'r' in something not a structure or union
+     block.color.r -= BLOCK_COLOR_DIFF;
+                ^
+../src/blocks.c:25:16: error: request for member 'g' in something not a structure or union
+     block.color.g -= BLOCK_COLOR_DIFF;
+                ^
+../src/blocks.c:26:16: error: request for member 'b' in something not a structure or union
+     block.color.b -= BLOCK_COLOR_DIFF;
+                ^
+../src/blocks.c:28:5: warning: implicit declaration of function 'print_block'; did you mean 'reprint_block'? [-Wimplicit-function-declaration]
+     print_block(block.location, block.color);
+     ^~~~~~~~~~~
+     reprint_block
+../src/blocks.c: In function 'init_map':
+../src/blocks.c:34:5: error: unknown type name 'color_t'; did you mean 'caddr_t'?
+     color_t indest_color = M_DGREY;
+     ^~~~~~~
+     caddr_t
+../src/blocks.c:34:28: error: 'M_DGREY' undeclared (first use in this function); did you mean 'M_GREEN'?
+     color_t indest_color = M_DGREY;
+                            ^~~~~~~
+                            M_GREEN
+../src/blocks.c:34:28: note: each undeclared identifier is reported only once for each function it appears in
+../src/blocks.c:57:32: error: request for member 'r' in something not a structure or union
+                 map[j][i].color.r = map_colors[i].r + (collisions - 1) * BLOCK_COLOR_DIFF;
+                                ^
+../src/blocks.c:57:50: error: request for member 'r' in something not a structure or union
+                 map[j][i].color.r = map_colors[i].r + (collisions - 1) * BLOCK_COLOR_DIFF;
+                                                  ^
+../src/blocks.c:58:32: error: request for member 'g' in something not a structure or union
+                 map[j][i].color.g = map_colors[i].g + (collisions - 1) * BLOCK_COLOR_DIFF;
+                                ^
+../src/blocks.c:58:50: error: request for member 'g' in something not a structure or union
+                 map[j][i].color.g = map_colors[i].g + (collisions - 1) * BLOCK_COLOR_DIFF;
+                                                  ^
+../src/blocks.c:59:32: error: request for member 'b' in something not a structure or union
+                 map[j][i].color.b = map_colors[i].b + (collisions - 1) * BLOCK_COLOR_DIFF;
+                                ^
+../src/blocks.c:59:50: error: request for member 'b' in something not a structure or union
+                 map[j][i].color.b = map_colors[i].b + (collisions - 1) * BLOCK_COLOR_DIFF;
+                                                  ^
+make: *** [src/subdir.mk:29: src/blocks.o] Error 1
+18:49:43 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/blocks.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/blocks.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/blocks.d" -MT"src/blocks.o" -o "src/blocks.o" "../src/blocks.c"
+In file included from ../src/blocks.c:3:0:
+../src/blocks.h:47:2: error: unknown type name 'color_t'
+  color_t color;
+  ^~~~~~~
+../src/blocks.h:55:34: error: unknown type name 'color_t'; did you mean 'caddr_t'?
+ void print_block(position_t pos, color_t col);
+                                  ^~~~~~~
+                                  caddr_t
+../src/blocks.c:5:7: error: unknown type name 'color_t'
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+       ^~~~~~~
+../src/blocks.c:5:41: error: 'M_RED' undeclared here (not in a function)
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+                                         ^~~~~
+../src/blocks.c:5:48: error: 'M_ORANGE' undeclared here (not in a function)
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+                                                ^~~~~~~~
+../src/blocks.c:5:58: error: 'M_YELLOW' undeclared here (not in a function)
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+                                                          ^~~~~~~~
+../src/blocks.c:5:68: error: 'M_GREEN' undeclared here (not in a function); did you mean 'M_RED'?
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+                                                                    ^~~~~~~
+                                                                    M_RED
+../src/blocks.c:5:77: error: 'M_DBLUE' undeclared here (not in a function)
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+                                                                             ^~~~~~~
+../src/blocks.c:5:86: error: 'M_PURPLE' undeclared here (not in a function)
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+                                                                                      ^~~~~~~~
+../src/blocks.c:5:96: error: 'M_CYAN' undeclared here (not in a function)
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+                                                                                                ^~~~~~
+../src/blocks.c:7:34: error: unknown type name 'color_t'; did you mean 'caddr_t'?
+ void print_block(position_t pos, color_t col)
+                                  ^~~~~~~
+                                  caddr_t
+../src/blocks.c: In function 'reprint_block':
+../src/blocks.c:24:16: error: request for member 'r' in something not a structure or union
+     block.color.r -= BLOCK_COLOR_DIFF;
+                ^
+../src/blocks.c:25:16: error: request for member 'g' in something not a structure or union
+     block.color.g -= BLOCK_COLOR_DIFF;
+                ^
+../src/blocks.c:26:16: error: request for member 'b' in something not a structure or union
+     block.color.b -= BLOCK_COLOR_DIFF;
+                ^
+../src/blocks.c:28:5: warning: implicit declaration of function 'print_block'; did you mean 'reprint_block'? [-Wimplicit-function-declaration]
+     print_block(block.location, block.color);
+     ^~~~~~~~~~~
+     reprint_block
+../src/blocks.c: In function 'init_map':
+../src/blocks.c:34:5: error: unknown type name 'color_t'; did you mean 'caddr_t'?
+     color_t indest_color = M_DGREY;
+     ^~~~~~~
+     caddr_t
+../src/blocks.c:34:28: error: 'M_DGREY' undeclared (first use in this function); did you mean 'M_GREEN'?
+     color_t indest_color = M_DGREY;
+                            ^~~~~~~
+                            M_GREEN
+../src/blocks.c:34:28: note: each undeclared identifier is reported only once for each function it appears in
+../src/blocks.c:57:32: error: request for member 'r' in something not a structure or union
+                 map[j][i].color.r = map_colors[i].r + (collisions - 1) * BLOCK_COLOR_DIFF;
+                                ^
+../src/blocks.c:57:50: error: request for member 'r' in something not a structure or union
+                 map[j][i].color.r = map_colors[i].r + (collisions - 1) * BLOCK_COLOR_DIFF;
+                                                  ^
+../src/blocks.c:58:32: error: request for member 'g' in something not a structure or union
+                 map[j][i].color.g = map_colors[i].g + (collisions - 1) * BLOCK_COLOR_DIFF;
+                                ^
+../src/blocks.c:58:50: error: request for member 'g' in something not a structure or union
+                 map[j][i].color.g = map_colors[i].g + (collisions - 1) * BLOCK_COLOR_DIFF;
+                                                  ^
+../src/blocks.c:59:32: error: request for member 'b' in something not a structure or union
+                 map[j][i].color.b = map_colors[i].b + (collisions - 1) * BLOCK_COLOR_DIFF;
+                                ^
+../src/blocks.c:59:50: error: request for member 'b' in something not a structure or union
+                 map[j][i].color.b = map_colors[i].b + (collisions - 1) * BLOCK_COLOR_DIFF;
+                                                  ^
+make: *** [src/subdir.mk:29: src/blocks.o] Error 1
+18:50:22 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/blocks.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/blocks.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/blocks.d" -MT"src/blocks.o" -o "src/blocks.o" "../src/blocks.c"
+In file included from ../src/blocks.c:3:0:
+../src/blocks.h:47:2: error: unknown type name 'color_t'
+  color_t color;
+  ^~~~~~~
+../src/blocks.h:55:34: error: unknown type name 'color_t'; did you mean 'caddr_t'?
+ void print_block(position_t pos, color_t col);
+                                  ^~~~~~~
+                                  caddr_t
+../src/blocks.c:5:7: error: unknown type name 'color_t'
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+       ^~~~~~~
+../src/blocks.c:5:1: warning: braces around scalar initializer
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+ ^~~~~
+../src/blocks.c:5:1: note: (near initialization for 'map_colors[0]')
+In file included from ../src/blocks.h:5:0,
+                 from ../src/blocks.c:3:
+../src/colors.h:19:28: warning: excess elements in scalar initializer
+ #define M_RED       {0xee, 0x48, 0x4c}
+                            ^
+../src/blocks.c:5:41: note: in expansion of macro 'M_RED'
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+                                         ^~~~~
+../src/colors.h:19:28: note: (near initialization for 'map_colors[0]')
+ #define M_RED       {0xee, 0x48, 0x4c}
+                            ^
+../src/blocks.c:5:41: note: in expansion of macro 'M_RED'
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+                                         ^~~~~
+../src/colors.h:19:34: warning: excess elements in scalar initializer
+ #define M_RED       {0xee, 0x48, 0x4c}
+                                  ^
+../src/blocks.c:5:41: note: in expansion of macro 'M_RED'
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+                                         ^~~~~
+../src/colors.h:19:34: note: (near initialization for 'map_colors[0]')
+ #define M_RED       {0xee, 0x48, 0x4c}
+                                  ^
+../src/blocks.c:5:41: note: in expansion of macro 'M_RED'
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+                                         ^~~~~
+../src/blocks.c:5:1: warning: braces around scalar initializer
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+ ^~~~~
+../src/blocks.c:5:1: note: (near initialization for 'map_colors[1]')
+In file included from ../src/blocks.h:5:0,
+                 from ../src/blocks.c:3:
+../src/colors.h:20:28: warning: excess elements in scalar initializer
+ #define M_ORANGE    {0xde, 0x6a, 0x35}
+                            ^
+../src/blocks.c:5:48: note: in expansion of macro 'M_ORANGE'
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+                                                ^~~~~~~~
+../src/colors.h:20:28: note: (near initialization for 'map_colors[1]')
+ #define M_ORANGE    {0xde, 0x6a, 0x35}
+                            ^
+../src/blocks.c:5:48: note: in expansion of macro 'M_ORANGE'
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+                                                ^~~~~~~~
+../src/colors.h:20:34: warning: excess elements in scalar initializer
+ #define M_ORANGE    {0xde, 0x6a, 0x35}
+                                  ^
+../src/blocks.c:5:48: note: in expansion of macro 'M_ORANGE'
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+                                                ^~~~~~~~
+../src/colors.h:20:34: note: (near initialization for 'map_colors[1]')
+ #define M_ORANGE    {0xde, 0x6a, 0x35}
+                                  ^
+../src/blocks.c:5:48: note: in expansion of macro 'M_ORANGE'
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+                                                ^~~~~~~~
+../src/blocks.c:5:1: warning: braces around scalar initializer
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+ ^~~~~
+../src/blocks.c:5:1: note: (near initialization for 'map_colors[2]')
+In file included from ../src/blocks.h:5:0,
+                 from ../src/blocks.c:3:
+../src/colors.h:21:28: warning: excess elements in scalar initializer
+ #define M_YELLOW    {0xf3, 0xc0, 0x01}
+                            ^
+../src/blocks.c:5:58: note: in expansion of macro 'M_YELLOW'
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+                                                          ^~~~~~~~
+../src/colors.h:21:28: note: (near initialization for 'map_colors[2]')
+ #define M_YELLOW    {0xf3, 0xc0, 0x01}
+                            ^
+../src/blocks.c:5:58: note: in expansion of macro 'M_YELLOW'
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+                                                          ^~~~~~~~
+../src/colors.h:21:34: warning: excess elements in scalar initializer
+ #define M_YELLOW    {0xf3, 0xc0, 0x01}
+                                  ^
+../src/blocks.c:5:58: note: in expansion of macro 'M_YELLOW'
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+                                                          ^~~~~~~~
+../src/colors.h:21:34: note: (near initialization for 'map_colors[2]')
+ #define M_YELLOW    {0xf3, 0xc0, 0x01}
+                                  ^
+../src/blocks.c:5:58: note: in expansion of macro 'M_YELLOW'
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+                                                          ^~~~~~~~
+../src/blocks.c:5:1: warning: braces around scalar initializer
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+ ^~~~~
+../src/blocks.c:5:1: note: (near initialization for 'map_colors[3]')
+In file included from ../src/blocks.h:5:0,
+                 from ../src/blocks.c:3:
+../src/colors.h:22:28: warning: excess elements in scalar initializer
+ #define M_GREEN     {0x53, 0xbe, 0x42}
+                            ^
+../src/blocks.c:5:68: note: in expansion of macro 'M_GREEN'
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+                                                                    ^~~~~~~
+../src/colors.h:22:28: note: (near initialization for 'map_colors[3]')
+ #define M_GREEN     {0x53, 0xbe, 0x42}
+                            ^
+../src/blocks.c:5:68: note: in expansion of macro 'M_GREEN'
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+                                                                    ^~~~~~~
+../src/colors.h:22:34: warning: excess elements in scalar initializer
+ #define M_GREEN     {0x53, 0xbe, 0x42}
+                                  ^
+../src/blocks.c:5:68: note: in expansion of macro 'M_GREEN'
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+                                                                    ^~~~~~~
+../src/colors.h:22:34: note: (near initialization for 'map_colors[3]')
+ #define M_GREEN     {0x53, 0xbe, 0x42}
+                                  ^
+../src/blocks.c:5:68: note: in expansion of macro 'M_GREEN'
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+                                                                    ^~~~~~~
+../src/blocks.c:5:1: warning: braces around scalar initializer
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+ ^~~~~
+../src/blocks.c:5:1: note: (near initialization for 'map_colors[4]')
+In file included from ../src/blocks.h:5:0,
+                 from ../src/blocks.c:3:
+../src/colors.h:23:28: warning: excess elements in scalar initializer
+ #define M_DBLUE     {0x3f, 0x41, 0xfd}
+                            ^
+../src/blocks.c:5:77: note: in expansion of macro 'M_DBLUE'
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+                                                                             ^~~~~~~
+../src/colors.h:23:28: note: (near initialization for 'map_colors[4]')
+ #define M_DBLUE     {0x3f, 0x41, 0xfd}
+                            ^
+../src/blocks.c:5:77: note: in expansion of macro 'M_DBLUE'
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+                                                                             ^~~~~~~
+../src/colors.h:23:34: warning: excess elements in scalar initializer
+ #define M_DBLUE     {0x3f, 0x41, 0xfd}
+                                  ^
+../src/blocks.c:5:77: note: in expansion of macro 'M_DBLUE'
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+                                                                             ^~~~~~~
+../src/colors.h:23:34: note: (near initialization for 'map_colors[4]')
+ #define M_DBLUE     {0x3f, 0x41, 0xfd}
+                                  ^
+../src/blocks.c:5:77: note: in expansion of macro 'M_DBLUE'
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+                                                                             ^~~~~~~
+../src/blocks.c:5:1: warning: braces around scalar initializer
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+ ^~~~~
+../src/blocks.c:5:1: note: (near initialization for 'map_colors[5]')
+In file included from ../src/blocks.h:5:0,
+                 from ../src/blocks.c:3:
+../src/colors.h:24:28: warning: excess elements in scalar initializer
+ #define M_PURPLE    {0x87, 0x48, 0xf1}
+                            ^
+../src/blocks.c:5:86: note: in expansion of macro 'M_PURPLE'
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+                                                                                      ^~~~~~~~
+../src/colors.h:24:28: note: (near initialization for 'map_colors[5]')
+ #define M_PURPLE    {0x87, 0x48, 0xf1}
+                            ^
+../src/blocks.c:5:86: note: in expansion of macro 'M_PURPLE'
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+                                                                                      ^~~~~~~~
+../src/colors.h:24:34: warning: excess elements in scalar initializer
+ #define M_PURPLE    {0x87, 0x48, 0xf1}
+                                  ^
+../src/blocks.c:5:86: note: in expansion of macro 'M_PURPLE'
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+                                                                                      ^~~~~~~~
+../src/colors.h:24:34: note: (near initialization for 'map_colors[5]')
+ #define M_PURPLE    {0x87, 0x48, 0xf1}
+                                  ^
+../src/blocks.c:5:86: note: in expansion of macro 'M_PURPLE'
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+                                                                                      ^~~~~~~~
+../src/blocks.c:5:1: warning: braces around scalar initializer
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+ ^~~~~
+../src/blocks.c:5:1: note: (near initialization for 'map_colors[6]')
+In file included from ../src/blocks.h:5:0,
+                 from ../src/blocks.c:3:
+../src/colors.h:25:28: warning: excess elements in scalar initializer
+ #define M_CYAN      {0x02, 0xf3, 0xf3}
+                            ^
+../src/blocks.c:5:96: note: in expansion of macro 'M_CYAN'
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+                                                                                                ^~~~~~
+../src/colors.h:25:28: note: (near initialization for 'map_colors[6]')
+ #define M_CYAN      {0x02, 0xf3, 0xf3}
+                            ^
+../src/blocks.c:5:96: note: in expansion of macro 'M_CYAN'
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+                                                                                                ^~~~~~
+../src/colors.h:25:34: warning: excess elements in scalar initializer
+ #define M_CYAN      {0x02, 0xf3, 0xf3}
+                                  ^
+../src/blocks.c:5:96: note: in expansion of macro 'M_CYAN'
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+                                                                                                ^~~~~~
+../src/colors.h:25:34: note: (near initialization for 'map_colors[6]')
+ #define M_CYAN      {0x02, 0xf3, 0xf3}
+                                  ^
+../src/blocks.c:5:96: note: in expansion of macro 'M_CYAN'
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+                                                                                                ^~~~~~
+../src/blocks.c:7:34: error: unknown type name 'color_t'; did you mean 'caddr_t'?
+ void print_block(position_t pos, color_t col)
+                                  ^~~~~~~
+                                  caddr_t
+../src/blocks.c: In function 'reprint_block':
+../src/blocks.c:24:16: error: request for member 'r' in something not a structure or union
+     block.color.r -= BLOCK_COLOR_DIFF;
+                ^
+../src/blocks.c:25:16: error: request for member 'g' in something not a structure or union
+     block.color.g -= BLOCK_COLOR_DIFF;
+                ^
+../src/blocks.c:26:16: error: request for member 'b' in something not a structure or union
+     block.color.b -= BLOCK_COLOR_DIFF;
+                ^
+../src/blocks.c:28:5: warning: implicit declaration of function 'print_block'; did you mean 'reprint_block'? [-Wimplicit-function-declaration]
+     print_block(block.location, block.color);
+     ^~~~~~~~~~~
+     reprint_block
+../src/blocks.c: In function 'init_map':
+../src/blocks.c:34:5: error: unknown type name 'color_t'; did you mean 'caddr_t'?
+     color_t indest_color = M_DGREY;
+     ^~~~~~~
+     caddr_t
+In file included from ../src/blocks.h:5:0,
+                 from ../src/blocks.c:3:
+../src/colors.h:26:28: warning: excess elements in scalar initializer
+ #define M_DGREY     {0x46, 0x46, 0x46}
+                            ^
+../src/blocks.c:34:28: note: in expansion of macro 'M_DGREY'
+     color_t indest_color = M_DGREY;
+                            ^~~~~~~
+../src/colors.h:26:28: note: (near initialization for 'indest_color')
+ #define M_DGREY     {0x46, 0x46, 0x46}
+                            ^
+../src/blocks.c:34:28: note: in expansion of macro 'M_DGREY'
+     color_t indest_color = M_DGREY;
+                            ^~~~~~~
+../src/colors.h:26:34: warning: excess elements in scalar initializer
+ #define M_DGREY     {0x46, 0x46, 0x46}
+                                  ^
+../src/blocks.c:34:28: note: in expansion of macro 'M_DGREY'
+     color_t indest_color = M_DGREY;
+                            ^~~~~~~
+../src/colors.h:26:34: note: (near initialization for 'indest_color')
+ #define M_DGREY     {0x46, 0x46, 0x46}
+                                  ^
+../src/blocks.c:34:28: note: in expansion of macro 'M_DGREY'
+     color_t indest_color = M_DGREY;
+                            ^~~~~~~
+../src/blocks.c:57:32: error: request for member 'r' in something not a structure or union
+                 map[j][i].color.r = map_colors[i].r + (collisions - 1) * BLOCK_COLOR_DIFF;
+                                ^
+../src/blocks.c:57:50: error: request for member 'r' in something not a structure or union
+                 map[j][i].color.r = map_colors[i].r + (collisions - 1) * BLOCK_COLOR_DIFF;
+                                                  ^
+../src/blocks.c:58:32: error: request for member 'g' in something not a structure or union
+                 map[j][i].color.g = map_colors[i].g + (collisions - 1) * BLOCK_COLOR_DIFF;
+                                ^
+../src/blocks.c:58:50: error: request for member 'g' in something not a structure or union
+                 map[j][i].color.g = map_colors[i].g + (collisions - 1) * BLOCK_COLOR_DIFF;
+                                                  ^
+../src/blocks.c:59:32: error: request for member 'b' in something not a structure or union
+                 map[j][i].color.b = map_colors[i].b + (collisions - 1) * BLOCK_COLOR_DIFF;
+                                ^
+../src/blocks.c:59:50: error: request for member 'b' in something not a structure or union
+                 map[j][i].color.b = map_colors[i].b + (collisions - 1) * BLOCK_COLOR_DIFF;
+                                                  ^
+make: *** [src/subdir.mk:29: src/blocks.o] Error 1
+18:50:39 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/blocks.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/blocks.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/blocks.d" -MT"src/blocks.o" -o "src/blocks.o" "../src/blocks.c"
+In file included from ../src/blocks.h:5:0,
+                 from ../src/blocks.c:3:
+../src/colors.h:29:18: error: unknown type name 'color_t'; did you mean 'caddr_t'?
+ int equals_color(color_t color1, color_t color2)
+                  ^~~~~~~
+                  caddr_t
+../src/colors.h:29:34: error: unknown type name 'color_t'; did you mean 'caddr_t'?
+ int equals_color(color_t color1, color_t color2)
+                                  ^~~~~~~
+                                  caddr_t
+In file included from ../src/blocks.c:3:0:
+../src/blocks.h:30:56: warning: data definition has no type or storage class
+ typedef enum levels {first_lvl, second_lvl, third_lvl} levels_t;
+                                                        ^~~~~~~~
+../src/blocks.h:30:56: warning: type defaults to 'int' in declaration of 'levels_t' [-Wimplicit-int]
+../src/blocks.h:47:2: error: unknown type name 'color_t'
+  color_t color;
+  ^~~~~~~
+../src/blocks.h:55:34: error: unknown type name 'color_t'; did you mean 'caddr_t'?
+ void print_block(position_t pos, color_t col);
+                                  ^~~~~~~
+                                  caddr_t
+../src/blocks.h:56:52: error: expected declaration specifiers or '...' before 'levels_t'
+ void init_map(block_t map[N_BLOCKS_X][N_BLOCKS_Y], levels_t level);
+                                                    ^~~~~~~~
+../src/blocks.c:5:7: error: unknown type name 'color_t'
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+       ^~~~~~~
+../src/blocks.c:5:1: warning: braces around scalar initializer
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+ ^~~~~
+../src/blocks.c:5:1: note: (near initialization for 'map_colors[0]')
+In file included from ../src/blocks.h:5:0,
+                 from ../src/blocks.c:3:
+../src/colors.h:19:28: warning: excess elements in scalar initializer
+ #define M_RED       {0xee, 0x48, 0x4c}
+                            ^
+../src/blocks.c:5:41: note: in expansion of macro 'M_RED'
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+                                         ^~~~~
+../src/colors.h:19:28: note: (near initialization for 'map_colors[0]')
+ #define M_RED       {0xee, 0x48, 0x4c}
+                            ^
+../src/blocks.c:5:41: note: in expansion of macro 'M_RED'
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+                                         ^~~~~
+../src/colors.h:19:34: warning: excess elements in scalar initializer
+ #define M_RED       {0xee, 0x48, 0x4c}
+                                  ^
+../src/blocks.c:5:41: note: in expansion of macro 'M_RED'
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+                                         ^~~~~
+../src/colors.h:19:34: note: (near initialization for 'map_colors[0]')
+ #define M_RED       {0xee, 0x48, 0x4c}
+                                  ^
+../src/blocks.c:5:41: note: in expansion of macro 'M_RED'
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+                                         ^~~~~
+../src/blocks.c:5:1: warning: braces around scalar initializer
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+ ^~~~~
+../src/blocks.c:5:1: note: (near initialization for 'map_colors[1]')
+In file included from ../src/blocks.h:5:0,
+                 from ../src/blocks.c:3:
+../src/colors.h:20:28: warning: excess elements in scalar initializer
+ #define M_ORANGE    {0xde, 0x6a, 0x35}
+                            ^
+../src/blocks.c:5:48: note: in expansion of macro 'M_ORANGE'
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+                                                ^~~~~~~~
+../src/colors.h:20:28: note: (near initialization for 'map_colors[1]')
+ #define M_ORANGE    {0xde, 0x6a, 0x35}
+                            ^
+../src/blocks.c:5:48: note: in expansion of macro 'M_ORANGE'
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+                                                ^~~~~~~~
+../src/colors.h:20:34: warning: excess elements in scalar initializer
+ #define M_ORANGE    {0xde, 0x6a, 0x35}
+                                  ^
+../src/blocks.c:5:48: note: in expansion of macro 'M_ORANGE'
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+                                                ^~~~~~~~
+../src/colors.h:20:34: note: (near initialization for 'map_colors[1]')
+ #define M_ORANGE    {0xde, 0x6a, 0x35}
+                                  ^
+../src/blocks.c:5:48: note: in expansion of macro 'M_ORANGE'
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+                                                ^~~~~~~~
+../src/blocks.c:5:1: warning: braces around scalar initializer
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+ ^~~~~
+../src/blocks.c:5:1: note: (near initialization for 'map_colors[2]')
+In file included from ../src/blocks.h:5:0,
+                 from ../src/blocks.c:3:
+../src/colors.h:21:28: warning: excess elements in scalar initializer
+ #define M_YELLOW    {0xf3, 0xc0, 0x01}
+                            ^
+../src/blocks.c:5:58: note: in expansion of macro 'M_YELLOW'
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+                                                          ^~~~~~~~
+../src/colors.h:21:28: note: (near initialization for 'map_colors[2]')
+ #define M_YELLOW    {0xf3, 0xc0, 0x01}
+                            ^
+../src/blocks.c:5:58: note: in expansion of macro 'M_YELLOW'
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+                                                          ^~~~~~~~
+../src/colors.h:21:34: warning: excess elements in scalar initializer
+ #define M_YELLOW    {0xf3, 0xc0, 0x01}
+                                  ^
+../src/blocks.c:5:58: note: in expansion of macro 'M_YELLOW'
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+                                                          ^~~~~~~~
+../src/colors.h:21:34: note: (near initialization for 'map_colors[2]')
+ #define M_YELLOW    {0xf3, 0xc0, 0x01}
+                                  ^
+../src/blocks.c:5:58: note: in expansion of macro 'M_YELLOW'
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+                                                          ^~~~~~~~
+../src/blocks.c:5:1: warning: braces around scalar initializer
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+ ^~~~~
+../src/blocks.c:5:1: note: (near initialization for 'map_colors[3]')
+In file included from ../src/blocks.h:5:0,
+                 from ../src/blocks.c:3:
+../src/colors.h:22:28: warning: excess elements in scalar initializer
+ #define M_GREEN     {0x53, 0xbe, 0x42}
+                            ^
+../src/blocks.c:5:68: note: in expansion of macro 'M_GREEN'
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+                                                                    ^~~~~~~
+../src/colors.h:22:28: note: (near initialization for 'map_colors[3]')
+ #define M_GREEN     {0x53, 0xbe, 0x42}
+                            ^
+../src/blocks.c:5:68: note: in expansion of macro 'M_GREEN'
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+                                                                    ^~~~~~~
+../src/colors.h:22:34: warning: excess elements in scalar initializer
+ #define M_GREEN     {0x53, 0xbe, 0x42}
+                                  ^
+../src/blocks.c:5:68: note: in expansion of macro 'M_GREEN'
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+                                                                    ^~~~~~~
+../src/colors.h:22:34: note: (near initialization for 'map_colors[3]')
+ #define M_GREEN     {0x53, 0xbe, 0x42}
+                                  ^
+../src/blocks.c:5:68: note: in expansion of macro 'M_GREEN'
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+                                                                    ^~~~~~~
+../src/blocks.c:5:1: warning: braces around scalar initializer
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+ ^~~~~
+../src/blocks.c:5:1: note: (near initialization for 'map_colors[4]')
+In file included from ../src/blocks.h:5:0,
+                 from ../src/blocks.c:3:
+../src/colors.h:23:28: warning: excess elements in scalar initializer
+ #define M_DBLUE     {0x3f, 0x41, 0xfd}
+                            ^
+../src/blocks.c:5:77: note: in expansion of macro 'M_DBLUE'
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+                                                                             ^~~~~~~
+../src/colors.h:23:28: note: (near initialization for 'map_colors[4]')
+ #define M_DBLUE     {0x3f, 0x41, 0xfd}
+                            ^
+../src/blocks.c:5:77: note: in expansion of macro 'M_DBLUE'
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+                                                                             ^~~~~~~
+../src/colors.h:23:34: warning: excess elements in scalar initializer
+ #define M_DBLUE     {0x3f, 0x41, 0xfd}
+                                  ^
+../src/blocks.c:5:77: note: in expansion of macro 'M_DBLUE'
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+                                                                             ^~~~~~~
+../src/colors.h:23:34: note: (near initialization for 'map_colors[4]')
+ #define M_DBLUE     {0x3f, 0x41, 0xfd}
+                                  ^
+../src/blocks.c:5:77: note: in expansion of macro 'M_DBLUE'
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+                                                                             ^~~~~~~
+../src/blocks.c:5:1: warning: braces around scalar initializer
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+ ^~~~~
+../src/blocks.c:5:1: note: (near initialization for 'map_colors[5]')
+In file included from ../src/blocks.h:5:0,
+                 from ../src/blocks.c:3:
+../src/colors.h:24:28: warning: excess elements in scalar initializer
+ #define M_PURPLE    {0x87, 0x48, 0xf1}
+                            ^
+../src/blocks.c:5:86: note: in expansion of macro 'M_PURPLE'
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+                                                                                      ^~~~~~~~
+../src/colors.h:24:28: note: (near initialization for 'map_colors[5]')
+ #define M_PURPLE    {0x87, 0x48, 0xf1}
+                            ^
+../src/blocks.c:5:86: note: in expansion of macro 'M_PURPLE'
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+                                                                                      ^~~~~~~~
+../src/colors.h:24:34: warning: excess elements in scalar initializer
+ #define M_PURPLE    {0x87, 0x48, 0xf1}
+                                  ^
+../src/blocks.c:5:86: note: in expansion of macro 'M_PURPLE'
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+                                                                                      ^~~~~~~~
+../src/colors.h:24:34: note: (near initialization for 'map_colors[5]')
+ #define M_PURPLE    {0x87, 0x48, 0xf1}
+                                  ^
+../src/blocks.c:5:86: note: in expansion of macro 'M_PURPLE'
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+                                                                                      ^~~~~~~~
+../src/blocks.c:5:1: warning: braces around scalar initializer
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+ ^~~~~
+../src/blocks.c:5:1: note: (near initialization for 'map_colors[6]')
+In file included from ../src/blocks.h:5:0,
+                 from ../src/blocks.c:3:
+../src/colors.h:25:28: warning: excess elements in scalar initializer
+ #define M_CYAN      {0x02, 0xf3, 0xf3}
+                            ^
+../src/blocks.c:5:96: note: in expansion of macro 'M_CYAN'
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+                                                                                                ^~~~~~
+../src/colors.h:25:28: note: (near initialization for 'map_colors[6]')
+ #define M_CYAN      {0x02, 0xf3, 0xf3}
+                            ^
+../src/blocks.c:5:96: note: in expansion of macro 'M_CYAN'
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+                                                                                                ^~~~~~
+../src/colors.h:25:34: warning: excess elements in scalar initializer
+ #define M_CYAN      {0x02, 0xf3, 0xf3}
+                                  ^
+../src/blocks.c:5:96: note: in expansion of macro 'M_CYAN'
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+                                                                                                ^~~~~~
+../src/colors.h:25:34: note: (near initialization for 'map_colors[6]')
+ #define M_CYAN      {0x02, 0xf3, 0xf3}
+                                  ^
+../src/blocks.c:5:96: note: in expansion of macro 'M_CYAN'
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+                                                                                                ^~~~~~
+../src/blocks.c:7:34: error: unknown type name 'color_t'; did you mean 'caddr_t'?
+ void print_block(position_t pos, color_t col)
+                                  ^~~~~~~
+                                  caddr_t
+../src/blocks.c: In function 'reprint_block':
+../src/blocks.c:24:16: error: request for member 'r' in something not a structure or union
+     block.color.r -= BLOCK_COLOR_DIFF;
+                ^
+../src/blocks.c:25:16: error: request for member 'g' in something not a structure or union
+     block.color.g -= BLOCK_COLOR_DIFF;
+                ^
+../src/blocks.c:26:16: error: request for member 'b' in something not a structure or union
+     block.color.b -= BLOCK_COLOR_DIFF;
+                ^
+../src/blocks.c:28:5: warning: implicit declaration of function 'print_block'; did you mean 'reprint_block'? [-Wimplicit-function-declaration]
+     print_block(block.location, block.color);
+     ^~~~~~~~~~~
+     reprint_block
+../src/blocks.c: At top level:
+../src/blocks.c:31:52: error: expected declaration specifiers or '...' before 'levels_t'
+ void init_map(block_t map[N_BLOCKS_X][N_BLOCKS_Y], levels_t level)
+                                                    ^~~~~~~~
+make: *** [src/subdir.mk:29: src/blocks.o] Error 1
+18:50:48 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/blocks.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/blocks.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/blocks.d" -MT"src/blocks.o" -o "src/blocks.o" "../src/blocks.c"
+In file included from ../src/blocks.h:5:0,
+                 from ../src/blocks.c:3:
+../src/colors.h:29:18: error: unknown type name 'color_t'; did you mean 'caddr_t'?
+ int equals_color(color_t color1, color_t color2);
+                  ^~~~~~~
+                  caddr_t
+../src/colors.h:29:34: error: unknown type name 'color_t'; did you mean 'caddr_t'?
+ int equals_color(color_t color1, color_t color2);
+                                  ^~~~~~~
+                                  caddr_t
+../src/colors.h:31:2: error: #endif without #if
+ #endif
+  ^~~~~
+In file included from ../src/blocks.c:3:0:
+../src/blocks.h:47:2: error: unknown type name 'color_t'
+  color_t color;
+  ^~~~~~~
+../src/blocks.h:55:34: error: unknown type name 'color_t'; did you mean 'caddr_t'?
+ void print_block(position_t pos, color_t col);
+                                  ^~~~~~~
+                                  caddr_t
+../src/blocks.c:5:7: error: unknown type name 'color_t'
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+       ^~~~~~~
+../src/blocks.c:5:1: warning: braces around scalar initializer
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+ ^~~~~
+../src/blocks.c:5:1: note: (near initialization for 'map_colors[0]')
+In file included from ../src/blocks.h:5:0,
+                 from ../src/blocks.c:3:
+../src/colors.h:19:28: warning: excess elements in scalar initializer
+ #define M_RED       {0xee, 0x48, 0x4c}
+                            ^
+../src/blocks.c:5:41: note: in expansion of macro 'M_RED'
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+                                         ^~~~~
+../src/colors.h:19:28: note: (near initialization for 'map_colors[0]')
+ #define M_RED       {0xee, 0x48, 0x4c}
+                            ^
+../src/blocks.c:5:41: note: in expansion of macro 'M_RED'
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+                                         ^~~~~
+../src/colors.h:19:34: warning: excess elements in scalar initializer
+ #define M_RED       {0xee, 0x48, 0x4c}
+                                  ^
+../src/blocks.c:5:41: note: in expansion of macro 'M_RED'
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+                                         ^~~~~
+../src/colors.h:19:34: note: (near initialization for 'map_colors[0]')
+ #define M_RED       {0xee, 0x48, 0x4c}
+                                  ^
+../src/blocks.c:5:41: note: in expansion of macro 'M_RED'
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+                                         ^~~~~
+../src/blocks.c:5:1: warning: braces around scalar initializer
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+ ^~~~~
+../src/blocks.c:5:1: note: (near initialization for 'map_colors[1]')
+In file included from ../src/blocks.h:5:0,
+                 from ../src/blocks.c:3:
+../src/colors.h:20:28: warning: excess elements in scalar initializer
+ #define M_ORANGE    {0xde, 0x6a, 0x35}
+                            ^
+../src/blocks.c:5:48: note: in expansion of macro 'M_ORANGE'
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+                                                ^~~~~~~~
+../src/colors.h:20:28: note: (near initialization for 'map_colors[1]')
+ #define M_ORANGE    {0xde, 0x6a, 0x35}
+                            ^
+../src/blocks.c:5:48: note: in expansion of macro 'M_ORANGE'
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+                                                ^~~~~~~~
+../src/colors.h:20:34: warning: excess elements in scalar initializer
+ #define M_ORANGE    {0xde, 0x6a, 0x35}
+                                  ^
+../src/blocks.c:5:48: note: in expansion of macro 'M_ORANGE'
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+                                                ^~~~~~~~
+../src/colors.h:20:34: note: (near initialization for 'map_colors[1]')
+ #define M_ORANGE    {0xde, 0x6a, 0x35}
+                                  ^
+../src/blocks.c:5:48: note: in expansion of macro 'M_ORANGE'
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+                                                ^~~~~~~~
+../src/blocks.c:5:1: warning: braces around scalar initializer
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+ ^~~~~
+../src/blocks.c:5:1: note: (near initialization for 'map_colors[2]')
+In file included from ../src/blocks.h:5:0,
+                 from ../src/blocks.c:3:
+../src/colors.h:21:28: warning: excess elements in scalar initializer
+ #define M_YELLOW    {0xf3, 0xc0, 0x01}
+                            ^
+../src/blocks.c:5:58: note: in expansion of macro 'M_YELLOW'
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+                                                          ^~~~~~~~
+../src/colors.h:21:28: note: (near initialization for 'map_colors[2]')
+ #define M_YELLOW    {0xf3, 0xc0, 0x01}
+                            ^
+../src/blocks.c:5:58: note: in expansion of macro 'M_YELLOW'
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+                                                          ^~~~~~~~
+../src/colors.h:21:34: warning: excess elements in scalar initializer
+ #define M_YELLOW    {0xf3, 0xc0, 0x01}
+                                  ^
+../src/blocks.c:5:58: note: in expansion of macro 'M_YELLOW'
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+                                                          ^~~~~~~~
+../src/colors.h:21:34: note: (near initialization for 'map_colors[2]')
+ #define M_YELLOW    {0xf3, 0xc0, 0x01}
+                                  ^
+../src/blocks.c:5:58: note: in expansion of macro 'M_YELLOW'
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+                                                          ^~~~~~~~
+../src/blocks.c:5:1: warning: braces around scalar initializer
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+ ^~~~~
+../src/blocks.c:5:1: note: (near initialization for 'map_colors[3]')
+In file included from ../src/blocks.h:5:0,
+                 from ../src/blocks.c:3:
+../src/colors.h:22:28: warning: excess elements in scalar initializer
+ #define M_GREEN     {0x53, 0xbe, 0x42}
+                            ^
+../src/blocks.c:5:68: note: in expansion of macro 'M_GREEN'
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+                                                                    ^~~~~~~
+../src/colors.h:22:28: note: (near initialization for 'map_colors[3]')
+ #define M_GREEN     {0x53, 0xbe, 0x42}
+                            ^
+../src/blocks.c:5:68: note: in expansion of macro 'M_GREEN'
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+                                                                    ^~~~~~~
+../src/colors.h:22:34: warning: excess elements in scalar initializer
+ #define M_GREEN     {0x53, 0xbe, 0x42}
+                                  ^
+../src/blocks.c:5:68: note: in expansion of macro 'M_GREEN'
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+                                                                    ^~~~~~~
+../src/colors.h:22:34: note: (near initialization for 'map_colors[3]')
+ #define M_GREEN     {0x53, 0xbe, 0x42}
+                                  ^
+../src/blocks.c:5:68: note: in expansion of macro 'M_GREEN'
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+                                                                    ^~~~~~~
+../src/blocks.c:5:1: warning: braces around scalar initializer
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+ ^~~~~
+../src/blocks.c:5:1: note: (near initialization for 'map_colors[4]')
+In file included from ../src/blocks.h:5:0,
+                 from ../src/blocks.c:3:
+../src/colors.h:23:28: warning: excess elements in scalar initializer
+ #define M_DBLUE     {0x3f, 0x41, 0xfd}
+                            ^
+../src/blocks.c:5:77: note: in expansion of macro 'M_DBLUE'
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+                                                                             ^~~~~~~
+../src/colors.h:23:28: note: (near initialization for 'map_colors[4]')
+ #define M_DBLUE     {0x3f, 0x41, 0xfd}
+                            ^
+../src/blocks.c:5:77: note: in expansion of macro 'M_DBLUE'
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+                                                                             ^~~~~~~
+../src/colors.h:23:34: warning: excess elements in scalar initializer
+ #define M_DBLUE     {0x3f, 0x41, 0xfd}
+                                  ^
+../src/blocks.c:5:77: note: in expansion of macro 'M_DBLUE'
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+                                                                             ^~~~~~~
+../src/colors.h:23:34: note: (near initialization for 'map_colors[4]')
+ #define M_DBLUE     {0x3f, 0x41, 0xfd}
+                                  ^
+../src/blocks.c:5:77: note: in expansion of macro 'M_DBLUE'
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+                                                                             ^~~~~~~
+../src/blocks.c:5:1: warning: braces around scalar initializer
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+ ^~~~~
+../src/blocks.c:5:1: note: (near initialization for 'map_colors[5]')
+In file included from ../src/blocks.h:5:0,
+                 from ../src/blocks.c:3:
+../src/colors.h:24:28: warning: excess elements in scalar initializer
+ #define M_PURPLE    {0x87, 0x48, 0xf1}
+                            ^
+../src/blocks.c:5:86: note: in expansion of macro 'M_PURPLE'
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+                                                                                      ^~~~~~~~
+../src/colors.h:24:28: note: (near initialization for 'map_colors[5]')
+ #define M_PURPLE    {0x87, 0x48, 0xf1}
+                            ^
+../src/blocks.c:5:86: note: in expansion of macro 'M_PURPLE'
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+                                                                                      ^~~~~~~~
+../src/colors.h:24:34: warning: excess elements in scalar initializer
+ #define M_PURPLE    {0x87, 0x48, 0xf1}
+                                  ^
+../src/blocks.c:5:86: note: in expansion of macro 'M_PURPLE'
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+                                                                                      ^~~~~~~~
+../src/colors.h:24:34: note: (near initialization for 'map_colors[5]')
+ #define M_PURPLE    {0x87, 0x48, 0xf1}
+                                  ^
+../src/blocks.c:5:86: note: in expansion of macro 'M_PURPLE'
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+                                                                                      ^~~~~~~~
+../src/blocks.c:5:1: warning: braces around scalar initializer
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+ ^~~~~
+../src/blocks.c:5:1: note: (near initialization for 'map_colors[6]')
+In file included from ../src/blocks.h:5:0,
+                 from ../src/blocks.c:3:
+../src/colors.h:25:28: warning: excess elements in scalar initializer
+ #define M_CYAN      {0x02, 0xf3, 0xf3}
+                            ^
+../src/blocks.c:5:96: note: in expansion of macro 'M_CYAN'
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+                                                                                                ^~~~~~
+../src/colors.h:25:28: note: (near initialization for 'map_colors[6]')
+ #define M_CYAN      {0x02, 0xf3, 0xf3}
+                            ^
+../src/blocks.c:5:96: note: in expansion of macro 'M_CYAN'
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+                                                                                                ^~~~~~
+../src/colors.h:25:34: warning: excess elements in scalar initializer
+ #define M_CYAN      {0x02, 0xf3, 0xf3}
+                                  ^
+../src/blocks.c:5:96: note: in expansion of macro 'M_CYAN'
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+                                                                                                ^~~~~~
+../src/colors.h:25:34: note: (near initialization for 'map_colors[6]')
+ #define M_CYAN      {0x02, 0xf3, 0xf3}
+                                  ^
+../src/blocks.c:5:96: note: in expansion of macro 'M_CYAN'
+ const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
+                                                                                                ^~~~~~
+../src/blocks.c:7:34: error: unknown type name 'color_t'; did you mean 'caddr_t'?
+ void print_block(position_t pos, color_t col)
+                                  ^~~~~~~
+                                  caddr_t
+../src/blocks.c: In function 'reprint_block':
+../src/blocks.c:24:16: error: request for member 'r' in something not a structure or union
+     block.color.r -= BLOCK_COLOR_DIFF;
+                ^
+../src/blocks.c:25:16: error: request for member 'g' in something not a structure or union
+     block.color.g -= BLOCK_COLOR_DIFF;
+                ^
+../src/blocks.c:26:16: error: request for member 'b' in something not a structure or union
+     block.color.b -= BLOCK_COLOR_DIFF;
+                ^
+../src/blocks.c:28:5: warning: implicit declaration of function 'print_block'; did you mean 'reprint_block'? [-Wimplicit-function-declaration]
+     print_block(block.location, block.color);
+     ^~~~~~~~~~~
+     reprint_block
+../src/blocks.c: In function 'init_map':
+../src/blocks.c:34:5: error: unknown type name 'color_t'; did you mean 'caddr_t'?
+     color_t indest_color = M_DGREY;
+     ^~~~~~~
+     caddr_t
+In file included from ../src/blocks.h:5:0,
+                 from ../src/blocks.c:3:
+../src/colors.h:26:28: warning: excess elements in scalar initializer
+ #define M_DGREY     {0x46, 0x46, 0x46}
+                            ^
+../src/blocks.c:34:28: note: in expansion of macro 'M_DGREY'
+     color_t indest_color = M_DGREY;
+                            ^~~~~~~
+../src/colors.h:26:28: note: (near initialization for 'indest_color')
+ #define M_DGREY     {0x46, 0x46, 0x46}
+                            ^
+../src/blocks.c:34:28: note: in expansion of macro 'M_DGREY'
+     color_t indest_color = M_DGREY;
+                            ^~~~~~~
+../src/colors.h:26:34: warning: excess elements in scalar initializer
+ #define M_DGREY     {0x46, 0x46, 0x46}
+                                  ^
+../src/blocks.c:34:28: note: in expansion of macro 'M_DGREY'
+     color_t indest_color = M_DGREY;
+                            ^~~~~~~
+../src/colors.h:26:34: note: (near initialization for 'indest_color')
+ #define M_DGREY     {0x46, 0x46, 0x46}
+                                  ^
+../src/blocks.c:34:28: note: in expansion of macro 'M_DGREY'
+     color_t indest_color = M_DGREY;
+                            ^~~~~~~
+../src/blocks.c:57:32: error: request for member 'r' in something not a structure or union
+                 map[j][i].color.r = map_colors[i].r + (collisions - 1) * BLOCK_COLOR_DIFF;
+                                ^
+../src/blocks.c:57:50: error: request for member 'r' in something not a structure or union
+                 map[j][i].color.r = map_colors[i].r + (collisions - 1) * BLOCK_COLOR_DIFF;
+                                                  ^
+../src/blocks.c:58:32: error: request for member 'g' in something not a structure or union
+                 map[j][i].color.g = map_colors[i].g + (collisions - 1) * BLOCK_COLOR_DIFF;
+                                ^
+../src/blocks.c:58:50: error: request for member 'g' in something not a structure or union
+                 map[j][i].color.g = map_colors[i].g + (collisions - 1) * BLOCK_COLOR_DIFF;
+                                                  ^
+../src/blocks.c:59:32: error: request for member 'b' in something not a structure or union
+                 map[j][i].color.b = map_colors[i].b + (collisions - 1) * BLOCK_COLOR_DIFF;
+                                ^
+../src/blocks.c:59:50: error: request for member 'b' in something not a structure or union
+                 map[j][i].color.b = map_colors[i].b + (collisions - 1) * BLOCK_COLOR_DIFF;
+                                                  ^
+make: *** [src/subdir.mk:29: src/blocks.o] Error 1
+18:51:34 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/blocks.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/blocks.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/blocks.d" -MT"src/blocks.o" -o "src/blocks.o" "../src/blocks.c"
+../src/blocks.c: In function 'print_block':
+../src/blocks.c:13:4: warning: implicit declaration of function 'paint'; did you mean 'print'? [-Wimplicit-function-declaration]
+    paint(pos.x + i, pos.y + j, col);
+    ^~~~~
+    print
+'Finished building: ../src/blocks.c'
+' '
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.h:4:0,
+                 from ../src/main.c:5:
+../src/blocks.h:47:2: error: unknown type name 'color_t'
+  color_t color;
+  ^~~~~~~
+../src/blocks.h:55:34: error: unknown type name 'color_t'; did you mean 'caddr_t'?
+ void print_block(position_t pos, color_t col);
+                                  ^~~~~~~
+                                  caddr_t
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:35: error: unknown type name 'color_t'; did you mean 'caddr_t'?
+ void paint_object(position_t pos, color_t *object, int height, int width);
+                                   ^~~~~~~
+                                   caddr_t
+../src/graphics.h:16:38: error: unknown type name 'color_t'; did you mean 'caddr_t'?
+ void paint_animation(position_t pos, color_t ***animation, int frames, int period, int rows, int cols);
+                                      ^~~~~~~
+                                      caddr_t
+../src/graphics.h:17:23: error: unknown type name 'color_t'; did you mean 'caddr_t'?
+ void print_background(color_t color);
+                       ^~~~~~~
+                       caddr_t
+../src/graphics.h:22:26: error: unknown type name 'color_t'; did you mean 'caddr_t'?
+ void paint(int x, int y, color_t rgb);
+                          ^~~~~~~
+                          caddr_t
+../src/graphics.h:25:1: error: unknown type name 'color_t'; did you mean 'caddr_t'?
+ color_t pixel(int x, int y);
+ ^~~~~~~
+ caddr_t
+../src/graphics.h:31:28: error: unknown type name 'color_t'; did you mean 'caddr_t'?
+ void rect (position_t pos, color_t col, int w, int h);
+                            ^~~~~~~
+                            caddr_t
+In file included from ../src/main.c:5:0:
+../src/main.h:40:1: error: unknown type name 'color_t'; did you mean 'caddr_t'?
+ color_t number_1[12][9]={
+ ^~~~~~~
+ caddr_t
+../src/main.h:41:4: error: 'N' undeclared here (not in a function); did you mean '_N'?
+   {N,N,N,GI,GI,GI,N,N,N},
+    ^
+    _N
+../src/main.h:41:10: error: 'GI' undeclared here (not in a function)
+   {N,N,N,GI,GI,GI,N,N,N},
+          ^~
+../src/main.h:42:11: error: 'W' undeclared here (not in a function)
+   {N,N,GI,W,W,GC,GI,N,N},
+           ^
+../src/main.h:42:15: error: 'GC' undeclared here (not in a function); did you mean 'GI'?
+   {N,N,GI,W,W,GC,GI,N,N},
+               ^~
+               GI
+../src/main.h:49:6: error: 'GO' undeclared here (not in a function); did you mean 'GC'?
+   {N,GO,GO,W,W,GC,GO,GO,N},
+      ^~
+      GC
+../src/main.h:54:1: error: unknown type name 'color_t'; did you mean 'caddr_t'?
+ color_t number_2[12][10]={
+ ^~~~~~~
+ caddr_t
+../src/main.h:69:1: error: unknown type name 'color_t'; did you mean 'caddr_t'?
+ color_t number_3[12][9]={
+ ^~~~~~~
+ caddr_t
+../src/main.h:73:26: warning: excess elements in array initializer
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/main.h:73:26: note: (near initialization for 'number_3[3]')
+../src/main.h:74:26: warning: excess elements in array initializer
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/main.h:74:26: note: (near initialization for 'number_3[4]')
+../src/main.h:75:26: warning: excess elements in array initializer
+  {N,GI,GI,GI,W,W,W,GC,GI,N},
+                          ^
+../src/main.h:75:26: note: (near initialization for 'number_3[5]')
+../src/main.h:76:26: warning: excess elements in array initializer
+  {N,GI,GI,GI,W,W,W,GC,GI,N},
+                          ^
+../src/main.h:76:26: note: (near initialization for 'number_3[6]')
+../src/main.h:77:26: warning: excess elements in array initializer
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/main.h:77:26: note: (near initialization for 'number_3[7]')
+../src/main.h:78:26: warning: excess elements in array initializer
+  {GO,W,W,GC,GO,GO,W,W,GC,GO},
+                          ^~
+../src/main.h:78:26: note: (near initialization for 'number_3[8]')
+../src/main.h:80:25: warning: excess elements in array initializer
+  {N,GO,W,W,W,W,W, GC,GO,N},
+                         ^
+../src/main.h:80:25: note: (near initialization for 'number_3[10]')
+../src/main.h:85:1: error: unknown type name 'color_t'; did you mean 'caddr_t'?
+ color_t button[10][9]={
+ ^~~~~~~
+ caddr_t
+../src/main.h:98:1: error: unknown type name 'color_t'; did you mean 'caddr_t'?
+ color_t choose_level[5][47]={
+ ^~~~~~~
+ caddr_t
+../src/main.h:106:1: error: unknown type name 'color_t'; did you mean 'caddr_t'?
+ color_t authors[14][25]={
+ ^~~~~~~
+ caddr_t
+../src/main.h:107:4: error: 'M_CYAN' undeclared here (not in a function)
+   {M_CYAN,M_CYAN,M_CYAN,N,N,N,M_CYAN,M_CYAN,M_CYAN,N,M_CYAN,N,N,M_CYAN,M_CYAN,M_CYAN,N,M_CYAN,N,M_CYAN,N,N,M_CYAN,M_CYAN,M_CYAN},
+    ^~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:114:24: error: 'M_GREEN' undeclared here (not in a function); did you mean '_REENT'?
+   {N,N,N,N,N,N,N,N,N,N,M_GREEN,N,N,N,N,M_GREEN,N,N,N,N,N,N,N,N,N},
+                        ^~~~~~~
+                        _REENT
+../src/main.h:124:1: error: unknown type name 'color_t'; did you mean 'caddr_t'?
+ color_t smoke[SMOKE_FRAMES][SMOKE_WIDTH][SMOKE_HEIGHT] = {
+ ^~~~~~~
+ caddr_t
+../src/main.h:126:10: error: 'G_BL' undeclared here (not in a function); did you mean '_B'?
+         {G_BL,G_BL,G_BL},
+          ^~~~
+          _B
+../src/main.h:128:15: error: 'G_GC' undeclared here (not in a function); did you mean 'G_BL'?
+         {G_BL,G_GC,G_BL},
+               ^~~~
+               G_BL
+../src/main.h:129:20: error: 'G_GO' undeclared here (not in a function); did you mean 'G_GC'?
+         {G_BL,G_BL,G_GO},
+                    ^~~~
+                    G_GC
+../src/main.h:159:1: error: unknown type name 'color_t'; did you mean 'caddr_t'?
+ color_t breakout[7][38] = {
+ ^~~~~~~
+ caddr_t
+../src/main.c:14:1: error: unknown type name 'color_t'; did you mean 'caddr_t'?
+ color_t negro = N;
+ ^~~~~~~
+ caddr_t
+../src/main.c:15:1: error: unknown type name 'color_t'; did you mean 'caddr_t'?
+ color_t blanco = W;
+ ^~~~~~~
+ caddr_t
+../src/main.c:16:1: error: unknown type name 'color_t'; did you mean 'caddr_t'?
+ color_t azul = A;
+ ^~~~~~~
+ caddr_t
+../src/main.c:16:16: error: 'A' undeclared here (not in a function)
+ color_t azul = A;
+                ^
+../src/main.c:17:1: error: unknown type name 'color_t'; did you mean 'caddr_t'?
+ color_t azul_claro = B;
+ ^~~~~~~
+ caddr_t
+../src/main.c:17:22: error: 'B' undeclared here (not in a function)
+ color_t azul_claro = B;
+                      ^
+../src/main.c:18:1: error: unknown type name 'color_t'; did you mean 'caddr_t'?
+ color_t verde = C;
+ ^~~~~~~
+ caddr_t
+../src/main.c:18:17: error: 'C' undeclared here (not in a function)
+ color_t verde = C;
+                 ^
+../src/main.c:19:1: error: unknown type name 'color_t'; did you mean 'caddr_t'?
+ color_t verde_oscuro = D;
+ ^~~~~~~
+ caddr_t
+../src/main.c:19:24: error: 'D' undeclared here (not in a function)
+ color_t verde_oscuro = D;
+                        ^
+../src/main.c:20:1: error: unknown type name 'color_t'; did you mean 'caddr_t'?
+ color_t amarillo = E;
+ ^~~~~~~
+ caddr_t
+../src/main.c:20:20: error: 'E' undeclared here (not in a function)
+ color_t amarillo = E;
+                    ^
+../src/main.c:21:1: error: unknown type name 'color_t'; did you mean 'caddr_t'?
+ color_t rojo = F;
+ ^~~~~~~
+ caddr_t
+../src/main.c:21:16: error: 'F' undeclared here (not in a function)
+ color_t rojo = F;
+                ^
+../src/main.c:22:1: error: unknown type name 'color_t'; did you mean 'caddr_t'?
+ color_t gold = G;
+ ^~~~~~~
+ caddr_t
+../src/main.c:22:16: error: 'G' undeclared here (not in a function)
+ color_t gold = G;
+                ^
+../src/main.c:23:1: error: unknown type name 'color_t'; did you mean 'caddr_t'?
+ color_t gris_claro = GC;
+ ^~~~~~~
+ caddr_t
+../src/main.c:24:1: error: unknown type name 'color_t'; did you mean 'caddr_t'?
+ color_t gris_intermedio = GI;
+ ^~~~~~~
+ caddr_t
+../src/main.c:25:1: error: unknown type name 'color_t'; did you mean 'caddr_t'?
+ color_t gris_oscuro = GO;
+ ^~~~~~~
+ caddr_t
+../src/main.c:27:1: error: unknown type name 'color_t'; did you mean 'caddr_t'?
+ color_t amar = {255, 255, 0};
+ ^~~~~~~
+ caddr_t
+../src/main.c:27:22: warning: excess elements in scalar initializer
+ color_t amar = {255, 255, 0};
+                      ^~~
+../src/main.c:27:22: note: (near initialization for 'amar')
+../src/main.c:27:27: warning: excess elements in scalar initializer
+ color_t amar = {255, 255, 0};
+                           ^
+../src/main.c:27:27: note: (near initialization for 'amar')
+../src/main.c: In function 'main':
+../src/main.c:58:3: warning: implicit declaration of function 'print_background' [-Wimplicit-function-declaration]
+   print_background(negro);
+   ^~~~~~~~~~~~~~~~
+../src/main.c:65:3: warning: implicit declaration of function 'rect' [-Wimplicit-function-declaration]
+   rect(frames[0], blanco, END_X_BORDER, BORDER_THICKNESS);
+   ^~~~
+../src/main.c: In function 'life_lost':
+../src/main.c:125:2: warning: implicit declaration of function 'paint_animation' [-Wimplicit-function-declaration]
+  paint_animation(pos, smoke, SMOKE_FRAMES, SMOKE_TIME, SMOKE_WIDTH, SMOKE_HEIGHT);
+  ^~~~~~~~~~~~~~~
+../src/main.c: At top level:
+../src/main.c:154:18: error: unknown type name 'color_t'; did you mean 'caddr_t'?
+ int equals_color(color_t color1, color_t color2)
+                  ^~~~~~~
+                  caddr_t
+../src/main.c:154:34: error: unknown type name 'color_t'; did you mean 'caddr_t'?
+ int equals_color(color_t color1, color_t color2)
+                                  ^~~~~~~
+                                  caddr_t
+../src/main.c: In function 'move_ball':
+../src/main.c:170:3: error: unknown type name 'color_t'; did you mean 'caddr_t'?
+   color_t next_color;
+   ^~~~~~~
+   caddr_t
+../src/main.c:191:8: warning: implicit declaration of function 'equals_color' [-Wimplicit-function-declaration]
+   if (!equals_color(negro, next_color))
+        ^~~~~~~~~~~~
+../src/main.c:202:8: warning: implicit declaration of function 'print_block'; did you mean 'reprint_block'? [-Wimplicit-function-declaration]
+        print_block(block.location, negro);
+        ^~~~~~~~~~~
+        reprint_block
+../src/main.c:212:5: warning: implicit declaration of function 'paint'; did you mean 'print'? [-Wimplicit-function-declaration]
+     paint(bola.x, bola.y, negro);
+     ^~~~~
+     print
+../src/main.c: In function 'level_selection':
+../src/main.c:581:2: warning: implicit declaration of function 'paint_object' [-Wimplicit-function-declaration]
+  paint_object(aux, choose_level, 5, 47);
+  ^~~~~~~~~~~~
+make: *** [src/subdir.mk:29: src/main.o] Error 1
+18:51:37 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/blocks.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/blocks.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/blocks.d" -MT"src/blocks.o" -o "src/blocks.o" "../src/blocks.c"
+../src/blocks.c: In function 'print_block':
+../src/blocks.c:13:4: warning: implicit declaration of function 'paint'; did you mean 'print'? [-Wimplicit-function-declaration]
+    paint(pos.x + i, pos.y + j, col);
+    ^~~~~
+    print
+'Finished building: ../src/blocks.c'
+' '
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.h:4:0,
+                 from ../src/main.c:5:
+../src/blocks.h:47:2: error: unknown type name 'color_t'
+  color_t color;
+  ^~~~~~~
+../src/blocks.h:55:34: error: unknown type name 'color_t'; did you mean 'caddr_t'?
+ void print_block(position_t pos, color_t col);
+                                  ^~~~~~~
+                                  caddr_t
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:35: error: unknown type name 'color_t'; did you mean 'caddr_t'?
+ void paint_object(position_t pos, color_t *object, int height, int width);
+                                   ^~~~~~~
+                                   caddr_t
+../src/graphics.h:16:38: error: unknown type name 'color_t'; did you mean 'caddr_t'?
+ void paint_animation(position_t pos, color_t ***animation, int frames, int period, int rows, int cols);
+                                      ^~~~~~~
+                                      caddr_t
+../src/graphics.h:17:23: error: unknown type name 'color_t'; did you mean 'caddr_t'?
+ void print_background(color_t color);
+                       ^~~~~~~
+                       caddr_t
+../src/graphics.h:22:26: error: unknown type name 'color_t'; did you mean 'caddr_t'?
+ void paint(int x, int y, color_t rgb);
+                          ^~~~~~~
+                          caddr_t
+../src/graphics.h:25:1: error: unknown type name 'color_t'; did you mean 'caddr_t'?
+ color_t pixel(int x, int y);
+ ^~~~~~~
+ caddr_t
+../src/graphics.h:31:28: error: unknown type name 'color_t'; did you mean 'caddr_t'?
+ void rect (position_t pos, color_t col, int w, int h);
+                            ^~~~~~~
+                            caddr_t
+In file included from ../src/main.c:5:0:
+../src/main.h:40:1: error: unknown type name 'color_t'; did you mean 'caddr_t'?
+ color_t number_1[12][9]={
+ ^~~~~~~
+ caddr_t
+../src/main.h:41:4: error: 'N' undeclared here (not in a function); did you mean '_N'?
+   {N,N,N,GI,GI,GI,N,N,N},
+    ^
+    _N
+../src/main.h:41:10: error: 'GI' undeclared here (not in a function)
+   {N,N,N,GI,GI,GI,N,N,N},
+          ^~
+../src/main.h:42:11: error: 'W' undeclared here (not in a function)
+   {N,N,GI,W,W,GC,GI,N,N},
+           ^
+../src/main.h:42:15: error: 'GC' undeclared here (not in a function); did you mean 'GI'?
+   {N,N,GI,W,W,GC,GI,N,N},
+               ^~
+               GI
+../src/main.h:49:6: error: 'GO' undeclared here (not in a function); did you mean 'GC'?
+   {N,GO,GO,W,W,GC,GO,GO,N},
+      ^~
+      GC
+../src/main.h:54:1: error: unknown type name 'color_t'; did you mean 'caddr_t'?
+ color_t number_2[12][10]={
+ ^~~~~~~
+ caddr_t
+../src/main.h:69:1: error: unknown type name 'color_t'; did you mean 'caddr_t'?
+ color_t number_3[12][9]={
+ ^~~~~~~
+ caddr_t
+../src/main.h:73:26: warning: excess elements in array initializer
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/main.h:73:26: note: (near initialization for 'number_3[3]')
+../src/main.h:74:26: warning: excess elements in array initializer
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/main.h:74:26: note: (near initialization for 'number_3[4]')
+../src/main.h:75:26: warning: excess elements in array initializer
+  {N,GI,GI,GI,W,W,W,GC,GI,N},
+                          ^
+../src/main.h:75:26: note: (near initialization for 'number_3[5]')
+../src/main.h:76:26: warning: excess elements in array initializer
+  {N,GI,GI,GI,W,W,W,GC,GI,N},
+                          ^
+../src/main.h:76:26: note: (near initialization for 'number_3[6]')
+../src/main.h:77:26: warning: excess elements in array initializer
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/main.h:77:26: note: (near initialization for 'number_3[7]')
+../src/main.h:78:26: warning: excess elements in array initializer
+  {GO,W,W,GC,GO,GO,W,W,GC,GO},
+                          ^~
+../src/main.h:78:26: note: (near initialization for 'number_3[8]')
+../src/main.h:80:25: warning: excess elements in array initializer
+  {N,GO,W,W,W,W,W, GC,GO,N},
+                         ^
+../src/main.h:80:25: note: (near initialization for 'number_3[10]')
+../src/main.h:85:1: error: unknown type name 'color_t'; did you mean 'caddr_t'?
+ color_t button[10][9]={
+ ^~~~~~~
+ caddr_t
+../src/main.h:98:1: error: unknown type name 'color_t'; did you mean 'caddr_t'?
+ color_t choose_level[5][47]={
+ ^~~~~~~
+ caddr_t
+../src/main.h:106:1: error: unknown type name 'color_t'; did you mean 'caddr_t'?
+ color_t authors[14][25]={
+ ^~~~~~~
+ caddr_t
+../src/main.h:107:4: error: 'M_CYAN' undeclared here (not in a function)
+   {M_CYAN,M_CYAN,M_CYAN,N,N,N,M_CYAN,M_CYAN,M_CYAN,N,M_CYAN,N,N,M_CYAN,M_CYAN,M_CYAN,N,M_CYAN,N,M_CYAN,N,N,M_CYAN,M_CYAN,M_CYAN},
+    ^~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:114:24: error: 'M_GREEN' undeclared here (not in a function); did you mean '_REENT'?
+   {N,N,N,N,N,N,N,N,N,N,M_GREEN,N,N,N,N,M_GREEN,N,N,N,N,N,N,N,N,N},
+                        ^~~~~~~
+                        _REENT
+../src/main.h:124:1: error: unknown type name 'color_t'; did you mean 'caddr_t'?
+ color_t smoke[SMOKE_FRAMES][SMOKE_WIDTH][SMOKE_HEIGHT] = {
+ ^~~~~~~
+ caddr_t
+../src/main.h:126:10: error: 'G_BL' undeclared here (not in a function); did you mean '_B'?
+         {G_BL,G_BL,G_BL},
+          ^~~~
+          _B
+../src/main.h:128:15: error: 'G_GC' undeclared here (not in a function); did you mean 'G_BL'?
+         {G_BL,G_GC,G_BL},
+               ^~~~
+               G_BL
+../src/main.h:129:20: error: 'G_GO' undeclared here (not in a function); did you mean 'G_GC'?
+         {G_BL,G_BL,G_GO},
+                    ^~~~
+                    G_GC
+../src/main.h:159:1: error: unknown type name 'color_t'; did you mean 'caddr_t'?
+ color_t breakout[7][38] = {
+ ^~~~~~~
+ caddr_t
+../src/main.c:14:1: error: unknown type name 'color_t'; did you mean 'caddr_t'?
+ color_t negro = N;
+ ^~~~~~~
+ caddr_t
+../src/main.c:15:1: error: unknown type name 'color_t'; did you mean 'caddr_t'?
+ color_t blanco = W;
+ ^~~~~~~
+ caddr_t
+../src/main.c:16:1: error: unknown type name 'color_t'; did you mean 'caddr_t'?
+ color_t azul = A;
+ ^~~~~~~
+ caddr_t
+../src/main.c:16:16: error: 'A' undeclared here (not in a function)
+ color_t azul = A;
+                ^
+../src/main.c:17:1: error: unknown type name 'color_t'; did you mean 'caddr_t'?
+ color_t azul_claro = B;
+ ^~~~~~~
+ caddr_t
+../src/main.c:17:22: error: 'B' undeclared here (not in a function)
+ color_t azul_claro = B;
+                      ^
+../src/main.c:18:1: error: unknown type name 'color_t'; did you mean 'caddr_t'?
+ color_t verde = C;
+ ^~~~~~~
+ caddr_t
+../src/main.c:18:17: error: 'C' undeclared here (not in a function)
+ color_t verde = C;
+                 ^
+../src/main.c:19:1: error: unknown type name 'color_t'; did you mean 'caddr_t'?
+ color_t verde_oscuro = D;
+ ^~~~~~~
+ caddr_t
+../src/main.c:19:24: error: 'D' undeclared here (not in a function)
+ color_t verde_oscuro = D;
+                        ^
+../src/main.c:20:1: error: unknown type name 'color_t'; did you mean 'caddr_t'?
+ color_t amarillo = E;
+ ^~~~~~~
+ caddr_t
+../src/main.c:20:20: error: 'E' undeclared here (not in a function)
+ color_t amarillo = E;
+                    ^
+../src/main.c:21:1: error: unknown type name 'color_t'; did you mean 'caddr_t'?
+ color_t rojo = F;
+ ^~~~~~~
+ caddr_t
+../src/main.c:21:16: error: 'F' undeclared here (not in a function)
+ color_t rojo = F;
+                ^
+../src/main.c:22:1: error: unknown type name 'color_t'; did you mean 'caddr_t'?
+ color_t gold = G;
+ ^~~~~~~
+ caddr_t
+../src/main.c:22:16: error: 'G' undeclared here (not in a function)
+ color_t gold = G;
+                ^
+../src/main.c:23:1: error: unknown type name 'color_t'; did you mean 'caddr_t'?
+ color_t gris_claro = GC;
+ ^~~~~~~
+ caddr_t
+../src/main.c:24:1: error: unknown type name 'color_t'; did you mean 'caddr_t'?
+ color_t gris_intermedio = GI;
+ ^~~~~~~
+ caddr_t
+../src/main.c:25:1: error: unknown type name 'color_t'; did you mean 'caddr_t'?
+ color_t gris_oscuro = GO;
+ ^~~~~~~
+ caddr_t
+../src/main.c:27:1: error: unknown type name 'color_t'; did you mean 'caddr_t'?
+ color_t amar = {255, 255, 0};
+ ^~~~~~~
+ caddr_t
+../src/main.c:27:22: warning: excess elements in scalar initializer
+ color_t amar = {255, 255, 0};
+                      ^~~
+../src/main.c:27:22: note: (near initialization for 'amar')
+../src/main.c:27:27: warning: excess elements in scalar initializer
+ color_t amar = {255, 255, 0};
+                           ^
+../src/main.c:27:27: note: (near initialization for 'amar')
+../src/main.c: In function 'main':
+../src/main.c:58:3: warning: implicit declaration of function 'print_background' [-Wimplicit-function-declaration]
+   print_background(negro);
+   ^~~~~~~~~~~~~~~~
+../src/main.c:65:3: warning: implicit declaration of function 'rect' [-Wimplicit-function-declaration]
+   rect(frames[0], blanco, END_X_BORDER, BORDER_THICKNESS);
+   ^~~~
+../src/main.c: In function 'life_lost':
+../src/main.c:125:2: warning: implicit declaration of function 'paint_animation' [-Wimplicit-function-declaration]
+  paint_animation(pos, smoke, SMOKE_FRAMES, SMOKE_TIME, SMOKE_WIDTH, SMOKE_HEIGHT);
+  ^~~~~~~~~~~~~~~
+../src/main.c: At top level:
+../src/main.c:154:18: error: unknown type name 'color_t'; did you mean 'caddr_t'?
+ int equals_color(color_t color1, color_t color2)
+                  ^~~~~~~
+                  caddr_t
+../src/main.c:154:34: error: unknown type name 'color_t'; did you mean 'caddr_t'?
+ int equals_color(color_t color1, color_t color2)
+                                  ^~~~~~~
+                                  caddr_t
+../src/main.c: In function 'move_ball':
+../src/main.c:170:3: error: unknown type name 'color_t'; did you mean 'caddr_t'?
+   color_t next_color;
+   ^~~~~~~
+   caddr_t
+../src/main.c:191:8: warning: implicit declaration of function 'equals_color' [-Wimplicit-function-declaration]
+   if (!equals_color(negro, next_color))
+        ^~~~~~~~~~~~
+../src/main.c:202:8: warning: implicit declaration of function 'print_block'; did you mean 'reprint_block'? [-Wimplicit-function-declaration]
+        print_block(block.location, negro);
+        ^~~~~~~~~~~
+        reprint_block
+../src/main.c:212:5: warning: implicit declaration of function 'paint'; did you mean 'print'? [-Wimplicit-function-declaration]
+     paint(bola.x, bola.y, negro);
+     ^~~~~
+     print
+../src/main.c: In function 'level_selection':
+../src/main.c:581:2: warning: implicit declaration of function 'paint_object' [-Wimplicit-function-declaration]
+  paint_object(aux, choose_level, 5, 47);
+  ^~~~~~~~~~~~
+make: *** [src/subdir.mk:29: src/main.o] Error 1
+18:51:58 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/blocks.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/blocks.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/blocks.d" -MT"src/blocks.o" -o "src/blocks.o" "../src/blocks.c"
+../src/blocks.c: In function 'print_block':
+../src/blocks.c:13:4: warning: implicit declaration of function 'paint'; did you mean 'print'? [-Wimplicit-function-declaration]
+    paint(pos.x + i, pos.y + j, col);
+    ^~~~~
+    print
+'Finished building: ../src/blocks.c'
+' '
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/blocks.h:5:0,
+                 from ../src/main.h:4,
+                 from ../src/main.c:5:
+../src/colors.h:14:12: warning: excess elements in array initializer
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:73:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:14:12: note: (near initialization for 'number_3[3]')
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:73:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:14:12: warning: excess elements in array initializer
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:74:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:14:12: note: (near initialization for 'number_3[4]')
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:74:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:12:11: warning: excess elements in array initializer
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:75:26: note: in expansion of macro 'N'
+  {N,GI,GI,GI,W,W,W,GC,GI,N},
+                          ^
+../src/colors.h:12:11: note: (near initialization for 'number_3[5]')
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:75:26: note: in expansion of macro 'N'
+  {N,GI,GI,GI,W,W,W,GC,GI,N},
+                          ^
+../src/colors.h:12:11: warning: excess elements in array initializer
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:76:26: note: in expansion of macro 'N'
+  {N,GI,GI,GI,W,W,W,GC,GI,N},
+                          ^
+../src/colors.h:12:11: note: (near initialization for 'number_3[6]')
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:76:26: note: in expansion of macro 'N'
+  {N,GI,GI,GI,W,W,W,GC,GI,N},
+                          ^
+../src/colors.h:14:12: warning: excess elements in array initializer
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:77:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:14:12: note: (near initialization for 'number_3[7]')
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:77:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:13:12: warning: excess elements in array initializer
+ #define GO {0x3d, 0x3d, 0x3d}
+            ^
+../src/main.h:78:26: note: in expansion of macro 'GO'
+  {GO,W,W,GC,GO,GO,W,W,GC,GO},
+                          ^~
+../src/colors.h:13:12: note: (near initialization for 'number_3[8]')
+ #define GO {0x3d, 0x3d, 0x3d}
+            ^
+../src/main.h:78:26: note: in expansion of macro 'GO'
+  {GO,W,W,GC,GO,GO,W,W,GC,GO},
+                          ^~
+../src/colors.h:12:11: warning: excess elements in array initializer
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:80:25: note: in expansion of macro 'N'
+  {N,GO,W,W,W,W,W, GC,GO,N},
+                         ^
+../src/colors.h:12:11: note: (near initialization for 'number_3[10]')
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:80:25: note: in expansion of macro 'N'
+  {N,GO,W,W,W,W,W, GC,GO,N},
+                         ^
+../src/main.c: In function 'life_lost':
+../src/main.c:125:23: warning: passing argument 2 of 'paint_animation' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_animation(pos, smoke, SMOKE_FRAMES, SMOKE_TIME, SMOKE_WIDTH, SMOKE_HEIGHT);
+                       ^~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:16:6: note: expected 'color_t *** {aka struct color ***}' but argument is of type 'color_t (*)[6][3] {aka struct color (*)[6][3]}'
+ void paint_animation(position_t pos, color_t ***animation, int frames, int period, int rows, int cols);
+      ^~~~~~~~~~~~~~~
+../src/main.c: In function 'level_selection':
+../src/main.c:581:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, choose_level, 5, 47);
+                    ^~~~~~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[47] {aka struct color (*)[47]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:584:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, number_1, 12, 9);
+                    ^~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[9] {aka struct color (*)[9]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:586:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, button, 10, 9);
+                    ^~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[9] {aka struct color (*)[9]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:589:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, number_2, 12, 10);
+                    ^~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[10] {aka struct color (*)[10]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:591:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, button, 10, 9);
+                    ^~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[9] {aka struct color (*)[9]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:594:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, number_3, 12,9);
+                    ^~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[9] {aka struct color (*)[9]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:596:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, button, 10, 9);
+                    ^~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[9] {aka struct color (*)[9]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:599:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, authors, 14, 25);
+                    ^~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[25] {aka struct color (*)[25]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:602:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, breakout, 7, 38);
+                    ^~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[38] {aka struct color (*)[38]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building file: ../src/graphics.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/graphics.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/graphics.d" -MT"src/graphics.o" -o "src/graphics.o" "../src/graphics.c"
+../src/graphics.c: In function 'paint_animation':
+../src/graphics.c:23:27: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+         paint_object(pos, animation[f], rows, cols);
+                           ^~~~~~~~~
+../src/graphics.c:11:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t ** {aka struct color **}'
+ void paint_object(position_t pos, color_t *object, int rows, int cols) {
+      ^~~~~~~~~~~~
+../src/graphics.c:24:23: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+     paint_object(pos, animation[frames - 1], rows, cols);
+                       ^~~~~~~~~
+../src/graphics.c:11:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t ** {aka struct color **}'
+ void paint_object(position_t pos, color_t *object, int rows, int cols) {
+      ^~~~~~~~~~~~
+'Finished building: ../src/graphics.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  26600	   5220	   5380	  37200	   9150	example.elf
+'Finished building: example.elf.size'
+' '
+18:52:03 **** Incremental Build of configuration Debug for project example ****
+make all 
+make: Nothing to be done for 'all'.
+18:53:44 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/blocks.h:5:0,
+                 from ../src/main.h:4,
+                 from ../src/main.c:5:
+../src/colors.h:14:12: warning: excess elements in array initializer
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:73:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:14:12: note: (near initialization for 'number_3[3]')
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:73:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:14:12: warning: excess elements in array initializer
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:74:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:14:12: note: (near initialization for 'number_3[4]')
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:74:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:12:11: warning: excess elements in array initializer
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:75:26: note: in expansion of macro 'N'
+  {N,GI,GI,GI,W,W,W,GC,GI,N},
+                          ^
+../src/colors.h:12:11: note: (near initialization for 'number_3[5]')
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:75:26: note: in expansion of macro 'N'
+  {N,GI,GI,GI,W,W,W,GC,GI,N},
+                          ^
+../src/colors.h:12:11: warning: excess elements in array initializer
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:76:26: note: in expansion of macro 'N'
+  {N,GI,GI,GI,W,W,W,GC,GI,N},
+                          ^
+../src/colors.h:12:11: note: (near initialization for 'number_3[6]')
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:76:26: note: in expansion of macro 'N'
+  {N,GI,GI,GI,W,W,W,GC,GI,N},
+                          ^
+../src/colors.h:14:12: warning: excess elements in array initializer
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:77:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:14:12: note: (near initialization for 'number_3[7]')
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:77:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:13:12: warning: excess elements in array initializer
+ #define GO {0x3d, 0x3d, 0x3d}
+            ^
+../src/main.h:78:26: note: in expansion of macro 'GO'
+  {GO,W,W,GC,GO,GO,W,W,GC,GO},
+                          ^~
+../src/colors.h:13:12: note: (near initialization for 'number_3[8]')
+ #define GO {0x3d, 0x3d, 0x3d}
+            ^
+../src/main.h:78:26: note: in expansion of macro 'GO'
+  {GO,W,W,GC,GO,GO,W,W,GC,GO},
+                          ^~
+../src/colors.h:12:11: warning: excess elements in array initializer
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:80:25: note: in expansion of macro 'N'
+  {N,GO,W,W,W,W,W, GC,GO,N},
+                         ^
+../src/colors.h:12:11: note: (near initialization for 'number_3[10]')
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:80:25: note: in expansion of macro 'N'
+  {N,GO,W,W,W,W,W, GC,GO,N},
+                         ^
+../src/main.c: In function 'life_lost':
+../src/main.c:125:23: warning: passing argument 2 of 'paint_animation' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_animation(pos, smoke, SMOKE_FRAMES, SMOKE_TIME, SMOKE_WIDTH, SMOKE_HEIGHT);
+                       ^~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:16:6: note: expected 'color_t *** {aka struct color ***}' but argument is of type 'color_t (*)[6][3] {aka struct color (*)[6][3]}'
+ void paint_animation(position_t pos, color_t ***animation, int frames, int period, int rows, int cols);
+      ^~~~~~~~~~~~~~~
+../src/main.c: In function 'level_selection':
+../src/main.c:581:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, choose_level, 5, 47);
+                    ^~~~~~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[47] {aka struct color (*)[47]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:584:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, number_1, 12, 9);
+                    ^~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[9] {aka struct color (*)[9]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:586:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, button, 10, 9);
+                    ^~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[9] {aka struct color (*)[9]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:589:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, number_2, 12, 10);
+                    ^~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[10] {aka struct color (*)[10]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:591:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, button, 10, 9);
+                    ^~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[9] {aka struct color (*)[9]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:594:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, number_3, 12,9);
+                    ^~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[9] {aka struct color (*)[9]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:596:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, button, 10, 9);
+                    ^~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[9] {aka struct color (*)[9]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:599:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, authors, 14, 25);
+                    ^~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[25] {aka struct color (*)[25]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:602:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, breakout, 7, 38);
+                    ^~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[38] {aka struct color (*)[38]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  26600	   5220	   5380	  37200	   9150	example.elf
+'Finished building: example.elf.size'
+' '
+18:53:45 **** Incremental Build of configuration Debug for project example ****
+make all 
+make: Nothing to be done for 'all'.
+18:54:17 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/blocks.h:5:0,
+                 from ../src/main.h:4,
+                 from ../src/main.c:5:
+../src/colors.h:14:12: warning: excess elements in array initializer
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:73:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:14:12: note: (near initialization for 'number_3[3]')
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:73:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:14:12: warning: excess elements in array initializer
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:74:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:14:12: note: (near initialization for 'number_3[4]')
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:74:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:12:11: warning: excess elements in array initializer
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:75:26: note: in expansion of macro 'N'
+  {N,GI,GI,GI,W,W,W,GC,GI,N},
+                          ^
+../src/colors.h:12:11: note: (near initialization for 'number_3[5]')
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:75:26: note: in expansion of macro 'N'
+  {N,GI,GI,GI,W,W,W,GC,GI,N},
+                          ^
+../src/colors.h:12:11: warning: excess elements in array initializer
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:76:26: note: in expansion of macro 'N'
+  {N,GI,GI,GI,W,W,W,GC,GI,N},
+                          ^
+../src/colors.h:12:11: note: (near initialization for 'number_3[6]')
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:76:26: note: in expansion of macro 'N'
+  {N,GI,GI,GI,W,W,W,GC,GI,N},
+                          ^
+../src/colors.h:14:12: warning: excess elements in array initializer
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:77:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:14:12: note: (near initialization for 'number_3[7]')
+ #define GI {0x78, 0x78, 0x78}
+            ^
+../src/main.h:77:26: note: in expansion of macro 'GI'
+  {GI,W,W,GC,GI,GI,W,W,GC,GI},
+                          ^~
+../src/colors.h:13:12: warning: excess elements in array initializer
+ #define GO {0x3d, 0x3d, 0x3d}
+            ^
+../src/main.h:78:26: note: in expansion of macro 'GO'
+  {GO,W,W,GC,GO,GO,W,W,GC,GO},
+                          ^~
+../src/colors.h:13:12: note: (near initialization for 'number_3[8]')
+ #define GO {0x3d, 0x3d, 0x3d}
+            ^
+../src/main.h:78:26: note: in expansion of macro 'GO'
+  {GO,W,W,GC,GO,GO,W,W,GC,GO},
+                          ^~
+../src/colors.h:12:11: warning: excess elements in array initializer
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:80:25: note: in expansion of macro 'N'
+  {N,GO,W,W,W,W,W, GC,GO,N},
+                         ^
+../src/colors.h:12:11: note: (near initialization for 'number_3[10]')
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:80:25: note: in expansion of macro 'N'
+  {N,GO,W,W,W,W,W, GC,GO,N},
+                         ^
+../src/main.c: In function 'life_lost':
+../src/main.c:125:23: warning: passing argument 2 of 'paint_animation' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_animation(pos, smoke, SMOKE_FRAMES, SMOKE_TIME, SMOKE_WIDTH, SMOKE_HEIGHT);
+                       ^~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:16:6: note: expected 'color_t *** {aka struct color ***}' but argument is of type 'color_t (*)[6][3] {aka struct color (*)[6][3]}'
+ void paint_animation(position_t pos, color_t ***animation, int frames, int period, int rows, int cols);
+      ^~~~~~~~~~~~~~~
+../src/main.c: In function 'level_selection':
+../src/main.c:581:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, choose_level, 5, 47);
+                    ^~~~~~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[47] {aka struct color (*)[47]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:584:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, number_1, 12, 9);
+                    ^~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[9] {aka struct color (*)[9]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:586:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, button, 10, 9);
+                    ^~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[9] {aka struct color (*)[9]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:589:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, number_2, 12, 10);
+                    ^~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[10] {aka struct color (*)[10]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:591:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, button, 10, 9);
+                    ^~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[9] {aka struct color (*)[9]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:594:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, number_3, 12,9);
+                    ^~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[9] {aka struct color (*)[9]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:596:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, button, 10, 9);
+                    ^~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[9] {aka struct color (*)[9]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:599:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, authors, 14, 25);
+                    ^~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[25] {aka struct color (*)[25]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+../src/main.c:602:20: warning: passing argument 2 of 'paint_object' from incompatible pointer type [-Wincompatible-pointer-types]
+  paint_object(aux, breakout, 7, 38);
+                    ^~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:15:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[38] {aka struct color (*)[38]}'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+      ^~~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  26600	   5220	   5380	  37200	   9150	example.elf
+'Finished building: example.elf.size'
+' '

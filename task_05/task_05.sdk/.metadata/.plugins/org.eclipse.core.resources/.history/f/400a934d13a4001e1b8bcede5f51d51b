@@ -87,6 +87,8 @@ int main(){
 			if(speed_ball == 5){
 				speed_ball=0;
 				status = move_ball();
+			} else speed_ball++;
+			usleep(10000);
 				if (status == lost_life)
 				{
 					count1 = 0;
@@ -106,8 +108,6 @@ int main(){
 					else
 						status = continues;
 				}
-			} else speed_ball++;
-			usleep(10000);
 		}
 
 		if (status == game_over)

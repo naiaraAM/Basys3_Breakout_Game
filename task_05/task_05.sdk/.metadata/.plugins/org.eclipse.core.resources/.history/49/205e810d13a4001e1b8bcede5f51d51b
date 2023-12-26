@@ -89,6 +89,7 @@ int main(){
 				status = move_ball();
 				if (status == lost_life)
 				{
+					life_lost();
 					count1 = 0;
 					speed_ball = 0;
 					lifes--;

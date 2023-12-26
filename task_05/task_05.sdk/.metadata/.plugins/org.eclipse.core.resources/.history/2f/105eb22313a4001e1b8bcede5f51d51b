@@ -95,7 +95,10 @@ int main(){
 					if (lifes == 0)
 						status = game_over;
 					else
+					{
 						status = continues;
+						life_lost();
+					}
 				}
 				else if (status == block_broken)
 				{
