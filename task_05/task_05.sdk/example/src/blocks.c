@@ -30,13 +30,17 @@ void reprint_block(block_t block)
 
 void init_map(block_t map[N_BLOCKS_X][N_BLOCKS_Y], levels_t level)
 {
-	int i, j, collisions;
+	int i, j, collisions = 1;
     color_t indest_color = M_DGREY;
 
 	for(i = 0; i < N_BLOCKS_Y; i++)
     {
 		for(j = 0; j < N_BLOCKS_X; j++)
         {
+            // Set block default color
+            map[j][i].color = map_colors[i];
+
+            // Decide if the block is indestructible
             if (level == third_lvl)
             	map[j][i].indestructible = (rand() % 4 == 0) ? true : false;  // approx. 25% of indestructible blocks
             else
@@ -47,19 +51,15 @@ void init_map(block_t map[N_BLOCKS_X][N_BLOCKS_Y], levels_t level)
                 map[j][i].collisions = 0;
                 map[j][i].color = indest_color;
             }
-            else
+            else if (level == second_lvl || level == third_lvl)
             {
-                if (level == second_lvl)
-                    collisions = (rand() % 10 < 7) ? 1 : (rand() % 10 < 9) ? 2 : 3;  // 70% chance for 1, 15% chance for 2, 15% chance for 3
-                else
-                    collisions = 1;
-
-                map[j][i].collisions = collisions;
-                map[j][i].color = map_colors[i];
+                collisions = (rand() % 10 < 7) ? 1 : (rand() % 10 < 9) ? 2 : 3;  // 70% chance for 1, 15% chance for 2, 15% chance for 3
                 map[j][i].color.r = map_colors[i].r + (collisions - 1) * BLOCK_COLOR_DIFF;
                 map[j][i].color.g = map_colors[i].g + (collisions - 1) * BLOCK_COLOR_DIFF;
                 map[j][i].color.b = map_colors[i].b + (collisions - 1) * BLOCK_COLOR_DIFF;
             }
+
+            map[j][i].collisions = collisions;
             map[j][i].i = i;
             map[j][i].j = j;
         }
