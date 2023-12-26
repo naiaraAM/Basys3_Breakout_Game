@@ -16,7 +16,16 @@ typedef enum side {top, bottom, right, left,
 
 typedef enum movement {mov_top_right, mov_bottom_right, mov_bottom_left, mov_top_left} movement_t;
 
-typedef enum game_status {continues, life_lost, win, game_over} game_status_t;
+typedef enum game_status {continues, life_lost, block_broken, win, game_over} game_status_t;
+
+/**
+ * LEVEL DESCRIPTION:
+ * Every level has a different map, and the same lives.
+ * 1. Every block in the map can be broken with one hit.
+ * 2. The same than lvl 1, but random blocks in the map will increase their collision requirements.
+ * 3. The same than lvl 2, plus random indestructible blocks.
+*/
+typedef enum levels {first_lvl, second_lvl, third_lvl} levels_t;
 
 #define A {0x00, 0x00, 0xf0}
 #define C {0x00, 0x80, 0x00}

@@ -30,54 +30,65 @@ color_t pixel(int x, int y){
 }
 
 int main(){
-	int i,j, count1 = 0, speed_ball = 0;
+	int i,j, count1, speed_ball;
 	init_buttons();
 	int dir;
-	int lifes = 3;
-	game_status_t status = continues;
+	int lifes;
+	int remaining_blocks;
+	game_status_t status;
+	levels_t level;
 
-	// Pinta el fondo negro. Se puede reemplazar por una llamada a rect
-	print_background(negro);
+	while (1)
+	{
+		// Init variables
+		count1 = 0;
+		speed_ball = 0;
+		lifes = NUM_LIFES;
+		status = continues;
+		remaining_blocks = N_BLOCKS_X * N_BLOCKS_Y;
 
-	// Aqui va loading_screen()
+		// Prints background
+		print_background(negro);
 
-    // Pinta bordes
-    frames[0].x = INT_X_BORDER; frames[0].y = INT_Y_BORDER;
-    frames[1].x = END_X_BORDER; frames[1].y = INT_Y_BORDER;
-    frames[2].x = INT_X_BORDER; frames[2].y = END_Y_BORDER;
-    frames[3].x = INT_X_BORDER; frames[3].y = INT_Y_BORDER;
+		// Here it goes loading_screen()
+		level = first_lvl;	// should be: level = loading_screen();
 
-    rect(frames[0], blanco, END_X_BORDER, BORDER_THICKNESS);
-    rect(frames[1], blanco, BORDER_THICKNESS, END_Y_BORDER);
-    rect(frames[2], blanco, END_X_BORDER, BORDER_THICKNESS);
-    rect(frames[3], blanco, BORDER_THICKNESS, END_Y_BORDER);
+		// Print game borders
+		frames[0].x = INT_X_BORDER; frames[0].y = INT_Y_BORDER;
+		frames[1].x = END_X_BORDER; frames[1].y = INT_Y_BORDER;
+		frames[2].x = INT_X_BORDER; frames[2].y = END_Y_BORDER;
+		frames[3].x = INT_X_BORDER; frames[3].y = INT_Y_BORDER;
 
-    // Print map
-    init_map(map);
-    print_map(map);
+		rect(frames[0], blanco, END_X_BORDER, BORDER_THICKNESS);
+		rect(frames[1], blanco, BORDER_THICKNESS, END_Y_BORDER);
+		rect(frames[2], blanco, END_X_BORDER, BORDER_THICKNESS);
+		rect(frames[3], blanco, BORDER_THICKNESS, END_Y_BORDER);
 
-    // Pos inicial de la nave
-	init_ball();
-	move_bar(0);
-	bola.mov = 3;
+		// Print map
+		init_map(map);
+		print_map(map);
 
-    while(1){
-    	// una de cada 5 veces, mueve la nave en el eje X
-    	if(count1==3){
-    		count1=0;
-    		if ((dir = wait_button()) != 0)
-				move_bar(dir);
-    	}else count1++;
-    	// Mueve la bala cada vuelta del ciclo. La bala va 5 veces m�s r�pido que la nave.
-    	if(speed_ball == 5){
-    		status = move_ball();
-    		speed_ball=0;
-    	} else speed_ball++;
-    	usleep(10000);
+		// Pos inicial de la nave
+		init_ball();
+		move_bar(0);
+		bola.mov = 3;
 
-		switch (status)
-		{
-			case life_lost:
+		while (status == continue) {
+			// una de cada 5 veces, mueve la nave en el eje X
+			if(count1==3){
+				count1=0;
+				if ((dir = wait_button()) != 0)
+					move_bar(dir);
+			} else count1++;
+			// Mueve la bala cada vuelta del ciclo. La bala va 5 veces m�s r�pido que la nave.
+			if(speed_ball == 5){
+				status = move_ball();
+				speed_ball=0;
+			} else speed_ball++;
+			usleep(10000);
+
+			if (status == life_lost)
+			{
 				count1 = 0;
 				speed_ball = 0;
 				lifes--;
@@ -85,17 +96,21 @@ int main(){
 					status = game_over;
 				else
 					status = continues;
-				// Do not break. game_over must be checked.
-			case game_over:
-				// game_over();
-				break;
-			case win:
-				// win();
-				break;
-			default:
-				break;
+			}
+			else if (status == block_broken)
+			{
+				remaining_blocks--;
+				xil_printf("Remaining blocks: %d\r", remaining_blocks);
+				if (remaining_blocks == 0)
+					status = win;
+			}
 		}
-    }
+
+		if (status == game_over)
+			xil_printf("GAME OVER\n");	// Aqui va game_over_screen()
+		else if (status == win)
+			xil_printf("YOU WON\n");	// Aqui va win_screen()
+	}
 
 	return 0;
 }
@@ -170,8 +185,19 @@ game_status_t move_ball()
 			{
 				if ((is_block = calculate_block(next_pos, &block)))
 				{
-					block.collisions--;
-					print_block(block.location, negro);
+					if (!block.indestructible)
+					{
+						if (block.collisions > 1)
+						{
+							block.collisions--;
+							reprint_block(block);
+						}
+						else if (block.collisions == 0)
+						{
+							print_block(block.location, negro);
+							status = block_broken;
+						}
+					}
 				}
 			}
 			else if (side == bottom)
