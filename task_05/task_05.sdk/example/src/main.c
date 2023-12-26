@@ -598,6 +598,9 @@ levels_t level_selection() {
 	aux.x = 5;
 	aux.y = 100;
 	paint_object(aux, authors, 14, 25);
+	aux.x = 61;
+	aux.y = 10;
+	paint_object(aux, breakout, 7, 38);
 
 	while (btn == 0)
 		btn = wait_button();
