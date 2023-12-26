@@ -121,6 +121,13 @@ color_t authors[14][25]={
 		{M_GREEN,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N}
 };
 
+
+
+#define SMOKE_TIME      100000   // microseconds
+#define SMOKE_FRAMES    5       // microseconds
+#define SMOKE_WIDTH     3       // pixels
+#define SMOKE_HEIGHT    6       // pixels
+
 color_t smoke[SMOKE_FRAMES][SMOKE_HEIGHT][SMOKE_WIDTH] = {
     {
         {G_BL,G_BL,G_BL},
@@ -132,14 +139,6 @@ color_t smoke[SMOKE_FRAMES][SMOKE_HEIGHT][SMOKE_WIDTH] = {
     },
     {
         {G_BL,G_BL,G_BL},
-        {G_BL,G_BL,G_BL},
-        {G_GO,G_BL,G_BL},
-        {G_BL,G_GO,G_GC},
-        {G_GC,G_BL,G_GO},
-        {G_BL,G_BL,G_BL}
-    },
-    {
-        {G_BL,G_BL,G_BL},
         {G_BL,G_GO,G_BL},
         {G_BL,G_BL,G_GC},
         {G_GC,G_BL,G_BL},
@@ -147,7 +146,23 @@ color_t smoke[SMOKE_FRAMES][SMOKE_HEIGHT][SMOKE_WIDTH] = {
         {G_BL,G_BL,G_BL}
     },
     {
+        {G_BL,G_BL,G_BL},
+        {G_BL,G_BL,G_BL},
+        {G_GO,G_BL,G_BL},
+        {G_BL,G_GO,G_GC},
+        {G_GC,G_BL,G_GO},
+        {G_BL,G_BL,G_BL}
+    },
+    {
         {G_BL,G_BL,G_GO},
+        {G_BL,G_BL,G_BL},
+        {G_BL,G_BL,G_BL},
+        {G_BL,G_BL,G_BL},
+        {G_BL,G_BL,G_BL},
+        {G_BL,G_BL,G_BL}
+    },
+    {
+        {G_BL,G_BL,G_BL},
         {G_BL,G_BL,G_BL},
         {G_BL,G_BL,G_BL},
         {G_BL,G_BL,G_BL},

@@ -17,11 +17,13 @@ void paint_object(position_t pos, color_t *object, int rows, int cols) {
     }
 }
 
-void paint_animation(position_t pos, color_t ***animation, int frames, int period, int rows, int cols) {
+void paint_animation(position_t pos, color_t *animation, int frames, int period, int rows, int cols) {
     // Process the frames
-    for (int f = 0; f < frames - 1; f++)
-        paint_object(pos, animation[f], rows, cols);
-    paint_object(pos, animation[frames - 1], rows, cols);
+    for (int f = 0; f < frames; f++)
+    {
+        paint_object(pos, &animation[f * rows * cols], rows, cols);
+        usleep(period);
+    }
 }
 
 void paint(int x, int y, color_t rgb){
