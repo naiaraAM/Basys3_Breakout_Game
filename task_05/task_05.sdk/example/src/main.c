@@ -125,7 +125,7 @@ int main(){
 void life_lost()
 {
 	position_t pos = {bola.x - SMOKE_WIDTH / 2, bola.y - SMOKE_HEIGHT};
-	paint_animation(pos, smoke, SMOKE_FRAMES, SMOKE_TIME, SMOKE_WIDTH, SMOKE_HEIGHT);
+	paint_animation(pos, smoke, SMOKE_FRAMES, SMOKE_TIME, SMOKE_HEIGHT, SMOKE_WIDTH);
 	init_ball();
 }
 
