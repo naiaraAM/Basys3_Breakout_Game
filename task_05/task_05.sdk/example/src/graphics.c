@@ -24,9 +24,6 @@ void paint_animation(position_t pos, color_t ***animation, int frames, int perio
     paint_object(pos, animation[frames - 1], rows, cols);
 }
 
-
-
-
 void paint(int x, int y, color_t rgb){
 	int *ptr = (int *)VGA_CTRL_BASE;
 	int val = (rgb.r>>4) | (rgb.b&0xf0) | ((rgb.g&0xf0)<<4);
