@@ -8,14 +8,24 @@
 
 typedef struct ball {
 	int x, y, mov;
-}ball_t;
+} ball_t;
 
 typedef enum side {top, bottom, right, left,
-					 top_left, top_right, bottom_left, bottom_right,
-					 not_border} side_t;
+					top_left, top_right, bottom_left, bottom_right,
+					not_border} side_t;
 
 typedef enum movement {mov_top_right, mov_bottom_right, mov_bottom_left, mov_top_left} movement_t;
-typedef enum game_status {continues, game_over} game_status_t;
+
+typedef enum game_status {continues, life_lost, block_broken, win, game_over} game_status_t;
+
+/**
+ * LEVEL DESCRIPTION:
+ * Every level has a different map, and the same lives.
+ * 1. Every block in the map can be broken with one hit.
+ * 2. The same than lvl 1, but random blocks in the map will increase their collision requirements.
+ * 3. The same than lvl 2, plus random indestructible blocks.
+*/
+typedef enum levels {first_lvl, second_lvl, third_lvl} levels_t;
 
 #define A {0x00, 0x00, 0xf0}
 #define C {0x00, 0x80, 0x00}
@@ -38,6 +48,8 @@ typedef enum game_status {continues, game_over} game_status_t;
 
 #define BAR_LENGTH			13
 #define BAR_HEIGHT			2
+
+#define NUM_LIFES			3
 
 color_t negro = N;
 color_t blanco = W;
@@ -146,34 +158,34 @@ color_t authors[14][25]={
 
 
 
-// Función que pinta un pixel en pantalla
+// Funciï¿½n que pinta un pixel en pantalla
 // X entre 0 y 159, Y entre 0 y 119,
 // R/G/B: colores - entre 0 y 255 (los cuatro bits menos significativos se ignoran)
 void paint(int x, int y, color_t rgb);
 
-// Función que retorna el valor de un pixel en pantalla
+// Funciï¿½n que retorna el valor de un pixel en pantalla
 color_t pixel(int x, int y);
 
-// Función que pinta un rectángulo de un color
+// Funciï¿½n que pinta un rectï¿½ngulo de un color
 // Pos: esquina superior izquierda del rectangulo
-// Color: color del rectángulo
+// Color: color del rectï¿½ngulo
 // W: anchura, H: altura
 void rect (position_t pos, color_t col, int w, int h);
 
 
-// Función que pinta una imagen en la VGA.
+// Funciï¿½n que pinta una imagen en la VGA.
 // Solo pinta los puntos que no son de color alfa (en este caso, negro), que se quedan "transparentes".
 
 
-// Mueve la náve automáticamente de derecha a izquierda o viceversa
+// Mueve la nï¿½ve automï¿½ticamente de derecha a izquierda o viceversa
 // El procedimiento para mover la nave es:
-//        borrar la nave de pantalla, calcular la nueva posición, pintar la nave
+//        borrar la nave de pantalla, calcular la nueva posiciï¿½n, pintar la nave
 void move_bar(int dir);
 
-// Inicializa una bala en la posición X
+// Inicializa una bala en la posiciï¿½n X
 void init_ball();
 
-// Mueve la bala, en vertical, hasta y = 0. Cuando llega ahí la desactiva
+// Mueve la bala, en vertical, hasta y = 0. Cuando llega ahï¿½ la desactiva
 game_status_t move_ball();
 
 void init_buttons();

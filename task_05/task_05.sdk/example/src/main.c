@@ -4,6 +4,7 @@
 #include "xil_printf.h"
 #include "main.h"
 #include "blocks.h"
+#include "graphics.h"
 
 #define MAX_LED 		0x8000
 #define BASE_GPIO0 		0x40000000
@@ -30,9 +31,34 @@ color_t pixel(int x, int y){
 }
 
 int main(){
-	int i,j, count1=0, speed_ball=0;
+	int i,j, count1, speed_ball;
 	init_buttons();
 	int dir;
+	int lifes;
+	int remaining_blocks;
+	game_status_t status;
+	levels_t level;
+
+	while (1)
+	{
+		// Init variables
+		count1 = 0;
+		speed_ball = 0;
+		lifes = NUM_LIFES;
+		status = continues;
+		remaining_blocks = N_BLOCKS_X * N_BLOCKS_Y;
+
+		// Prints background
+		print_background(negro);
+
+		// Here it goes loading_screen()
+		level = first_lvl;	// should be: level = loading_screen();
+
+		// Print game borders
+		frames[0].x = INT_X_BORDER; frames[0].y = INT_Y_BORDER;
+		frames[1].x = END_X_BORDER; frames[1].y = INT_Y_BORDER;
+		frames[2].x = INT_X_BORDER; frames[2].y = END_Y_BORDER;
+		frames[3].x = INT_X_BORDER; frames[3].y = INT_Y_BORDER;
 	game_status_t status = continues;
 	int lvl = level_selection();
 
@@ -48,56 +74,82 @@ int main(){
     frames[2].x = INT_X_BORDER; frames[2].y = END_Y_BORDER;
     frames[3].x = INT_X_BORDER; frames[3].y = INT_Y_BORDER;
 
-    rect(frames[0], blanco, END_X_BORDER, BORDER_THICKNESS);
-    rect(frames[1], blanco, BORDER_THICKNESS, END_Y_BORDER);
-    rect(frames[2], blanco, END_X_BORDER, BORDER_THICKNESS);
-    rect(frames[3], blanco, BORDER_THICKNESS, END_Y_BORDER);
+		rect(frames[0], blanco, END_X_BORDER, BORDER_THICKNESS);
+		rect(frames[1], blanco, BORDER_THICKNESS, END_Y_BORDER);
+		rect(frames[2], blanco, END_X_BORDER, BORDER_THICKNESS);
+		rect(frames[3], blanco, BORDER_THICKNESS, END_Y_BORDER);
 
-    // Print map
-    init_map(map);
-    print_map(map);
+		// Print map
+		init_map(map);
+		print_map(map);
 
-    // Pos inicial de la nave
-	init_ball();
-	move_bar(0);
-	bola.mov = 3;
+		// Pos inicial de la nave
+		init_ball();
+		move_bar(0);
+		bola.mov = 3;
 
-    while(1){
-    	// una de cada 5 veces, mueve la nave en el eje X
-    	if(count1==3){
-    		count1=0;
-    		if ((dir = wait_button()) != 0)
-				move_bar(dir);
-    	}else count1++;
-    	// Mueve la bala cada vuelta del ciclo. La bala va 5 veces más rápido que la nave.
-    	if(speed_ball == 5){
-    		status = move_ball();
-    		speed_ball=0;
-    	} else speed_ball++;
-    	usleep(10000);
+		while (status == continue) {
+			// una de cada 5 veces, mueve la nave en el eje X
+			if(count1==3){
+				count1=0;
+				if ((dir = wait_button()) != 0)
+					move_bar(dir);
+			} else count1++;
+			// Mueve la bala cada vuelta del ciclo. La bala va 5 veces mï¿½s rï¿½pido que la nave.
+			if(speed_ball == 5){
+				status = move_ball();
+				speed_ball=0;
+			} else speed_ball++;
+			usleep(10000);
 
-    	if (status == game_over)
-    	{
-    		init_ball();
-    		count1 = 0;
-			speed_ball = 0;
-			status = continues;
-    	}
-    }
+			if (status == life_lost)
+			{
+				count1 = 0;
+				speed_ball = 0;
+				lifes--;
+				if (lifes == 0)
+					status = game_over;
+				else
+					status = continues;
+			}
+			else if (status == block_broken)
+			{
+				remaining_blocks--;
+				xil_printf("Remaining blocks: %d\r", remaining_blocks);
+				if (remaining_blocks == 0)
+					status = win;
+			}
+		}
+
+		if (status == game_over)
+			xil_printf("GAME OVER\n");	// Aqui va game_over_screen()
+		else if (status == win)
+			xil_printf("YOU WON\n");	// Aqui va win_screen()
+	}
 
 	return 0;
 }
 
-void init_buttons(){
-	gpio0[1] = MASK_BUTTONS; 						// Configurar 4 bits como entrada
+void life_lost()
+{
+	paint_animation(bola.pos, smoke, SMOKE_FRAMES, SMOKE_TIME, SMOKE_WIDTH, SMOKE_HEIGHT);
+	init_ball();
 }
 
-int wait_button(){
+void init_buttons()
+{
+	// Configurar 4 bits como entrada
+	gpio0[1] = MASK_BUTTONS;
+}
+
+int wait_button()
+{
 	int data;
 	char btn = 0;
 
-	if ((data = gpio0[0] & MASK_BUTTONS) != 0) { 	// Espera a que se pulse un boton.
-		if ((data & 0x2) != 0)			// Boton de mover a la izquierda
+	// Espera a que se pulse un boton.
+	if ((data = gpio0[0] & MASK_BUTTONS) != 0) { 	
+		if ((data & 0x2) != 0)		// Boton de mover a la izquierda
 			btn = 1;
 		else if ((data & 0x4) != 0)			// Boton de mover a la derecha
 			btn = 3;
@@ -152,14 +204,25 @@ game_status_t move_ball()
 			{
 				if ((is_block = calculate_block(next_pos, &block)))
 				{
-					block.collisions--;
-					print_block(block.location, negro);
+					if (!block.indestructible)
+					{
+						if (block.collisions > 1)
+						{
+							block.collisions--;
+							reprint_block(block);
+						}
+						else if (block.collisions == 0)
+						{
+							print_block(block.location, negro);
+							status = block_broken;
+						}
+					}
 				}
 			}
 			else if (side == bottom)
 			{
 				paint(bola.x, bola.y, negro);
-				return game_over;
+				return life_lost;
 			}
 			else
 				is_block = false;
