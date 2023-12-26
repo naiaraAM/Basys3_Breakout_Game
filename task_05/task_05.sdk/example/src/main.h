@@ -26,6 +26,9 @@ typedef enum game_status {continues, game_over} game_status_t;
 #define G {0xc2, 0x99, 0x27}
 #define B {0xb4, 0xe2, 0xf4}
 #define N {0x00, 0x00, 0x00}
+#define GO {0x3d, 0x3d, 0x3d}
+#define GI {0x78, 0x78, 0x78}
+#define GC {0xb0, 0xac, 0xb0}
 
 #define INT_X_BORDER		1
 #define END_X_BORDER		158
@@ -45,11 +48,103 @@ color_t verde_oscuro = D;
 color_t amarillo = E;
 color_t rojo = F;
 color_t gold = G;
+color_t gris_claro = GC;
+color_t gris_intermedio = GI;
+color_t gris_oscuro = GO;
 
-color_t bar[11][2]={
+
+/*
+color_t bar[BAR_LENGTH][BAR_HEIGHT]={
 		{G,G,G,G,G,G,G,G,G,G,G},
 		{G,G,G,G,G,G,G,G,G,G,G}
 };
+*/
+
+color_t number_1[12][9]={
+		{N,N,N,GI,GI,GI,N,N,N},
+		{N,N,GI,W,W,GC,GI,N,N},
+		{N,GI,W,W,W,GC,GI,N,N},
+		{GI,W,W,W,W,GC,GI,N,N},
+		{GI,W,W,W,W,GC,GI,N,N},
+		{N,GI,GI,W,W,GC,GI,N,N},
+		{N,N,GI,W,W,GC,GI,N,N},
+		{N,N,GI,W,W,GC,GI,N,N},
+		{N,GO,GO,W,W,GC,GO,GO,N},
+		{GO,W,W,W,W,W,W,GC,GO},
+		{GO,W,W,W,W,W,W,GC,GO},
+		{N,GO,GO,GO,GO,GO,GO,N}
+};
+color_t number_2[12][10]={
+    {N,N,GI,GI,GI,GI,GI,GI,N,N},
+	{N,GI,W,W,W,W,W,GC,GI,N},
+	{GI,W,W,W,W,W,W,GC,GI},
+	{GI,W,W,GC,GI,GI,W,W,GC,GI},
+	{GI,W,W,GC,GI,GI,W,W,GC,GI},
+	{N,GI,GI,GI,GI,W,W,W,GC,GI},
+	{N,N,N,GI,W,W,W,GC,GI,N},
+	{N,N,GI,W,W,W,GC,GI,N,N},
+	{N,GO,W,W,W,GC,GO,GO,GO,N},
+	{GO,W,W,W,W,W,W,W,GC,GO},
+	{GO,W,W,W,W,W,W,W,GC,GO},
+	{N,GO,GO,GO,GO,GO,GO,GO,GO,N}
+
+};
+color_t number_3[12][9]={
+    {N,N,GI,GI,GI,GI,GI,N,N},
+	{N,GI,W,W,W,W,GC,GI,N},
+	{GI,W,W,W,W,W,W,GC,GI},
+	{GI,W,W,GC,GI,GI,W,W,GC,GI},
+	{GI,W,W,GC,GI,GI,W,W,GC,GI},
+	{N,GI,GI,GI,W,W,W,GC,GI,N},
+	{N,GI,GI,GI,W,W,W,GC,GI,N},
+	{GI,W,W,GC,GI,GI,W,W,GC,GI},
+	{GO,W,W,GC,GO,GO,W,W,GC,GO},
+	{GO,W,W,W,W,W,W,GC,GO},
+	{N,GO,W,W,W,W,W, GC,GO,N},
+	{N,N,GO,GO,GO,GO,GO,N,N}
+
+};
+
+color_t button[10][9]={
+		{N,N,GC,GC,GC,GC,GC,N,N},
+		{N,GC,GC,GC,GC,GC,GC,GC,N},
+		{GC,GC,GC,GC,GC,GC,GC,GC,GC},
+		{GC,GC,GC,GC,GC,GC,GC,GC,GC},
+		{GC,GC,GC,GC,GC,GC,GC,GC,GC},
+		{GC,GC,GC,GC,GC,GC,GC,GC,GC},
+		{GI,GC,GC,GC,GC,GC,GC,GC,GI},
+		{GO,GI,GC,GC,GC,GC,GC,GI,GO},
+		{N,GO,GI,GI,GI,GI,GI,GO,N},
+		{N,N,GO,GO,GO,GO,GO,N,N}
+};
+
+color_t choose_level[5][47]={
+		{W,W,W,N,W,N,W,N,W,W,W,N,W,W,W,N,W,W,W,N,W,W,W,N,N,N,W,N,N,N,W,W,W,N,W,N,W,N,W,W,W,N,W,N,N,N,N},
+		{W,N,N,N,W,N,W,N,W,N,W,N,W,N,W,N,W,N,N,N,W,N,N,N,N,N,W,N,N,N,W,N,N,N,W,N,W,N,W,N,N,N,W,N,N,N,W},
+		{W,N,N,N,W,W,W,N,W,N,W,N,W,N,W,N,W,W,W,N,W,W,N,N,N,N,W,N,N,N,W,W,N,N,W,N,W,N,W,W,N,N,W,N,N,N,N},
+		{W,N,N,N,W,N,W,N,W,N,W,N,W,N,W,N,N,N,W,N,W,N,N,N,N,N,W,N,N,N,W,N,N,N,W,N,W,N,W,N,N,N,W,N,N,N,W},
+		{W,W,W,N,W,N,W,N,W,W,W,N,W,W,W,N,W,W,W,N,W,W,W,N,N,N,W,W,W,N,W,W,W,N,N,W,N,N,W,W,W,N,W,W,W,N,N}
+};
+
+color_t authors[14][25]={
+		{M_CYAN,M_CYAN,M_CYAN,N,N,N,M_CYAN,M_CYAN,M_CYAN,N,M_CYAN,N,N,M_CYAN,M_CYAN,M_CYAN,N,M_CYAN,N,M_CYAN,N,N,M_CYAN,M_CYAN,M_CYAN},
+		{M_CYAN,N,N,M_CYAN,N,M_CYAN,N,N,M_CYAN,N,N,N,M_CYAN,N,N,M_CYAN,N,M_CYAN,M_CYAN,N,N,M_CYAN,N,N,M_CYAN},
+		{M_CYAN,N,N,M_CYAN,N,M_CYAN,N,N,M_CYAN,N,M_CYAN,N,M_CYAN,N,N,M_CYAN,N,M_CYAN,N,N,N,M_CYAN,N,N,M_CYAN},
+		{M_CYAN,N,N,M_CYAN,N,N,M_CYAN,M_CYAN,M_CYAN,N,M_CYAN,N,N,M_CYAN,M_CYAN,M_CYAN,N,M_CYAN,N,N,N,N,M_CYAN,M_CYAN,M_CYAN},
+
+		{N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N},
+		{N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N},
+		{N,N,N,N,N,N,N,N,N,N,M_GREEN,N,N,N,N,M_GREEN,N,N,N,N,N,N,N,N,N},
+		{N,N,N,N,N,N,N,N,N,N,M_GREEN,N,N,N,N,M_GREEN,N,N,N,N,N,N,N,N,N},
+		{M_GREEN,M_GREEN,M_GREEN,N,N,N,M_GREEN,M_GREEN,M_GREEN,N,M_GREEN,M_GREEN,M_GREEN,N,N,M_GREEN,N,N,M_GREEN,M_GREEN,N,N,N,N,N},
+		{M_GREEN,N,N,M_GREEN,N,M_GREEN,N,N,M_GREEN,N,M_GREEN,N,N,M_GREEN,N,M_GREEN,N,M_GREEN,N,N,M_GREEN,N,N,N,N},
+		{M_GREEN,N,N,M_GREEN,N,M_GREEN,N,N,M_GREEN,N,M_GREEN,N,N,M_GREEN,N,M_GREEN,N,M_GREEN,N,N,M_GREEN,N,N,N,N},
+		{M_GREEN,M_GREEN,M_GREEN,N,N,N,M_GREEN,M_GREEN,M_GREEN,N,M_GREEN,M_GREEN,M_GREEN,N,N,M_GREEN,N,N,M_GREEN,M_GREEN,N,N,N,N,N},
+		{M_GREEN,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N},
+		{M_GREEN,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N}
+};
+
+
 
 // Función que pinta un pixel en pantalla
 // X entre 0 y 159, Y entre 0 y 119,
@@ -68,7 +163,6 @@ void rect (position_t pos, color_t col, int w, int h);
 
 // Función que pinta una imagen en la VGA.
 // Solo pinta los puntos que no son de color alfa (en este caso, negro), que se quedan "transparentes".
-//void paint_bar(position_t pos, color_t img[11][2]);
 
 
 // Mueve la náve automáticamente de derecha a izquierda o viceversa
@@ -92,5 +186,7 @@ side_t calculate_border(position_t next_pos);
 bool calculate_block(position_t next_pos, block_t *block);
 movement_t calculate_rebound(ball_t bola, side_t side, bool is_block, block_t *block, position_t *next_pos);
 side_t which_side_bar(position_t next_pos);
+void paint_object(position_t pos, color_t *object, int height, int width);
+int level_selection();
 
 #endif

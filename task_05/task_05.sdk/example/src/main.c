@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <sleep.h>
 #include <stdbool.h>
+#include "xil_printf.h"
 #include "main.h"
 #include "blocks.h"
 
@@ -33,6 +34,8 @@ int main(){
 	init_buttons();
 	int dir;
 	game_status_t status = continues;
+	int lvl = level_selection();
+
 
 	// Pinta el fondo negro. Se puede reemplazar por una llamada a rect
     for(i=0;i<160;i++)
@@ -97,8 +100,10 @@ int wait_button(){
 		if ((data & 0x2) != 0)			// Boton de mover a la izquierda
 			btn = 1;
 		else if ((data & 0x4) != 0)			// Boton de mover a la derecha
+			btn = 3;
+		else if ((data & 0x1) != 0)
 			btn = 2;
-		xil_printf("Boton pulsado %d\r", btn);
+
 
 	}
 	return btn;
@@ -506,16 +511,6 @@ void rect (position_t pos, color_t col, int w, int h){
 	}
 }
 
-void paint_bar(position_t pos, color_t img[11][2]){
-	int i,j;
-	struct color alfa = negro;
-	for(i=0;i<BAR_LENGTH;i++){
-		for(j=0;j<2;j++){
-			if(img[j][i].r==alfa.r && img[j][i].g==alfa.g && img[j][i].b==alfa.b) continue;
-			else paint(pos.x+i, pos.y+j, img[j][i]);
-		}
-	}
-}
 
 void move_bar(int dir){
 	static int var = 0;
@@ -523,7 +518,7 @@ void move_bar(int dir){
 	{
 		var = -1;
 	}
-	else if (dir == 2)
+	else if (dir == 3)
 	{
 		var = 1;
 	}
@@ -541,3 +536,44 @@ void init_ball(){
 	bola_activa=1;
 	paint(bola.x,bola.y,azul_claro);
 }
+
+
+void paint_object(position_t pos, color_t *object, int rows, int cols) {
+    // Process the array elements
+    for (int i = 0; i < rows; i++)
+        for (int j = 0; j < cols; j++)
+			paint(pos.x + j, pos.y + i, object[i * cols + j]);
+}
+
+int level_selection() {
+
+	for(int i=0;i<160;i++)
+	    	for(int j=0;j<120;j++)
+	    		paint(i,j,negro);
+
+	position_t aux = {57, 25};
+	paint_object(aux, choose_level, 5, 47);
+	aux.x = 50;
+	aux.y = 50;
+	paint_object(aux, number_1, 12, 9);
+	aux.y = 65;
+	paint_object(aux, button, 10, 9);
+	aux.x = 75;
+	aux.y = 40;
+	paint_object(aux, number_2, 12, 10);
+	aux.y = 55;
+	paint_object(aux, button, 10, 9);
+	aux.x = 100;
+	aux.y = 50;
+	paint_object(aux, number_3, 12,9);
+	aux.y = 65;
+	paint_object(aux, button, 10, 9);
+	aux.x = 5;
+	aux.y = 100;
+	paint_object(aux, authors, 14, 25);
+	int button = 0;
+	while (button == 0)
+		button = wait_button();
+	return button;
+}
+

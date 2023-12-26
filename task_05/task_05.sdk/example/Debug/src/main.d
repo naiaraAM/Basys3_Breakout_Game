@@ -7,7 +7,8 @@ src/main.o src/main.o: ../src/main.c \
  ../../example_bsp/microblaze_0/include/bspconfig.h \
  ../../example_bsp/microblaze_0/include/mb_interface.h \
  ../../example_bsp/microblaze_0/include/xil_assert.h \
- ../../example_bsp/microblaze_0/include/xil_exception.h ../src/main.h \
+ ../../example_bsp/microblaze_0/include/xil_exception.h \
+ ../../example_bsp/microblaze_0/include/xil_printf.h ../src/main.h \
  ../src/blocks.h
 
 ../../example_bsp/microblaze_0/include/sleep.h:
@@ -27,6 +28,8 @@ src/main.o src/main.o: ../src/main.c \
 ../../example_bsp/microblaze_0/include/xil_assert.h:
 
 ../../example_bsp/microblaze_0/include/xil_exception.h:
+
+../../example_bsp/microblaze_0/include/xil_printf.h:
 
 ../src/main.h:
 
