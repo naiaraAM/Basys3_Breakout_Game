@@ -87,26 +87,25 @@ int main(){
 			if(speed_ball == 5){
 				status = move_ball();
 				speed_ball=0;
+				if (status == lost_life)
+				{
+					count1 = 0;
+					speed_ball = 0;
+					lifes--;
+					if (lifes == 0)
+						status = game_over;
+					else
+						status = continues;
+				}
+				else if (status == block_broken)
+				{
+					remaining_blocks--;
+					xil_printf("Remaining blocks: %d\r", remaining_blocks);
+					if (remaining_blocks == 0)
+						status = win;
+				}
 			} else speed_ball++;
 			usleep(10000);
-
-			if (status == lost_life)
-			{
-				count1 = 0;
-				speed_ball = 0;
-				lifes--;
-				if (lifes == 0)
-					status = game_over;
-				else
-					status = continues;
-			}
-			else if (status == block_broken)
-			{
-				remaining_blocks--;
-				xil_printf("Remaining blocks: %d\r", remaining_blocks);
-				if (remaining_blocks == 0)
-					status = win;
-			}
 		}
 
 		if (status == game_over)
