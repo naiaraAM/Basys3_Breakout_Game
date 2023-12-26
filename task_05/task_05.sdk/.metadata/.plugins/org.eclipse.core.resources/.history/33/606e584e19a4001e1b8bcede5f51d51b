@@ -105,7 +105,7 @@ int main(){
 					xil_printf("Remaining blocks: %d\r", remaining_blocks);
 					if (remaining_blocks == 0)
 						status = win;
-					else
+					else{
 						status = continues;
 				}
 			} else speed_ball++;

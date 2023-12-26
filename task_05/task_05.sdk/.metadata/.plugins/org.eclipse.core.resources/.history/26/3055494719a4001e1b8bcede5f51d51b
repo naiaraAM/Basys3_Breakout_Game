@@ -94,10 +94,8 @@ int main(){
 					lifes--;
 					if (lifes == 0)
 						status = game_over;
-					else {
+					else
 						status = continues;
-						life_lost();
-					}
 				}
 				else if (status == block_broken)
 				{
@@ -105,8 +103,11 @@ int main(){
 					xil_printf("Remaining blocks: %d\r", remaining_blocks);
 					if (remaining_blocks == 0)
 						status = win;
-					else
+					else{
 						status = continues;
+						life_lost();
+					}
+
 				}
 			} else speed_ball++;
 			usleep(10000);
