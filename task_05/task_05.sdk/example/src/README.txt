@@ -12,3 +12,4 @@ To-do list and new proposals:
  - [TODO] Delete unused peripherals.
  - [IDEA] The ball could be thrown with different angles.
  - [IDEA] The buttons could have arrows.
+ - [IDEA] Add a wait after a button is pressed in the 'check_button()' funcion.
