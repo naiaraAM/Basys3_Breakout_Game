@@ -1,1 +1,12 @@
-Empty application. Add your own sources.
+To-do list and new proposals:
+ - The map, the bar and the ball could be local variables.
+ - The bar should be generated always in the middle of the screen between matches.
+ - The ball could be thrown with different angles.
+ - The buttons could have arrows.
+ - There must be a life-score in the screen.
+ - Same, but with the remaining destructible blocks.
+ - Generate quality doxygen docs for each function.
+ - Extract bar and ball speeds to a game constant.
+ - Modularize even more the game.
+ - Check styles.
+ - Delete useless comments, and check for more unused variables.
