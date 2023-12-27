@@ -16,8 +16,8 @@ void print_background(color_t color);
 // R/G/B: colores - entre 0 y 255 (los cuatro bits menos significativos se ignoran)
 void paint(int x, int y, color_t rgb);
 
-// Funci�n que retorna el valor de un pixel en pantalla
-color_t pixel(int x, int y);
+// Function that returns the value of a pixel on the screen
+color_t get_color(int x, int y);
 
 // Funci�n que pinta un rect�ngulo de un color
 // Pos: esquina superior izquierda del rectangulo
