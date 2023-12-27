@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "blocks.h"
+#include "graphics.h"
 
 const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
 
