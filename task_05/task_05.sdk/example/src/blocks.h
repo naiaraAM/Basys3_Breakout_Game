@@ -28,15 +28,6 @@
  * 3. The same than lvl 2, plus random indestructible blocks.
 */
 typedef enum levels {first_lvl, second_lvl, third_lvl} levels_t;
-/*
-const color_t red = M_RED;
-const color_t orange = M_ORANGE;
-const color_t yellow = M_YELLOW;
-const color_t green = M_GREEN;
-const color_t dark_blue = M_DBLUE;
-const color_t purple = M_PURPLE;
-const color_t cyan = M_CYAN;
-*/
 
 typedef struct position {
 	int x, y;
