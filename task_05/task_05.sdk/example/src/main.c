@@ -4,32 +4,17 @@
 #include "xil_printf.h"
 #include "main.h"
 
-#define MAX_LED 		0x8000
-#define BASE_GPIO0 		0x40000000
-#define BASE_GPIO1 		0x40010000
-#define MASK_BUTTONS	0xF
+// Colors used in the game
+const color_t negro = N;		// Background
+const color_t blanco = W;		// Borders
+const color_t azul_claro = B;	// Ball
+const color_t gold = G;			// Bar
 
-
-
-color_t negro = N;
-color_t blanco = W;
-color_t azul = A;
-color_t azul_claro = B;
-color_t verde = C;
-color_t verde_oscuro = D;
-color_t amarillo = E;
-color_t rojo = F;
-color_t gold = G;
-color_t gris_claro = GC;
-color_t gris_intermedio = GI;
-color_t gris_oscuro = GO;
-
-color_t amar = {255, 255, 0};
 position_t pos_barra={((RESOLUTION_X / 2) - BAR_LENGTH / 2), 100}; //75
 ball_t bola;
 block_t map[N_BLOCKS_X][N_BLOCKS_Y];
 position_t frames[4];
-int bola_activa=0;
+bool bola_activa=0;
 
 volatile int *gpio0 = (int*)BASE_GPIO0; // dir base buttons
 
@@ -71,20 +56,20 @@ int main(){
 		init_map(map, level);
 		print_map(map);
 
-		// Pos inicial de la nave
+		// Initialize the bar and the ball
 		init_ball();
 		move_bar(0);
 		bola.mov = 3;
 
 		while (status == continues) {
-			// una de cada 5 veces, mueve la nave en el eje X
-			if(count1==3){
+			// Every 2 times, move the bar along the X-axis
+			if(count1==1){
 				count1=0;
-				if (((dir = wait_button()) != 0) && (dir == 1 || dir == 3))
+				if ((dir = check_button()) != 0)
 					move_bar(dir);
 			} else count1++;
-			// Mueve la bala cada vuelta del ciclo. La bala va 5 veces m�s r�pido que la nave.
-			if(speed_ball == 5){
+			// Every 4 times, the ball moves to its next position
+			if(speed_ball == 3){
 				speed_ball=0;
 				status = move_ball();
 				if (status == lost_life)
@@ -114,9 +99,9 @@ int main(){
 		}
 
 		if (status == game_over)
-			xil_printf("GAME OVER\n");	// Aqui va game_over_screen()
+			xil_printf("GAME OVER\n");	// Here goes the game_over_screen() function
 		else if (status == win)
-			xil_printf("YOU WON\n");	// Aqui va win_screen()
+			xil_printf("YOU WON\n");	// Here goes the win_screen() function
 	}
 
 	return 0;
@@ -135,42 +120,37 @@ void init_buttons()
 	gpio0[1] = MASK_BUTTONS;
 }
 
-int wait_button()
+int check_button()
 {
 	int data;
 	char btn = 0;
 
-	// Espera a que se pulse un boton.
-	if ((data = gpio0[0] & MASK_BUTTONS) != 0) { 	
-		if ((data & 0x2) != 0)		// Boton de mover a la izquierda
+	// Checks if any button is pressed
+	if ((data = gpio0[0] & MASK_BUTTONS) != 0) {
+		if ((data & 0x2) != 0)		// Right
 			btn = 1;
-		else if ((data & 0x4) != 0)			// Boton de mover a la derecha
+		else if ((data & 0x4) != 0)	// Left
 			btn = 3;
-		else if ((data & 0x1) != 0)
+		else if ((data & 0x1) != 0)	// Top
 			btn = 2;
-
-
 	}
-	return btn;
-}
 
-int equals_color(color_t color1, color_t color2)
-{
-	return ((color1.r == color2.r) && (color1.g == color2.g) && (color1.b == color2.b));
+	return btn;
 }
 
 game_status_t move_ball()
 {
 	game_status_t status = continues;
+	position_t next_pos;
+	side_t side;
+	block_t **block_ptr = NULL;
+	block_t *block;
+	movement_t next_mov;
+	bool is_block = false;
+	color_t next_color;
+
 	if(bola_activa)
 	{
-		position_t next_pos;
-		side_t side;
-		block_t block;
-
-		movement_t next_mov;
-		bool is_block = false;
-		color_t next_color;
 		switch(bola.mov)
 		{
 			case 0:
@@ -190,23 +170,24 @@ game_status_t move_ball()
 				next_pos.y = bola.y-1;
 				break;
 		}
-		next_color = pixel(next_pos.x, next_pos.y);
+		next_color = get_color(next_pos.x, next_pos.y);
 		if (!equals_color(negro, next_color))
 		{
 			if ((side = calculate_border(next_pos)) == not_border)
 			{
-				if ((is_block = calculate_block(next_pos, &block)))
+				if ((is_block = calculate_block(next_pos, block_ptr)))
 				{
-					if (!block.indestructible)
+					block = *block_ptr;
+					if (!block->indestructible)
 					{
-						block.collisions--;
-						if (block.collisions == 0)
+						block->collisions--;
+						if (block->collisions == 0)
 						{
-							print_block(block.location, negro);
+							print_block(block->location, negro);
 							status = block_broken;
 						}
 						else
-							reprint_block(block);
+							reprint_block(*block);
 					}
 				}
 			}
@@ -218,7 +199,7 @@ game_status_t move_ball()
 			else
 				is_block = false;
 
-			next_mov = calculate_rebound(bola, side, is_block, &block, &next_pos);	// lo ha hecho Pablo el cutres
+			next_mov = calculate_rebound(bola, side, is_block, *block, &next_pos);	// lo ha hecho Pablo el cutres
 		} else
 		{
 			next_mov = bola.mov;
@@ -343,27 +324,25 @@ side_t which_side_bar(position_t next_pos)
 }
 
 
-bool calculate_block(position_t next_pos, block_t *block)
+bool calculate_block(position_t next_pos, block_t **block)
 {
-	block_t res;
 	for (int i = N_BLOCKS_Y - 1; i >= 0; i--)
 	{
 		for (int j = N_BLOCKS_X - 1; j >= 0; j--)
 		{
-			res = map[j][i];
-			if (next_pos.x >= res.location.x && next_pos.x < res.location.x + BLOCK_LENGTH &&
-				next_pos.y >= res.location.y && next_pos.y < res.location.y + BLOCK_HEIGHT)
+			block_t *res = &map[j][i];
+			if (next_pos.x >= res->location.x && next_pos.x < res->location.x + BLOCK_LENGTH &&
+				next_pos.y >= res->location.y && next_pos.y < res->location.y + BLOCK_HEIGHT)
 			{
 				*block = res;
 				return true;
 			}
-
 		}
 	}
 	return false;
 }
 
-movement_t calculate_rebound(ball_t bola, side_t side, bool is_block, block_t *block, position_t *next_pos)
+movement_t calculate_rebound(ball_t bola, side_t side, bool is_block, block_t block, position_t *next_pos)
 {
 	movement_t mov = bola.mov;
 	if (side != not_border) 	// border
@@ -420,7 +399,7 @@ movement_t calculate_rebound(ball_t bola, side_t side, bool is_block, block_t *b
 		}
 	} else if (is_block) 	// block
 	{
-		switch (which_side_block(*next_pos, *block)) {
+		switch (which_side_block(*next_pos, block)) {
 			case top_left:
 				mov = mov_top_left;
 				next_pos->x = bola.x - 1;
@@ -550,15 +529,14 @@ movement_t calculate_rebound(ball_t bola, side_t side, bool is_block, block_t *b
 
 
 void move_bar(int dir){
-	static int var = 0;
+	int var;
+
 	if (dir == 1)
-	{
 		var = -1;
-	}
 	else if (dir == 3)
-	{
 		var = 1;
-	}
+	else
+		var = 0;
 
 	if (pos_barra.x + var > INT_X_BORDER && pos_barra.x + var <= END_X_BORDER - BAR_LENGTH) {
 		rect(pos_barra, negro, BAR_LENGTH, BAR_HEIGHT);
@@ -605,7 +583,7 @@ levels_t level_selection() {
 	paint_object(aux, breakout, 7, 38);
 
 	while (btn == 0)
-		btn = wait_button();
+		btn = check_button();
 
 	switch (btn) {
 		case 1:
