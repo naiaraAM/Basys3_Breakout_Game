@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <sleep.h>
 #include "graphics.h"
 
 void print_background(color_t color) {
@@ -41,7 +42,7 @@ void rect (position_t pos, color_t col, int w, int h){
 	}
 }
 
-color_t pixel(int x, int y){
+color_t get_color(int x, int y){
 	color_t col;
 	int *ptr = (int*) VGA_CTRL_BASE;
 	int val = ptr[(y<<8) | x];
