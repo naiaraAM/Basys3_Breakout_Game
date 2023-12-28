@@ -4,6 +4,8 @@
 #include "blocks.h"
 #include "colors.h"
 #include "graphics.h"
+#include "timer.h"
+#include "leds.h"
 
 
 typedef struct ball {
@@ -34,6 +36,7 @@ typedef enum game_status {continues, lost_life, block_broken, win, game_over} ga
 
 // Game parameters
 #define NUM_LIVES			3
+#define NUM_LED_LAPS		3
 
 // Function definitions
 void move_bar(int dir, position_t *bar_pos);
@@ -48,6 +51,7 @@ side_t which_side_bar(position_t next_pos, position_t *bar_pos);
 levels_t level_selection();
 void life_lost(int lives, ball_t *ball, position_t *bar_pos);
 void reset_bar_position(position_t *bar_pos);
+void game_win();
 
 
 // ###################################
@@ -307,10 +311,10 @@ color_t numbers[NUMBERS_NUM][NUMBERS_HEIGHT][NUMBERS_WIDTH] = {
 };
 
 // Smoke animation
-#define SMOKE_TIME      100000   // microseconds
-#define SMOKE_FRAMES    5       // microseconds
-#define SMOKE_WIDTH     3       // pixels
-#define SMOKE_HEIGHT    6       // pixels
+#define SMOKE_TIME      100	    // miliseconds
+#define SMOKE_FRAMES    5
+#define SMOKE_WIDTH     3
+#define SMOKE_HEIGHT    6
 
 color_t smoke[SMOKE_FRAMES][SMOKE_HEIGHT][SMOKE_WIDTH] = {
     {

@@ -1,6 +1,6 @@
 #include <stdio.h>
-#include <sleep.h>
 #include "graphics.h"
+#include "timer.h"
 
 // #############################
 // ###   GENERIC FUNCTIONS   ###
@@ -24,7 +24,7 @@ void paint_animation(position_t pos, color_t *animation, int frames, int period,
     // Process the frames
     for (int f = 0; f < frames; f++) {
         paint_object(pos, &animation[f * rows * cols], rows, cols);
-        usleep(period);
+        msleep(period);
     }
 }
 

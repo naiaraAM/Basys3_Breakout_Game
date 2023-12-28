@@ -1,3 +1,5 @@
+#include <stdbool.h>
+
 #ifndef __COLORS_H__
 #define __COLORS_H__
 
@@ -38,6 +40,6 @@ typedef struct color {
 } color_t;
 
 // Function definitions
-int equals_color(color_t color1, color_t color2);
+bool equals_color(color_t color1, color_t color2);
 
 #endif
