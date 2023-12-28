@@ -44,6 +44,7 @@ void init_ball(ball_t *ball, position_t *bar_pos);
 game_status_t move_ball(ball_t *ball, position_t *bar_pos);
 void init_buttons();
 int check_button();
+void wait_button();
 side_t calculate_border(position_t next_pos);
 bool calculate_block(position_t next_pos, block_t **block);
 movement_t calculate_rebound(ball_t *ball, side_t side, bool is_block, block_t block, position_t *next_pos, position_t *bar_pos);

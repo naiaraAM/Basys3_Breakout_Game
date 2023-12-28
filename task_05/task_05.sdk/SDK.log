@@ -13693,3 +13693,2073 @@ con
 ----------------End of Script----------------
 
 16:33:23 INFO  : Launch script is exported to file 'C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_example.elf_on_local.tcl'
+16:45:19 INFO  : Disconnected from the channel tcfchan#74.
+16:45:20 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==0} -index 0' command is executed.
+16:45:20 INFO  : 'fpga -state' command is executed.
+16:45:20 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:45:20 INFO  : Jtag cable 'Digilent Basys3 210183AB4397A' is selected.
+16:45:20 INFO  : 'jtag frequency' command is executed.
+16:45:20 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+16:45:20 INFO  : Context for processor 'microblaze_0' is selected.
+16:45:20 INFO  : Processor reset is completed for 'microblaze_0'.
+16:45:20 INFO  : Context for processor 'microblaze_0' is selected.
+16:45:20 INFO  : The application 'C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf' is downloaded to processor 'microblaze_0'.
+16:45:20 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+dow C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf
+----------------End of Script----------------
+
+16:45:20 INFO  : Memory regions updated for context PA
+16:45:20 INFO  : Memory regions updated for context PA
+16:45:20 INFO  : Context for processor 'microblaze_0' is selected.
+16:45:20 INFO  : 'con' command is executed.
+16:45:20 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+con
+----------------End of Script----------------
+
+16:45:20 INFO  : Launch script is exported to file 'C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_example.elf_on_local.tcl'
+16:46:30 INFO  : Disconnected from the channel tcfchan#75.
+16:46:31 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==0} -index 0' command is executed.
+16:46:31 INFO  : 'fpga -state' command is executed.
+16:46:31 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:46:31 INFO  : Jtag cable 'Digilent Basys3 210183AB4397A' is selected.
+16:46:31 INFO  : 'jtag frequency' command is executed.
+16:46:31 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+16:46:31 INFO  : Context for processor 'microblaze_0' is selected.
+16:46:31 INFO  : Processor reset is completed for 'microblaze_0'.
+16:46:31 INFO  : Context for processor 'microblaze_0' is selected.
+16:46:32 INFO  : The application 'C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf' is downloaded to processor 'microblaze_0'.
+16:46:32 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+dow C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf
+----------------End of Script----------------
+
+16:46:32 INFO  : Memory regions updated for context PA
+16:46:32 INFO  : Memory regions updated for context PA
+16:46:32 INFO  : Context for processor 'microblaze_0' is selected.
+16:46:32 INFO  : 'con' command is executed.
+16:46:32 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+con
+----------------End of Script----------------
+
+16:46:32 INFO  : Launch script is exported to file 'C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_example.elf_on_local.tcl'
+16:47:06 INFO  : Disconnected from the channel tcfchan#76.
+16:47:07 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==0} -index 0' command is executed.
+16:47:07 INFO  : 'fpga -state' command is executed.
+16:47:07 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:47:07 INFO  : Jtag cable 'Digilent Basys3 210183AB4397A' is selected.
+16:47:07 INFO  : 'jtag frequency' command is executed.
+16:47:07 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+16:47:07 INFO  : Context for processor 'microblaze_0' is selected.
+16:47:07 INFO  : Processor reset is completed for 'microblaze_0'.
+16:47:07 INFO  : Context for processor 'microblaze_0' is selected.
+16:47:07 INFO  : The application 'C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf' is downloaded to processor 'microblaze_0'.
+16:47:07 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+dow C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf
+----------------End of Script----------------
+
+16:47:07 INFO  : Memory regions updated for context PA
+16:47:07 INFO  : Memory regions updated for context PA
+16:47:07 INFO  : Context for processor 'microblaze_0' is selected.
+16:47:07 INFO  : 'con' command is executed.
+16:47:07 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+con
+----------------End of Script----------------
+
+16:47:07 INFO  : Launch script is exported to file 'C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_example.elf_on_local.tcl'
+16:47:32 INFO  : Disconnected from the channel tcfchan#77.
+16:47:33 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==0} -index 0' command is executed.
+16:47:33 INFO  : 'fpga -state' command is executed.
+16:47:33 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:47:33 INFO  : Jtag cable 'Digilent Basys3 210183AB4397A' is selected.
+16:47:33 INFO  : 'jtag frequency' command is executed.
+16:47:33 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+16:47:33 INFO  : Context for processor 'microblaze_0' is selected.
+16:47:33 INFO  : Processor reset is completed for 'microblaze_0'.
+16:47:34 INFO  : Context for processor 'microblaze_0' is selected.
+16:47:34 INFO  : The application 'C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf' is downloaded to processor 'microblaze_0'.
+16:47:34 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+dow C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf
+----------------End of Script----------------
+
+16:47:34 INFO  : Memory regions updated for context PA
+16:47:34 INFO  : Memory regions updated for context PA
+16:47:34 INFO  : Context for processor 'microblaze_0' is selected.
+16:47:34 INFO  : 'con' command is executed.
+16:47:34 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+con
+----------------End of Script----------------
+
+16:47:34 INFO  : Launch script is exported to file 'C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_example.elf_on_local.tcl'
+16:48:23 INFO  : Disconnected from the channel tcfchan#78.
+16:48:24 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==0} -index 0' command is executed.
+16:48:24 INFO  : 'fpga -state' command is executed.
+16:48:24 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:48:25 INFO  : Jtag cable 'Digilent Basys3 210183AB4397A' is selected.
+16:48:25 INFO  : 'jtag frequency' command is executed.
+16:48:25 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+16:48:25 INFO  : Context for processor 'microblaze_0' is selected.
+16:48:25 INFO  : Processor reset is completed for 'microblaze_0'.
+16:48:25 INFO  : Context for processor 'microblaze_0' is selected.
+16:48:25 INFO  : The application 'C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf' is downloaded to processor 'microblaze_0'.
+16:48:25 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+dow C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf
+----------------End of Script----------------
+
+16:48:25 INFO  : Memory regions updated for context PA
+16:48:25 INFO  : Memory regions updated for context PA
+16:48:25 INFO  : Context for processor 'microblaze_0' is selected.
+16:48:25 INFO  : 'con' command is executed.
+16:48:25 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+con
+----------------End of Script----------------
+
+16:48:25 INFO  : Launch script is exported to file 'C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_example.elf_on_local.tcl'
+16:50:45 INFO  : Disconnected from the channel tcfchan#79.
+16:50:46 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==0} -index 0' command is executed.
+16:50:46 INFO  : 'fpga -state' command is executed.
+16:50:46 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:50:46 INFO  : Jtag cable 'Digilent Basys3 210183AB4397A' is selected.
+16:50:46 INFO  : 'jtag frequency' command is executed.
+16:50:46 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+16:50:47 INFO  : Context for processor 'microblaze_0' is selected.
+16:50:47 INFO  : Processor reset is completed for 'microblaze_0'.
+16:50:47 INFO  : Context for processor 'microblaze_0' is selected.
+16:50:47 INFO  : The application 'C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf' is downloaded to processor 'microblaze_0'.
+16:50:47 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+dow C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf
+----------------End of Script----------------
+
+16:50:47 INFO  : Memory regions updated for context PA
+16:50:47 INFO  : Memory regions updated for context PA
+16:50:47 INFO  : Context for processor 'microblaze_0' is selected.
+16:50:47 INFO  : 'con' command is executed.
+16:50:47 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+con
+----------------End of Script----------------
+
+16:50:47 INFO  : Launch script is exported to file 'C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_example.elf_on_local.tcl'
+16:51:24 INFO  : Disconnected from the channel tcfchan#80.
+16:51:25 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==0} -index 0' command is executed.
+16:51:25 INFO  : 'fpga -state' command is executed.
+16:51:25 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:51:25 INFO  : Jtag cable 'Digilent Basys3 210183AB4397A' is selected.
+16:51:25 INFO  : 'jtag frequency' command is executed.
+16:51:25 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+16:51:25 INFO  : Context for processor 'microblaze_0' is selected.
+16:51:25 INFO  : Processor reset is completed for 'microblaze_0'.
+16:51:25 INFO  : Context for processor 'microblaze_0' is selected.
+16:51:25 INFO  : The application 'C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf' is downloaded to processor 'microblaze_0'.
+16:51:25 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+dow C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf
+----------------End of Script----------------
+
+16:51:25 INFO  : Memory regions updated for context PA
+16:51:25 INFO  : Memory regions updated for context PA
+16:51:25 INFO  : Context for processor 'microblaze_0' is selected.
+16:51:25 INFO  : 'con' command is executed.
+16:51:25 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+con
+----------------End of Script----------------
+
+16:51:25 INFO  : Launch script is exported to file 'C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_example.elf_on_local.tcl'
+16:53:56 INFO  : Disconnected from the channel tcfchan#81.
+16:53:57 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==0} -index 0' command is executed.
+16:53:57 INFO  : 'fpga -state' command is executed.
+16:53:57 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:53:57 INFO  : Jtag cable 'Digilent Basys3 210183AB4397A' is selected.
+16:53:57 INFO  : 'jtag frequency' command is executed.
+16:53:57 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+16:53:57 INFO  : Context for processor 'microblaze_0' is selected.
+16:53:57 INFO  : Processor reset is completed for 'microblaze_0'.
+16:53:57 INFO  : Context for processor 'microblaze_0' is selected.
+16:53:57 INFO  : The application 'C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf' is downloaded to processor 'microblaze_0'.
+16:53:57 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+dow C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf
+----------------End of Script----------------
+
+16:53:57 INFO  : Memory regions updated for context PA
+16:53:57 INFO  : Memory regions updated for context PA
+16:53:57 INFO  : Context for processor 'microblaze_0' is selected.
+16:53:57 INFO  : 'con' command is executed.
+16:53:57 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+con
+----------------End of Script----------------
+
+16:53:57 INFO  : Launch script is exported to file 'C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_example.elf_on_local.tcl'
+16:55:29 INFO  : Disconnected from the channel tcfchan#82.
+16:55:30 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==0} -index 0' command is executed.
+16:55:30 INFO  : 'fpga -state' command is executed.
+16:55:30 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:55:30 INFO  : Jtag cable 'Digilent Basys3 210183AB4397A' is selected.
+16:55:30 INFO  : 'jtag frequency' command is executed.
+16:55:30 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+16:55:30 INFO  : Context for processor 'microblaze_0' is selected.
+16:55:30 INFO  : Processor reset is completed for 'microblaze_0'.
+16:55:30 INFO  : Context for processor 'microblaze_0' is selected.
+16:55:30 INFO  : The application 'C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf' is downloaded to processor 'microblaze_0'.
+16:55:30 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+dow C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf
+----------------End of Script----------------
+
+16:55:30 INFO  : Memory regions updated for context PA
+16:55:30 INFO  : Memory regions updated for context PA
+16:55:30 INFO  : Context for processor 'microblaze_0' is selected.
+16:55:30 INFO  : 'con' command is executed.
+16:55:30 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+con
+----------------End of Script----------------
+
+16:55:30 INFO  : Launch script is exported to file 'C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_example.elf_on_local.tcl'
+16:55:49 INFO  : Disconnected from the channel tcfchan#83.
+16:55:50 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==0} -index 0' command is executed.
+16:55:50 INFO  : 'fpga -state' command is executed.
+16:55:50 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:55:50 INFO  : Jtag cable 'Digilent Basys3 210183AB4397A' is selected.
+16:55:50 INFO  : 'jtag frequency' command is executed.
+16:55:50 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+16:55:50 INFO  : Context for processor 'microblaze_0' is selected.
+16:55:50 INFO  : Processor reset is completed for 'microblaze_0'.
+16:55:50 INFO  : Context for processor 'microblaze_0' is selected.
+16:55:50 INFO  : The application 'C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf' is downloaded to processor 'microblaze_0'.
+16:55:50 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+dow C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf
+----------------End of Script----------------
+
+16:55:50 INFO  : Memory regions updated for context PA
+16:55:50 INFO  : Memory regions updated for context PA
+16:55:50 INFO  : Context for processor 'microblaze_0' is selected.
+16:55:50 INFO  : 'con' command is executed.
+16:55:50 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+con
+----------------End of Script----------------
+
+16:55:50 INFO  : Launch script is exported to file 'C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_example.elf_on_local.tcl'
+16:57:37 INFO  : Disconnected from the channel tcfchan#84.
+16:57:38 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==0} -index 0' command is executed.
+16:57:38 INFO  : 'fpga -state' command is executed.
+16:57:38 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:57:38 INFO  : Jtag cable 'Digilent Basys3 210183AB4397A' is selected.
+16:57:38 INFO  : 'jtag frequency' command is executed.
+16:57:38 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+16:57:38 INFO  : Context for processor 'microblaze_0' is selected.
+16:57:38 INFO  : Processor reset is completed for 'microblaze_0'.
+16:57:38 INFO  : Context for processor 'microblaze_0' is selected.
+16:57:39 INFO  : The application 'C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf' is downloaded to processor 'microblaze_0'.
+16:57:39 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+dow C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf
+----------------End of Script----------------
+
+16:57:39 INFO  : Memory regions updated for context PA
+16:57:39 INFO  : Memory regions updated for context PA
+16:57:39 INFO  : Context for processor 'microblaze_0' is selected.
+16:57:39 INFO  : 'con' command is executed.
+16:57:39 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+con
+----------------End of Script----------------
+
+16:57:39 INFO  : Launch script is exported to file 'C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_example.elf_on_local.tcl'
+16:58:19 INFO  : Disconnected from the channel tcfchan#85.
+16:58:20 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==0} -index 0' command is executed.
+16:58:20 INFO  : 'fpga -state' command is executed.
+16:58:20 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:58:20 INFO  : Jtag cable 'Digilent Basys3 210183AB4397A' is selected.
+16:58:20 INFO  : 'jtag frequency' command is executed.
+16:58:20 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+16:58:20 INFO  : Context for processor 'microblaze_0' is selected.
+16:58:20 INFO  : Processor reset is completed for 'microblaze_0'.
+16:58:20 INFO  : Context for processor 'microblaze_0' is selected.
+16:58:20 INFO  : The application 'C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf' is downloaded to processor 'microblaze_0'.
+16:58:20 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+dow C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf
+----------------End of Script----------------
+
+16:58:20 INFO  : Memory regions updated for context PA
+16:58:20 INFO  : Memory regions updated for context PA
+16:58:20 INFO  : Context for processor 'microblaze_0' is selected.
+16:58:20 INFO  : 'con' command is executed.
+16:58:20 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+con
+----------------End of Script----------------
+
+16:58:20 INFO  : Launch script is exported to file 'C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_example.elf_on_local.tcl'
+16:58:59 INFO  : Disconnected from the channel tcfchan#86.
+16:59:00 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==0} -index 0' command is executed.
+16:59:00 INFO  : 'fpga -state' command is executed.
+16:59:00 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:59:00 INFO  : Jtag cable 'Digilent Basys3 210183AB4397A' is selected.
+16:59:00 INFO  : 'jtag frequency' command is executed.
+16:59:00 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+16:59:00 INFO  : Context for processor 'microblaze_0' is selected.
+16:59:00 INFO  : Processor reset is completed for 'microblaze_0'.
+16:59:00 INFO  : Context for processor 'microblaze_0' is selected.
+16:59:00 INFO  : The application 'C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf' is downloaded to processor 'microblaze_0'.
+16:59:00 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+dow C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf
+----------------End of Script----------------
+
+16:59:00 INFO  : Memory regions updated for context PA
+16:59:00 INFO  : Memory regions updated for context PA
+16:59:00 INFO  : Context for processor 'microblaze_0' is selected.
+16:59:00 INFO  : 'con' command is executed.
+16:59:00 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+con
+----------------End of Script----------------
+
+16:59:00 INFO  : Launch script is exported to file 'C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_example.elf_on_local.tcl'
+16:59:18 INFO  : Disconnected from the channel tcfchan#87.
+16:59:19 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==0} -index 0' command is executed.
+16:59:19 INFO  : 'fpga -state' command is executed.
+16:59:19 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:59:19 INFO  : Jtag cable 'Digilent Basys3 210183AB4397A' is selected.
+16:59:19 INFO  : 'jtag frequency' command is executed.
+16:59:19 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+16:59:19 INFO  : Context for processor 'microblaze_0' is selected.
+16:59:19 INFO  : Processor reset is completed for 'microblaze_0'.
+16:59:19 INFO  : Context for processor 'microblaze_0' is selected.
+16:59:20 INFO  : The application 'C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf' is downloaded to processor 'microblaze_0'.
+16:59:20 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+dow C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf
+----------------End of Script----------------
+
+16:59:20 INFO  : Memory regions updated for context PA
+16:59:20 INFO  : Memory regions updated for context PA
+16:59:20 INFO  : Context for processor 'microblaze_0' is selected.
+16:59:20 INFO  : 'con' command is executed.
+16:59:20 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+con
+----------------End of Script----------------
+
+16:59:20 INFO  : Launch script is exported to file 'C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_example.elf_on_local.tcl'
+17:00:37 INFO  : Disconnected from the channel tcfchan#88.
+17:00:38 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==0} -index 0' command is executed.
+17:00:38 INFO  : 'fpga -state' command is executed.
+17:00:38 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:00:38 INFO  : Jtag cable 'Digilent Basys3 210183AB4397A' is selected.
+17:00:38 INFO  : 'jtag frequency' command is executed.
+17:00:38 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+17:00:38 INFO  : Context for processor 'microblaze_0' is selected.
+17:00:38 INFO  : Processor reset is completed for 'microblaze_0'.
+17:00:38 INFO  : Context for processor 'microblaze_0' is selected.
+17:00:38 INFO  : The application 'C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf' is downloaded to processor 'microblaze_0'.
+17:00:38 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+dow C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf
+----------------End of Script----------------
+
+17:00:38 INFO  : Memory regions updated for context PA
+17:00:38 INFO  : Memory regions updated for context PA
+17:00:38 INFO  : Context for processor 'microblaze_0' is selected.
+17:00:38 INFO  : 'con' command is executed.
+17:00:38 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+con
+----------------End of Script----------------
+
+17:00:38 INFO  : Launch script is exported to file 'C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_example.elf_on_local.tcl'
+17:01:24 INFO  : Disconnected from the channel tcfchan#89.
+17:01:25 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==0} -index 0' command is executed.
+17:01:25 INFO  : 'fpga -state' command is executed.
+17:01:25 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:01:25 INFO  : Jtag cable 'Digilent Basys3 210183AB4397A' is selected.
+17:01:25 INFO  : 'jtag frequency' command is executed.
+17:01:25 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+17:01:25 INFO  : Context for processor 'microblaze_0' is selected.
+17:01:25 INFO  : Processor reset is completed for 'microblaze_0'.
+17:01:25 INFO  : Context for processor 'microblaze_0' is selected.
+17:01:25 INFO  : The application 'C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf' is downloaded to processor 'microblaze_0'.
+17:01:25 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+dow C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf
+----------------End of Script----------------
+
+17:01:25 INFO  : Memory regions updated for context PA
+17:01:25 INFO  : Memory regions updated for context PA
+17:01:25 INFO  : Context for processor 'microblaze_0' is selected.
+17:01:25 INFO  : 'con' command is executed.
+17:01:25 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+con
+----------------End of Script----------------
+
+17:01:25 INFO  : Launch script is exported to file 'C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_example.elf_on_local.tcl'
+17:01:39 INFO  : Disconnected from the channel tcfchan#90.
+17:01:40 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==0} -index 0' command is executed.
+17:01:40 INFO  : 'fpga -state' command is executed.
+17:01:40 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:01:41 INFO  : Jtag cable 'Digilent Basys3 210183AB4397A' is selected.
+17:01:41 INFO  : 'jtag frequency' command is executed.
+17:01:41 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+17:01:41 INFO  : Context for processor 'microblaze_0' is selected.
+17:01:41 INFO  : Processor reset is completed for 'microblaze_0'.
+17:01:41 INFO  : Context for processor 'microblaze_0' is selected.
+17:01:41 INFO  : The application 'C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf' is downloaded to processor 'microblaze_0'.
+17:01:41 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+dow C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf
+----------------End of Script----------------
+
+17:01:41 INFO  : Memory regions updated for context PA
+17:01:41 INFO  : Memory regions updated for context PA
+17:01:41 INFO  : Context for processor 'microblaze_0' is selected.
+17:01:41 INFO  : 'con' command is executed.
+17:01:41 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+con
+----------------End of Script----------------
+
+17:01:41 INFO  : Launch script is exported to file 'C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_example.elf_on_local.tcl'
+17:03:23 INFO  : Disconnected from the channel tcfchan#91.
+17:03:24 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==0} -index 0' command is executed.
+17:03:24 INFO  : 'fpga -state' command is executed.
+17:03:24 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:03:25 INFO  : Jtag cable 'Digilent Basys3 210183AB4397A' is selected.
+17:03:25 INFO  : 'jtag frequency' command is executed.
+17:03:25 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+17:03:25 INFO  : Context for processor 'microblaze_0' is selected.
+17:03:25 INFO  : Processor reset is completed for 'microblaze_0'.
+17:03:25 INFO  : Context for processor 'microblaze_0' is selected.
+17:03:25 INFO  : The application 'C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf' is downloaded to processor 'microblaze_0'.
+17:03:25 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+dow C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf
+----------------End of Script----------------
+
+17:03:25 INFO  : Memory regions updated for context PA
+17:03:25 INFO  : Memory regions updated for context PA
+17:03:25 INFO  : Context for processor 'microblaze_0' is selected.
+17:03:25 INFO  : 'con' command is executed.
+17:03:25 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+con
+----------------End of Script----------------
+
+17:03:25 INFO  : Launch script is exported to file 'C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_example.elf_on_local.tcl'
+17:04:06 INFO  : Disconnected from the channel tcfchan#92.
+17:04:07 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==0} -index 0' command is executed.
+17:04:07 INFO  : 'fpga -state' command is executed.
+17:04:07 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:04:07 INFO  : Jtag cable 'Digilent Basys3 210183AB4397A' is selected.
+17:04:07 INFO  : 'jtag frequency' command is executed.
+17:04:07 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+17:04:07 INFO  : Context for processor 'microblaze_0' is selected.
+17:04:07 INFO  : Processor reset is completed for 'microblaze_0'.
+17:04:07 INFO  : Context for processor 'microblaze_0' is selected.
+17:04:08 INFO  : The application 'C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf' is downloaded to processor 'microblaze_0'.
+17:04:08 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+dow C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf
+----------------End of Script----------------
+
+17:04:08 INFO  : Memory regions updated for context PA
+17:04:08 INFO  : Memory regions updated for context PA
+17:04:08 INFO  : Context for processor 'microblaze_0' is selected.
+17:04:08 INFO  : 'con' command is executed.
+17:04:08 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+con
+----------------End of Script----------------
+
+17:04:08 INFO  : Launch script is exported to file 'C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_example.elf_on_local.tcl'
+17:05:26 INFO  : Disconnected from the channel tcfchan#93.
+17:05:27 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==0} -index 0' command is executed.
+17:05:27 INFO  : 'fpga -state' command is executed.
+17:05:27 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:05:27 INFO  : Jtag cable 'Digilent Basys3 210183AB4397A' is selected.
+17:05:27 INFO  : 'jtag frequency' command is executed.
+17:05:27 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+17:05:27 INFO  : Context for processor 'microblaze_0' is selected.
+17:05:27 INFO  : Processor reset is completed for 'microblaze_0'.
+17:05:27 INFO  : Context for processor 'microblaze_0' is selected.
+17:05:28 INFO  : The application 'C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf' is downloaded to processor 'microblaze_0'.
+17:05:28 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+dow C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf
+----------------End of Script----------------
+
+17:05:28 INFO  : Memory regions updated for context PA
+17:05:28 INFO  : Memory regions updated for context PA
+17:05:28 INFO  : Context for processor 'microblaze_0' is selected.
+17:05:28 INFO  : 'con' command is executed.
+17:05:28 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+con
+----------------End of Script----------------
+
+17:05:28 INFO  : Launch script is exported to file 'C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_example.elf_on_local.tcl'
+17:05:49 INFO  : Disconnected from the channel tcfchan#94.
+17:05:51 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==0} -index 0' command is executed.
+17:05:51 INFO  : 'fpga -state' command is executed.
+17:05:51 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:05:51 INFO  : Jtag cable 'Digilent Basys3 210183AB4397A' is selected.
+17:05:51 INFO  : 'jtag frequency' command is executed.
+17:05:51 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+17:05:51 INFO  : Context for processor 'microblaze_0' is selected.
+17:05:51 INFO  : Processor reset is completed for 'microblaze_0'.
+17:05:51 INFO  : Context for processor 'microblaze_0' is selected.
+17:05:51 INFO  : The application 'C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf' is downloaded to processor 'microblaze_0'.
+17:05:51 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+dow C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf
+----------------End of Script----------------
+
+17:05:51 INFO  : Memory regions updated for context PA
+17:05:51 INFO  : Memory regions updated for context PA
+17:05:51 INFO  : Context for processor 'microblaze_0' is selected.
+17:05:51 INFO  : 'con' command is executed.
+17:05:51 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+con
+----------------End of Script----------------
+
+17:05:51 INFO  : Launch script is exported to file 'C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_example.elf_on_local.tcl'
+17:06:53 INFO  : Disconnected from the channel tcfchan#95.
+17:06:55 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==0} -index 0' command is executed.
+17:06:55 INFO  : 'fpga -state' command is executed.
+17:06:55 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:06:55 INFO  : Jtag cable 'Digilent Basys3 210183AB4397A' is selected.
+17:06:55 INFO  : 'jtag frequency' command is executed.
+17:06:55 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+17:06:55 INFO  : Context for processor 'microblaze_0' is selected.
+17:06:55 INFO  : Processor reset is completed for 'microblaze_0'.
+17:06:55 INFO  : Context for processor 'microblaze_0' is selected.
+17:06:55 INFO  : The application 'C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf' is downloaded to processor 'microblaze_0'.
+17:06:55 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+dow C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf
+----------------End of Script----------------
+
+17:06:55 INFO  : Memory regions updated for context PA
+17:06:55 INFO  : Memory regions updated for context PA
+17:06:55 INFO  : Context for processor 'microblaze_0' is selected.
+17:06:55 INFO  : 'con' command is executed.
+17:06:55 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+con
+----------------End of Script----------------
+
+17:06:55 INFO  : Launch script is exported to file 'C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_example.elf_on_local.tcl'
+17:07:12 INFO  : Disconnected from the channel tcfchan#96.
+17:07:13 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==0} -index 0' command is executed.
+17:07:13 INFO  : 'fpga -state' command is executed.
+17:07:13 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:07:13 INFO  : Jtag cable 'Digilent Basys3 210183AB4397A' is selected.
+17:07:13 INFO  : 'jtag frequency' command is executed.
+17:07:13 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+17:07:13 INFO  : Context for processor 'microblaze_0' is selected.
+17:07:13 INFO  : Processor reset is completed for 'microblaze_0'.
+17:07:13 INFO  : Context for processor 'microblaze_0' is selected.
+17:07:13 INFO  : The application 'C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf' is downloaded to processor 'microblaze_0'.
+17:07:13 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+dow C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf
+----------------End of Script----------------
+
+17:07:13 INFO  : Memory regions updated for context PA
+17:07:13 INFO  : Memory regions updated for context PA
+17:07:13 INFO  : Context for processor 'microblaze_0' is selected.
+17:07:13 INFO  : 'con' command is executed.
+17:07:13 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+con
+----------------End of Script----------------
+
+17:07:13 INFO  : Launch script is exported to file 'C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_example.elf_on_local.tcl'
+17:07:34 INFO  : Disconnected from the channel tcfchan#97.
+17:07:35 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==0} -index 0' command is executed.
+17:07:35 INFO  : 'fpga -state' command is executed.
+17:07:35 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:07:35 INFO  : Jtag cable 'Digilent Basys3 210183AB4397A' is selected.
+17:07:35 INFO  : 'jtag frequency' command is executed.
+17:07:35 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+17:07:35 INFO  : Context for processor 'microblaze_0' is selected.
+17:07:35 INFO  : Processor reset is completed for 'microblaze_0'.
+17:07:35 INFO  : Context for processor 'microblaze_0' is selected.
+17:07:35 INFO  : The application 'C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf' is downloaded to processor 'microblaze_0'.
+17:07:35 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+dow C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf
+----------------End of Script----------------
+
+17:07:35 INFO  : Memory regions updated for context PA
+17:07:35 INFO  : Memory regions updated for context PA
+17:07:35 INFO  : Context for processor 'microblaze_0' is selected.
+17:07:35 INFO  : 'con' command is executed.
+17:07:35 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+con
+----------------End of Script----------------
+
+17:07:35 INFO  : Launch script is exported to file 'C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_example.elf_on_local.tcl'
+17:08:36 INFO  : Disconnected from the channel tcfchan#98.
+17:08:37 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==0} -index 0' command is executed.
+17:08:37 INFO  : 'fpga -state' command is executed.
+17:08:37 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:08:37 INFO  : Jtag cable 'Digilent Basys3 210183AB4397A' is selected.
+17:08:37 INFO  : 'jtag frequency' command is executed.
+17:08:37 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+17:08:37 INFO  : Context for processor 'microblaze_0' is selected.
+17:08:37 INFO  : Processor reset is completed for 'microblaze_0'.
+17:08:37 INFO  : Context for processor 'microblaze_0' is selected.
+17:08:37 INFO  : The application 'C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf' is downloaded to processor 'microblaze_0'.
+17:08:37 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+dow C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf
+----------------End of Script----------------
+
+17:08:37 INFO  : Memory regions updated for context PA
+17:08:37 INFO  : Memory regions updated for context PA
+17:08:37 INFO  : Context for processor 'microblaze_0' is selected.
+17:08:37 INFO  : 'con' command is executed.
+17:08:37 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+con
+----------------End of Script----------------
+
+17:08:37 INFO  : Launch script is exported to file 'C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_example.elf_on_local.tcl'
+17:09:26 INFO  : Disconnected from the channel tcfchan#99.
+17:09:27 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==0} -index 0' command is executed.
+17:09:27 INFO  : 'fpga -state' command is executed.
+17:09:27 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:09:27 INFO  : Jtag cable 'Digilent Basys3 210183AB4397A' is selected.
+17:09:27 INFO  : 'jtag frequency' command is executed.
+17:09:27 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+17:09:27 INFO  : Context for processor 'microblaze_0' is selected.
+17:09:27 INFO  : Processor reset is completed for 'microblaze_0'.
+17:09:27 INFO  : Context for processor 'microblaze_0' is selected.
+17:09:27 INFO  : The application 'C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf' is downloaded to processor 'microblaze_0'.
+17:09:27 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+dow C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf
+----------------End of Script----------------
+
+17:09:27 INFO  : Memory regions updated for context PA
+17:09:27 INFO  : Memory regions updated for context PA
+17:09:27 INFO  : Context for processor 'microblaze_0' is selected.
+17:09:28 INFO  : 'con' command is executed.
+17:09:28 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+con
+----------------End of Script----------------
+
+17:09:28 INFO  : Launch script is exported to file 'C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_example.elf_on_local.tcl'
+17:09:42 INFO  : Disconnected from the channel tcfchan#100.
+17:09:43 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==0} -index 0' command is executed.
+17:09:43 INFO  : 'fpga -state' command is executed.
+17:09:43 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:09:44 INFO  : Jtag cable 'Digilent Basys3 210183AB4397A' is selected.
+17:09:44 INFO  : 'jtag frequency' command is executed.
+17:09:44 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+17:09:44 INFO  : Context for processor 'microblaze_0' is selected.
+17:09:44 INFO  : Processor reset is completed for 'microblaze_0'.
+17:09:44 INFO  : Context for processor 'microblaze_0' is selected.
+17:09:44 INFO  : The application 'C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf' is downloaded to processor 'microblaze_0'.
+17:09:44 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+dow C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf
+----------------End of Script----------------
+
+17:09:44 INFO  : Memory regions updated for context PA
+17:09:44 INFO  : Memory regions updated for context PA
+17:09:44 INFO  : Context for processor 'microblaze_0' is selected.
+17:09:44 INFO  : 'con' command is executed.
+17:09:44 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+con
+----------------End of Script----------------
+
+17:09:44 INFO  : Launch script is exported to file 'C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_example.elf_on_local.tcl'
+17:10:48 INFO  : Disconnected from the channel tcfchan#101.
+17:10:49 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==0} -index 0' command is executed.
+17:10:49 INFO  : 'fpga -state' command is executed.
+17:10:49 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:10:49 INFO  : Jtag cable 'Digilent Basys3 210183AB4397A' is selected.
+17:10:49 INFO  : 'jtag frequency' command is executed.
+17:10:49 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+17:10:49 INFO  : Context for processor 'microblaze_0' is selected.
+17:10:49 INFO  : Processor reset is completed for 'microblaze_0'.
+17:10:49 INFO  : Context for processor 'microblaze_0' is selected.
+17:10:49 INFO  : The application 'C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf' is downloaded to processor 'microblaze_0'.
+17:10:49 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+dow C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf
+----------------End of Script----------------
+
+17:10:49 INFO  : Memory regions updated for context PA
+17:10:49 INFO  : Memory regions updated for context PA
+17:10:49 INFO  : Context for processor 'microblaze_0' is selected.
+17:10:49 INFO  : 'con' command is executed.
+17:10:49 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+con
+----------------End of Script----------------
+
+17:10:49 INFO  : Launch script is exported to file 'C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_example.elf_on_local.tcl'
+17:11:42 INFO  : Disconnected from the channel tcfchan#102.
+17:11:43 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==0} -index 0' command is executed.
+17:11:43 INFO  : 'fpga -state' command is executed.
+17:11:43 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:11:43 INFO  : Jtag cable 'Digilent Basys3 210183AB4397A' is selected.
+17:11:43 INFO  : 'jtag frequency' command is executed.
+17:11:43 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+17:11:43 INFO  : Context for processor 'microblaze_0' is selected.
+17:11:43 INFO  : Processor reset is completed for 'microblaze_0'.
+17:11:43 INFO  : Context for processor 'microblaze_0' is selected.
+17:11:43 INFO  : The application 'C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf' is downloaded to processor 'microblaze_0'.
+17:11:43 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+dow C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf
+----------------End of Script----------------
+
+17:11:44 INFO  : Memory regions updated for context PA
+17:11:44 INFO  : Memory regions updated for context PA
+17:11:44 INFO  : Context for processor 'microblaze_0' is selected.
+17:11:44 INFO  : 'con' command is executed.
+17:11:44 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+con
+----------------End of Script----------------
+
+17:11:44 INFO  : Launch script is exported to file 'C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_example.elf_on_local.tcl'
+17:11:59 INFO  : Disconnected from the channel tcfchan#103.
+17:12:00 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==0} -index 0' command is executed.
+17:12:00 INFO  : 'fpga -state' command is executed.
+17:12:00 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:12:00 INFO  : Jtag cable 'Digilent Basys3 210183AB4397A' is selected.
+17:12:00 INFO  : 'jtag frequency' command is executed.
+17:12:00 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+17:12:00 INFO  : Context for processor 'microblaze_0' is selected.
+17:12:00 INFO  : Processor reset is completed for 'microblaze_0'.
+17:12:00 INFO  : Context for processor 'microblaze_0' is selected.
+17:12:01 INFO  : The application 'C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf' is downloaded to processor 'microblaze_0'.
+17:12:01 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+dow C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf
+----------------End of Script----------------
+
+17:12:01 INFO  : Memory regions updated for context PA
+17:12:01 INFO  : Memory regions updated for context PA
+17:12:01 INFO  : Context for processor 'microblaze_0' is selected.
+17:12:01 INFO  : 'con' command is executed.
+17:12:01 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+con
+----------------End of Script----------------
+
+17:12:01 INFO  : Launch script is exported to file 'C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_example.elf_on_local.tcl'
+17:14:46 INFO  : Disconnected from the channel tcfchan#104.
+17:14:47 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==0} -index 0' command is executed.
+17:14:47 INFO  : 'fpga -state' command is executed.
+17:14:47 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:14:47 INFO  : Jtag cable 'Digilent Basys3 210183AB4397A' is selected.
+17:14:47 INFO  : 'jtag frequency' command is executed.
+17:14:47 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+17:14:47 INFO  : Context for processor 'microblaze_0' is selected.
+17:14:47 INFO  : Processor reset is completed for 'microblaze_0'.
+17:14:47 INFO  : Context for processor 'microblaze_0' is selected.
+17:14:47 INFO  : The application 'C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf' is downloaded to processor 'microblaze_0'.
+17:14:47 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+dow C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf
+----------------End of Script----------------
+
+17:14:47 INFO  : Memory regions updated for context PA
+17:14:47 INFO  : Memory regions updated for context PA
+17:14:47 INFO  : Context for processor 'microblaze_0' is selected.
+17:14:47 INFO  : 'con' command is executed.
+17:14:47 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+con
+----------------End of Script----------------
+
+17:14:47 INFO  : Launch script is exported to file 'C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_example.elf_on_local.tcl'
+17:28:09 INFO  : Disconnected from the channel tcfchan#105.
+17:28:10 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==0} -index 0' command is executed.
+17:28:10 INFO  : 'fpga -state' command is executed.
+17:28:10 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:28:10 INFO  : Jtag cable 'Digilent Basys3 210183AB4397A' is selected.
+17:28:10 INFO  : 'jtag frequency' command is executed.
+17:28:10 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+17:28:10 INFO  : Context for processor 'microblaze_0' is selected.
+17:28:10 INFO  : Processor reset is completed for 'microblaze_0'.
+17:28:11 INFO  : Context for processor 'microblaze_0' is selected.
+17:28:11 INFO  : The application 'C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf' is downloaded to processor 'microblaze_0'.
+17:28:11 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+dow C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf
+----------------End of Script----------------
+
+17:28:11 INFO  : Memory regions updated for context PA
+17:28:11 INFO  : Memory regions updated for context PA
+17:28:11 INFO  : Context for processor 'microblaze_0' is selected.
+17:28:11 INFO  : 'con' command is executed.
+17:28:11 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+con
+----------------End of Script----------------
+
+17:28:11 INFO  : Launch script is exported to file 'C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_example.elf_on_local.tcl'
+17:28:40 INFO  : Disconnected from the channel tcfchan#106.
+17:28:41 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==0} -index 0' command is executed.
+17:28:41 INFO  : 'fpga -state' command is executed.
+17:28:41 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:28:41 INFO  : Jtag cable 'Digilent Basys3 210183AB4397A' is selected.
+17:28:41 INFO  : 'jtag frequency' command is executed.
+17:28:41 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+17:28:41 INFO  : Context for processor 'microblaze_0' is selected.
+17:28:41 INFO  : Processor reset is completed for 'microblaze_0'.
+17:28:41 INFO  : Context for processor 'microblaze_0' is selected.
+17:28:41 INFO  : The application 'C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf' is downloaded to processor 'microblaze_0'.
+17:28:41 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+dow C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf
+----------------End of Script----------------
+
+17:28:41 INFO  : Memory regions updated for context PA
+17:28:41 INFO  : Memory regions updated for context PA
+17:28:41 INFO  : Context for processor 'microblaze_0' is selected.
+17:28:41 INFO  : 'con' command is executed.
+17:28:41 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+con
+----------------End of Script----------------
+
+17:28:41 INFO  : Launch script is exported to file 'C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_example.elf_on_local.tcl'
+17:28:55 INFO  : Disconnected from the channel tcfchan#107.
+17:28:56 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==0} -index 0' command is executed.
+17:28:56 INFO  : 'fpga -state' command is executed.
+17:28:56 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:28:56 INFO  : Jtag cable 'Digilent Basys3 210183AB4397A' is selected.
+17:28:56 INFO  : 'jtag frequency' command is executed.
+17:28:56 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+17:28:56 INFO  : Context for processor 'microblaze_0' is selected.
+17:28:56 INFO  : Processor reset is completed for 'microblaze_0'.
+17:28:56 INFO  : Context for processor 'microblaze_0' is selected.
+17:28:56 INFO  : The application 'C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf' is downloaded to processor 'microblaze_0'.
+17:28:56 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+dow C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf
+----------------End of Script----------------
+
+17:28:57 INFO  : Memory regions updated for context PA
+17:28:57 INFO  : Memory regions updated for context PA
+17:28:57 INFO  : Context for processor 'microblaze_0' is selected.
+17:28:57 INFO  : 'con' command is executed.
+17:28:57 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+con
+----------------End of Script----------------
+
+17:28:57 INFO  : Launch script is exported to file 'C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_example.elf_on_local.tcl'
+17:31:22 INFO  : Disconnected from the channel tcfchan#108.
+17:31:23 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==0} -index 0' command is executed.
+17:31:23 INFO  : 'fpga -state' command is executed.
+17:31:23 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:31:23 INFO  : Jtag cable 'Digilent Basys3 210183AB4397A' is selected.
+17:31:23 INFO  : 'jtag frequency' command is executed.
+17:31:23 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+17:31:23 INFO  : Context for processor 'microblaze_0' is selected.
+17:31:23 INFO  : Processor reset is completed for 'microblaze_0'.
+17:31:23 INFO  : Context for processor 'microblaze_0' is selected.
+17:31:23 INFO  : The application 'C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf' is downloaded to processor 'microblaze_0'.
+17:31:23 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+dow C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf
+----------------End of Script----------------
+
+17:31:23 INFO  : Memory regions updated for context PA
+17:31:23 INFO  : Memory regions updated for context PA
+17:31:23 INFO  : Context for processor 'microblaze_0' is selected.
+17:31:23 INFO  : 'con' command is executed.
+17:31:23 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+con
+----------------End of Script----------------
+
+17:31:23 INFO  : Launch script is exported to file 'C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_example.elf_on_local.tcl'
+17:32:15 INFO  : Disconnected from the channel tcfchan#109.
+17:32:16 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==0} -index 0' command is executed.
+17:32:16 INFO  : 'fpga -state' command is executed.
+17:32:16 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:32:16 INFO  : Jtag cable 'Digilent Basys3 210183AB4397A' is selected.
+17:32:16 INFO  : 'jtag frequency' command is executed.
+17:32:16 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+17:32:16 INFO  : Context for processor 'microblaze_0' is selected.
+17:32:16 INFO  : Processor reset is completed for 'microblaze_0'.
+17:32:16 INFO  : Context for processor 'microblaze_0' is selected.
+17:32:16 INFO  : The application 'C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf' is downloaded to processor 'microblaze_0'.
+17:32:16 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+dow C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf
+----------------End of Script----------------
+
+17:32:17 INFO  : Memory regions updated for context PA
+17:32:17 INFO  : Memory regions updated for context PA
+17:32:17 INFO  : Context for processor 'microblaze_0' is selected.
+17:32:17 INFO  : 'con' command is executed.
+17:32:17 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+con
+----------------End of Script----------------
+
+17:32:17 INFO  : Launch script is exported to file 'C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_example.elf_on_local.tcl'
+17:32:55 INFO  : Disconnected from the channel tcfchan#110.
+17:32:56 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==0} -index 0' command is executed.
+17:32:56 INFO  : 'fpga -state' command is executed.
+17:32:56 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:32:57 INFO  : Jtag cable 'Digilent Basys3 210183AB4397A' is selected.
+17:32:57 INFO  : 'jtag frequency' command is executed.
+17:32:57 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+17:32:57 INFO  : Context for processor 'microblaze_0' is selected.
+17:32:57 INFO  : Processor reset is completed for 'microblaze_0'.
+17:32:57 INFO  : Context for processor 'microblaze_0' is selected.
+17:32:57 INFO  : The application 'C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf' is downloaded to processor 'microblaze_0'.
+17:32:57 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+dow C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf
+----------------End of Script----------------
+
+17:32:57 INFO  : Memory regions updated for context PA
+17:32:57 INFO  : Memory regions updated for context PA
+17:32:57 INFO  : Context for processor 'microblaze_0' is selected.
+17:32:57 INFO  : 'con' command is executed.
+17:32:57 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+con
+----------------End of Script----------------
+
+17:32:57 INFO  : Launch script is exported to file 'C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_example.elf_on_local.tcl'
+17:33:45 INFO  : Disconnected from the channel tcfchan#111.
+17:33:46 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==0} -index 0' command is executed.
+17:33:46 INFO  : 'fpga -state' command is executed.
+17:33:46 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:33:46 INFO  : Jtag cable 'Digilent Basys3 210183AB4397A' is selected.
+17:33:46 INFO  : 'jtag frequency' command is executed.
+17:33:46 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+17:33:46 INFO  : Context for processor 'microblaze_0' is selected.
+17:33:46 INFO  : Processor reset is completed for 'microblaze_0'.
+17:33:46 INFO  : Context for processor 'microblaze_0' is selected.
+17:33:46 INFO  : The application 'C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf' is downloaded to processor 'microblaze_0'.
+17:33:46 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+dow C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf
+----------------End of Script----------------
+
+17:33:46 INFO  : Memory regions updated for context PA
+17:33:46 INFO  : Memory regions updated for context PA
+17:33:46 INFO  : Context for processor 'microblaze_0' is selected.
+17:33:46 INFO  : 'con' command is executed.
+17:33:46 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+con
+----------------End of Script----------------
+
+17:33:46 INFO  : Launch script is exported to file 'C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_example.elf_on_local.tcl'
+17:35:13 INFO  : Disconnected from the channel tcfchan#112.
+17:35:14 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==0} -index 0' command is executed.
+17:35:14 INFO  : 'fpga -state' command is executed.
+17:35:14 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:35:14 INFO  : Jtag cable 'Digilent Basys3 210183AB4397A' is selected.
+17:35:14 INFO  : 'jtag frequency' command is executed.
+17:35:14 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+17:35:14 INFO  : Context for processor 'microblaze_0' is selected.
+17:35:14 INFO  : Processor reset is completed for 'microblaze_0'.
+17:35:14 INFO  : Context for processor 'microblaze_0' is selected.
+17:35:14 INFO  : The application 'C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf' is downloaded to processor 'microblaze_0'.
+17:35:14 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+dow C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf
+----------------End of Script----------------
+
+17:35:14 INFO  : Memory regions updated for context PA
+17:35:14 INFO  : Memory regions updated for context PA
+17:35:14 INFO  : Context for processor 'microblaze_0' is selected.
+17:35:14 INFO  : 'con' command is executed.
+17:35:14 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+con
+----------------End of Script----------------
+
+17:35:14 INFO  : Launch script is exported to file 'C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_example.elf_on_local.tcl'
+17:35:26 INFO  : Disconnected from the channel tcfchan#113.
+17:35:27 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==0} -index 0' command is executed.
+17:35:27 INFO  : 'fpga -state' command is executed.
+17:35:27 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:35:27 INFO  : Jtag cable 'Digilent Basys3 210183AB4397A' is selected.
+17:35:27 INFO  : 'jtag frequency' command is executed.
+17:35:27 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+17:35:27 INFO  : Context for processor 'microblaze_0' is selected.
+17:35:28 INFO  : Processor reset is completed for 'microblaze_0'.
+17:35:28 INFO  : Context for processor 'microblaze_0' is selected.
+17:35:28 INFO  : The application 'C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf' is downloaded to processor 'microblaze_0'.
+17:35:28 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+dow C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf
+----------------End of Script----------------
+
+17:35:28 INFO  : Memory regions updated for context PA
+17:35:28 INFO  : Memory regions updated for context PA
+17:35:28 INFO  : Context for processor 'microblaze_0' is selected.
+17:35:28 INFO  : 'con' command is executed.
+17:35:28 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+con
+----------------End of Script----------------
+
+17:35:28 INFO  : Launch script is exported to file 'C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_example.elf_on_local.tcl'
+17:37:34 INFO  : Disconnected from the channel tcfchan#114.
+17:37:35 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==0} -index 0' command is executed.
+17:37:35 INFO  : 'fpga -state' command is executed.
+17:37:35 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:37:36 INFO  : Jtag cable 'Digilent Basys3 210183AB4397A' is selected.
+17:37:36 INFO  : 'jtag frequency' command is executed.
+17:37:36 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+17:37:36 INFO  : Context for processor 'microblaze_0' is selected.
+17:37:36 INFO  : Processor reset is completed for 'microblaze_0'.
+17:37:36 INFO  : Context for processor 'microblaze_0' is selected.
+17:37:36 INFO  : The application 'C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf' is downloaded to processor 'microblaze_0'.
+17:37:36 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+dow C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf
+----------------End of Script----------------
+
+17:37:36 INFO  : Memory regions updated for context PA
+17:37:36 INFO  : Memory regions updated for context PA
+17:37:36 INFO  : Context for processor 'microblaze_0' is selected.
+17:37:36 INFO  : 'con' command is executed.
+17:37:36 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+con
+----------------End of Script----------------
+
+17:37:36 INFO  : Launch script is exported to file 'C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_example.elf_on_local.tcl'
+17:38:01 INFO  : Disconnected from the channel tcfchan#115.
+17:38:02 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==0} -index 0' command is executed.
+17:38:02 INFO  : 'fpga -state' command is executed.
+17:38:02 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:38:02 INFO  : Jtag cable 'Digilent Basys3 210183AB4397A' is selected.
+17:38:02 INFO  : 'jtag frequency' command is executed.
+17:38:02 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+17:38:02 INFO  : Context for processor 'microblaze_0' is selected.
+17:38:02 INFO  : Processor reset is completed for 'microblaze_0'.
+17:38:02 INFO  : Context for processor 'microblaze_0' is selected.
+17:38:02 INFO  : The application 'C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf' is downloaded to processor 'microblaze_0'.
+17:38:02 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+dow C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf
+----------------End of Script----------------
+
+17:38:02 INFO  : Memory regions updated for context PA
+17:38:02 INFO  : Memory regions updated for context PA
+17:38:02 INFO  : Context for processor 'microblaze_0' is selected.
+17:38:02 INFO  : 'con' command is executed.
+17:38:02 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+con
+----------------End of Script----------------
+
+17:38:02 INFO  : Launch script is exported to file 'C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_example.elf_on_local.tcl'
+17:38:31 INFO  : Disconnected from the channel tcfchan#116.
+17:38:32 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==0} -index 0' command is executed.
+17:38:32 INFO  : 'fpga -state' command is executed.
+17:38:32 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:38:33 INFO  : Jtag cable 'Digilent Basys3 210183AB4397A' is selected.
+17:38:33 INFO  : 'jtag frequency' command is executed.
+17:38:33 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+17:38:33 INFO  : Context for processor 'microblaze_0' is selected.
+17:38:33 INFO  : Processor reset is completed for 'microblaze_0'.
+17:38:33 INFO  : Context for processor 'microblaze_0' is selected.
+17:38:33 INFO  : The application 'C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf' is downloaded to processor 'microblaze_0'.
+17:38:33 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+dow C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf
+----------------End of Script----------------
+
+17:38:33 INFO  : Memory regions updated for context PA
+17:38:33 INFO  : Memory regions updated for context PA
+17:38:33 INFO  : Context for processor 'microblaze_0' is selected.
+17:38:33 INFO  : 'con' command is executed.
+17:38:33 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+con
+----------------End of Script----------------
+
+17:38:33 INFO  : Launch script is exported to file 'C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_example.elf_on_local.tcl'
+17:38:50 INFO  : Disconnected from the channel tcfchan#117.
+17:38:51 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==0} -index 0' command is executed.
+17:38:51 INFO  : 'fpga -state' command is executed.
+17:38:51 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:38:51 INFO  : Jtag cable 'Digilent Basys3 210183AB4397A' is selected.
+17:38:51 INFO  : 'jtag frequency' command is executed.
+17:38:51 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+17:38:51 INFO  : Context for processor 'microblaze_0' is selected.
+17:38:51 INFO  : Processor reset is completed for 'microblaze_0'.
+17:38:51 INFO  : Context for processor 'microblaze_0' is selected.
+17:38:51 INFO  : The application 'C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf' is downloaded to processor 'microblaze_0'.
+17:38:51 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+dow C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf
+----------------End of Script----------------
+
+17:38:51 INFO  : Memory regions updated for context PA
+17:38:51 INFO  : Memory regions updated for context PA
+17:38:51 INFO  : Context for processor 'microblaze_0' is selected.
+17:38:51 INFO  : 'con' command is executed.
+17:38:51 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+con
+----------------End of Script----------------
+
+17:38:51 INFO  : Launch script is exported to file 'C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_example.elf_on_local.tcl'
+17:39:13 INFO  : Disconnected from the channel tcfchan#118.
+17:39:14 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==0} -index 0' command is executed.
+17:39:14 INFO  : 'fpga -state' command is executed.
+17:39:14 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:39:14 INFO  : Jtag cable 'Digilent Basys3 210183AB4397A' is selected.
+17:39:14 INFO  : 'jtag frequency' command is executed.
+17:39:14 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+17:39:14 INFO  : Context for processor 'microblaze_0' is selected.
+17:39:14 INFO  : Processor reset is completed for 'microblaze_0'.
+17:39:14 INFO  : Context for processor 'microblaze_0' is selected.
+17:39:14 INFO  : The application 'C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf' is downloaded to processor 'microblaze_0'.
+17:39:14 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+dow C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf
+----------------End of Script----------------
+
+17:39:14 INFO  : Memory regions updated for context PA
+17:39:14 INFO  : Memory regions updated for context PA
+17:39:14 INFO  : Context for processor 'microblaze_0' is selected.
+17:39:14 INFO  : 'con' command is executed.
+17:39:14 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+con
+----------------End of Script----------------
+
+17:39:14 INFO  : Launch script is exported to file 'C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_example.elf_on_local.tcl'
+17:39:25 INFO  : Disconnected from the channel tcfchan#119.
+17:39:27 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==0} -index 0' command is executed.
+17:39:27 INFO  : 'fpga -state' command is executed.
+17:39:27 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:39:27 INFO  : Jtag cable 'Digilent Basys3 210183AB4397A' is selected.
+17:39:27 INFO  : 'jtag frequency' command is executed.
+17:39:27 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+17:39:27 INFO  : Context for processor 'microblaze_0' is selected.
+17:39:27 INFO  : Processor reset is completed for 'microblaze_0'.
+17:39:27 INFO  : Context for processor 'microblaze_0' is selected.
+17:39:27 INFO  : The application 'C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf' is downloaded to processor 'microblaze_0'.
+17:39:27 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+dow C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf
+----------------End of Script----------------
+
+17:39:27 INFO  : Memory regions updated for context PA
+17:39:27 INFO  : Memory regions updated for context PA
+17:39:27 INFO  : Context for processor 'microblaze_0' is selected.
+17:39:27 INFO  : 'con' command is executed.
+17:39:27 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+con
+----------------End of Script----------------
+
+17:39:27 INFO  : Launch script is exported to file 'C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_example.elf_on_local.tcl'
+17:39:40 INFO  : Disconnected from the channel tcfchan#120.
+17:39:41 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==0} -index 0' command is executed.
+17:39:41 INFO  : 'fpga -state' command is executed.
+17:39:41 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:39:42 INFO  : Jtag cable 'Digilent Basys3 210183AB4397A' is selected.
+17:39:42 INFO  : 'jtag frequency' command is executed.
+17:39:42 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+17:39:42 INFO  : Context for processor 'microblaze_0' is selected.
+17:39:42 INFO  : Processor reset is completed for 'microblaze_0'.
+17:39:42 INFO  : Context for processor 'microblaze_0' is selected.
+17:39:42 INFO  : The application 'C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf' is downloaded to processor 'microblaze_0'.
+17:39:42 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+dow C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf
+----------------End of Script----------------
+
+17:39:42 INFO  : Memory regions updated for context PA
+17:39:42 INFO  : Memory regions updated for context PA
+17:39:42 INFO  : Context for processor 'microblaze_0' is selected.
+17:39:42 INFO  : 'con' command is executed.
+17:39:42 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+con
+----------------End of Script----------------
+
+17:39:42 INFO  : Launch script is exported to file 'C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_example.elf_on_local.tcl'
+17:40:32 INFO  : Disconnected from the channel tcfchan#121.
+17:40:33 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==0} -index 0' command is executed.
+17:40:33 INFO  : 'fpga -state' command is executed.
+17:40:33 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:40:33 INFO  : Jtag cable 'Digilent Basys3 210183AB4397A' is selected.
+17:40:33 INFO  : 'jtag frequency' command is executed.
+17:40:33 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+17:40:33 INFO  : Context for processor 'microblaze_0' is selected.
+17:40:33 INFO  : Processor reset is completed for 'microblaze_0'.
+17:40:33 INFO  : Context for processor 'microblaze_0' is selected.
+17:40:33 INFO  : The application 'C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf' is downloaded to processor 'microblaze_0'.
+17:40:33 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+dow C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf
+----------------End of Script----------------
+
+17:40:33 INFO  : Memory regions updated for context PA
+17:40:33 INFO  : Memory regions updated for context PA
+17:40:33 INFO  : Context for processor 'microblaze_0' is selected.
+17:40:33 INFO  : 'con' command is executed.
+17:40:33 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+con
+----------------End of Script----------------
+
+17:40:33 INFO  : Launch script is exported to file 'C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_example.elf_on_local.tcl'
+17:46:16 INFO  : Disconnected from the channel tcfchan#122.
+17:46:17 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==0} -index 0' command is executed.
+17:46:17 INFO  : 'fpga -state' command is executed.
+17:46:17 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:46:18 INFO  : Jtag cable 'Digilent Basys3 210183AB4397A' is selected.
+17:46:18 INFO  : 'jtag frequency' command is executed.
+17:46:18 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+17:46:18 INFO  : Context for processor 'microblaze_0' is selected.
+17:46:19 INFO  : Processor reset is completed for 'microblaze_0'.
+17:46:19 INFO  : Context for processor 'microblaze_0' is selected.
+17:46:19 INFO  : The application 'C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf' is downloaded to processor 'microblaze_0'.
+17:46:19 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+dow C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf
+----------------End of Script----------------
+
+17:46:19 INFO  : Memory regions updated for context PA
+17:46:19 INFO  : Memory regions updated for context PA
+17:46:19 INFO  : Context for processor 'microblaze_0' is selected.
+17:46:19 INFO  : 'con' command is executed.
+17:46:19 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+con
+----------------End of Script----------------
+
+17:46:19 INFO  : Launch script is exported to file 'C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_example.elf_on_local.tcl'
+17:46:59 INFO  : Disconnected from the channel tcfchan#123.
+17:47:00 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==0} -index 0' command is executed.
+17:47:00 INFO  : 'fpga -state' command is executed.
+17:47:00 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:47:00 INFO  : Jtag cable 'Digilent Basys3 210183AB4397A' is selected.
+17:47:00 INFO  : 'jtag frequency' command is executed.
+17:47:00 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+17:47:00 INFO  : Context for processor 'microblaze_0' is selected.
+17:47:00 INFO  : Processor reset is completed for 'microblaze_0'.
+17:47:00 INFO  : Context for processor 'microblaze_0' is selected.
+17:47:00 INFO  : The application 'C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf' is downloaded to processor 'microblaze_0'.
+17:47:00 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+dow C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf
+----------------End of Script----------------
+
+17:47:00 INFO  : Memory regions updated for context PA
+17:47:00 INFO  : Memory regions updated for context PA
+17:47:00 INFO  : Context for processor 'microblaze_0' is selected.
+17:47:00 INFO  : 'con' command is executed.
+17:47:00 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+con
+----------------End of Script----------------
+
+17:47:00 INFO  : Launch script is exported to file 'C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_example.elf_on_local.tcl'
+17:47:16 INFO  : Disconnected from the channel tcfchan#124.
+17:47:17 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==0} -index 0' command is executed.
+17:47:17 INFO  : 'fpga -state' command is executed.
+17:47:17 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:47:17 INFO  : Jtag cable 'Digilent Basys3 210183AB4397A' is selected.
+17:47:17 INFO  : 'jtag frequency' command is executed.
+17:47:17 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+17:47:17 INFO  : Context for processor 'microblaze_0' is selected.
+17:47:17 INFO  : Processor reset is completed for 'microblaze_0'.
+17:47:17 INFO  : Context for processor 'microblaze_0' is selected.
+17:47:17 INFO  : The application 'C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf' is downloaded to processor 'microblaze_0'.
+17:47:17 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+dow C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf
+----------------End of Script----------------
+
+17:47:17 INFO  : Memory regions updated for context PA
+17:47:17 INFO  : Memory regions updated for context PA
+17:47:17 INFO  : Context for processor 'microblaze_0' is selected.
+17:47:17 INFO  : 'con' command is executed.
+17:47:17 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+con
+----------------End of Script----------------
+
+17:47:17 INFO  : Launch script is exported to file 'C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_example.elf_on_local.tcl'
+17:47:42 INFO  : Disconnected from the channel tcfchan#125.
+17:47:43 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==0} -index 0' command is executed.
+17:47:43 INFO  : 'fpga -state' command is executed.
+17:47:43 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:47:43 INFO  : Jtag cable 'Digilent Basys3 210183AB4397A' is selected.
+17:47:43 INFO  : 'jtag frequency' command is executed.
+17:47:43 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+17:47:43 INFO  : Context for processor 'microblaze_0' is selected.
+17:47:43 INFO  : Processor reset is completed for 'microblaze_0'.
+17:47:43 INFO  : Context for processor 'microblaze_0' is selected.
+17:47:43 INFO  : The application 'C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf' is downloaded to processor 'microblaze_0'.
+17:47:43 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+dow C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf
+----------------End of Script----------------
+
+17:47:43 INFO  : Memory regions updated for context PA
+17:47:43 INFO  : Memory regions updated for context PA
+17:47:43 INFO  : Context for processor 'microblaze_0' is selected.
+17:47:43 INFO  : 'con' command is executed.
+17:47:43 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+con
+----------------End of Script----------------
+
+17:47:43 INFO  : Launch script is exported to file 'C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_example.elf_on_local.tcl'
+17:47:53 INFO  : Disconnected from the channel tcfchan#126.
+17:47:54 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==0} -index 0' command is executed.
+17:47:54 INFO  : 'fpga -state' command is executed.
+17:47:54 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:47:54 INFO  : Jtag cable 'Digilent Basys3 210183AB4397A' is selected.
+17:47:54 INFO  : 'jtag frequency' command is executed.
+17:47:54 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+17:47:54 INFO  : Context for processor 'microblaze_0' is selected.
+17:47:55 INFO  : Processor reset is completed for 'microblaze_0'.
+17:47:55 INFO  : Context for processor 'microblaze_0' is selected.
+17:47:55 INFO  : The application 'C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf' is downloaded to processor 'microblaze_0'.
+17:47:55 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+dow C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf
+----------------End of Script----------------
+
+17:47:55 INFO  : Memory regions updated for context PA
+17:47:55 INFO  : Memory regions updated for context PA
+17:47:55 INFO  : Context for processor 'microblaze_0' is selected.
+17:47:55 INFO  : 'con' command is executed.
+17:47:55 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+con
+----------------End of Script----------------
+
+17:47:55 INFO  : Launch script is exported to file 'C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_example.elf_on_local.tcl'
+17:48:16 INFO  : Disconnected from the channel tcfchan#127.
+17:48:17 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==0} -index 0' command is executed.
+17:48:17 INFO  : 'fpga -state' command is executed.
+17:48:17 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:48:17 INFO  : Jtag cable 'Digilent Basys3 210183AB4397A' is selected.
+17:48:17 INFO  : 'jtag frequency' command is executed.
+17:48:17 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+17:48:17 INFO  : Context for processor 'microblaze_0' is selected.
+17:48:17 INFO  : Processor reset is completed for 'microblaze_0'.
+17:48:17 INFO  : Context for processor 'microblaze_0' is selected.
+17:48:18 INFO  : The application 'C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf' is downloaded to processor 'microblaze_0'.
+17:48:18 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+dow C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf
+----------------End of Script----------------
+
+17:48:18 INFO  : Memory regions updated for context PA
+17:48:18 INFO  : Memory regions updated for context PA
+17:48:18 INFO  : Context for processor 'microblaze_0' is selected.
+17:48:18 INFO  : 'con' command is executed.
+17:48:18 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+con
+----------------End of Script----------------
+
+17:48:18 INFO  : Launch script is exported to file 'C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_example.elf_on_local.tcl'
+17:48:31 INFO  : Disconnected from the channel tcfchan#128.
+17:48:32 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==0} -index 0' command is executed.
+17:48:32 INFO  : 'fpga -state' command is executed.
+17:48:32 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:48:32 INFO  : Jtag cable 'Digilent Basys3 210183AB4397A' is selected.
+17:48:32 INFO  : 'jtag frequency' command is executed.
+17:48:32 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+17:48:32 INFO  : Context for processor 'microblaze_0' is selected.
+17:48:32 INFO  : Processor reset is completed for 'microblaze_0'.
+17:48:32 INFO  : Context for processor 'microblaze_0' is selected.
+17:48:32 INFO  : The application 'C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf' is downloaded to processor 'microblaze_0'.
+17:48:32 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+dow C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf
+----------------End of Script----------------
+
+17:48:32 INFO  : Memory regions updated for context PA
+17:48:32 INFO  : Memory regions updated for context PA
+17:48:32 INFO  : Context for processor 'microblaze_0' is selected.
+17:48:32 INFO  : 'con' command is executed.
+17:48:32 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+con
+----------------End of Script----------------
+
+17:48:32 INFO  : Launch script is exported to file 'C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_example.elf_on_local.tcl'
+17:49:17 INFO  : Disconnected from the channel tcfchan#129.
+17:49:19 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==0} -index 0' command is executed.
+17:49:19 INFO  : 'fpga -state' command is executed.
+17:49:19 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:49:19 INFO  : Jtag cable 'Digilent Basys3 210183AB4397A' is selected.
+17:49:19 INFO  : 'jtag frequency' command is executed.
+17:49:19 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+17:49:19 INFO  : Context for processor 'microblaze_0' is selected.
+17:49:19 INFO  : Processor reset is completed for 'microblaze_0'.
+17:49:19 INFO  : Context for processor 'microblaze_0' is selected.
+17:49:19 INFO  : The application 'C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf' is downloaded to processor 'microblaze_0'.
+17:49:19 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+dow C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf
+----------------End of Script----------------
+
+17:49:19 INFO  : Memory regions updated for context PA
+17:49:19 INFO  : Memory regions updated for context PA
+17:49:19 INFO  : Context for processor 'microblaze_0' is selected.
+17:49:19 INFO  : 'con' command is executed.
+17:49:19 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+con
+----------------End of Script----------------
+
+17:49:19 INFO  : Launch script is exported to file 'C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_example.elf_on_local.tcl'
+17:50:27 INFO  : Disconnected from the channel tcfchan#130.
+17:50:28 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==0} -index 0' command is executed.
+17:50:28 INFO  : 'fpga -state' command is executed.
+17:50:28 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:50:28 INFO  : Jtag cable 'Digilent Basys3 210183AB4397A' is selected.
+17:50:28 INFO  : 'jtag frequency' command is executed.
+17:50:28 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+17:50:28 INFO  : Context for processor 'microblaze_0' is selected.
+17:50:28 INFO  : Processor reset is completed for 'microblaze_0'.
+17:50:28 INFO  : Context for processor 'microblaze_0' is selected.
+17:50:29 INFO  : The application 'C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf' is downloaded to processor 'microblaze_0'.
+17:50:29 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+dow C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf
+----------------End of Script----------------
+
+17:50:29 INFO  : Memory regions updated for context PA
+17:50:29 INFO  : Memory regions updated for context PA
+17:50:29 INFO  : Context for processor 'microblaze_0' is selected.
+17:50:29 INFO  : 'con' command is executed.
+17:50:29 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+con
+----------------End of Script----------------
+
+17:50:29 INFO  : Launch script is exported to file 'C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_example.elf_on_local.tcl'
+17:51:24 INFO  : Disconnected from the channel tcfchan#131.
+17:51:25 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==0} -index 0' command is executed.
+17:51:25 INFO  : 'fpga -state' command is executed.
+17:51:25 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:51:25 INFO  : Jtag cable 'Digilent Basys3 210183AB4397A' is selected.
+17:51:25 INFO  : 'jtag frequency' command is executed.
+17:51:25 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+17:51:25 INFO  : Context for processor 'microblaze_0' is selected.
+17:51:25 INFO  : Processor reset is completed for 'microblaze_0'.
+17:51:25 INFO  : Context for processor 'microblaze_0' is selected.
+17:51:26 INFO  : The application 'C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf' is downloaded to processor 'microblaze_0'.
+17:51:26 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+dow C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf
+----------------End of Script----------------
+
+17:51:26 INFO  : Memory regions updated for context PA
+17:51:26 INFO  : Memory regions updated for context PA
+17:51:26 INFO  : Context for processor 'microblaze_0' is selected.
+17:51:26 INFO  : 'con' command is executed.
+17:51:26 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+con
+----------------End of Script----------------
+
+17:51:26 INFO  : Launch script is exported to file 'C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_example.elf_on_local.tcl'
+17:52:26 INFO  : Disconnected from the channel tcfchan#132.
+17:52:27 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==0} -index 0' command is executed.
+17:52:27 INFO  : 'fpga -state' command is executed.
+17:52:27 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:52:27 INFO  : Jtag cable 'Digilent Basys3 210183AB4397A' is selected.
+17:52:27 INFO  : 'jtag frequency' command is executed.
+17:52:27 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+17:52:27 INFO  : Context for processor 'microblaze_0' is selected.
+17:52:27 INFO  : Processor reset is completed for 'microblaze_0'.
+17:52:27 INFO  : Context for processor 'microblaze_0' is selected.
+17:52:27 INFO  : The application 'C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf' is downloaded to processor 'microblaze_0'.
+17:52:27 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+dow C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf
+----------------End of Script----------------
+
+17:52:27 INFO  : Memory regions updated for context PA
+17:52:27 INFO  : Memory regions updated for context PA
+17:52:27 INFO  : Context for processor 'microblaze_0' is selected.
+17:52:27 INFO  : 'con' command is executed.
+17:52:27 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+con
+----------------End of Script----------------
+
+17:52:27 INFO  : Launch script is exported to file 'C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_example.elf_on_local.tcl'
+17:52:45 INFO  : Disconnected from the channel tcfchan#133.
+17:52:46 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==0} -index 0' command is executed.
+17:52:46 INFO  : 'fpga -state' command is executed.
+17:52:46 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:52:46 INFO  : Jtag cable 'Digilent Basys3 210183AB4397A' is selected.
+17:52:46 INFO  : 'jtag frequency' command is executed.
+17:52:46 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+17:52:46 INFO  : Context for processor 'microblaze_0' is selected.
+17:52:46 INFO  : Processor reset is completed for 'microblaze_0'.
+17:52:46 INFO  : Context for processor 'microblaze_0' is selected.
+17:52:46 INFO  : The application 'C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf' is downloaded to processor 'microblaze_0'.
+17:52:46 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+dow C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf
+----------------End of Script----------------
+
+17:52:46 INFO  : Memory regions updated for context PA
+17:52:46 INFO  : Memory regions updated for context PA
+17:52:47 INFO  : Context for processor 'microblaze_0' is selected.
+17:52:47 INFO  : 'con' command is executed.
+17:52:47 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+con
+----------------End of Script----------------
+
+17:52:47 INFO  : Launch script is exported to file 'C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_example.elf_on_local.tcl'
+17:53:30 INFO  : Disconnected from the channel tcfchan#134.
+17:53:31 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==0} -index 0' command is executed.
+17:53:31 INFO  : 'fpga -state' command is executed.
+17:53:31 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:53:31 INFO  : Jtag cable 'Digilent Basys3 210183AB4397A' is selected.
+17:53:31 INFO  : 'jtag frequency' command is executed.
+17:53:31 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+17:53:31 INFO  : Context for processor 'microblaze_0' is selected.
+17:53:31 INFO  : Processor reset is completed for 'microblaze_0'.
+17:53:31 INFO  : Context for processor 'microblaze_0' is selected.
+17:53:31 INFO  : The application 'C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf' is downloaded to processor 'microblaze_0'.
+17:53:31 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+dow C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf
+----------------End of Script----------------
+
+17:53:31 INFO  : Memory regions updated for context PA
+17:53:31 INFO  : Memory regions updated for context PA
+17:53:31 INFO  : Context for processor 'microblaze_0' is selected.
+17:53:31 INFO  : 'con' command is executed.
+17:53:31 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+con
+----------------End of Script----------------
+
+17:53:31 INFO  : Launch script is exported to file 'C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_example.elf_on_local.tcl'
+17:53:55 INFO  : Disconnected from the channel tcfchan#135.
+17:53:56 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==0} -index 0' command is executed.
+17:53:56 INFO  : 'fpga -state' command is executed.
+17:53:56 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:53:56 INFO  : Jtag cable 'Digilent Basys3 210183AB4397A' is selected.
+17:53:56 INFO  : 'jtag frequency' command is executed.
+17:53:56 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+17:53:56 INFO  : Context for processor 'microblaze_0' is selected.
+17:53:57 INFO  : Processor reset is completed for 'microblaze_0'.
+17:53:57 INFO  : Context for processor 'microblaze_0' is selected.
+17:53:57 INFO  : The application 'C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf' is downloaded to processor 'microblaze_0'.
+17:53:57 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+dow C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf
+----------------End of Script----------------
+
+17:53:57 INFO  : Memory regions updated for context PA
+17:53:57 INFO  : Memory regions updated for context PA
+17:53:57 INFO  : Context for processor 'microblaze_0' is selected.
+17:53:57 INFO  : 'con' command is executed.
+17:53:57 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+con
+----------------End of Script----------------
+
+17:53:57 INFO  : Launch script is exported to file 'C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_example.elf_on_local.tcl'
+17:54:33 INFO  : Disconnected from the channel tcfchan#136.
+17:54:34 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==0} -index 0' command is executed.
+17:54:34 INFO  : 'fpga -state' command is executed.
+17:54:34 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:54:34 INFO  : Jtag cable 'Digilent Basys3 210183AB4397A' is selected.
+17:54:34 INFO  : 'jtag frequency' command is executed.
+17:54:34 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+17:54:34 INFO  : Context for processor 'microblaze_0' is selected.
+17:54:34 INFO  : Processor reset is completed for 'microblaze_0'.
+17:54:34 INFO  : Context for processor 'microblaze_0' is selected.
+17:54:34 INFO  : The application 'C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf' is downloaded to processor 'microblaze_0'.
+17:54:34 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+dow C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf
+----------------End of Script----------------
+
+17:54:35 INFO  : Memory regions updated for context PA
+17:54:35 INFO  : Memory regions updated for context PA
+17:54:35 INFO  : Context for processor 'microblaze_0' is selected.
+17:54:35 INFO  : 'con' command is executed.
+17:54:35 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+con
+----------------End of Script----------------
+
+17:54:35 INFO  : Launch script is exported to file 'C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_example.elf_on_local.tcl'
+17:54:53 INFO  : Disconnected from the channel tcfchan#137.
+17:54:54 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==0} -index 0' command is executed.
+17:54:54 INFO  : 'fpga -state' command is executed.
+17:54:54 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:54:54 INFO  : Jtag cable 'Digilent Basys3 210183AB4397A' is selected.
+17:54:54 INFO  : 'jtag frequency' command is executed.
+17:54:54 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+17:54:55 INFO  : Context for processor 'microblaze_0' is selected.
+17:54:55 INFO  : Processor reset is completed for 'microblaze_0'.
+17:54:55 INFO  : Context for processor 'microblaze_0' is selected.
+17:54:55 INFO  : The application 'C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf' is downloaded to processor 'microblaze_0'.
+17:54:55 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+dow C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf
+----------------End of Script----------------
+
+17:54:55 INFO  : Memory regions updated for context PA
+17:54:55 INFO  : Memory regions updated for context PA
+17:54:55 INFO  : Context for processor 'microblaze_0' is selected.
+17:54:55 INFO  : 'con' command is executed.
+17:54:55 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+con
+----------------End of Script----------------
+
+17:54:55 INFO  : Launch script is exported to file 'C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_example.elf_on_local.tcl'
+17:55:13 INFO  : Disconnected from the channel tcfchan#138.
+17:55:14 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==0} -index 0' command is executed.
+17:55:14 INFO  : 'fpga -state' command is executed.
+17:55:14 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:55:14 INFO  : Jtag cable 'Digilent Basys3 210183AB4397A' is selected.
+17:55:14 INFO  : 'jtag frequency' command is executed.
+17:55:14 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+17:55:14 INFO  : Context for processor 'microblaze_0' is selected.
+17:55:14 INFO  : Processor reset is completed for 'microblaze_0'.
+17:55:14 INFO  : Context for processor 'microblaze_0' is selected.
+17:55:15 INFO  : The application 'C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf' is downloaded to processor 'microblaze_0'.
+17:55:15 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+dow C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf
+----------------End of Script----------------
+
+17:55:15 INFO  : Memory regions updated for context PA
+17:55:15 INFO  : Memory regions updated for context PA
+17:55:15 INFO  : Context for processor 'microblaze_0' is selected.
+17:55:15 INFO  : 'con' command is executed.
+17:55:15 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+con
+----------------End of Script----------------
+
+17:55:15 INFO  : Launch script is exported to file 'C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_example.elf_on_local.tcl'
+18:00:39 INFO  : Disconnected from the channel tcfchan#139.
+18:00:40 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==0} -index 0' command is executed.
+18:00:40 INFO  : 'fpga -state' command is executed.
+18:00:40 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:00:40 INFO  : Jtag cable 'Digilent Basys3 210183AB4397A' is selected.
+18:00:40 INFO  : 'jtag frequency' command is executed.
+18:00:40 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+18:00:40 INFO  : Context for processor 'microblaze_0' is selected.
+18:00:40 INFO  : Processor reset is completed for 'microblaze_0'.
+18:00:40 INFO  : Context for processor 'microblaze_0' is selected.
+18:00:40 INFO  : The application 'C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf' is downloaded to processor 'microblaze_0'.
+18:00:40 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+dow C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf
+----------------End of Script----------------
+
+18:00:40 INFO  : Memory regions updated for context PA
+18:00:40 INFO  : Memory regions updated for context PA
+18:00:40 INFO  : Context for processor 'microblaze_0' is selected.
+18:00:40 INFO  : 'con' command is executed.
+18:00:40 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+con
+----------------End of Script----------------
+
+18:00:40 INFO  : Launch script is exported to file 'C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_example.elf_on_local.tcl'
+18:00:55 INFO  : Disconnected from the channel tcfchan#140.
+18:00:56 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==0} -index 0' command is executed.
+18:00:56 INFO  : 'fpga -state' command is executed.
+18:00:56 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:00:56 INFO  : Jtag cable 'Digilent Basys3 210183AB4397A' is selected.
+18:00:56 INFO  : 'jtag frequency' command is executed.
+18:00:56 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+18:00:56 INFO  : Context for processor 'microblaze_0' is selected.
+18:00:56 INFO  : Processor reset is completed for 'microblaze_0'.
+18:00:56 INFO  : Context for processor 'microblaze_0' is selected.
+18:00:56 INFO  : The application 'C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf' is downloaded to processor 'microblaze_0'.
+18:00:56 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+dow C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf
+----------------End of Script----------------
+
+18:00:56 INFO  : Memory regions updated for context PA
+18:00:56 INFO  : Memory regions updated for context PA
+18:00:56 INFO  : Context for processor 'microblaze_0' is selected.
+18:00:56 INFO  : 'con' command is executed.
+18:00:56 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+con
+----------------End of Script----------------
+
+18:00:56 INFO  : Launch script is exported to file 'C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_example.elf_on_local.tcl'
+18:02:21 INFO  : Disconnected from the channel tcfchan#141.
+18:02:22 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==0} -index 0' command is executed.
+18:02:22 INFO  : 'fpga -state' command is executed.
+18:02:22 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:02:22 INFO  : Jtag cable 'Digilent Basys3 210183AB4397A' is selected.
+18:02:22 INFO  : 'jtag frequency' command is executed.
+18:02:22 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+18:02:22 INFO  : Context for processor 'microblaze_0' is selected.
+18:02:22 INFO  : Processor reset is completed for 'microblaze_0'.
+18:02:22 INFO  : Context for processor 'microblaze_0' is selected.
+18:02:23 INFO  : The application 'C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf' is downloaded to processor 'microblaze_0'.
+18:02:23 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+dow C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf
+----------------End of Script----------------
+
+18:02:23 INFO  : Memory regions updated for context PA
+18:02:23 INFO  : Memory regions updated for context PA
+18:02:23 INFO  : Context for processor 'microblaze_0' is selected.
+18:02:23 INFO  : 'con' command is executed.
+18:02:23 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+con
+----------------End of Script----------------
+
+18:02:23 INFO  : Launch script is exported to file 'C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_example.elf_on_local.tcl'
+18:02:47 INFO  : Disconnected from the channel tcfchan#142.
+18:02:48 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==0} -index 0' command is executed.
+18:02:48 INFO  : 'fpga -state' command is executed.
+18:02:48 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:02:48 INFO  : Jtag cable 'Digilent Basys3 210183AB4397A' is selected.
+18:02:48 INFO  : 'jtag frequency' command is executed.
+18:02:48 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+18:02:48 INFO  : Context for processor 'microblaze_0' is selected.
+18:02:48 INFO  : Processor reset is completed for 'microblaze_0'.
+18:02:48 INFO  : Context for processor 'microblaze_0' is selected.
+18:02:48 INFO  : The application 'C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf' is downloaded to processor 'microblaze_0'.
+18:02:48 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+dow C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf
+----------------End of Script----------------
+
+18:02:48 INFO  : Memory regions updated for context PA
+18:02:48 INFO  : Memory regions updated for context PA
+18:02:48 INFO  : Context for processor 'microblaze_0' is selected.
+18:02:48 INFO  : 'con' command is executed.
+18:02:48 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0
+con
+----------------End of Script----------------
+
+18:02:48 INFO  : Launch script is exported to file 'C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_example.elf_on_local.tcl'

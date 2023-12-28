@@ -47,7 +47,7 @@ int main(){
 		// Print map
 		init_map(&map, level);
 		print_map(map.blocks);
-		remaining_blocks = map.destructible;
+		remaining_blocks = 1; // TODO: cambiar despues
 		print_blocks_info(remaining_blocks, *blocks, **numbers);
 
 		// Initialize the bar and the ball
@@ -146,6 +146,12 @@ int check_button()
 	}
 
 	return btn;
+}
+
+void wait_button()
+{
+	int data;
+	while ((data = gpio0[0] & MASK_BUTTONS) != 0) msleep(10);
 }
 
 game_status_t move_ball(ball_t *ball, position_t *bar_pos)
@@ -614,7 +620,8 @@ levels_t level_selection() {
 		default:
 			break;
 	}
-	msleep(3000); // delay to start map
+	wait_button();
+	msleep(200);
 	return level;
 }
 

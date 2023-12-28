@@ -1,4 +1,4 @@
-17:49:16 **** Incremental Build of configuration Debug for project example ****
+18:03:43 **** Auto Build of configuration Debug for project example ****
 make all 
 'Building file: ../src/main.c'
 'Invoking: MicroBlaze gcc compiler'
@@ -13,9 +13,9 @@ mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittl
 'Invoking: MicroBlaze Print Size'
 mb-size example.elf  |tee "example.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  28952	   7724	   5332	  42008	   a418	example.elf
+  29044	   7724	   5336	  42104	   a478	example.elf
 'Finished building: example.elf.size'
 ' '
 
-17:49:17 Build Finished (took 736ms)
+18:03:43 Build Finished (took 724ms)
 

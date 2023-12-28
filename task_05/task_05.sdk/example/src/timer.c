@@ -11,8 +11,7 @@ int tiempo = 0;
  */
 void msleep(int milisegundos) {
 	int temp = tiempo;
-	while (tiempo <= milisegundos + temp);
-	tiempo = 0;
+	while (tiempo != milisegundos + temp);
 }
 
 /**
