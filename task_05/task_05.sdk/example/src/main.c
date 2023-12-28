@@ -19,6 +19,7 @@ int main(){
 	int bar_speed, ball_speed;
 	init_buttons();
 	init_timer();
+	init_leds();
 	int dir;
 	int lives;
 	int remaining_blocks;
@@ -103,10 +104,14 @@ int main(){
 		if (status == game_over)
 			xil_printf("\nGAME OVER!!!\n\r");	// Here goes the game_over_screen() function
 		else if (status == win)
-			xil_printf("\nYOU WON!!!\n\r");	// Here goes the win_screen() function
+			game_win();
 	}
 
 	return 0;
+}
+
+void game_win() {
+	led_loop(NUM_LED_LAPS);
 }
 
 void life_lost(int lives, ball_t *ball, position_t *bar_pos)

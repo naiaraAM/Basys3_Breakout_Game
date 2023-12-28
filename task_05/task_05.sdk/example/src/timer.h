@@ -1,3 +1,6 @@
+#ifndef __TIMER_H__
+#define __TIMER_H__
+
 #include "xparameters.h"
 
 // Timer control constants
@@ -16,3 +19,4 @@ void myISR(void) __attribute__ ((interrupt_handler));
 void timer_ISR(void);
 void msleep(int milisegundos);
 
+#endif

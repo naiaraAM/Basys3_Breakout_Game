@@ -5,6 +5,7 @@
 #include "colors.h"
 #include "graphics.h"
 #include "timer.h"
+#include "leds.h"
 
 
 typedef struct ball {
@@ -35,6 +36,7 @@ typedef enum game_status {continues, lost_life, block_broken, win, game_over} ga
 
 // Game parameters
 #define NUM_LIVES			3
+#define NUM_LED_LAPS		3
 
 // Function definitions
 void move_bar(int dir, position_t *bar_pos);
@@ -49,6 +51,7 @@ side_t which_side_bar(position_t next_pos, position_t *bar_pos);
 levels_t level_selection();
 void life_lost(int lives, ball_t *ball, position_t *bar_pos);
 void reset_bar_position(position_t *bar_pos);
+void game_win();
 
 
 // ###################################
