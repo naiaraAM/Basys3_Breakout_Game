@@ -4,6 +4,7 @@
 #include "blocks.h"
 #include "colors.h"
 #include "graphics.h"
+#include "timer.h"
 
 
 typedef struct ball {
@@ -223,10 +224,10 @@ color_t breakout[7][38] = {
 };
 
 // Smoke animation
-#define SMOKE_TIME      100000   // microseconds
-#define SMOKE_FRAMES    5       // microseconds
-#define SMOKE_WIDTH     3       // pixels
-#define SMOKE_HEIGHT    6       // pixels
+#define SMOKE_TIME      100	    // miliseconds
+#define SMOKE_FRAMES    5
+#define SMOKE_WIDTH     3
+#define SMOKE_HEIGHT    6
 
 color_t smoke[SMOKE_FRAMES][SMOKE_HEIGHT][SMOKE_WIDTH] = {
     {

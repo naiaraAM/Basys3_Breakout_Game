@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <sleep.h>
 #include <stdbool.h>
 #include "xil_printf.h"
 #include "main.h"
@@ -19,6 +18,7 @@ int main(){
 	ball_t ball;
 	int bar_speed, ball_speed;
 	init_buttons();
+	init_timer();
 	int dir;
 	int lives;
 	int remaining_blocks;
@@ -97,7 +97,7 @@ int main(){
 						status = continues;
 				}
 			} else ball_speed++;
-			usleep(10000);
+			msleep(10);
 		}
 
 		if (status == game_over)
@@ -607,7 +607,7 @@ levels_t level_selection() {
 		default:
 			break;
 	}
-	usleep(300000); // delay to start map
+	msleep(300); // delay to start map
 	return level;
 }
 
