@@ -10,19 +10,25 @@ C_SRCS += \
 ../src/blocks.c \
 ../src/colors.c \
 ../src/graphics.c \
-../src/main.c 
+../src/leds.c \
+../src/main.c \
+../src/timer.c 
 
 OBJS += \
 ./src/blocks.o \
 ./src/colors.o \
 ./src/graphics.o \
-./src/main.o 
+./src/leds.o \
+./src/main.o \
+./src/timer.o 
 
 C_DEPS += \
 ./src/blocks.d \
 ./src/colors.d \
 ./src/graphics.d \
-./src/main.d 
+./src/leds.d \
+./src/main.d \
+./src/timer.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

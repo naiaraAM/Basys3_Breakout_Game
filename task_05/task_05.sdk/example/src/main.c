@@ -614,7 +614,7 @@ levels_t level_selection() {
 		default:
 			break;
 	}
-	msleep(300); // delay to start map
+	msleep(3000); // delay to start map
 	return level;
 }
 

@@ -11,7 +11,8 @@ int tiempo = 0;
  */
 void msleep(int milisegundos) {
 	int temp = tiempo;
-	while (tiempo != milisegundos + temp);
+	while (tiempo <= milisegundos + temp);
+	tiempo = 0;
 }
 
 /**
@@ -47,4 +48,5 @@ void timer_ISR()
 	tiempo++;
 	// Acknowledge Interrupt In Timer (Clear pending bit)
 	TCSR0 = TCSR0 | 0x100;
+	INTC_IAR = TIMER_INT;
 }
