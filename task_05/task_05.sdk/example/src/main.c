@@ -16,23 +16,22 @@ volatile int *gpio0 = (int*)BASE_GPIO0; // dir base buttons
 map_t map;
 
 int main(){
-	position_t bar_pos = {((RESOLUTION_X / 2) - BAR_LENGTH / 2), 100}; // 75
+	position_t bar_pos = {((RESOLUTION_X / 2) - BAR_LENGTH / 2), 90}; // 75
 	ball_t ball;
 	int bar_speed, ball_speed;
 	init_buttons();
 	int dir;
-	int lifes;
+	int lives;
 	int remaining_blocks;
 	game_status_t status;
 	levels_t level;
-	position_t frames[4];
 
 	while (1)
 	{
 		// Init variables
 		bar_speed = 0;
 		ball_speed = 0;
-		lifes = NUM_LIFES;
+		lives = NUM_LIVES;
 		status = continues;
 
 		// Here it goes loading_screen()
@@ -42,14 +41,7 @@ int main(){
 		print_background(negro);
 
 		// Print game borders
-		frames[0].x = INT_X_BORDER; frames[0].y = INT_Y_BORDER;
-		frames[1].x = END_X_BORDER; frames[1].y = INT_Y_BORDER;
-		frames[2].x = INT_X_BORDER; frames[2].y = END_Y_BORDER;
-		frames[3].x = INT_X_BORDER; frames[3].y = INT_Y_BORDER;
-		rect(frames[0], blanco, END_X_BORDER, BORDER_THICKNESS);
-		rect(frames[1], blanco, BORDER_THICKNESS, END_Y_BORDER);
-		rect(frames[2], blanco, END_X_BORDER, BORDER_THICKNESS);
-		rect(frames[3], blanco, BORDER_THICKNESS, END_Y_BORDER);
+		void print_frame();
 
 		// Print map
 		init_map(&map, level);
@@ -76,8 +68,8 @@ int main(){
 				{
 					bar_speed = 0;
 					ball_speed = 0;
-					lifes--;
-					if (lifes == 0)
+					lives--;
+					if (lives == 0)
 						status = game_over;
 					else
 					{
@@ -92,7 +84,7 @@ int main(){
 						}
 						paint(bar_pos.x, bar_pos.y, negro);
 						reset_bar_position(&bar_pos);
-						life_lost(&ball, &bar_pos);
+						life_lost(&ball, &bar_poslives);
 					}
 				}
 				else if (status == block_broken)
@@ -117,10 +109,11 @@ int main(){
 	return 0;
 }
 
-void life_lost(ball_t *ball, position_t *bar_pos)
+void life_lost(int lives, ball_t *ball, position_t *bar_pos)
 {
-	position_t pos = {ball->x - SMOKE_WIDTH / 2, ball->y - SMOKE_HEIGHT+1};
-	paint_animation(pos, **smoke, SMOKE_FRAMES, SMOKE_TIME, SMOKE_HEIGHT, SMOKE_WIDTH);
+	position_t ball_pos = {ball->x - SMOKE_WIDTH / 2, ball->y - SMOKE_HEIGHT+1};
+	print_lives(lives);
+	paint_animation(ball_pos, **smoke, SMOKE_FRAMES, SMOKE_TIME, SMOKE_HEIGHT, SMOKE_WIDTH);
 	init_ball(ball, bar_pos);
 }
 

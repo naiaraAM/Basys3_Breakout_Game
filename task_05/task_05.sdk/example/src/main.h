@@ -24,13 +24,6 @@ typedef enum game_status {continues, lost_life, block_broken, win, game_over} ga
 #define BASE_GPIO1 		0x40010000
 #define MASK_BUTTONS	0xF
 
-// Borders (frame) constants
-#define INT_X_BORDER		1
-#define END_X_BORDER		158
-#define INT_Y_BORDER		1
-#define END_Y_BORDER		118
-#define BORDER_THICKNESS	1
-
 // Bar specification constants
 #define BAR_LENGTH			13
 #define BAR_HEIGHT			2
@@ -40,10 +33,7 @@ typedef enum game_status {continues, lost_life, block_broken, win, game_over} ga
 #define BALL_SPEED			3
 
 // Game parameters
-#define NUM_LIFES			3
-
-
-
+#define NUM_LIVES			3
 
 // Function definitions
 void move_bar(int dir, position_t *bar_pos);
@@ -56,7 +46,7 @@ bool calculate_block(position_t next_pos, block_t **block);
 movement_t calculate_rebound(ball_t *ball, side_t side, bool is_block, block_t block, position_t *next_pos, position_t *bar_pos);
 side_t which_side_bar(position_t next_pos, position_t *bar_pos);
 levels_t level_selection();
-void life_lost();
+void life_lost(int lives, ball_t *ball, position_t *bar_pos);
 void reset_bar_position(position_t *bar_pos);
 
 // ### GRAPHICAL ELEMENTS ###
