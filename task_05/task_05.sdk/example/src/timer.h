@@ -19,5 +19,6 @@ void init_timer(void);
 void myISR(void) __attribute__ ((interrupt_handler));
 void timer_ISR(void);
 void msleep(int milisegundos);
+int get_cycles();
 
 #endif

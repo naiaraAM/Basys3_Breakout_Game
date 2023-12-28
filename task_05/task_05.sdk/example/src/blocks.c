@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include "blocks.h"
 #include "graphics.h"
+#include "timer.h"
 
 const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
 
@@ -33,6 +34,9 @@ void init_map(map_t *map, levels_t level)
 {
 	int i, j, collisions = 1, destructibles = N_BLOCKS_X * N_BLOCKS_Y;
     color_t indest_color = M_DGREY;
+
+
+    srand(get_cycles());
 
 	for(i = 0; i < N_BLOCKS_Y; i++)
     {

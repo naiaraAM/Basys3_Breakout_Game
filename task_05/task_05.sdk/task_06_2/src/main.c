@@ -30,7 +30,7 @@
 #define OFF_STATUS 		0x08
 
 // Global variables
-int tiempo = 0;
+int cycles = 0;
 
 // Function definition
 void print_button(char button);
@@ -85,8 +85,8 @@ int main() {
  * @param milisegundos time in ms to sleep
  */
 void msleep(int milisegundos) {
-	int temp = tiempo;
-	while (tiempo != milisegundos + temp);
+	int temp = cycles;
+	while (cycles != milisegundos + temp);
 }
 
 /**
@@ -143,7 +143,7 @@ void myISR()
  */
 void timer_ISR()
 {
-	tiempo++;
+	cycles++;
 	// Acknowledge Interrupt In Timer (Clear pending bit)
 	TCSR0 = TCSR0 | 0x100;
 }

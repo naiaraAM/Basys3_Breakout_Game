@@ -1226,3 +1226,774 @@ mb-size example.elf  |tee "example.elf.size"
   29044	   7724	   5336	  42104	   a478	example.elf
 'Finished building: example.elf.size'
 ' '
+18:06:40 **** Incremental Build of configuration Debug for project example ****
+make all 
+make: Nothing to be done for 'all'.
+18:07:27 **** Incremental Build of configuration Debug for project example ****
+make all 
+make: Nothing to be done for 'all'.
+18:08:06 **** Incremental Build of configuration Debug for project example ****
+make all 
+make: Nothing to be done for 'all'.
+18:08:44 **** Incremental Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/leds.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/leds.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/leds.d" -MT"src/leds.o" -o "src/leds.o" "../src/leds.c"
+'Finished building: ../src/leds.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/leds.o ./src/main.o ./src/timer.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  29044	   7724	   5336	  42104	   a478	example.elf
+'Finished building: example.elf.size'
+' '
+18:09:15 **** Incremental Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/leds.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/leds.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/leds.d" -MT"src/leds.o" -o "src/leds.o" "../src/leds.c"
+'Finished building: ../src/leds.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/leds.o ./src/main.o ./src/timer.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  29056	   7724	   5332	  42112	   a480	example.elf
+'Finished building: example.elf.size'
+' '
+18:11:22 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/leds.o ./src/main.o ./src/timer.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  29060	   7724	   5336	  42120	   a488	example.elf
+'Finished building: example.elf.size'
+' '
+18:11:25 **** Incremental Build of configuration Debug for project example ****
+make all 
+make: Nothing to be done for 'all'.
+18:13:02 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:106:3: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+   if (status == game_over)
+   ^~
+../src/main.c:108:4: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+    reset_bar_position(&bar_pos);
+    ^~~~~~~~~~~~~~~~~~
+../src/main.c:109:3: error: 'else' without a previous 'if'
+   else if (status == win)
+   ^~~~
+../src/main.c:109:8: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+   else if (status == win)
+        ^~
+../src/main.c:111:4: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+    reset_bar_position(&bar_pos);
+    ^~~~~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:38: src/main.o] Error 1
+18:13:42 **** Incremental Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/leds.o ./src/main.o ./src/timer.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  29060	   7724	   5336	  42120	   a488	example.elf
+'Finished building: example.elf.size'
+' '
+18:14:20 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/leds.o ./src/main.o ./src/timer.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  29060	   7724	   5336	  42120	   a488	example.elf
+'Finished building: example.elf.size'
+' '
+18:14:25 **** Incremental Build of configuration Debug for project example ****
+make all 
+make: Nothing to be done for 'all'.
+18:15:39 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/leds.o ./src/main.o ./src/timer.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  29024	   7724	   5332	  42080	   a460	example.elf
+'Finished building: example.elf.size'
+' '
+18:16:38 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/leds.o ./src/main.o ./src/timer.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  29100	   7724	   5336	  42160	   a4b0	example.elf
+'Finished building: example.elf.size'
+' '
+18:16:43 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/leds.o ./src/main.o ./src/timer.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  29064	   7724	   5332	  42120	   a488	example.elf
+'Finished building: example.elf.size'
+' '
+18:16:46 **** Incremental Build of configuration Debug for project example ****
+make all 
+make: Nothing to be done for 'all'.
+18:17:31 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/leds.o ./src/main.o ./src/timer.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  29064	   7724	   5332	  42120	   a488	example.elf
+'Finished building: example.elf.size'
+' '
+18:18:09 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/leds.o ./src/main.o ./src/timer.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  29064	   7724	   5332	  42120	   a488	example.elf
+'Finished building: example.elf.size'
+' '
+18:18:10 **** Incremental Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/leds.o ./src/main.o ./src/timer.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  29064	   7724	   5332	  42120	   a488	example.elf
+'Finished building: example.elf.size'
+' '
+18:22:12 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/blocks.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/blocks.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/blocks.d" -MT"src/blocks.o" -o "src/blocks.o" "../src/blocks.c"
+'Finished building: ../src/blocks.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/leds.o ./src/main.o ./src/timer.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  29064	   7724	   5332	  42120	   a488	example.elf
+'Finished building: example.elf.size'
+' '
+18:24:15 **** Incremental Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/blocks.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/blocks.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/blocks.d" -MT"src/blocks.o" -o "src/blocks.o" "../src/blocks.c"
+../src/blocks.c: In function 'init_map':
+../src/blocks.c:39:9: warning: unused variable 'random' [-Wunused-variable]
+     int random = rand();
+         ^~~~~~
+'Finished building: ../src/blocks.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/leds.o ./src/main.o ./src/timer.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+../../example_bsp/microblaze_0/lib\libc.a(lib_a-gettimeofdayr.o): In function `_gettimeofday_r':
+(.text+0x2c): undefined reference to `gettimeofday'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:38: example.elf] Error 1
+18:25:03 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/blocks.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/blocks.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/blocks.d" -MT"src/blocks.o" -o "src/blocks.o" "../src/blocks.c"
+'Finished building: ../src/blocks.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/leds.o ./src/main.o ./src/timer.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+../../example_bsp/microblaze_0/lib\libc.a(lib_a-gettimeofdayr.o): In function `_gettimeofday_r':
+(.text+0x2c): undefined reference to `gettimeofday'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:38: example.elf] Error 1
+18:26:20 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/blocks.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/blocks.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/blocks.d" -MT"src/blocks.o" -o "src/blocks.o" "../src/blocks.c"
+../src/blocks.c: In function '_gettimeofday':
+../src/blocks.c:99:18: warning: implicit declaration of function '__your_system_time_function_here__' [-Wimplicit-function-declaration]
+     uint64_t t = __your_system_time_function_here__();  // get uptime in nanoseconds
+                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/blocks.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/leds.o ./src/main.o ./src/timer.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+../../example_bsp/microblaze_0/lib\libc.a(lib_a-gettimeofdayr.o): In function `_gettimeofday_r':
+(.text+0x2c): undefined reference to `gettimeofday'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:38: example.elf] Error 1
+18:26:42 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/blocks.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/blocks.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/blocks.d" -MT"src/blocks.o" -o "src/blocks.o" "../src/blocks.c"
+'Finished building: ../src/blocks.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/leds.o ./src/main.o ./src/timer.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+../../example_bsp/microblaze_0/lib\libc.a(lib_a-gettimeofdayr.o): In function `_gettimeofday_r':
+(.text+0x2c): undefined reference to `gettimeofday'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:38: example.elf] Error 1
+18:27:57 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/blocks.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/blocks.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/blocks.d" -MT"src/blocks.o" -o "src/blocks.o" "../src/blocks.c"
+'Finished building: ../src/blocks.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/leds.o ./src/main.o ./src/timer.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+../../example_bsp/microblaze_0/lib\libc.a(lib_a-gettimeofdayr.o): In function `_gettimeofday_r':
+(.text+0x2c): undefined reference to `gettimeofday'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:38: example.elf] Error 1
+18:31:23 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/blocks.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/blocks.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/blocks.d" -MT"src/blocks.o" -o "src/blocks.o" "../src/blocks.c"
+'Finished building: ../src/blocks.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/leds.o ./src/main.o ./src/timer.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+../../example_bsp/microblaze_0/lib\libc.a(lib_a-gettimeofdayr.o): In function `_gettimeofday_r':
+(.text+0x2c): undefined reference to `gettimeofday'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:38: example.elf] Error 1
+18:33:11 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/blocks.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/blocks.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/blocks.d" -MT"src/blocks.o" -o "src/blocks.o" "../src/blocks.c"
+'Finished building: ../src/blocks.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/leds.o ./src/main.o ./src/timer.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+../../example_bsp/microblaze_0/lib\libc.a(lib_a-gettimeofdayr.o): In function `_gettimeofday_r':
+(.text+0x2c): undefined reference to `gettimeofday'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:38: example.elf] Error 1
+18:33:54 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/blocks.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/blocks.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/blocks.d" -MT"src/blocks.o" -o "src/blocks.o" "../src/blocks.c"
+../src/blocks.c:3:10: fatal error: windows.h: No such file or directory
+ #include <windows.h>
+          ^~~~~~~~~~~
+compilation terminated.
+make: *** [src/subdir.mk:38: src/blocks.o] Error 1
+18:35:28 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/blocks.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/blocks.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/blocks.d" -MT"src/blocks.o" -o "src/blocks.o" "../src/blocks.c"
+../src/blocks.c:3:10: fatal error: windows.h: No such file or directory
+ #include <windows.h>
+          ^~~~~~~~~~~
+compilation terminated.
+make: *** [src/subdir.mk:38: src/blocks.o] Error 1
+18:35:33 **** Clean-only build of configuration Debug for project example ****
+make clean 
+rm -rf  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/leds.o ./src/main.o ./src/timer.o  ./src/blocks.d ./src/colors.d ./src/graphics.d ./src/leds.d ./src/main.d ./src/timer.d  example.elf.size  example.elf
+' '
+18:35:33 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/blocks.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/blocks.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/blocks.d" -MT"src/blocks.o" -o "src/blocks.o" "../src/blocks.c"
+../src/blocks.c:3:10: fatal error: windows.h: No such file or directory
+ #include <windows.h>
+          ^~~~~~~~~~~
+compilation terminated.
+make: *** [src/subdir.mk:38: src/blocks.o] Error 1
+18:35:36 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/blocks.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/blocks.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/blocks.d" -MT"src/blocks.o" -o "src/blocks.o" "../src/blocks.c"
+../src/blocks.c:3:10: fatal error: windows.h: No such file or directory
+ #include <windows.h>
+          ^~~~~~~~~~~
+compilation terminated.
+make: *** [src/subdir.mk:38: src/blocks.o] Error 1
+18:35:46 **** Clean-only build of configuration Debug for project example ****
+make clean 
+rm -rf  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/leds.o ./src/main.o ./src/timer.o  ./src/blocks.d ./src/colors.d ./src/graphics.d ./src/leds.d ./src/main.d ./src/timer.d  example.elf.size  example.elf
+' '
+18:35:47 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/blocks.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/blocks.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/blocks.d" -MT"src/blocks.o" -o "src/blocks.o" "../src/blocks.c"
+../src/blocks.c:3:10: fatal error: windows.h: No such file or directory
+ #include <windows.h>
+          ^~~~~~~~~~~
+compilation terminated.
+make: *** [src/subdir.mk:38: src/blocks.o] Error 1
+18:35:57 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/blocks.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/blocks.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/blocks.d" -MT"src/blocks.o" -o "src/blocks.o" "../src/blocks.c"
+'Finished building: ../src/blocks.c'
+' '
+'Building file: ../src/colors.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/colors.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/colors.d" -MT"src/colors.o" -o "src/colors.o" "../src/colors.c"
+'Finished building: ../src/colors.c'
+' '
+'Building file: ../src/graphics.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/graphics.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/graphics.d" -MT"src/graphics.o" -o "src/graphics.o" "../src/graphics.c"
+'Finished building: ../src/graphics.c'
+' '
+'Building file: ../src/leds.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/leds.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/leds.d" -MT"src/leds.o" -o "src/leds.o" "../src/leds.c"
+'Finished building: ../src/leds.c'
+' '
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building file: ../src/timer.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/timer.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/timer.d" -MT"src/timer.o" -o "src/timer.o" "../src/timer.c"
+'Finished building: ../src/timer.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/leds.o ./src/main.o ./src/timer.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+../../example_bsp/microblaze_0/lib\libc.a(lib_a-gettimeofdayr.o): In function `_gettimeofday_r':
+(.text+0x2c): undefined reference to `gettimeofday'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:38: example.elf] Error 1
+18:37:43 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/blocks.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/blocks.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/blocks.d" -MT"src/blocks.o" -o "src/blocks.o" "../src/blocks.c"
+../src/blocks.c:3:10: fatal error: xtime_l: No such file or directory
+ #include <xtime_l>
+          ^~~~~~~~~
+compilation terminated.
+make: *** [src/subdir.mk:38: src/blocks.o] Error 1
+18:37:45 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/blocks.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/blocks.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/blocks.d" -MT"src/blocks.o" -o "src/blocks.o" "../src/blocks.c"
+../src/blocks.c:3:10: fatal error: xtime_l.h: No such file or directory
+ #include <xtime_l.h>
+          ^~~~~~~~~~~
+compilation terminated.
+make: *** [src/subdir.mk:38: src/blocks.o] Error 1
+18:37:54 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/blocks.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/blocks.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/blocks.d" -MT"src/blocks.o" -o "src/blocks.o" "../src/blocks.c"
+../src/blocks.c:3:10: fatal error: xtime_l.h: No such file or directory
+ #include "xtime_l.h"
+          ^~~~~~~~~~~
+compilation terminated.
+make: *** [src/subdir.mk:38: src/blocks.o] Error 1
+18:42:33 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/blocks.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/blocks.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/blocks.d" -MT"src/blocks.o" -o "src/blocks.o" "../src/blocks.c"
+../src/blocks.c: In function 'init_map':
+../src/blocks.c:37:5: warning: implicit declaration of function 'time'; did you mean 'true'? [-Wimplicit-function-declaration]
+     time(&t);
+     ^~~~
+     true
+'Finished building: ../src/blocks.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/leds.o ./src/main.o ./src/timer.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+../../example_bsp/microblaze_0/lib\libc.a(lib_a-gettimeofdayr.o): In function `_gettimeofday_r':
+(.text+0x2c): undefined reference to `gettimeofday'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:38: example.elf] Error 1
+18:42:41 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/blocks.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/blocks.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/blocks.d" -MT"src/blocks.o" -o "src/blocks.o" "../src/blocks.c"
+'Finished building: ../src/blocks.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/leds.o ./src/main.o ./src/timer.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  29080	   7724	   5332	  42136	   a498	example.elf
+'Finished building: example.elf.size'
+' '
+18:43:28 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/blocks.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/blocks.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/blocks.d" -MT"src/blocks.o" -o "src/blocks.o" "../src/blocks.c"
+../src/blocks.c: In function 'init_map':
+../src/blocks.c:37:5: warning: implicit declaration of function 'time'; did you mean 'true'? [-Wimplicit-function-declaration]
+     time(&t);
+     ^~~~
+     true
+../src/blocks.c:39:29: error: 'tiempo' undeclared (first use in this function)
+    srand((unsigned int)time(tiempo));
+                             ^~~~~~
+../src/blocks.c:39:29: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/subdir.mk:38: src/blocks.o] Error 1
+18:43:36 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/blocks.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/blocks.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/blocks.d" -MT"src/blocks.o" -o "src/blocks.o" "../src/blocks.c"
+../src/blocks.c: In function 'init_map':
+../src/blocks.c:37:5: warning: implicit declaration of function 'time'; did you mean 'true'? [-Wimplicit-function-declaration]
+     time(&t);
+     ^~~~
+     true
+../src/blocks.c:39:10: error: 'tiempo' undeclared (first use in this function)
+    srand(tiempo);
+          ^~~~~~
+../src/blocks.c:39:10: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/subdir.mk:38: src/blocks.o] Error 1
+18:43:38 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/blocks.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/blocks.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/blocks.d" -MT"src/blocks.o" -o "src/blocks.o" "../src/blocks.c"
+../src/blocks.c: In function 'init_map':
+../src/blocks.c:38:10: error: 'tiempo' undeclared (first use in this function)
+    srand(tiempo);
+          ^~~~~~
+../src/blocks.c:38:10: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/subdir.mk:38: src/blocks.o] Error 1
+18:45:04 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/blocks.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/blocks.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/blocks.d" -MT"src/blocks.o" -o "src/blocks.o" "../src/blocks.c"
+../src/blocks.c: In function 'init_map':
+../src/blocks.c:38:10: error: 'tiempo' undeclared (first use in this function)
+    srand(tiempo);
+          ^~~~~~
+../src/blocks.c:38:10: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/subdir.mk:38: src/blocks.o] Error 1
+18:45:24 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/blocks.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/blocks.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/blocks.d" -MT"src/blocks.o" -o "src/blocks.o" "../src/blocks.c"
+../src/blocks.c: In function 'init_map':
+../src/blocks.c:38:10: error: 'cycles' undeclared (first use in this function)
+    srand(cycles);
+          ^~~~~~
+../src/blocks.c:38:10: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/subdir.mk:38: src/blocks.o] Error 1
+18:45:24 **** Auto Build of configuration Debug for project task_05_int ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../task_05_int_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: task_05_int.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../task_05_int_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "task_05_int.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: task_05_int.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size task_05_int.elf  |tee "task_05_int.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6588	    264	   3116	   9968	   26f0	task_05_int.elf
+'Finished building: task_05_int.elf.size'
+' '
+18:45:25 **** Auto Build of configuration Debug for project task_06_2 ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../task_06_2_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: task_06_2.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../task_06_2_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "task_06_2.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: task_06_2.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size task_06_2.elf  |tee "task_06_2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3020	    260	   3120	   6400	   1900	task_06_2.elf
+'Finished building: task_06_2.elf.size'
+' '
+18:45:42 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/blocks.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/blocks.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/blocks.d" -MT"src/blocks.o" -o "src/blocks.o" "../src/blocks.c"
+../src/blocks.c:5:10: fatal error: timer.: No such file or directory
+ #include "timer."
+          ^~~~~~~~
+compilation terminated.
+make: *** [src/subdir.mk:38: src/blocks.o] Error 1
+18:45:44 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/blocks.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/blocks.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/blocks.d" -MT"src/blocks.o" -o "src/blocks.o" "../src/blocks.c"
+../src/blocks.c: In function 'init_map':
+../src/blocks.c:39:10: error: 'cycles' undeclared (first use in this function)
+    srand(cycles);
+          ^~~~~~
+../src/blocks.c:39:10: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/subdir.mk:38: src/blocks.o] Error 1
+18:46:35 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/blocks.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/blocks.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/blocks.d" -MT"src/blocks.o" -o "src/blocks.o" "../src/blocks.c"
+../src/blocks.c: In function 'init_map':
+../src/blocks.c:39:10: warning: implicit declaration of function 'get_cycle'; did you mean 'get_color'? [-Wimplicit-function-declaration]
+    srand(get_cycle());
+          ^~~~~~~~~
+          get_color
+'Finished building: ../src/blocks.c'
+' '
+'Building file: ../src/timer.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/timer.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/timer.d" -MT"src/timer.o" -o "src/timer.o" "../src/timer.c"
+'Finished building: ../src/timer.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/leds.o ./src/main.o ./src/timer.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  29132	   7724	   5336	  42192	   a4d0	example.elf
+'Finished building: example.elf.size'
+' '
+18:46:38 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/blocks.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/blocks.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/blocks.d" -MT"src/blocks.o" -o "src/blocks.o" "../src/blocks.c"
+../src/blocks.c: In function 'init_map':
+../src/blocks.c:39:11: warning: implicit declaration of function 'get_cycle'; did you mean 'get_color'? [-Wimplicit-function-declaration]
+     srand(get_cycle());
+           ^~~~~~~~~
+           get_color
+'Finished building: ../src/blocks.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/leds.o ./src/main.o ./src/timer.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  29132	   7724	   5336	  42192	   a4d0	example.elf
+'Finished building: example.elf.size'
+' '
+18:46:44 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/blocks.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/blocks.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/blocks.d" -MT"src/blocks.o" -o "src/blocks.o" "../src/blocks.c"
+../src/blocks.c: In function 'init_map':
+../src/blocks.c:39:11: warning: implicit declaration of function 'get_cycles'; did you mean 'get_color'? [-Wimplicit-function-declaration]
+     srand(get_cycles());
+           ^~~~~~~~~~
+           get_color
+'Finished building: ../src/blocks.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/leds.o ./src/main.o ./src/timer.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/blocks.o: In function `init_map':
+C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\example\Debug/../src/blocks.c:39: undefined reference to `get_cycles'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:38: example.elf] Error 1
+18:47:00 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/blocks.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/blocks.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/blocks.d" -MT"src/blocks.o" -o "src/blocks.o" "../src/blocks.c"
+'Finished building: ../src/blocks.c'
+' '
+'Building file: ../src/graphics.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/graphics.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/graphics.d" -MT"src/graphics.o" -o "src/graphics.o" "../src/graphics.c"
+'Finished building: ../src/graphics.c'
+' '
+'Building file: ../src/leds.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/leds.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/leds.d" -MT"src/leds.o" -o "src/leds.o" "../src/leds.c"
+'Finished building: ../src/leds.c'
+' '
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building file: ../src/timer.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/timer.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/timer.d" -MT"src/timer.o" -o "src/timer.o" "../src/timer.c"
+'Finished building: ../src/timer.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/leds.o ./src/main.o ./src/timer.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/blocks.o: In function `init_map':
+C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\example\Debug/../src/blocks.c:39: undefined reference to `get_cycles'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:38: example.elf] Error 1
+18:47:03 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/timer.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/timer.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/timer.d" -MT"src/timer.o" -o "src/timer.o" "../src/timer.c"
+'Finished building: ../src/timer.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/leds.o ./src/main.o ./src/timer.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  29132	   7724	   5336	  42192	   a4d0	example.elf
+'Finished building: example.elf.size'
+' '
+18:47:13 **** Incremental Build of configuration Debug for project example ****
+make all 
+make: Nothing to be done for 'all'.

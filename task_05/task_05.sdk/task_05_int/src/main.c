@@ -32,7 +32,7 @@
 
 
 // Global variables
-int tiempo = 0;
+int cycles = 0;
 
 
 // Function definition
@@ -88,8 +88,8 @@ int main() {
 }
 
 void msleep(int milisegundos) {
-	int temp = tiempo;
-	while (tiempo != milisegundos + temp);
+	int temp = cycles;
+	while (cycles != milisegundos + temp);
 }
 
 void print_button(char button) {
@@ -142,7 +142,7 @@ void myISR()
  */
 void timer_ISR()
 {
-	tiempo++;
+	cycles++;
 	xil_printf("En rutina de atención timer\n\r");
 
 	//TCSR0 = TCSR0; // Acknowledge Interrupt In Timer (Clear pending bit)

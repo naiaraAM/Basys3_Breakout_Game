@@ -21,10 +21,11 @@ void led_loop(int times) {
 			led <<= 1;
 			msleep(10);
 		}
-		for (int l = 0; l < NUM_LEDS - 1; l++) {
+		for (int l = 0; l < NUM_LEDS; l++) {
 			led >>= 1;
 			gpio1[0] = led;
 			msleep(10);
 		}
+		gpio1[0] = 0;
 	}
 }

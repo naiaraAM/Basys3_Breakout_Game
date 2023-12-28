@@ -1,6 +1,21 @@
-15:38:57 **** Incremental Build of configuration Debug for project task_05_int ****
+18:45:24 **** Auto Build of configuration Debug for project task_05_int ****
 make all 
-make: Nothing to be done for 'all'.
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../task_05_int_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: task_05_int.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../task_05_int_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "task_05_int.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: task_05_int.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size task_05_int.elf  |tee "task_05_int.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6588	    264	   3116	   9968	   26f0	task_05_int.elf
+'Finished building: task_05_int.elf.size'
+' '
 
-15:38:57 Build Finished (took 165ms)
+18:45:25 Build Finished (took 731ms)
 

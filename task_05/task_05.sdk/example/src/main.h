@@ -29,7 +29,7 @@ typedef enum game_status {continues, lost_life, block_broken, win, game_over} ga
 // Bar specification constants
 #define BAR_LENGTH			13
 #define BAR_HEIGHT			2
-#define BAR_SPEED			1
+#define BAR_SPEED			2
 
 // Ball specification constants
 #define BALL_SPEED			3

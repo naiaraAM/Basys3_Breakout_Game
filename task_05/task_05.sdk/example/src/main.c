@@ -47,7 +47,7 @@ int main(){
 		// Print map
 		init_map(&map, level);
 		print_map(map.blocks);
-		remaining_blocks = 1; // TODO: cambiar despues
+		remaining_blocks = map.destructible;
 		print_blocks_info(remaining_blocks, *blocks, **numbers);
 
 		// Initialize the bar and the ball
@@ -56,7 +56,7 @@ int main(){
 		ball.mov = 3;
 
 		while (status == continues) {
-			// Every 1 times, move the bar along the X-axis
+			// Every 2 time, move the bar along the X-axis
 			if(bar_speed == BAR_SPEED){
 				bar_speed = 0;
 				if ((dir = check_button()) != 0)
@@ -84,7 +84,6 @@ int main(){
 						else {
 							ball.mov = 3;
 						}
-						paint(bar_pos.x, bar_pos.y, negro);
 						reset_bar_position(&bar_pos);
 						life_lost(lives, &ball, &bar_pos);
 					}
@@ -102,13 +101,15 @@ int main(){
 			} else ball_speed++;
 			msleep(10);
 		}
-
-		if (status == game_over)
+		if (status == game_over) {
+			reset_bar_position(&bar_pos);
 			xil_printf("\nGAME OVER!!!\n\r");	// Here goes the game_over_screen() function
-		else if (status == win)
+		}
+		else if (status == win) {
 			game_win();
+			reset_bar_position(&bar_pos);
+		}
 	}
-
 	return 0;
 }
 
