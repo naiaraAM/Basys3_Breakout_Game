@@ -28,7 +28,7 @@ typedef enum game_status {continues, lost_life, block_broken, win, game_over} ga
 #define INT_X_BORDER		1
 #define END_X_BORDER		158
 #define INT_Y_BORDER		1
-#define END_Y_BORDER		118
+#define END_Y_BORDER		108
 #define BORDER_THICKNESS	1
 
 // Bar specification constants
@@ -49,7 +49,7 @@ bool calculate_block(position_t next_pos, block_t **block);
 movement_t calculate_rebound(ball_t bola, side_t side, bool is_block, block_t block, position_t *next_pos);
 side_t which_side_bar(position_t next_pos);
 levels_t level_selection();
-void life_lost();
+void life_lost(int lives);
 
 // ### GRAPHICAL ELEMENTS ###
 // ## Level selection numbers ##

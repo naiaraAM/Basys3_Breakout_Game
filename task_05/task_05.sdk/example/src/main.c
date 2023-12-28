@@ -12,7 +12,7 @@ const color_t gold = G;			// Bar
 
 // Global variables
 volatile int *gpio0 = (int*)BASE_GPIO0; // dir base buttons
-position_t bar_pos = {((RESOLUTION_X / 2) - BAR_LENGTH / 2), 100}; // 75
+position_t bar_pos = {((RESOLUTION_X / 2) - BAR_LENGTH / 2), 90};
 ball_t bola;
 map_t map;
 
@@ -20,7 +20,7 @@ int main(){
 	int count1, speed_ball;
 	init_buttons();
 	int dir;
-	int lifes;
+	int lives;
 	int remaining_blocks;
 	game_status_t status;
 	levels_t level;
@@ -31,7 +31,7 @@ int main(){
 		// Init variables
 		count1 = 0;
 		speed_ball = 0;
-		lifes = NUM_LIFES;
+		lives = NUM_lives;
 		status = continues;
 
 		// Here it goes loading_screen()
@@ -75,13 +75,13 @@ int main(){
 				{
 					count1 = 0;
 					speed_ball = 0;
-					lifes--;
-					if (lifes == 0)
+					lives--;
+					if (lives == 0)
 						status = game_over;
 					else
 					{
 						status = continues;
-						life_lost();
+						life_lost(lives);
 					}
 				}
 				else if (status == block_broken)
@@ -106,10 +106,13 @@ int main(){
 	return 0;
 }
 
-void life_lost()
+void life_lost(int lives)
 {
-	position_t pos = {bola.x - SMOKE_WIDTH / 2, bola.y - SMOKE_HEIGHT+1};
-	paint_animation(pos, **smoke, SMOKE_FRAMES, SMOKE_TIME, SMOKE_HEIGHT, SMOKE_WIDTH);
+	position_t lives_pos = {INT_X_BORDER + HEART_DISTANCE, END_Y_BORDER - HEART_HEIGHT - HEART_DISTANCE};
+	position_t ball_pos = {bola.x - SMOKE_WIDTH / 2, bola.y - SMOKE_HEIGHT+1};
+
+	print_lives(lives_pos, lives);
+	paint_animation(ball_pos, **smoke, SMOKE_FRAMES, SMOKE_TIME, SMOKE_HEIGHT, SMOKE_WIDTH);
 	init_ball();
 }
 
