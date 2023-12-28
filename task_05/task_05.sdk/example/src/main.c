@@ -26,6 +26,8 @@ int main(){
 	int remaining_blocks;
 	game_status_t status;
 	levels_t level;
+	bool game_finished = false;
+	color_t *win_lose_title = NULL;
 
 	while (1)
 	{
@@ -36,7 +38,8 @@ int main(){
 		status = continues;
 
 		// Here it goes loading_screen()
-		level = level_selection();
+		level = level_selection(game_finished, win_lose_title);
+		game_finished = false;
 
 		// Prints background
 		print_background(negro);
@@ -104,11 +107,14 @@ int main(){
 		}
 		if (status == game_over) {
 			reset_bar_position(&bar_pos);
-			xil_printf("\nGAME OVER!!!\n\r");	// Here goes the game_over_screen() function
+			game_finished = true;
+			win_lose_title = *you_won_title;
 		}
 		else if (status == win) {
 			game_win();
 			reset_bar_position(&bar_pos);
+			game_finished = true;
+			win_lose_title = *you_won_title;
 		}
 	}
 	return 0;
@@ -567,7 +573,7 @@ void init_ball(ball_t *ball, position_t *bar_pos){
 	paint(ball->x, ball->y, azul_claro);
 }
 
-levels_t level_selection() {
+levels_t level_selection(bool game_finished, color_t *win_lose_title) {
 	int btn = 0;
 	levels_t level;
 
@@ -596,6 +602,12 @@ levels_t level_selection() {
 	aux.x = 61;
 	aux.y = 10;
 	paint_object(aux, *breakout, 7, 38);
+
+	if (game_finished) {
+		aux.x = 57;
+		aux.y = 80;
+		paint_object(aux, win_lose_title, 5, 46);
+	}
 
 	while (btn == 0)
 		btn = check_button();
