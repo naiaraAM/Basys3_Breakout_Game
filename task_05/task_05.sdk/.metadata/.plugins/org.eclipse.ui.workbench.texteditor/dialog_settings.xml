@@ -6,20 +6,20 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="xil_" key="selection"/>
+		<item value="SMOKE" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="xil_"/>
-			<item value="side"/>
-			<item value="calculate_rebound"/>
-			<item value="_Bool"/>
-			<item value="calculate_block"/>
-			<item value="struct block"/>
-			<item value="calculate_border"/>
-			<item value="struct color"/>
+			<item value="smoke"/>
+			<item value="color"/>
+			<item value="equal"/>
+			<item value="move_bar"/>
+			<item value="prin"/>
+			<item value="paint"/>
+			<item value="levels_t"/>
+			<item value="leve"/>
 		</list>
 		<list key="replacehistory">
 			<item value="block_t"/>
@@ -31,7 +31,7 @@
 		<item value="336" key="DIALOG_WIDTH"/>
 		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
 		<item value="454" key="DIALOG_HEIGHT"/>
-		<item value="1349" key="DIALOG_X_ORIGIN"/>
-		<item value="356" key="DIALOG_Y_ORIGIN"/>
+		<item value="632" key="DIALOG_X_ORIGIN"/>
+		<item value="489" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>
