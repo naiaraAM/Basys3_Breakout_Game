@@ -29,7 +29,7 @@ typedef enum game_status {continues, lost_life, block_broken, win, game_over} ga
 #define BAR_HEIGHT			2
 
 // Game parameters
-#define NUM_LIFES			3
+#define NUM_LIVES			3
 
 // Function definitions
 void move_bar(int dir);

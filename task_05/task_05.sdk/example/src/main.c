@@ -30,7 +30,7 @@ int main(){
 		// Init variables
 		count1 = 0;
 		speed_ball = 0;
-		lives = NUM_lives;
+		lives = NUM_LIVES;
 		status = continues;
 
 		// Here it goes loading_screen()
@@ -41,7 +41,7 @@ int main(){
 
 		// Print game borders
 		void print_frame();
-		
+
 		// Print map
 		init_map(&map, level);
 		print_map(map.blocks);
