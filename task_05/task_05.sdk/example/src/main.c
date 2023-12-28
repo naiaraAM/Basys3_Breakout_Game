@@ -11,11 +11,12 @@ const color_t gold = G;			// Bar
 // Global variables
 volatile int *gpio0 = (int*)BASE_GPIO0; // dir base buttons
 
-map_t map;
+
 
 int main(){
 	position_t bar_pos = {((RESOLUTION_X / 2) - BAR_LENGTH / 2), 90}; // 75
 	ball_t ball;
+	map_t map;
 	int bar_speed, ball_speed;
 	init_buttons();
 	init_timer();
@@ -65,7 +66,7 @@ int main(){
 			// Every 3 times, the ball moves to its next position
 			if(ball_speed == BALL_SPEED){
 				ball_speed=0;
-				status = move_ball(&ball, &bar_pos);
+				status = move_ball(&ball, &bar_pos, &map);
 				if (status == lost_life)
 				{
 					bar_speed = 0;
@@ -155,7 +156,7 @@ void wait_button()
 	while ((data = gpio0[0] & MASK_BUTTONS) != 0) msleep(10);
 }
 
-game_status_t move_ball(ball_t *ball, position_t *bar_pos)
+game_status_t move_ball(ball_t *ball, position_t *bar_pos, map_t *map)
 {
 	game_status_t status = continues;
 	position_t next_pos;
@@ -190,7 +191,7 @@ game_status_t move_ball(ball_t *ball, position_t *bar_pos)
 	{
 		if ((side = calculate_border(next_pos)) == not_border)
 		{
-			if ((is_block = calculate_block(next_pos, block_ptr)))
+			if ((is_block = calculate_block(next_pos, block_ptr, map)))
 			{
 				block = *block_ptr;
 				if (!block->indestructible)
@@ -339,13 +340,13 @@ side_t which_side_bar(position_t next_pos, position_t *bar_pos)
 }
 
 
-bool calculate_block(position_t next_pos, block_t **block)
+bool calculate_block(position_t next_pos, block_t **block, map_t *map)
 {
 	for (int i = N_BLOCKS_Y - 1; i >= 0; i--)
 	{
 		for (int j = N_BLOCKS_X - 1; j >= 0; j--)
 		{
-			block_t *res = &map.blocks[j][i];
+			block_t *res = &map->blocks[j][i];
 			if (next_pos.x >= res->location.x && next_pos.x < res->location.x + BLOCK_LENGTH &&
 				next_pos.y >= res->location.y && next_pos.y < res->location.y + BLOCK_HEIGHT)
 			{
