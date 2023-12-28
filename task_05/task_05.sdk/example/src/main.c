@@ -24,7 +24,6 @@ int main(){
 	int remaining_blocks;
 	game_status_t status;
 	levels_t level;
-	position_t frames[4];
 
 	while (1)
 	{
@@ -41,15 +40,8 @@ int main(){
 		print_background(negro);
 
 		// Print game borders
-		frames[0].x = INT_X_BORDER; frames[0].y = INT_Y_BORDER;
-		frames[1].x = END_X_BORDER; frames[1].y = INT_Y_BORDER;
-		frames[2].x = INT_X_BORDER; frames[2].y = END_Y_BORDER;
-		frames[3].x = INT_X_BORDER; frames[3].y = INT_Y_BORDER;
-		rect(frames[0], blanco, END_X_BORDER, BORDER_THICKNESS);
-		rect(frames[1], blanco, BORDER_THICKNESS, END_Y_BORDER);
-		rect(frames[2], blanco, END_X_BORDER, BORDER_THICKNESS);
-		rect(frames[3], blanco, BORDER_THICKNESS, END_Y_BORDER);
-
+		void print_frame();
+		
 		// Print map
 		init_map(&map, level);
 		print_map(map.blocks);
@@ -108,10 +100,8 @@ int main(){
 
 void life_lost(int lives)
 {
-	position_t lives_pos = {INT_X_BORDER + HEART_DISTANCE, END_Y_BORDER - HEART_HEIGHT - HEART_DISTANCE};
 	position_t ball_pos = {bola.x - SMOKE_WIDTH / 2, bola.y - SMOKE_HEIGHT+1};
-
-	print_lives(lives_pos, lives);
+	print_lives(lives);
 	paint_animation(ball_pos, **smoke, SMOKE_FRAMES, SMOKE_TIME, SMOKE_HEIGHT, SMOKE_WIDTH);
 	init_ball();
 }
