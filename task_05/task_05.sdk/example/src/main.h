@@ -49,7 +49,7 @@ side_t calculate_border(position_t next_pos);
 bool calculate_block(position_t next_pos, block_t **block);
 movement_t calculate_rebound(ball_t *ball, side_t side, bool is_block, block_t block, position_t *next_pos, position_t *bar_pos);
 side_t which_side_bar(position_t next_pos, position_t *bar_pos);
-levels_t level_selection();
+levels_t level_selection(bool game_finished, color_t *win_lose_title);
 void life_lost(int lives, ball_t *ball, position_t *bar_pos);
 void reset_bar_position(position_t *bar_pos);
 void game_win();
@@ -227,6 +227,8 @@ color_t breakout[7][38] = {
 		{W,W,W,N, N, W,N,N,W, N, W,W,W,W, N, W,N,N,W, N, W,N,N,W, N, W,W,W,W, N, W,W,W,W, N, N,W,N}
 };
 
+// Remaining blocks title
+
 color_t blocks[5][24] = {
 		{W,W,N, N, W,N, N, N,W,N, N, W,W, N, W,N,W, N, W,W,N, N, N,N},
 		{W,N,W, N, W,N, N, W,N,W, N, W,N, N, W,N,W, N, W,N,N, N, W,N},
@@ -235,80 +237,102 @@ color_t blocks[5][24] = {
 		{W,W,N, N, W,W, N, N,W,N, N, W,W, N, W,N,W, N, W,W,W, N, N,N}
 };
 
+// Remaining blocks numbers
+
 #define NUMBERS_NUM		10
 #define NUMBERS_HEIGHT	5
 #define NUMBERS_WIDTH	3
 color_t numbers[NUMBERS_NUM][NUMBERS_HEIGHT][NUMBERS_WIDTH] = {
 		{
-				{W,W,W},
-				{W,N,W},
-				{W,N,W},
-				{W,N,W},
-				{W,W,W}
+			{W,W,W},
+			{W,N,W},
+			{W,N,W},
+			{W,N,W},
+			{W,W,W}
 		},
 		{
-				{W,W,N},
-				{N,W,N},
-				{N,W,N},
-				{N,W,N},
-				{W,W,W}
+			{W,W,N},
+			{N,W,N},
+			{N,W,N},
+			{N,W,N},
+			{W,W,W}
 		},
 		{
-				{N,W,W},
-				{N,N,W},
-				{W,W,W},
-				{W,N,N},
-				{W,W,W}
+			{N,W,W},
+			{N,N,W},
+			{W,W,W},
+			{W,N,N},
+			{W,W,W}
 		},
 		{
-				{N,W,W},
-				{N,N,W},
-				{N,W,W},
-				{N,N,W},
-				{W,W,W}
+			{N,W,W},
+			{N,N,W},
+			{N,W,W},
+			{N,N,W},
+			{W,W,W}
 		},
 		{
-				{W,N,N},
-				{W,N,W},
-				{W,W,W},
-				{N,N,W},
-				{N,N,W}
+			{W,N,N},
+			{W,N,W},
+			{W,W,W},
+			{N,N,W},
+			{N,N,W}
 		},
 		{
-				{W,W,N},
-				{W,N,N},
-				{W,W,W},
-				{N,N,W},
-				{W,W,W}
+			{W,W,N},
+			{W,N,N},
+			{W,W,W},
+			{N,N,W},
+			{W,W,W}
 		},
 		{
-				{W,W,N},
-				{W,N,N},
-				{W,W,W},
-				{W,N,W},
-				{W,W,W}
+			{W,W,N},
+			{W,N,N},
+			{W,W,W},
+			{W,N,W},
+			{W,W,W}
 		},
 		{
-				{W,W,W},
-				{N,N,W},
-				{N,N,W},
-				{N,N,W},
-				{N,N,W}
+			{W,W,W},
+			{N,N,W},
+			{N,N,W},
+			{N,N,W},
+			{N,N,W}
 		},
 		{
-				{W,W,W},
-				{W,N,W},
-				{W,W,W},
-				{W,N,W},
-				{W,W,W}
+			{W,W,W},
+			{W,N,W},
+			{W,W,W},
+			{W,N,W},
+			{W,W,W}
 		},
 		{
-				{W,W,W},
-				{W,N,W},
-				{W,W,W},
-				{N,N,W},
-				{N,W,W}
+			{W,W,W},
+			{W,N,W},
+			{W,W,W},
+			{N,N,W},
+			{N,W,W}
 		},
+};
+
+// You won title
+
+color_t you_won_title[5][46] = {
+		{N,N,N,N,N,N, N, W,N,W, N, W,W,W, N, W,N,W, N, N,N,N, N, W,N,N,N,W, W,W,W, N, W,N,N,N,W, N, W, N, N,N,N,N,N,N},
+		{N,N,N,N,N,N, N, W,N,W, N, W,N,W, N, W,N,W, N, N,N,N, N, W,N,N,N,W, W,N,W, N, W,W,N,N,W, N, W, N, N,N,N,N,N,N},
+		{N,N,N,N,N,N, N, W,W,W, N, W,N,W, N, W,N,W, N, N,N,N, N, W,N,N,N,W, W,N,W, N, W,N,W,N,W, N, W, N, N,N,N,N,N,N},
+		{N,N,N,N,N,N, N, N,N,W, N, W,N,W, N, W,N,W, N, N,N,N, N, W,N,W,N,W, W,N,W, N, W,N,N,W,W, N, N, N, N,N,N,N,N,N},
+		{N,N,N,N,N,N, N, W,W,W, N, W,W,W, N, W,W,W, N, N,N,N, N, N,W,N,W,N, W,W,W, N, W,N,N,N,W, N, W, N, N,N,N,N,N,N}
+};
+
+// Game over title
+
+color_t game_over_title[5][46] = {
+		{W,W,W, N, W,W,W, N, W,N,N,N,W, N, W,W,W, N, N,N,N, N, W,W,W, N, W,N,W, N, W,W,W, N, W,W,W, N, N,N,N, N, N,N,N,W},
+		{W,N,N, N, W,N,W, N, W,W,N,W,W, N, W,N,N, N, N,N,N, N, W,N,W, N, W,N,W, N, W,N,N, N, W,N,W, N, N,N,N, N, W,N,W,N},
+		{W,N,W, N, W,W,W, N, W,N,W,N,W, N, W,W,W, N, N,N,N, N, W,N,W, N, W,N,W, N, W,W,W, N, W,W,N, N, N,N,N, N, N,N,W,N},
+		{W,N,W, N, W,N,W, N, W,N,N,N,W, N, W,N,N, N, N,N,N, N, W,N,W, N, W,N,W, N, W,N,N, N, W,N,N, N, N,N,N, N, W,N,W,N},
+		{W,W,W, N, W,N,W, N, W,N,N,N,W, N, W,W,W, N, N,N,N, N, W,W,W, N, N,W,N, N, W,W,W, N, W,N,W, N, N,N,N, N, N,N,N,W}
 };
 
 // Smoke animation
