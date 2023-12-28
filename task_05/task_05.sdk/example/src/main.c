@@ -6,7 +6,6 @@
 
 // Colors used in the game
 const color_t negro = N;		// Background
-const color_t blanco = W;		// Borders
 const color_t azul_claro = B;	// Ball
 const color_t gold = G;			// Bar
 
@@ -41,7 +40,8 @@ int main(){
 		print_background(negro);
 
 		// Print game borders
-		void print_frame();
+		print_frame();
+		print_lives(lives, NUM_LIVES, *heart);
 
 		// Print map
 		init_map(&map, level);
@@ -55,7 +55,7 @@ int main(){
 
 		while (status == continues) {
 			// Every 1 times, move the bar along the X-axis
-			if(bar_speed == BALL_SPEED){
+			if(bar_speed == BAR_SPEED){
 				bar_speed = 0;
 				if ((dir = check_button()) != 0)
 					move_bar(dir, &bar_pos);
@@ -84,7 +84,7 @@ int main(){
 						}
 						paint(bar_pos.x, bar_pos.y, negro);
 						reset_bar_position(&bar_pos);
-						life_lost(&ball, &bar_poslives);
+						life_lost(lives, &ball, &bar_pos);
 					}
 				}
 				else if (status == block_broken)
@@ -101,9 +101,9 @@ int main(){
 		}
 
 		if (status == game_over)
-			xil_printf("\nGAME OVER!!!\n");	// Here goes the game_over_screen() function
+			xil_printf("\nGAME OVER!!!\n\r");	// Here goes the game_over_screen() function
 		else if (status == win)
-			xil_printf("\nYOU WON!!!\n");	// Here goes the win_screen() function
+			xil_printf("\nYOU WON!!!\n\r");	// Here goes the win_screen() function
 	}
 
 	return 0;
@@ -112,7 +112,7 @@ int main(){
 void life_lost(int lives, ball_t *ball, position_t *bar_pos)
 {
 	position_t ball_pos = {ball->x - SMOKE_WIDTH / 2, ball->y - SMOKE_HEIGHT+1};
-	print_lives(lives);
+	print_lives(lives, NUM_LIVES, *heart);
 	paint_animation(ball_pos, **smoke, SMOKE_FRAMES, SMOKE_TIME, SMOKE_HEIGHT, SMOKE_WIDTH);
 	init_ball(ball, bar_pos);
 }
@@ -564,17 +564,17 @@ levels_t level_selection() {
 	aux.y = 50;
 	paint_object(aux, *number_1, 12, 9);
 	aux.y = 65;
-	paint_object(aux, *button, 10, 9);
+	paint_object(aux, *button_left, 10, 9);
 	aux.x = 75;
 	aux.y = 40;
 	paint_object(aux, *number_2, 12, 10);
 	aux.y = 55;
-	paint_object(aux, *button, 10, 9);
+	paint_object(aux, *button_top, 10, 9);
 	aux.x = 100;
 	aux.y = 50;
 	paint_object(aux, *number_3, 12,9);
 	aux.y = 65;
-	paint_object(aux, *button, 10, 9);
+	paint_object(aux, *button_right, 10, 9);
 	aux.x = 5;
 	aux.y = 100;
 	paint_object(aux, *authors, 14, 25);
@@ -588,17 +588,26 @@ levels_t level_selection() {
 	switch (btn) {
 		case 1:
 			level = first_lvl;
+			aux.x = 50;
+			aux.y = 65;
+			paint_object(aux, *button_left_pressed, 10, 9);
 			break;
 		case 2:
 			level = second_lvl;
+			aux.x = 75;
+			aux.y = 55;
+			paint_object(aux, *button_top_pressed, 10, 9);
 			break;
 		case 3:
 			level = third_lvl;
+			aux.x = 100;
+			aux.y = 65;
+			paint_object(aux, *button_right_pressed, 10, 9);
 			break;
 		default:
 			break;
 	}
-	usleep(1000000); // delay to start map
+	usleep(300000); // delay to start map
 	return level;
 }
 

@@ -49,9 +49,22 @@ levels_t level_selection();
 void life_lost(int lives, ball_t *ball, position_t *bar_pos);
 void reset_bar_position(position_t *bar_pos);
 
-// ### GRAPHICAL ELEMENTS ###
-// ## Level selection numbers ##
-color_t number_1[12][9]={
+
+// ###################################
+// ###   CUSTOM GRAPHIC ELEMENTS   ###
+// ###################################
+
+color_t heart[HEART_HEIGHT][HEART_WIDTH] = {
+		{H_BL,H_DR,H_DR,H_BL,H_DR,H_DR,H_BL},
+		{H_DR,H_MR,H_MR,H_DR,H_MR,H_LR,H_DR},
+		{H_DR,H_MR,H_MR,H_MR,H_MR,H_MR,H_DR},
+		{H_BL,H_DR,H_MR,H_MR,H_MR,H_DR,H_BL},
+		{H_BL,H_BL,H_DR,H_MR,H_DR,H_BL,H_BL},
+		{H_BL,H_BL,H_BL,H_DR,H_BL,H_BL,H_BL}
+};
+
+// Level selection numbers
+color_t number_1[12][9] = {
 		{N,N,N,GI,GI,GI,N,N,N},
 		{N,N,GI,W,W,GC,GI,N,N},
 		{N,GI,W,W,W,GC,GI,N,N},
@@ -65,7 +78,7 @@ color_t number_1[12][9]={
 		{GO,W,W,W,W,W,W,GC,GO},
 		{N,GO,GO,GO,GO,GO,GO,N}
 };
-color_t number_2[12][10]={
+color_t number_2[12][10] = {
     {N,N,GI,GI,GI,GI,GI,GI,N,N},
 	{N,GI,W,W,W,W,W,GC,GI,N},
 	{GI,W,W,W,W,W,W,GC,GI},
@@ -80,7 +93,7 @@ color_t number_2[12][10]={
 	{N,GO,GO,GO,GO,GO,GO,GO,GO,N}
 
 };
-color_t number_3[12][9]={
+color_t number_3[12][9] = {
     {N,N,GI,GI,GI,GI,GI,N,N},
 	{N,GI,W,W,W,W,GC,GI,N},
 	{GI,W,W,W,W,W,W,GC,GI},
@@ -96,22 +109,82 @@ color_t number_3[12][9]={
 
 };
 
-// ## Level selection buttons ##
-color_t button[10][9]={
+// Level selection buttons
+color_t button_left[10][9] = {
 		{N,N,GC,GC,GC,GC,GC,N,N},
 		{N,GC,GC,GC,GC,GC,GC,GC,N},
-		{GC,GC,GC,GC,GC,GC,GC,GC,GC},
-		{GC,GC,GC,GC,GC,GC,GC,GC,GC},
-		{GC,GC,GC,GC,GC,GC,GC,GC,GC},
-		{GC,GC,GC,GC,GC,GC,GC,GC,GC},
-		{GI,GC,GC,GC,GC,GC,GC,GC,GI},
+		{GC,GC,GC,GO,GC,GC,GC,GC,GC},
+		{GC,GC,GO,GO,GC,GC,GC,GC,GC},
+		{GC,GO,GO,GO,GO,GC,GO,GC,GC},
+		{GC,GC,GO,GO,GC,GC,GC,GC,GC},
+		{GI,GC,GC,GO,GC,GC,GC,GC,GI},
 		{GO,GI,GC,GC,GC,GC,GC,GI,GO},
 		{N,GO,GI,GI,GI,GI,GI,GO,N},
 		{N,N,GO,GO,GO,GO,GO,N,N}
 };
+color_t button_left_pressed[10][9] = {
+		{N,N,N,N,N,N,N,N,N},
+		{N,N,GC,GC,GC,GC,GC,N,N},
+		{N,GC,GC,GC,GC,GC,GC,GC,N},
+		{GC,GC,GC,GO,GC,GC,GC,GC,GC},
+		{GC,GC,GO,GO,GC,GC,GC,GC,GC},
+		{GC,GO,GO,GO,GO,GC,GO,GC,GC},
+		{GC,GC,GO,GO,GC,GC,GC,GC,GC},
+		{GI,GC,GC,GO,GC,GC,GC,GC,GI},
+		{N,GI,GC,GC,GC,GC,GC,GI,N},
+		{N,N,GI,GI,GI,GI,GI,N,N}
+};
+color_t button_top[10][9] = {
+		{N,N,GC,GC,GC,GC,GC,N,N},
+		{N,GC,GC,GC,GO,GC,GC,GC,N},
+		{GC,GC,GC,GO,GO,GO,GC,GC,GC},
+		{GC,GC,GO,GO,GO,GO,GO,GC,GC},
+		{GC,GC,GC,GC,GO,GC,GC,GC,GC},
+		{GC,GC,GC,GC,GC,GC,GC,GC,GC},
+		{GI,GC,GC,GC,GO,GC,GC,GC,GI},
+		{GO,GI,GC,GC,GC,GC,GC,GI,GO},
+		{N,GO,GI,GI,GI,GI,GI,GO,N},
+		{N,N,GO,GO,GO,GO,GO,N,N}
+};
+color_t button_top_pressed[10][9] = {
+		{N,N,N,N,N,N,N,N,N},
+		{N,N,GC,GC,GC,GC,GC,N,N},
+		{N,GC,GC,GC,GO,GC,GC,GC,N},
+		{GC,GC,GC,GO,GO,GO,GC,GC,GC},
+		{GC,GC,GO,GO,GO,GO,GO,GC,GC},
+		{GC,GC,GC,GC,GO,GC,GC,GC,GC},
+		{GC,GC,GC,GC,GC,GC,GC,GC,GC},
+		{GI,GC,GC,GC,GO,GC,GC,GC,GI},
+		{N,GI,GC,GC,GC,GC,GC,GI,N},
+		{N,N,GI,GI,GI,GI,GI,N,N}
+};
+color_t button_right[10][9] = {
+		{N,N,GC,GC,GC,GC,GC,N,N},
+		{N,GC,GC,GC,GC,GC,GC,GC,N},
+		{GC,GC,GC,GC,GC,GO,GC,GC,GC},
+		{GC,GC,GC,GC,GC,GO,GO,GC,GC},
+		{GC,GC,GO,GC,GO,GO,GO,GO,GC},
+		{GC,GC,GC,GC,GC,GO,GO,GC,GC},
+		{GI,GC,GC,GC,GC,GO,GC,GC,GI},
+		{GO,GI,GC,GC,GC,GC,GC,GI,GO},
+		{N,GO,GI,GI,GI,GI,GI,GO,N},
+		{N,N,GO,GO,GO,GO,GO,N,N}
+};
+color_t button_right_pressed[10][9] = {
+		{N,N,N,N,N,N,N,N,N},
+		{N,N,GC,GC,GC,GC,GC,N,N},
+		{N,GC,GC,GC,GC,GC,GC,GC,N},
+		{GC,GC,GC,GC,GC,GO,GC,GC,GC},
+		{GC,GC,GC,GC,GC,GO,GO,GC,GC},
+		{GC,GC,GO,GC,GO,GO,GO,GO,GC},
+		{GC,GC,GC,GC,GC,GO,GO,GC,GC},
+		{GI,GC,GC,GC,GC,GO,GC,GC,GI},
+		{N,GI,GC,GC,GC,GC,GC,GI,N},
+		{N,N,GI,GI,GI,GI,GI,N,N}
+};
 
-// ## Level selection phrase ##
-color_t choose_level[5][47]={
+// Level selection phrase
+color_t choose_level[5][47] = {
 		{W,W,W,N,W,N,W,N,W,W,W,N,W,W,W,N,W,W,W,N,W,W,W,N,N,N,W,N,N,N,W,W,W,N,W,N,W,N,W,W,W,N,W,N,N,N,N},
 		{W,N,N,N,W,N,W,N,W,N,W,N,W,N,W,N,W,N,N,N,W,N,N,N,N,N,W,N,N,N,W,N,N,N,W,N,W,N,W,N,N,N,W,N,N,N,W},
 		{W,N,N,N,W,W,W,N,W,N,W,N,W,N,W,N,W,W,W,N,W,W,N,N,N,N,W,N,N,N,W,W,N,N,W,N,W,N,W,W,N,N,W,N,N,N,N},
@@ -119,8 +192,8 @@ color_t choose_level[5][47]={
 		{W,W,W,N,W,N,W,N,W,W,W,N,W,W,W,N,W,W,W,N,W,W,W,N,N,N,W,W,W,N,W,W,W,N,N,W,N,N,W,W,W,N,W,W,W,N,N}
 };
 
-// ## Level selection credits ##
-color_t authors[14][25]={
+// Level selection authors
+color_t authors[14][25] = {
 		{M_CYAN,M_CYAN,M_CYAN,N,N,N,M_CYAN,M_CYAN,M_CYAN,N,M_CYAN,N,N,M_CYAN,M_CYAN,M_CYAN,N,M_CYAN,N,M_CYAN,N,N,M_CYAN,M_CYAN,M_CYAN},
 		{M_CYAN,N,N,M_CYAN,N,M_CYAN,N,N,M_CYAN,N,N,N,M_CYAN,N,N,M_CYAN,N,M_CYAN,M_CYAN,N,N,M_CYAN,N,N,M_CYAN},
 		{M_CYAN,N,N,M_CYAN,N,M_CYAN,N,N,M_CYAN,N,M_CYAN,N,M_CYAN,N,N,M_CYAN,N,M_CYAN,N,N,N,M_CYAN,N,N,M_CYAN},
@@ -138,7 +211,7 @@ color_t authors[14][25]={
 		{M_GREEN,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N}
 };
 
-// ## Level selection logo ##
+// Level selection logo
 color_t breakout[7][38] = {
 		{W,W,W,N, N, W,W,W,N, N, W,W,W,W, N, W,W,W,W, N, W,N,N,W, N, W,W,W,W, N, W,N,N,W, N, W,W,W},
 		{W,N,N,W, N, W,N,N,W, N, W,N,N,N, N, W,N,N,W, N, W,N,W,N, N, W,N,N,W, N, W,N,N,W, N, N,W,N},
@@ -149,8 +222,7 @@ color_t breakout[7][38] = {
 		{W,W,W,N, N, W,N,N,W, N, W,W,W,W, N, W,N,N,W, N, W,N,N,W, N, W,W,W,W, N, W,W,W,W, N, N,W,N}
 };
 
-
-// ## Smoke animation ##
+// Smoke animation
 #define SMOKE_TIME      100000   // microseconds
 #define SMOKE_FRAMES    5       // microseconds
 #define SMOKE_WIDTH     3       // pixels

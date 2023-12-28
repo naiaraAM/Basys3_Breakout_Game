@@ -3755,3 +3755,1905 @@ mb-size example.elf  |tee "example.elf.size"
   27572	   5472	   5332	  38376	   95e8	example.elf
 'Finished building: example.elf.size'
 ' '
+12:53:52 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/graphics.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/graphics.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/graphics.d" -MT"src/graphics.o" -o "src/graphics.o" "../src/graphics.c"
+../src/graphics.c: In function 'print_frame':
+../src/graphics.c:65:18: error: 'blanco' undeclared (first use in this function); did you mean 'block'?
+  rect(frames[0], blanco, END_X_BORDER, BORDER_THICKNESS);
+                  ^~~~~~
+                  block
+../src/graphics.c:65:18: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/subdir.mk:32: src/graphics.o] Error 1
+12:54:53 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/graphics.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/graphics.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/graphics.d" -MT"src/graphics.o" -o "src/graphics.o" "../src/graphics.c"
+'Finished building: ../src/graphics.c'
+' '
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:5:0:
+../src/main.h:54:9: error: redefinition of 'number_1'
+ color_t number_1[12][9]={
+         ^~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:55:9: note: previous definition of 'number_1' was here
+ color_t number_1[12][9] = {
+         ^~~~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:68:9: error: redefinition of 'number_2'
+ color_t number_2[12][10]={
+         ^~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:69:9: note: previous definition of 'number_2' was here
+ color_t number_2[12][10] = {
+         ^~~~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:83:9: error: redefinition of 'number_3'
+ color_t number_3[12][9]={
+         ^~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:84:9: note: previous definition of 'number_3' was here
+ color_t number_3[12][9] = {
+         ^~~~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:100:9: error: redefinition of 'button'
+ color_t button[10][9]={
+         ^~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:101:9: note: previous definition of 'button' was here
+ color_t button[10][9] = {
+         ^~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:114:9: error: redefinition of 'choose_level'
+ color_t choose_level[5][47]={
+         ^~~~~~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:115:9: note: previous definition of 'choose_level' was here
+ color_t choose_level[5][47] = {
+         ^~~~~~~~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:123:9: error: redefinition of 'authors'
+ color_t authors[14][25]={
+         ^~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:124:9: note: previous definition of 'authors' was here
+ color_t authors[14][25] = {
+         ^~~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:142:9: error: redefinition of 'breakout'
+ color_t breakout[7][38] = {
+         ^~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:143:9: note: previous definition of 'breakout' was here
+ color_t breakout[7][38] = {
+         ^~~~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:159:9: error: redefinition of 'smoke'
+ color_t smoke[SMOKE_FRAMES][SMOKE_HEIGHT][SMOKE_WIDTH] = {
+         ^~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:159:9: note: previous definition of 'smoke' was here
+ color_t smoke[SMOKE_FRAMES][SMOKE_HEIGHT][SMOKE_WIDTH] = {
+         ^~~~~
+../src/main.c: In function 'main':
+../src/main.c:87:25: error: 'bar_poslives' undeclared (first use in this function); did you mean 'bar_pos'?
+       life_lost(&ball, &bar_poslives);
+                         ^~~~~~~~~~~~
+                         bar_pos
+../src/main.c:87:25: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:87:17: warning: passing argument 1 of 'life_lost' makes integer from pointer without a cast [-Wint-conversion]
+       life_lost(&ball, &bar_poslives);
+                 ^
+In file included from ../src/main.c:5:0:
+../src/main.h:49:6: note: expected 'int' but argument is of type 'ball_t * {aka struct ball *}'
+ void life_lost(int lives, ball_t *ball, position_t *bar_pos);
+      ^~~~~~~~~
+../src/main.c:87:7: error: too few arguments to function 'life_lost'
+       life_lost(&ball, &bar_poslives);
+       ^~~~~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:49:6: note: declared here
+ void life_lost(int lives, ball_t *ball, position_t *bar_pos);
+      ^~~~~~~~~
+../src/main.c: In function 'life_lost':
+../src/main.c:115:14: error: incompatible type for argument 1 of 'print_lives'
+  print_lives(lives);
+              ^~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:31:6: note: expected 'position_t {aka struct position}' but argument is of type 'int'
+ void print_lives(position_t pos, int lifes);
+      ^~~~~~~~~~~
+../src/main.c:115:2: error: too few arguments to function 'print_lives'
+  print_lives(lives);
+  ^~~~~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:31:6: note: declared here
+ void print_lives(position_t pos, int lifes);
+      ^~~~~~~~~~~
+make: *** [src/subdir.mk:32: src/main.o] Error 1
+12:54:56 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/graphics.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/graphics.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/graphics.d" -MT"src/graphics.o" -o "src/graphics.o" "../src/graphics.c"
+'Finished building: ../src/graphics.c'
+' '
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:5:0:
+../src/main.h:54:9: error: redefinition of 'number_1'
+ color_t number_1[12][9]={
+         ^~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:55:9: note: previous definition of 'number_1' was here
+ color_t number_1[12][9] = {
+         ^~~~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:68:9: error: redefinition of 'number_2'
+ color_t number_2[12][10]={
+         ^~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:69:9: note: previous definition of 'number_2' was here
+ color_t number_2[12][10] = {
+         ^~~~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:83:9: error: redefinition of 'number_3'
+ color_t number_3[12][9]={
+         ^~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:84:9: note: previous definition of 'number_3' was here
+ color_t number_3[12][9] = {
+         ^~~~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:100:9: error: redefinition of 'button'
+ color_t button[10][9]={
+         ^~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:101:9: note: previous definition of 'button' was here
+ color_t button[10][9] = {
+         ^~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:114:9: error: redefinition of 'choose_level'
+ color_t choose_level[5][47]={
+         ^~~~~~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:115:9: note: previous definition of 'choose_level' was here
+ color_t choose_level[5][47] = {
+         ^~~~~~~~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:123:9: error: redefinition of 'authors'
+ color_t authors[14][25]={
+         ^~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:124:9: note: previous definition of 'authors' was here
+ color_t authors[14][25] = {
+         ^~~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:142:9: error: redefinition of 'breakout'
+ color_t breakout[7][38] = {
+         ^~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:143:9: note: previous definition of 'breakout' was here
+ color_t breakout[7][38] = {
+         ^~~~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:159:9: error: redefinition of 'smoke'
+ color_t smoke[SMOKE_FRAMES][SMOKE_HEIGHT][SMOKE_WIDTH] = {
+         ^~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:159:9: note: previous definition of 'smoke' was here
+ color_t smoke[SMOKE_FRAMES][SMOKE_HEIGHT][SMOKE_WIDTH] = {
+         ^~~~~
+../src/main.c: In function 'main':
+../src/main.c:87:25: error: 'bar_poslives' undeclared (first use in this function); did you mean 'bar_pos'?
+       life_lost(&ball, &bar_poslives);
+                         ^~~~~~~~~~~~
+                         bar_pos
+../src/main.c:87:25: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:87:17: warning: passing argument 1 of 'life_lost' makes integer from pointer without a cast [-Wint-conversion]
+       life_lost(&ball, &bar_poslives);
+                 ^
+In file included from ../src/main.c:5:0:
+../src/main.h:49:6: note: expected 'int' but argument is of type 'ball_t * {aka struct ball *}'
+ void life_lost(int lives, ball_t *ball, position_t *bar_pos);
+      ^~~~~~~~~
+../src/main.c:87:7: error: too few arguments to function 'life_lost'
+       life_lost(&ball, &bar_poslives);
+       ^~~~~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:49:6: note: declared here
+ void life_lost(int lives, ball_t *ball, position_t *bar_pos);
+      ^~~~~~~~~
+../src/main.c: In function 'life_lost':
+../src/main.c:115:14: error: incompatible type for argument 1 of 'print_lives'
+  print_lives(lives);
+              ^~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:31:6: note: expected 'position_t {aka struct position}' but argument is of type 'int'
+ void print_lives(position_t pos, int lifes);
+      ^~~~~~~~~~~
+../src/main.c:115:2: error: too few arguments to function 'print_lives'
+  print_lives(lives);
+  ^~~~~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:31:6: note: declared here
+ void print_lives(position_t pos, int lifes);
+      ^~~~~~~~~~~
+make: *** [src/subdir.mk:32: src/main.o] Error 1
+12:55:06 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:5:0:
+../src/main.h:54:9: error: redefinition of 'number_1'
+ color_t number_1[12][9]={
+         ^~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:55:9: note: previous definition of 'number_1' was here
+ color_t number_1[12][9] = {
+         ^~~~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:68:9: error: redefinition of 'number_2'
+ color_t number_2[12][10]={
+         ^~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:69:9: note: previous definition of 'number_2' was here
+ color_t number_2[12][10] = {
+         ^~~~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:83:9: error: redefinition of 'number_3'
+ color_t number_3[12][9]={
+         ^~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:84:9: note: previous definition of 'number_3' was here
+ color_t number_3[12][9] = {
+         ^~~~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:100:9: error: redefinition of 'button'
+ color_t button[10][9]={
+         ^~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:101:9: note: previous definition of 'button' was here
+ color_t button[10][9] = {
+         ^~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:114:9: error: redefinition of 'choose_level'
+ color_t choose_level[5][47]={
+         ^~~~~~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:115:9: note: previous definition of 'choose_level' was here
+ color_t choose_level[5][47] = {
+         ^~~~~~~~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:123:9: error: redefinition of 'authors'
+ color_t authors[14][25]={
+         ^~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:124:9: note: previous definition of 'authors' was here
+ color_t authors[14][25] = {
+         ^~~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:142:9: error: redefinition of 'breakout'
+ color_t breakout[7][38] = {
+         ^~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:143:9: note: previous definition of 'breakout' was here
+ color_t breakout[7][38] = {
+         ^~~~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:159:9: error: redefinition of 'smoke'
+ color_t smoke[SMOKE_FRAMES][SMOKE_HEIGHT][SMOKE_WIDTH] = {
+         ^~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:159:9: note: previous definition of 'smoke' was here
+ color_t smoke[SMOKE_FRAMES][SMOKE_HEIGHT][SMOKE_WIDTH] = {
+         ^~~~~
+../src/main.c: In function 'main':
+../src/main.c:86:25: error: 'bar_poslives' undeclared (first use in this function); did you mean 'bar_pos'?
+       life_lost(&ball, &bar_poslives);
+                         ^~~~~~~~~~~~
+                         bar_pos
+../src/main.c:86:25: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:86:17: warning: passing argument 1 of 'life_lost' makes integer from pointer without a cast [-Wint-conversion]
+       life_lost(&ball, &bar_poslives);
+                 ^
+In file included from ../src/main.c:5:0:
+../src/main.h:49:6: note: expected 'int' but argument is of type 'ball_t * {aka struct ball *}'
+ void life_lost(int lives, ball_t *ball, position_t *bar_pos);
+      ^~~~~~~~~
+../src/main.c:86:7: error: too few arguments to function 'life_lost'
+       life_lost(&ball, &bar_poslives);
+       ^~~~~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:49:6: note: declared here
+ void life_lost(int lives, ball_t *ball, position_t *bar_pos);
+      ^~~~~~~~~
+../src/main.c: In function 'life_lost':
+../src/main.c:114:14: error: incompatible type for argument 1 of 'print_lives'
+  print_lives(lives);
+              ^~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:31:6: note: expected 'position_t {aka struct position}' but argument is of type 'int'
+ void print_lives(position_t pos, int lifes);
+      ^~~~~~~~~~~
+../src/main.c:114:2: error: too few arguments to function 'print_lives'
+  print_lives(lives);
+  ^~~~~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:31:6: note: declared here
+ void print_lives(position_t pos, int lifes);
+      ^~~~~~~~~~~
+make: *** [src/subdir.mk:32: src/main.o] Error 1
+12:55:16 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:5:0:
+../src/main.h:54:9: error: redefinition of 'number_1'
+ color_t number_1[12][9]={
+         ^~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:55:9: note: previous definition of 'number_1' was here
+ color_t number_1[12][9] = {
+         ^~~~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:68:9: error: redefinition of 'number_2'
+ color_t number_2[12][10]={
+         ^~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:69:9: note: previous definition of 'number_2' was here
+ color_t number_2[12][10] = {
+         ^~~~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:83:9: error: redefinition of 'number_3'
+ color_t number_3[12][9]={
+         ^~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:84:9: note: previous definition of 'number_3' was here
+ color_t number_3[12][9] = {
+         ^~~~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:100:9: error: redefinition of 'button'
+ color_t button[10][9]={
+         ^~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:101:9: note: previous definition of 'button' was here
+ color_t button[10][9] = {
+         ^~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:114:9: error: redefinition of 'choose_level'
+ color_t choose_level[5][47]={
+         ^~~~~~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:115:9: note: previous definition of 'choose_level' was here
+ color_t choose_level[5][47] = {
+         ^~~~~~~~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:123:9: error: redefinition of 'authors'
+ color_t authors[14][25]={
+         ^~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:124:9: note: previous definition of 'authors' was here
+ color_t authors[14][25] = {
+         ^~~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:142:9: error: redefinition of 'breakout'
+ color_t breakout[7][38] = {
+         ^~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:143:9: note: previous definition of 'breakout' was here
+ color_t breakout[7][38] = {
+         ^~~~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:159:9: error: redefinition of 'smoke'
+ color_t smoke[SMOKE_FRAMES][SMOKE_HEIGHT][SMOKE_WIDTH] = {
+         ^~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:159:9: note: previous definition of 'smoke' was here
+ color_t smoke[SMOKE_FRAMES][SMOKE_HEIGHT][SMOKE_WIDTH] = {
+         ^~~~~
+../src/main.c: In function 'main':
+../src/main.c:86:33: error: expected ')' before 'lives'
+       life_lost(&ball, &bar_pos lives);
+                                 ^~~~~
+../src/main.c:86:17: warning: passing argument 1 of 'life_lost' makes integer from pointer without a cast [-Wint-conversion]
+       life_lost(&ball, &bar_pos lives);
+                 ^
+In file included from ../src/main.c:5:0:
+../src/main.h:49:6: note: expected 'int' but argument is of type 'ball_t * {aka struct ball *}'
+ void life_lost(int lives, ball_t *ball, position_t *bar_pos);
+      ^~~~~~~~~
+../src/main.c:86:24: warning: passing argument 2 of 'life_lost' from incompatible pointer type [-Wincompatible-pointer-types]
+       life_lost(&ball, &bar_pos lives);
+                        ^
+In file included from ../src/main.c:5:0:
+../src/main.h:49:6: note: expected 'ball_t * {aka struct ball *}' but argument is of type 'position_t * {aka struct position *}'
+ void life_lost(int lives, ball_t *ball, position_t *bar_pos);
+      ^~~~~~~~~
+../src/main.c:86:7: error: too few arguments to function 'life_lost'
+       life_lost(&ball, &bar_pos lives);
+       ^~~~~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:49:6: note: declared here
+ void life_lost(int lives, ball_t *ball, position_t *bar_pos);
+      ^~~~~~~~~
+../src/main.c: In function 'life_lost':
+../src/main.c:114:14: error: incompatible type for argument 1 of 'print_lives'
+  print_lives(lives);
+              ^~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:31:6: note: expected 'position_t {aka struct position}' but argument is of type 'int'
+ void print_lives(position_t pos, int lifes);
+      ^~~~~~~~~~~
+../src/main.c:114:2: error: too few arguments to function 'print_lives'
+  print_lives(lives);
+  ^~~~~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:31:6: note: declared here
+ void print_lives(position_t pos, int lifes);
+      ^~~~~~~~~~~
+make: *** [src/subdir.mk:32: src/main.o] Error 1
+12:55:30 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:5:0:
+../src/main.h:54:9: error: redefinition of 'number_1'
+ color_t number_1[12][9]={
+         ^~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:55:9: note: previous definition of 'number_1' was here
+ color_t number_1[12][9] = {
+         ^~~~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:68:9: error: redefinition of 'number_2'
+ color_t number_2[12][10]={
+         ^~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:69:9: note: previous definition of 'number_2' was here
+ color_t number_2[12][10] = {
+         ^~~~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:83:9: error: redefinition of 'number_3'
+ color_t number_3[12][9]={
+         ^~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:84:9: note: previous definition of 'number_3' was here
+ color_t number_3[12][9] = {
+         ^~~~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:100:9: error: redefinition of 'button'
+ color_t button[10][9]={
+         ^~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:101:9: note: previous definition of 'button' was here
+ color_t button[10][9] = {
+         ^~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:114:9: error: redefinition of 'choose_level'
+ color_t choose_level[5][47]={
+         ^~~~~~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:115:9: note: previous definition of 'choose_level' was here
+ color_t choose_level[5][47] = {
+         ^~~~~~~~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:123:9: error: redefinition of 'authors'
+ color_t authors[14][25]={
+         ^~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:124:9: note: previous definition of 'authors' was here
+ color_t authors[14][25] = {
+         ^~~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:142:9: error: redefinition of 'breakout'
+ color_t breakout[7][38] = {
+         ^~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:143:9: note: previous definition of 'breakout' was here
+ color_t breakout[7][38] = {
+         ^~~~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:159:9: error: redefinition of 'smoke'
+ color_t smoke[SMOKE_FRAMES][SMOKE_HEIGHT][SMOKE_WIDTH] = {
+         ^~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:159:9: note: previous definition of 'smoke' was here
+ color_t smoke[SMOKE_FRAMES][SMOKE_HEIGHT][SMOKE_WIDTH] = {
+         ^~~~~
+../src/main.c: In function 'main':
+../src/main.c:86:7: error: 'life_lostlives' undeclared (first use in this function); did you mean 'life_lost'?
+       life_lostlives, (&ball, &bar_pos);
+       ^~~~~~~~~~~~~~
+       life_lost
+../src/main.c:86:7: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:86:29: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+       life_lostlives, (&ball, &bar_pos);
+                             ^
+../src/main.c:86:21: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+       life_lostlives, (&ball, &bar_pos);
+                     ^
+../src/main.c:86:21: warning: statement with no effect [-Wunused-value]
+../src/main.c: In function 'life_lost':
+../src/main.c:114:14: error: incompatible type for argument 1 of 'print_lives'
+  print_lives(lives);
+              ^~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:31:6: note: expected 'position_t {aka struct position}' but argument is of type 'int'
+ void print_lives(position_t pos, int lifes);
+      ^~~~~~~~~~~
+../src/main.c:114:2: error: too few arguments to function 'print_lives'
+  print_lives(lives);
+  ^~~~~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:31:6: note: declared here
+ void print_lives(position_t pos, int lifes);
+      ^~~~~~~~~~~
+make: *** [src/subdir.mk:32: src/main.o] Error 1
+12:55:34 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:5:0:
+../src/main.h:54:9: error: redefinition of 'number_1'
+ color_t number_1[12][9]={
+         ^~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:55:9: note: previous definition of 'number_1' was here
+ color_t number_1[12][9] = {
+         ^~~~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:68:9: error: redefinition of 'number_2'
+ color_t number_2[12][10]={
+         ^~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:69:9: note: previous definition of 'number_2' was here
+ color_t number_2[12][10] = {
+         ^~~~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:83:9: error: redefinition of 'number_3'
+ color_t number_3[12][9]={
+         ^~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:84:9: note: previous definition of 'number_3' was here
+ color_t number_3[12][9] = {
+         ^~~~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:100:9: error: redefinition of 'button'
+ color_t button[10][9]={
+         ^~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:101:9: note: previous definition of 'button' was here
+ color_t button[10][9] = {
+         ^~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:114:9: error: redefinition of 'choose_level'
+ color_t choose_level[5][47]={
+         ^~~~~~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:115:9: note: previous definition of 'choose_level' was here
+ color_t choose_level[5][47] = {
+         ^~~~~~~~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:123:9: error: redefinition of 'authors'
+ color_t authors[14][25]={
+         ^~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:124:9: note: previous definition of 'authors' was here
+ color_t authors[14][25] = {
+         ^~~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:142:9: error: redefinition of 'breakout'
+ color_t breakout[7][38] = {
+         ^~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:143:9: note: previous definition of 'breakout' was here
+ color_t breakout[7][38] = {
+         ^~~~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:159:9: error: redefinition of 'smoke'
+ color_t smoke[SMOKE_FRAMES][SMOKE_HEIGHT][SMOKE_WIDTH] = {
+         ^~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:159:9: note: previous definition of 'smoke' was here
+ color_t smoke[SMOKE_FRAMES][SMOKE_HEIGHT][SMOKE_WIDTH] = {
+         ^~~~~
+../src/main.c: In function 'life_lost':
+../src/main.c:114:14: error: incompatible type for argument 1 of 'print_lives'
+  print_lives(lives);
+              ^~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:31:6: note: expected 'position_t {aka struct position}' but argument is of type 'int'
+ void print_lives(position_t pos, int lifes);
+      ^~~~~~~~~~~
+../src/main.c:114:2: error: too few arguments to function 'print_lives'
+  print_lives(lives);
+  ^~~~~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:31:6: note: declared here
+ void print_lives(position_t pos, int lifes);
+      ^~~~~~~~~~~
+make: *** [src/subdir.mk:32: src/main.o] Error 1
+12:56:28 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'life_lost':
+../src/main.c:114:14: error: incompatible type for argument 1 of 'print_lives'
+  print_lives(lives);
+              ^~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:31:6: note: expected 'position_t {aka struct position}' but argument is of type 'int'
+ void print_lives(position_t pos, int lifes);
+      ^~~~~~~~~~~
+../src/main.c:114:2: error: too few arguments to function 'print_lives'
+  print_lives(lives);
+  ^~~~~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:31:6: note: declared here
+ void print_lives(position_t pos, int lifes);
+      ^~~~~~~~~~~
+make: *** [src/subdir.mk:32: src/main.o] Error 1
+12:56:32 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'life_lost':
+../src/main.c:114:14: error: incompatible type for argument 1 of 'print_lives'
+  print_lives(lives);
+              ^~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:31:6: note: expected 'position_t {aka struct position}' but argument is of type 'int'
+ void print_lives(position_t pos, int lifes);
+      ^~~~~~~~~~~
+../src/main.c:114:2: error: too few arguments to function 'print_lives'
+  print_lives(lives);
+  ^~~~~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:31:6: note: declared here
+ void print_lives(position_t pos, int lifes);
+      ^~~~~~~~~~~
+make: *** [src/subdir.mk:32: src/main.o] Error 1
+12:56:59 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/blocks.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/blocks.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/blocks.d" -MT"src/blocks.o" -o "src/blocks.o" "../src/blocks.c"
+'Finished building: ../src/blocks.c'
+' '
+'Building file: ../src/graphics.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/graphics.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/graphics.d" -MT"src/graphics.o" -o "src/graphics.o" "../src/graphics.c"
+../src/graphics.c:73:6: error: conflicting types for 'print_lives'
+ void print_lives(position_t pos, int lifes) {
+      ^~~~~~~~~~~
+In file included from ../src/graphics.c:3:0:
+../src/graphics.h:31:6: note: previous declaration of 'print_lives' was here
+ void print_lives(int lifes);
+      ^~~~~~~~~~~
+make: *** [src/subdir.mk:32: src/graphics.o] Error 1
+12:57:07 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/graphics.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/graphics.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/graphics.d" -MT"src/graphics.o" -o "src/graphics.o" "../src/graphics.c"
+../src/graphics.c: In function 'print_lives':
+../src/graphics.c:77:3: error: 'pos' undeclared (first use in this function)
+   pos.x += i * (HEART_WIDTH + HEART_DISTANCE);
+   ^~~
+../src/graphics.c:77:3: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/subdir.mk:32: src/graphics.o] Error 1
+12:57:16 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/graphics.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/graphics.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/graphics.d" -MT"src/graphics.o" -o "src/graphics.o" "../src/graphics.c"
+'Finished building: ../src/graphics.c'
+' '
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/graphics.o:C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\example\Debug/../src/graphics.h:45: multiple definition of `heart'
+./src/blocks.o:C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\example\Debug/../src/graphics.h:45: first defined here
+./src/graphics.o:C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\example\Debug/../src/graphics.h:55: multiple definition of `number_1'
+./src/blocks.o:C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\example\Debug/../src/graphics.h:55: first defined here
+./src/graphics.o:C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\example\Debug/../src/graphics.h:69: multiple definition of `number_2'
+./src/blocks.o:C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\example\Debug/../src/graphics.h:69: first defined here
+./src/graphics.o:C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\example\Debug/../src/graphics.h:84: multiple definition of `number_3'
+./src/blocks.o:C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\example\Debug/../src/graphics.h:84: first defined here
+./src/graphics.o:C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\example\Debug/../src/graphics.h:101: multiple definition of `button'
+./src/blocks.o:C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\example\Debug/../src/graphics.h:101: first defined here
+./src/graphics.o:C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\example\Debug/../src/graphics.h:115: multiple definition of `choose_level'
+./src/blocks.o:C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\example\Debug/../src/graphics.h:115: first defined here
+./src/graphics.o:C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\example\Debug/../src/graphics.h:124: multiple definition of `authors'
+./src/blocks.o:C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\example\Debug/../src/graphics.h:124: first defined here
+./src/graphics.o:C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\example\Debug/../src/graphics.h:143: multiple definition of `breakout'
+./src/blocks.o:C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\example\Debug/../src/graphics.h:143: first defined here
+./src/graphics.o:C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\example\Debug/../src/graphics.h:159: multiple definition of `smoke'
+./src/blocks.o:C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\example\Debug/../src/graphics.h:159: first defined here
+./src/main.o:C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\example\Debug/../src/graphics.h:45: multiple definition of `heart'
+./src/blocks.o:C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\example\Debug/../src/graphics.h:45: first defined here
+./src/main.o:C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\example\Debug/../src/graphics.h:55: multiple definition of `number_1'
+./src/blocks.o:C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\example\Debug/../src/graphics.h:55: first defined here
+./src/main.o:C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\example\Debug/../src/graphics.h:69: multiple definition of `number_2'
+./src/blocks.o:C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\example\Debug/../src/graphics.h:69: first defined here
+./src/main.o:C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\example\Debug/../src/graphics.h:84: multiple definition of `number_3'
+./src/blocks.o:C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\example\Debug/../src/graphics.h:84: first defined here
+./src/main.o:C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\example\Debug/../src/graphics.h:101: multiple definition of `button'
+./src/blocks.o:C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\example\Debug/../src/graphics.h:101: first defined here
+./src/main.o:C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\example\Debug/../src/graphics.h:115: multiple definition of `choose_level'
+./src/blocks.o:C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\example\Debug/../src/graphics.h:115: first defined here
+./src/main.o:C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\example\Debug/../src/graphics.h:124: multiple definition of `authors'
+./src/blocks.o:C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\example\Debug/../src/graphics.h:124: first defined here
+./src/main.o:C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\example\Debug/../src/graphics.h:143: multiple definition of `breakout'
+./src/blocks.o:C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\example\Debug/../src/graphics.h:143: first defined here
+./src/main.o:C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\example\Debug/../src/graphics.h:159: multiple definition of `smoke'
+./src/blocks.o:C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\example\Debug/../src/graphics.h:159: first defined here
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:38: example.elf] Error 1
+12:58:58 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:5:0:
+../src/main.h:64:9: error: redefinition of 'heart'
+ color_t heart[HEART_HEIGHT][HEART_WIDTH] = {
+         ^~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:45:9: note: previous definition of 'heart' was here
+ color_t heart[HEART_HEIGHT][HEART_WIDTH] = {
+         ^~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:74:9: error: redefinition of 'number_1'
+ color_t number_1[12][9] = {
+         ^~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:55:9: note: previous definition of 'number_1' was here
+ color_t number_1[12][9] = {
+         ^~~~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:88:9: error: redefinition of 'number_2'
+ color_t number_2[12][10] = {
+         ^~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:69:9: note: previous definition of 'number_2' was here
+ color_t number_2[12][10] = {
+         ^~~~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:103:9: error: redefinition of 'number_3'
+ color_t number_3[12][9] = {
+         ^~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:84:9: note: previous definition of 'number_3' was here
+ color_t number_3[12][9] = {
+         ^~~~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:120:9: error: redefinition of 'button'
+ color_t button[10][9] = {
+         ^~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:101:9: note: previous definition of 'button' was here
+ color_t button[10][9] = {
+         ^~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:134:9: error: redefinition of 'choose_level'
+ color_t choose_level[5][47] = {
+         ^~~~~~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:115:9: note: previous definition of 'choose_level' was here
+ color_t choose_level[5][47] = {
+         ^~~~~~~~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:143:9: error: redefinition of 'authors'
+ color_t authors[14][25] = {
+         ^~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:124:9: note: previous definition of 'authors' was here
+ color_t authors[14][25] = {
+         ^~~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:162:9: error: redefinition of 'breakout'
+ color_t breakout[7][38] = {
+         ^~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:143:9: note: previous definition of 'breakout' was here
+ color_t breakout[7][38] = {
+         ^~~~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:178:9: error: redefinition of 'smoke'
+ color_t smoke[SMOKE_FRAMES][SMOKE_HEIGHT][SMOKE_WIDTH] = {
+         ^~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:159:9: note: previous definition of 'smoke' was here
+ color_t smoke[SMOKE_FRAMES][SMOKE_HEIGHT][SMOKE_WIDTH] = {
+         ^~~~~
+make: *** [src/subdir.mk:32: src/main.o] Error 1
+12:59:10 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/blocks.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/blocks.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/blocks.d" -MT"src/blocks.o" -o "src/blocks.o" "../src/blocks.c"
+'Finished building: ../src/blocks.c'
+' '
+'Building file: ../src/graphics.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/graphics.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/graphics.d" -MT"src/graphics.o" -o "src/graphics.o" "../src/graphics.c"
+../src/graphics.c: In function 'print_lives':
+../src/graphics.c:74:26: error: 'LIVES_POS_X' undeclared (first use in this function)
+  position_t lives_pos = {LIVES_POS_X, LIVES_POS_Y};
+                          ^~~~~~~~~~~
+../src/graphics.c:74:26: note: each undeclared identifier is reported only once for each function it appears in
+../src/graphics.c:74:39: error: 'LIVES_POS_Y' undeclared (first use in this function); did you mean 'LIVES_POS_X'?
+  position_t lives_pos = {LIVES_POS_X, LIVES_POS_Y};
+                                       ^~~~~~~~~~~
+                                       LIVES_POS_X
+../src/graphics.c:77:23: error: 'HEART_WIDTH' undeclared (first use in this function); did you mean '__SHRT_WIDTH__'?
+   lives_pos.x += i * (HEART_WIDTH + HEART_DISTANCE);
+                       ^~~~~~~~~~~
+                       __SHRT_WIDTH__
+../src/graphics.c:77:37: error: 'HEART_DISTANCE' undeclared (first use in this function); did you mean 'HEART_WIDTH'?
+   lives_pos.x += i * (HEART_WIDTH + HEART_DISTANCE);
+                                     ^~~~~~~~~~~~~~
+                                     HEART_WIDTH
+../src/graphics.c:78:28: error: 'heart' undeclared (first use in this function)
+   paint_object(lives_pos, *heart, HEART_HEIGHT, HEART_WIDTH);
+                            ^~~~~
+../src/graphics.c:78:35: error: 'HEART_HEIGHT' undeclared (first use in this function); did you mean 'HEART_WIDTH'?
+   paint_object(lives_pos, *heart, HEART_HEIGHT, HEART_WIDTH);
+                                   ^~~~~~~~~~~~
+                                   HEART_WIDTH
+make: *** [src/subdir.mk:32: src/graphics.o] Error 1
+12:59:53 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/blocks.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/blocks.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/blocks.d" -MT"src/blocks.o" -o "src/blocks.o" "../src/blocks.c"
+'Finished building: ../src/blocks.c'
+' '
+'Building file: ../src/graphics.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/graphics.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/graphics.d" -MT"src/graphics.o" -o "src/graphics.o" "../src/graphics.c"
+../src/graphics.c: In function 'print_lives':
+../src/graphics.c:78:28: error: 'heart' undeclared (first use in this function)
+   paint_object(lives_pos, *heart, HEART_HEIGHT, HEART_WIDTH);
+                            ^~~~~
+../src/graphics.c:78:28: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/subdir.mk:32: src/graphics.o] Error 1
+13:00:18 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/graphics.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/graphics.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/graphics.d" -MT"src/graphics.o" -o "src/graphics.o" "../src/graphics.c"
+../src/graphics.c: In function 'print_lives':
+../src/graphics.c:78:28: error: 'heart' undeclared (first use in this function)
+   paint_object(lives_pos, *heart, HEART_HEIGHT, HEART_WIDTH);
+                            ^~~~~
+../src/graphics.c:78:28: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/subdir.mk:32: src/graphics.o] Error 1
+13:00:38 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/graphics.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/graphics.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/graphics.d" -MT"src/graphics.o" -o "src/graphics.o" "../src/graphics.c"
+../src/graphics.c:73:6: error: conflicting types for 'print_lives'
+ void print_lives(int lifes, color_t *object) {
+      ^~~~~~~~~~~
+In file included from ../src/graphics.c:3:0:
+../src/graphics.h:31:6: note: previous declaration of 'print_lives' was here
+ void print_lives(int lifes);
+      ^~~~~~~~~~~
+../src/graphics.c: In function 'print_lives':
+../src/graphics.c:78:28: error: 'heart' undeclared (first use in this function)
+   paint_object(lives_pos, *heart, HEART_HEIGHT, HEART_WIDTH);
+                            ^~~~~
+../src/graphics.c:78:28: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/subdir.mk:32: src/graphics.o] Error 1
+13:00:56 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/graphics.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/graphics.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/graphics.d" -MT"src/graphics.o" -o "src/graphics.o" "../src/graphics.c"
+../src/graphics.c:73:6: error: conflicting types for 'print_lives'
+ void print_lives(int lifes, color_t *object) {
+      ^~~~~~~~~~~
+In file included from ../src/graphics.c:3:0:
+../src/graphics.h:31:6: note: previous declaration of 'print_lives' was here
+ void print_lives(int lifes);
+      ^~~~~~~~~~~
+../src/graphics.c: In function 'print_lives':
+../src/graphics.c:78:27: error: 'heart' undeclared (first use in this function)
+   paint_object(lives_pos, heart, HEART_HEIGHT, HEART_WIDTH);
+                           ^~~~~
+../src/graphics.c:78:27: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/subdir.mk:32: src/graphics.o] Error 1
+13:01:03 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/graphics.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/graphics.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/graphics.d" -MT"src/graphics.o" -o "src/graphics.o" "../src/graphics.c"
+../src/graphics.c:73:6: error: conflicting types for 'print_lives'
+ void print_lives(int lifes, color_t *heart) {
+      ^~~~~~~~~~~
+In file included from ../src/graphics.c:3:0:
+../src/graphics.h:31:6: note: previous declaration of 'print_lives' was here
+ void print_lives(int lifes);
+      ^~~~~~~~~~~
+make: *** [src/subdir.mk:32: src/graphics.o] Error 1
+13:01:12 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/blocks.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/blocks.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/blocks.d" -MT"src/blocks.o" -o "src/blocks.o" "../src/blocks.c"
+'Finished building: ../src/blocks.c'
+' '
+'Building file: ../src/graphics.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/graphics.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/graphics.d" -MT"src/graphics.o" -o "src/graphics.o" "../src/graphics.c"
+'Finished building: ../src/graphics.c'
+' '
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'life_lost':
+../src/main.c:114:2: error: too few arguments to function 'print_lives'
+  print_lives(lives);
+  ^~~~~~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:31:6: note: declared here
+ void print_lives(int lifes, color_t *heart);
+      ^~~~~~~~~~~
+make: *** [src/subdir.mk:32: src/main.o] Error 1
+13:01:25 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27580	   5600	   5332	  38512	   9670	example.elf
+'Finished building: example.elf.size'
+' '
+13:01:29 **** Incremental Build of configuration Debug for project example ****
+make all 
+make: Nothing to be done for 'all'.
+13:02:41 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27848	   5600	   5328	  38776	   9778	example.elf
+'Finished building: example.elf.size'
+' '
+13:02:44 **** Incremental Build of configuration Debug for project example ****
+make all 
+make: Nothing to be done for 'all'.
+13:03:16 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27872	   5600	   5328	  38800	   9790	example.elf
+'Finished building: example.elf.size'
+' '
+13:03:17 **** Incremental Build of configuration Debug for project example ****
+make all 
+make: Nothing to be done for 'all'.
+13:03:53 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27848	   5600	   5328	  38776	   9778	example.elf
+'Finished building: example.elf.size'
+' '
+13:03:54 **** Incremental Build of configuration Debug for project example ****
+make all 
+make: Nothing to be done for 'all'.
+13:04:14 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27872	   5600	   5328	  38800	   9790	example.elf
+'Finished building: example.elf.size'
+' '
+13:05:24 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/blocks.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/blocks.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/blocks.d" -MT"src/blocks.o" -o "src/blocks.o" "../src/blocks.c"
+In file included from ../src/blocks.h:6:0,
+                 from ../src/blocks.c:3:
+../src/graphics.h:22:19: error: unknown type name 'position_t'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+                   ^~~~~~~~~~
+../src/graphics.h:23:22: error: unknown type name 'position_t'
+ void paint_animation(position_t pos, color_t *animation, int frames, int period, int rows, int cols);
+                      ^~~~~~~~~~
+../src/graphics.h:27:11: error: unknown type name 'position_t'
+ void rect(position_t pos, color_t col, int w, int h);
+           ^~~~~~~~~~
+make: *** [src/subdir.mk:32: src/blocks.o] Error 1
+13:05:32 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/blocks.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/blocks.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/blocks.d" -MT"src/blocks.o" -o "src/blocks.o" "../src/blocks.c"
+In file included from ../src/blocks.h:6:0,
+                 from ../src/blocks.c:3:
+../src/graphics.h:25:19: error: unknown type name 'position_t'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+                   ^~~~~~~~~~
+../src/graphics.h:26:22: error: unknown type name 'position_t'
+ void paint_animation(position_t pos, color_t *animation, int frames, int period, int rows, int cols);
+                      ^~~~~~~~~~
+../src/graphics.h:30:11: error: unknown type name 'position_t'
+ void rect(position_t pos, color_t col, int w, int h);
+           ^~~~~~~~~~
+make: *** [src/subdir.mk:32: src/blocks.o] Error 1
+13:05:46 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/blocks.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/blocks.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/blocks.d" -MT"src/blocks.o" -o "src/blocks.o" "../src/blocks.c"
+In file included from ../src/blocks.h:6:0,
+                 from ../src/blocks.c:3:
+../src/graphics.h:25:19: error: unknown type name 'position_t'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+                   ^~~~~~~~~~
+../src/graphics.h:26:22: error: unknown type name 'position_t'
+ void paint_animation(position_t pos, color_t *animation, int frames, int period, int rows, int cols);
+                      ^~~~~~~~~~
+../src/graphics.h:30:11: error: unknown type name 'position_t'
+ void rect(position_t pos, color_t col, int w, int h);
+           ^~~~~~~~~~
+make: *** [src/subdir.mk:32: src/blocks.o] Error 1
+13:06:47 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/blocks.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/blocks.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/blocks.d" -MT"src/blocks.o" -o "src/blocks.o" "../src/blocks.c"
+In file included from ../src/blocks.h:6:0,
+                 from ../src/blocks.c:3:
+../src/graphics.h:24:19: error: unknown type name 'position_t'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+                   ^~~~~~~~~~
+../src/graphics.h:25:22: error: unknown type name 'position_t'
+ void paint_animation(position_t pos, color_t *animation, int frames, int period, int rows, int cols);
+                      ^~~~~~~~~~
+../src/graphics.h:29:11: error: unknown type name 'position_t'
+ void rect(position_t pos, color_t col, int w, int h);
+           ^~~~~~~~~~
+make: *** [src/subdir.mk:32: src/blocks.o] Error 1
+13:06:50 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/blocks.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/blocks.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/blocks.d" -MT"src/blocks.o" -o "src/blocks.o" "../src/blocks.c"
+In file included from ../src/blocks.h:6:0,
+                 from ../src/blocks.c:3:
+../src/graphics.h:25:19: error: unknown type name 'position_t'
+ void paint_object(position_t pos, color_t *object, int height, int width);
+                   ^~~~~~~~~~
+../src/graphics.h:26:22: error: unknown type name 'position_t'
+ void paint_animation(position_t pos, color_t *animation, int frames, int period, int rows, int cols);
+                      ^~~~~~~~~~
+../src/graphics.h:30:11: error: unknown type name 'position_t'
+ void rect(position_t pos, color_t col, int w, int h);
+           ^~~~~~~~~~
+make: *** [src/subdir.mk:32: src/blocks.o] Error 1
+13:07:36 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/blocks.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/blocks.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/blocks.d" -MT"src/blocks.o" -o "src/blocks.o" "../src/blocks.c"
+'Finished building: ../src/blocks.c'
+' '
+'Building file: ../src/graphics.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/graphics.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/graphics.d" -MT"src/graphics.o" -o "src/graphics.o" "../src/graphics.c"
+'Finished building: ../src/graphics.c'
+' '
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27872	   5600	   5328	  38800	   9790	example.elf
+'Finished building: example.elf.size'
+' '
+13:08:12 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/blocks.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/blocks.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/blocks.d" -MT"src/blocks.o" -o "src/blocks.o" "../src/blocks.c"
+'Finished building: ../src/blocks.c'
+' '
+'Building file: ../src/graphics.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/graphics.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/graphics.d" -MT"src/graphics.o" -o "src/graphics.o" "../src/graphics.c"
+'Finished building: ../src/graphics.c'
+' '
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27872	   5600	   5328	  38800	   9790	example.elf
+'Finished building: example.elf.size'
+' '
+13:08:36 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/blocks.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/blocks.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/blocks.d" -MT"src/blocks.o" -o "src/blocks.o" "../src/blocks.c"
+'Finished building: ../src/blocks.c'
+' '
+'Building file: ../src/graphics.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/graphics.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/graphics.d" -MT"src/graphics.o" -o "src/graphics.o" "../src/graphics.c"
+'Finished building: ../src/graphics.c'
+' '
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27872	   5600	   5328	  38800	   9790	example.elf
+'Finished building: example.elf.size'
+' '
+13:08:38 **** Incremental Build of configuration Debug for project example ****
+make all 
+make: Nothing to be done for 'all'.
+13:09:41 **** Incremental Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/graphics.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/graphics.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/graphics.d" -MT"src/graphics.o" -o "src/graphics.o" "../src/graphics.c"
+'Finished building: ../src/graphics.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27848	   5600	   5328	  38776	   9778	example.elf
+'Finished building: example.elf.size'
+' '
+13:11:26 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/blocks.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/blocks.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/blocks.d" -MT"src/blocks.o" -o "src/blocks.o" "../src/blocks.c"
+'Finished building: ../src/blocks.c'
+' '
+'Building file: ../src/graphics.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/graphics.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/graphics.d" -MT"src/graphics.o" -o "src/graphics.o" "../src/graphics.c"
+'Finished building: ../src/graphics.c'
+' '
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27848	   5600	   5328	  38776	   9778	example.elf
+'Finished building: example.elf.size'
+' '
+13:11:32 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/blocks.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/blocks.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/blocks.d" -MT"src/blocks.o" -o "src/blocks.o" "../src/blocks.c"
+In file included from ../src/blocks.c:4:0:
+../src/graphics.h:31:43: error: expected ';', ',' or ')' before 'color_t'
+ void print_lives(int lives, int max_lives color_t *heart);
+                                           ^~~~~~~
+make: *** [src/subdir.mk:32: src/blocks.o] Error 1
+13:11:35 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/blocks.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/blocks.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/blocks.d" -MT"src/blocks.o" -o "src/blocks.o" "../src/blocks.c"
+'Finished building: ../src/blocks.c'
+' '
+'Building file: ../src/graphics.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/graphics.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/graphics.d" -MT"src/graphics.o" -o "src/graphics.o" "../src/graphics.c"
+../src/graphics.c:73:6: error: conflicting types for 'print_lives'
+ void print_lives(int lifes, color_t *heart) {
+      ^~~~~~~~~~~
+In file included from ../src/graphics.c:3:0:
+../src/graphics.h:31:6: note: previous declaration of 'print_lives' was here
+ void print_lives(int lives, int max_lives, color_t *heart);
+      ^~~~~~~~~~~
+make: *** [src/subdir.mk:32: src/graphics.o] Error 1
+13:12:03 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/graphics.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/graphics.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/graphics.d" -MT"src/graphics.o" -o "src/graphics.o" "../src/graphics.c"
+../src/graphics.c:73:6: error: conflicting types for 'print_lives'
+ void print_lives(int lifes, color_t *heart) {
+      ^~~~~~~~~~~
+In file included from ../src/graphics.c:3:0:
+../src/graphics.h:31:6: note: previous declaration of 'print_lives' was here
+ void print_lives(int lives, int max_lives, color_t *heart);
+      ^~~~~~~~~~~
+make: *** [src/subdir.mk:32: src/graphics.o] Error 1
+13:12:05 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/graphics.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/graphics.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/graphics.d" -MT"src/graphics.o" -o "src/graphics.o" "../src/graphics.c"
+../src/graphics.c:73:6: error: conflicting types for 'print_lives'
+ void print_lives(int lifes, color_t *heart) {
+      ^~~~~~~~~~~
+In file included from ../src/graphics.c:3:0:
+../src/graphics.h:31:6: note: previous declaration of 'print_lives' was here
+ void print_lives(int lives, int max_lives, color_t *heart);
+      ^~~~~~~~~~~
+make: *** [src/subdir.mk:32: src/graphics.o] Error 1
+13:12:17 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/graphics.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/graphics.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/graphics.d" -MT"src/graphics.o" -o "src/graphics.o" "../src/graphics.c"
+../src/graphics.c:73:6: error: conflicting types for 'print_lives'
+ void print_lives(int lifes, color_t *heart) {
+      ^~~~~~~~~~~
+In file included from ../src/graphics.c:3:0:
+../src/graphics.h:31:6: note: previous declaration of 'print_lives' was here
+ void print_lives(int lives, int max_lives, color_t *heart);
+      ^~~~~~~~~~~
+make: *** [src/subdir.mk:32: src/graphics.o] Error 1
+13:13:58 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/graphics.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/graphics.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/graphics.d" -MT"src/graphics.o" -o "src/graphics.o" "../src/graphics.c"
+'Finished building: ../src/graphics.c'
+' '
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27924	   5600	   5332	  38856	   97c8	example.elf
+'Finished building: example.elf.size'
+' '
+13:14:02 **** Incremental Build of configuration Debug for project example ****
+make all 
+make: Nothing to be done for 'all'.
+13:14:27 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/graphics.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/graphics.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/graphics.d" -MT"src/graphics.o" -o "src/graphics.o" "../src/graphics.c"
+'Finished building: ../src/graphics.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27924	   5600	   5332	  38856	   97c8	example.elf
+'Finished building: example.elf.size'
+' '
+13:14:59 **** Incremental Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/graphics.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/graphics.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/graphics.d" -MT"src/graphics.o" -o "src/graphics.o" "../src/graphics.c"
+'Finished building: ../src/graphics.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27924	   5600	   5332	  38856	   97c8	example.elf
+'Finished building: example.elf.size'
+' '
+13:15:47 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27924	   5600	   5332	  38856	   97c8	example.elf
+'Finished building: example.elf.size'
+' '
+13:15:50 **** Incremental Build of configuration Debug for project example ****
+make all 
+make: Nothing to be done for 'all'.
+14:14:05 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27924	   5600	   5332	  38856	   97c8	example.elf
+'Finished building: example.elf.size'
+' '
+14:14:08 **** Incremental Build of configuration Debug for project example ****
+make all 
+make: Nothing to be done for 'all'.
+14:25:13 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'level_selection':
+../src/main.c:567:21: error: 'button' undeclared (first use in this function); did you mean 'bottom'?
+  paint_object(aux, *button, 10, 9);
+                     ^~~~~~
+                     bottom
+../src/main.c:567:21: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/subdir.mk:32: src/main.o] Error 1
+14:27:18 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'level_selection':
+../src/main.c:567:21: error: 'button' undeclared (first use in this function); did you mean 'bottom'?
+  paint_object(aux, *button, 10, 9);
+                     ^~~~~~
+                     bottom
+../src/main.c:567:21: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/subdir.mk:32: src/main.o] Error 1
+14:29:10 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'level_selection':
+../src/main.c:567:21: error: 'button' undeclared (first use in this function); did you mean 'bottom'?
+  paint_object(aux, *button, 10, 9);
+                     ^~~~~~
+                     bottom
+../src/main.c:567:21: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/subdir.mk:32: src/main.o] Error 1
+14:29:30 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27924	   6144	   5332	  39400	   99e8	example.elf
+'Finished building: example.elf.size'
+' '
+14:29:32 **** Incremental Build of configuration Debug for project example ****
+make all 
+make: Nothing to be done for 'all'.
+14:30:55 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27924	   6144	   5332	  39400	   99e8	example.elf
+'Finished building: example.elf.size'
+' '
+14:30:57 **** Incremental Build of configuration Debug for project example ****
+make all 
+make: Nothing to be done for 'all'.
+14:31:16 **** Incremental Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27924	   6144	   5332	  39400	   99e8	example.elf
+'Finished building: example.elf.size'
+' '
+14:32:02 **** Incremental Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27924	   6144	   5332	  39400	   99e8	example.elf
+'Finished building: example.elf.size'
+' '
+14:32:16 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27924	   6144	   5332	  39400	   99e8	example.elf
+'Finished building: example.elf.size'
+' '
+14:32:17 **** Incremental Build of configuration Debug for project example ****
+make all 
+make: Nothing to be done for 'all'.
+14:33:10 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27924	   6144	   5332	  39400	   99e8	example.elf
+'Finished building: example.elf.size'
+' '
+14:33:36 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/blocks.h:5:0,
+                 from ../src/main.h:4,
+                 from ../src/main.c:5:
+../src/colors.h:8:11: warning: excess elements in array initializer
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:126:22: note: in expansion of macro 'N'
+   {N,N,N,N,N,N,N,N,N,N},
+                      ^
+../src/colors.h:8:11: note: (near initialization for 'button_left_pressed[0]')
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:126:22: note: in expansion of macro 'N'
+   {N,N,N,N,N,N,N,N,N,N},
+                      ^
+'Finished building: ../src/main.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27924	   6144	   5332	  39400	   99e8	example.elf
+'Finished building: example.elf.size'
+' '
+14:33:40 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27924	   6144	   5332	  39400	   99e8	example.elf
+'Finished building: example.elf.size'
+' '
+14:34:35 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27976	   6416	   5328	  39720	   9b28	example.elf
+'Finished building: example.elf.size'
+' '
+14:34:37 **** Incremental Build of configuration Debug for project example ****
+make all 
+make: Nothing to be done for 'all'.
+14:34:58 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27976	   6416	   5328	  39720	   9b28	example.elf
+'Finished building: example.elf.size'
+' '
+14:35:05 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27976	   6416	   5328	  39720	   9b28	example.elf
+'Finished building: example.elf.size'
+' '
+14:35:10 **** Incremental Build of configuration Debug for project example ****
+make all 
+make: Nothing to be done for 'all'.
+14:35:23 **** Incremental Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27976	   6416	   5328	  39720	   9b28	example.elf
+'Finished building: example.elf.size'
+' '
+14:36:11 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27976	   6416	   5328	  39720	   9b28	example.elf
+'Finished building: example.elf.size'
+' '
+14:36:48 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:5:0:
+../src/main.h:173:9: error: redefinition of 'button_right'
+ color_t button_right[10][9] = {
+         ^~~~~~~~~~~~
+../src/main.h:161:9: note: previous definition of 'button_right' was here
+ color_t button_right[10][9] = {
+         ^~~~~~~~~~~~
+make: *** [src/subdir.mk:32: src/main.o] Error 1
+14:36:54 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27976	   6416	   5328	  39720	   9b28	example.elf
+'Finished building: example.elf.size'
+' '
+14:37:37 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28028	   6688	   5332	  40048	   9c70	example.elf
+'Finished building: example.elf.size'
+' '
+14:38:07 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28080	   6960	   5328	  40368	   9db0	example.elf
+'Finished building: example.elf.size'
+' '
+14:38:13 **** Incremental Build of configuration Debug for project example ****
+make all 
+make: Nothing to be done for 'all'.

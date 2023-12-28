@@ -34,7 +34,7 @@ void paint(int x, int y, color_t rgb) {
 	ptr[(y<<8)| x]=val;
 }
 
-void rect (position_t pos, color_t col, int w, int h) {
+void rect(position_t pos, color_t col, int w, int h) {
 	int i,j;
 	for(i=0;i<w;i++)
 		for(j=0;j<h;j++)
@@ -57,22 +57,28 @@ color_t get_color(int x, int y) {
 
 void print_frame() {
 	position_t frames[4];
+	const color_t white = W;
+
 	frames[0].x = INT_X_BORDER; frames[0].y = INT_Y_BORDER;
 	frames[1].x = END_X_BORDER; frames[1].y = INT_Y_BORDER;
 	frames[2].x = INT_X_BORDER; frames[2].y = END_Y_BORDER;
 	frames[3].x = INT_X_BORDER; frames[3].y = INT_Y_BORDER;
 	
-	rect(frames[0], blanco, END_X_BORDER, BORDER_THICKNESS);
-	rect(frames[1], blanco, BORDER_THICKNESS, END_Y_BORDER);
-	rect(frames[2], blanco, END_X_BORDER, BORDER_THICKNESS);
-	rect(frames[3], blanco, BORDER_THICKNESS, END_Y_BORDER);
+	rect(frames[0], white, END_X_BORDER, BORDER_THICKNESS);
+	rect(frames[1], white, BORDER_THICKNESS, END_Y_BORDER);
+	rect(frames[2], white, END_X_BORDER, BORDER_THICKNESS);
+	rect(frames[3], white, BORDER_THICKNESS, END_Y_BORDER);
 }
 
-void print_lives(position_t pos, int lifes) {
+void print_lives(int lives, int max_lives, color_t *heart) {
 	position_t lives_pos = {LIVES_POS_X, LIVES_POS_Y};
+	const color_t black = N;
 
-	for(int i=0; i < lifes; i++) {
-		pos.x += i * (HEART_WIDTH + HEART_DISTANCE);
-		paint_object(lives_pos, *heart, HEART_HEIGHT, HEART_WIDTH);
+	for(int i=0; i < max_lives; i++) {
+		if (i < lives)
+			paint_object(lives_pos, heart, HEART_HEIGHT, HEART_WIDTH);
+		else
+			rect(lives_pos, black, HEART_WIDTH, HEART_HEIGHT);
+		lives_pos.x += HEART_WIDTH + HEART_DISTANCE;
 	}
 }
