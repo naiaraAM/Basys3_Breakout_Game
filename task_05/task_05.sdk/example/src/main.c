@@ -108,7 +108,7 @@ int main(){
 		if (status == game_over) {
 			reset_bar_position(&bar_pos);
 			game_finished = true;
-			win_lose_title = *you_won_title;
+			win_lose_title = *game_over_title;
 		}
 		else if (status == win) {
 			game_win();
@@ -221,7 +221,7 @@ game_status_t move_ball(ball_t *ball, position_t *bar_pos, map_t *map)
 		else
 			is_block = false;
 
-		next_mov = calculate_rebound(ball, side, is_block, *block, &next_pos, bar_pos);	// lo ha hecho Pablo el cutres
+		next_mov = calculate_rebound(ball, side, is_block, *block, &next_pos, bar_pos);
 	} else
 	{
 		next_mov = ball->mov;
@@ -605,7 +605,7 @@ levels_t level_selection(bool game_finished, color_t *win_lose_title) {
 
 	if (game_finished) {
 		aux.x = 57;
-		aux.y = 80;
+		aux.y = 85;
 		paint_object(aux, win_lose_title, 5, 46);
 	}
 

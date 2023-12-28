@@ -318,11 +318,11 @@ color_t numbers[NUMBERS_NUM][NUMBERS_HEIGHT][NUMBERS_WIDTH] = {
 // You won title
 
 color_t you_won_title[5][46] = {
-		{N,N,N,N,N,N, N, W,N,W, N, W,W,W, N, W,N,W, N, N,N,N, N, W,N,N,N,W, W,W,W, N, W,N,N,N,W, N, W, N, N,N,N,N,N,N},
-		{N,N,N,N,N,N, N, W,N,W, N, W,N,W, N, W,N,W, N, N,N,N, N, W,N,N,N,W, W,N,W, N, W,W,N,N,W, N, W, N, N,N,N,N,N,N},
-		{N,N,N,N,N,N, N, W,W,W, N, W,N,W, N, W,N,W, N, N,N,N, N, W,N,N,N,W, W,N,W, N, W,N,W,N,W, N, W, N, N,N,N,N,N,N},
-		{N,N,N,N,N,N, N, N,N,W, N, W,N,W, N, W,N,W, N, N,N,N, N, W,N,W,N,W, W,N,W, N, W,N,N,W,W, N, N, N, N,N,N,N,N,N},
-		{N,N,N,N,N,N, N, W,W,W, N, W,W,W, N, W,W,W, N, N,N,N, N, N,W,N,W,N, W,W,W, N, W,N,N,N,W, N, W, N, N,N,N,N,N,N}
+		{N,N,N,N,N,N, N, W,N,W, N, W,W,W, N, W,N,W, N, N,N,N, N, W,N,N,N,W, N, W,W,W, N, W,N,N,N,W, N, W, N, N,N,N,N,N},
+		{N,N,N,N,N,N, N, W,N,W, N, W,N,W, N, W,N,W, N, N,N,N, N, W,N,N,N,W, N, W,N,W, N, W,W,N,N,W, N, W, N, N,N,N,N,N},
+		{N,N,N,N,N,N, N, W,W,W, N, W,N,W, N, W,N,W, N, N,N,N, N, W,N,N,N,W, N, W,N,W, N, W,N,W,N,W, N, W, N, N,N,N,N,N},
+		{N,N,N,N,N,N, N, N,N,W, N, W,N,W, N, W,N,W, N, N,N,N, N, W,N,W,N,W, N, W,N,W, N, W,N,N,W,W, N, N, N, N,N,N,N,N},
+		{N,N,N,N,N,N, N, W,W,W, N, W,W,W, N, W,W,W, N, N,N,N, N, N,W,N,W,N, N, W,W,W, N, W,N,N,N,W, N, W, N, N,N,N,N,N}
 };
 
 // Game over title
@@ -331,7 +331,7 @@ color_t game_over_title[5][46] = {
 		{W,W,W, N, W,W,W, N, W,N,N,N,W, N, W,W,W, N, N,N,N, N, W,W,W, N, W,N,W, N, W,W,W, N, W,W,W, N, N,N,N, N, N,N,N,W},
 		{W,N,N, N, W,N,W, N, W,W,N,W,W, N, W,N,N, N, N,N,N, N, W,N,W, N, W,N,W, N, W,N,N, N, W,N,W, N, N,N,N, N, W,N,W,N},
 		{W,N,W, N, W,W,W, N, W,N,W,N,W, N, W,W,W, N, N,N,N, N, W,N,W, N, W,N,W, N, W,W,W, N, W,W,N, N, N,N,N, N, N,N,W,N},
-		{W,N,W, N, W,N,W, N, W,N,N,N,W, N, W,N,N, N, N,N,N, N, W,N,W, N, W,N,W, N, W,N,N, N, W,N,N, N, N,N,N, N, W,N,W,N},
+		{W,N,W, N, W,N,W, N, W,N,N,N,W, N, W,N,N, N, N,N,N, N, W,N,W, N, W,N,W, N, W,N,N, N, W,N,W, N, N,N,N, N, W,N,W,N},
 		{W,W,W, N, W,N,W, N, W,N,N,N,W, N, W,W,W, N, N,N,N, N, W,W,W, N, N,W,N, N, W,W,W, N, W,N,W, N, N,N,N, N, N,N,N,W}
 };
 

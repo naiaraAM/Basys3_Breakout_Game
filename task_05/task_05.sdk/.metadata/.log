@@ -3546,3 +3546,1092 @@ Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-159
 
 !ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:15:07.915
 !MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-159
+
+!ENTRY org.eclipse.core.resources 4 568 2023-12-28 19:16:14.988
+!MESSAGE Could not write metadata for '/design_1_wrapper_hw_platform_3'.
+!STACK 0
+java.io.FileNotFoundException: C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\.metadata\.plugins\org.eclipse.core.resources\.projects\design_1_wrapper_hw_platform_3\.markers.snap (El sistema no puede encontrar la ruta especificada)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:133)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:45)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:41)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1768)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1852)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1224)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1165)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:52)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:20:00.728
+!MESSAGE XSCT Command: [disconnect tcfchan#173], Thread: Thread-9682
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:20:00.732
+!MESSAGE XSCT command with result: [disconnect tcfchan#173], Result: [null, ]. Thread: Thread-9682
+
+!ENTRY com.xilinx.sdk.utils 1 0 2023-12-28 19:20:01.738
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:20:01.738
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:20:01.741
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#174]. Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:20:01.741
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:20:01.752
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Basys3 210183AB4397A]. Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:20:01.752
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:20:01.752
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Basys3 210183AB4397A]. Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:20:01.758
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==1}], Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:20:01.768
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:20:01.768
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==0} -index 0], Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:20:01.789
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==0} -index 0], Result: [null, ]. Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:20:01.789
+!MESSAGE XSCT Command: [fpga -state], Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:20:01.795
+!MESSAGE XSCT command with result: [fpga -state], Result: [null, FPGA is configured]. Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:20:01.795
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:20:01.795
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#174]. Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:20:01.795
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:20:01.803
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Basys3 210183AB4397A]. Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:20:01.803
+!MESSAGE XSCT Command: [version -server], Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:20:01.805
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2018.3]. Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:20:01.805
+!MESSAGE XSCT Command: [version], Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:20:01.805
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2018.3
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:20:01.805
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:20:01.809
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Basys3 210183AB4397A]. Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:20:01.809
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==1}], Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:20:01.827
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:20:01.827
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:20:01.829
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Basys3 210183AB4397A]. Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:20:01.829
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==1}], Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:20:01.839
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:20:01.839
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:20:01.849
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Basys3 210183AB4397A]. Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:20:01.849
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==1}], Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:20:01.869
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:20:01.869
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:20:01.869
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Basys3 210183AB4397A]. Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:20:01.869
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==1}], Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:20:01.891
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:20:01.891
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent Basys3 210183AB4397A" && level == 0}], Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:20:01.902
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent Basys3 210183AB4397A" && level == 0}], Result: [null, ]. Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:20:01.902
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:20:01.902
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:20:01.911
+!MESSAGE XSCT Command: [configparams mdm-detect-bscan-mask 2], Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:20:01.912
+!MESSAGE XSCT command with result: [configparams mdm-detect-bscan-mask 2], Result: [null, ]. Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:20:01.912
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0], Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:20:01.933
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0], Result: [null, ]. Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:20:01.933
+!MESSAGE XSCT Command: [rst -processor], Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:20:01.976
+!MESSAGE XSCT command with result: [rst -processor], Result: [null, ]. Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:20:01.976
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0], Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:20:02.008
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0], Result: [null, ]. Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:20:02.008
+!MESSAGE XSCT Command: [dow C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf], Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:20:02.170
+!MESSAGE XSCT command with result: [dow C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf], Result: [null, ]. Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:20:02.213
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0], Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:20:02.245
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0], Result: [null, ]. Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:20:02.245
+!MESSAGE XSCT Command: [con], Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:20:02.252
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:21:47.819
+!MESSAGE XSCT Command: [disconnect tcfchan#174], Thread: Thread-9731
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:21:47.822
+!MESSAGE XSCT command with result: [disconnect tcfchan#174], Result: [null, ]. Thread: Thread-9731
+
+!ENTRY com.xilinx.sdk.utils 1 0 2023-12-28 19:21:48.821
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:21:48.821
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-184
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:21:48.826
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#175]. Thread: Worker-184
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:21:48.827
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-184
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:21:48.832
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Basys3 210183AB4397A]. Thread: Worker-184
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:21:48.837
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-184
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:21:48.842
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Basys3 210183AB4397A]. Thread: Worker-184
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:21:48.842
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==1}], Thread: Worker-184
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:21:48.865
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-184
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:21:48.865
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==0} -index 0], Thread: Worker-184
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:21:48.882
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==0} -index 0], Result: [null, ]. Thread: Worker-184
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:21:48.882
+!MESSAGE XSCT Command: [fpga -state], Thread: Worker-184
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:21:48.890
+!MESSAGE XSCT command with result: [fpga -state], Result: [null, FPGA is configured]. Thread: Worker-184
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:21:48.890
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-184
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:21:48.891
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#175]. Thread: Worker-184
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:21:48.892
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-184
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:21:48.898
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Basys3 210183AB4397A]. Thread: Worker-184
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:21:48.898
+!MESSAGE XSCT Command: [version -server], Thread: Worker-184
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:21:48.898
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2018.3]. Thread: Worker-184
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:21:48.900
+!MESSAGE XSCT Command: [version], Thread: Worker-184
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:21:48.900
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2018.3
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-184
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:21:48.900
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-184
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:21:48.904
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Basys3 210183AB4397A]. Thread: Worker-184
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:21:48.904
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==1}], Thread: Worker-184
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:21:48.923
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-184
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:21:48.923
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-184
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:21:48.928
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Basys3 210183AB4397A]. Thread: Worker-184
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:21:48.928
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==1}], Thread: Worker-184
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:21:48.944
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-184
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:21:48.944
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-184
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:21:48.946
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Basys3 210183AB4397A]. Thread: Worker-184
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:21:48.946
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==1}], Thread: Worker-184
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:21:48.965
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-184
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:21:48.965
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-184
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:21:48.969
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Basys3 210183AB4397A]. Thread: Worker-184
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:21:48.972
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==1}], Thread: Worker-184
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:21:48.987
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-184
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:21:48.987
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent Basys3 210183AB4397A" && level == 0}], Thread: Worker-184
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:21:49.002
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent Basys3 210183AB4397A" && level == 0}], Result: [null, ]. Thread: Worker-184
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:21:49.002
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-184
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:21:49.006
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-184
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:21:49.006
+!MESSAGE XSCT Command: [configparams mdm-detect-bscan-mask 2], Thread: Worker-184
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:21:49.008
+!MESSAGE XSCT command with result: [configparams mdm-detect-bscan-mask 2], Result: [null, ]. Thread: Worker-184
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:21:49.008
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0], Thread: Worker-184
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:21:49.034
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0], Result: [null, ]. Thread: Worker-184
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:21:49.034
+!MESSAGE XSCT Command: [rst -processor], Thread: Worker-184
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:21:49.076
+!MESSAGE XSCT command with result: [rst -processor], Result: [null, ]. Thread: Worker-184
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:21:49.076
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0], Thread: Worker-184
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:21:49.103
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0], Result: [null, ]. Thread: Worker-184
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:21:49.103
+!MESSAGE XSCT Command: [dow C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf], Thread: Worker-184
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:21:49.272
+!MESSAGE XSCT command with result: [dow C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf], Result: [null, ]. Thread: Worker-184
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:21:49.303
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0], Thread: Worker-184
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:21:49.334
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0], Result: [null, ]. Thread: Worker-184
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:21:49.334
+!MESSAGE XSCT Command: [con], Thread: Worker-184
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:21:49.344
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-184
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:22:12.801
+!MESSAGE XSCT Command: [disconnect tcfchan#175], Thread: Thread-9769
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:22:12.804
+!MESSAGE XSCT command with result: [disconnect tcfchan#175], Result: [null, ]. Thread: Thread-9769
+
+!ENTRY com.xilinx.sdk.utils 1 0 2023-12-28 19:22:13.803
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:22:13.803
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:22:13.808
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#176]. Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:22:13.809
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:22:13.813
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Basys3 210183AB4397A]. Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:22:13.813
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:22:13.821
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Basys3 210183AB4397A]. Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:22:13.821
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==1}], Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:22:13.833
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:22:13.833
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==0} -index 0], Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:22:13.853
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==0} -index 0], Result: [null, ]. Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:22:13.853
+!MESSAGE XSCT Command: [fpga -state], Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:22:13.853
+!MESSAGE XSCT command with result: [fpga -state], Result: [null, FPGA is configured]. Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:22:13.853
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:22:13.853
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#176]. Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:22:13.853
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:22:13.863
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Basys3 210183AB4397A]. Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:22:13.863
+!MESSAGE XSCT Command: [version -server], Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:22:13.863
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2018.3]. Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:22:13.863
+!MESSAGE XSCT Command: [version], Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:22:13.863
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2018.3
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:22:13.863
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:22:13.874
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Basys3 210183AB4397A]. Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:22:13.874
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==1}], Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:22:13.891
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:22:13.891
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:22:13.898
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Basys3 210183AB4397A]. Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:22:13.898
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==1}], Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:22:13.908
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:22:13.908
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:22:13.918
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Basys3 210183AB4397A]. Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:22:13.918
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==1}], Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:22:13.926
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:22:13.926
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:22:13.937
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Basys3 210183AB4397A]. Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:22:13.937
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==1}], Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:22:13.950
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:22:13.950
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent Basys3 210183AB4397A" && level == 0}], Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:22:13.969
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent Basys3 210183AB4397A" && level == 0}], Result: [null, ]. Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:22:13.969
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:22:13.969
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:22:13.969
+!MESSAGE XSCT Command: [configparams mdm-detect-bscan-mask 2], Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:22:13.969
+!MESSAGE XSCT command with result: [configparams mdm-detect-bscan-mask 2], Result: [null, ]. Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:22:13.969
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0], Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:22:14.001
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0], Result: [null, ]. Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:22:14.001
+!MESSAGE XSCT Command: [rst -processor], Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:22:14.033
+!MESSAGE XSCT command with result: [rst -processor], Result: [null, ]. Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:22:14.033
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0], Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:22:14.064
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0], Result: [null, ]. Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:22:14.064
+!MESSAGE XSCT Command: [dow C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf], Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:22:14.245
+!MESSAGE XSCT command with result: [dow C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf], Result: [null, ]. Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:22:14.317
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0], Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:22:14.346
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0], Result: [null, ]. Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:22:14.346
+!MESSAGE XSCT Command: [con], Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:22:14.353
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:23:56.575
+!MESSAGE XSCT Command: [disconnect tcfchan#176], Thread: Thread-9815
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:23:56.579
+!MESSAGE XSCT command with result: [disconnect tcfchan#176], Result: [null, ]. Thread: Thread-9815
+
+!ENTRY com.xilinx.sdk.utils 1 0 2023-12-28 19:23:57.585
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:23:57.585
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-186
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:23:57.589
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#177]. Thread: Worker-186
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:23:57.589
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-186
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:23:57.598
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Basys3 210183AB4397A]. Thread: Worker-186
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:23:57.598
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-186
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:23:57.598
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Basys3 210183AB4397A]. Thread: Worker-186
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:23:57.605
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==1}], Thread: Worker-186
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:23:57.619
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-186
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:23:57.619
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==0} -index 0], Thread: Worker-186
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:23:57.641
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==0} -index 0], Result: [null, ]. Thread: Worker-186
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:23:57.641
+!MESSAGE XSCT Command: [fpga -state], Thread: Worker-186
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:23:57.647
+!MESSAGE XSCT command with result: [fpga -state], Result: [null, FPGA is configured]. Thread: Worker-186
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:23:57.648
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-186
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:23:57.649
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#177]. Thread: Worker-186
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:23:57.649
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-186
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:23:57.655
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Basys3 210183AB4397A]. Thread: Worker-186
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:23:57.655
+!MESSAGE XSCT Command: [version -server], Thread: Worker-186
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:23:57.656
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2018.3]. Thread: Worker-186
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:23:57.656
+!MESSAGE XSCT Command: [version], Thread: Worker-186
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:23:57.656
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2018.3
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-186
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:23:57.656
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-186
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:23:57.662
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Basys3 210183AB4397A]. Thread: Worker-186
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:23:57.662
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==1}], Thread: Worker-186
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:23:57.676
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-186
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:23:57.676
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-186
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:23:57.683
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Basys3 210183AB4397A]. Thread: Worker-186
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:23:57.686
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==1}], Thread: Worker-186
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:23:57.698
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-186
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:23:57.698
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-186
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:23:57.707
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Basys3 210183AB4397A]. Thread: Worker-186
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:23:57.707
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==1}], Thread: Worker-186
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:23:57.717
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-186
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:23:57.726
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-186
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:23:57.728
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Basys3 210183AB4397A]. Thread: Worker-186
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:23:57.728
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==1}], Thread: Worker-186
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:23:57.739
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-186
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:23:57.747
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent Basys3 210183AB4397A" && level == 0}], Thread: Worker-186
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:23:57.758
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent Basys3 210183AB4397A" && level == 0}], Result: [null, ]. Thread: Worker-186
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:23:57.758
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-186
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:23:57.758
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-186
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:23:57.758
+!MESSAGE XSCT Command: [configparams mdm-detect-bscan-mask 2], Thread: Worker-186
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:23:57.758
+!MESSAGE XSCT command with result: [configparams mdm-detect-bscan-mask 2], Result: [null, ]. Thread: Worker-186
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:23:57.758
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0], Thread: Worker-186
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:23:57.790
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0], Result: [null, ]. Thread: Worker-186
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:23:57.790
+!MESSAGE XSCT Command: [rst -processor], Thread: Worker-186
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:23:57.822
+!MESSAGE XSCT command with result: [rst -processor], Result: [null, ]. Thread: Worker-186
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:23:57.822
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0], Thread: Worker-186
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:23:57.855
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0], Result: [null, ]. Thread: Worker-186
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:23:57.855
+!MESSAGE XSCT Command: [dow C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf], Thread: Worker-186
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:23:58.025
+!MESSAGE XSCT command with result: [dow C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf], Result: [null, ]. Thread: Worker-186
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:23:58.078
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0], Thread: Worker-186
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:23:58.106
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0], Result: [null, ]. Thread: Worker-186
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:23:58.106
+!MESSAGE XSCT Command: [con], Thread: Worker-186
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:23:58.110
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-186
+
+!ENTRY org.eclipse.core.resources 4 568 2023-12-28 19:24:57.871
+!MESSAGE Could not write metadata for '/design_1_wrapper_hw_platform_3'.
+!STACK 0
+java.io.FileNotFoundException: C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\.metadata\.plugins\org.eclipse.core.resources\.projects\design_1_wrapper_hw_platform_3\.markers.snap (El sistema no puede encontrar la ruta especificada)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:133)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:45)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:41)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1768)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1852)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1224)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1165)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:52)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:25:39.261
+!MESSAGE XSCT Command: [disconnect tcfchan#177], Thread: Thread-9855
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:25:39.263
+!MESSAGE XSCT command with result: [disconnect tcfchan#177], Result: [null, ]. Thread: Thread-9855
+
+!ENTRY com.xilinx.sdk.utils 1 0 2023-12-28 19:25:40.271
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:25:40.271
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:25:40.275
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#178]. Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:25:40.275
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:25:40.284
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Basys3 210183AB4397A]. Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:25:40.284
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:25:40.290
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Basys3 210183AB4397A]. Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:25:40.290
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==1}], Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:25:40.305
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:25:40.306
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==0} -index 0], Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:25:40.328
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==0} -index 0], Result: [null, ]. Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:25:40.328
+!MESSAGE XSCT Command: [fpga -state], Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:25:40.334
+!MESSAGE XSCT command with result: [fpga -state], Result: [null, FPGA is configured]. Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:25:40.335
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:25:40.336
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#178]. Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:25:40.336
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:25:40.343
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Basys3 210183AB4397A]. Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:25:40.343
+!MESSAGE XSCT Command: [version -server], Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:25:40.344
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2018.3]. Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:25:40.345
+!MESSAGE XSCT Command: [version], Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:25:40.345
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2018.3
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:25:40.346
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:25:40.351
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Basys3 210183AB4397A]. Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:25:40.352
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==1}], Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:25:40.367
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:25:40.368
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:25:40.374
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Basys3 210183AB4397A]. Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:25:40.374
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==1}], Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:25:40.389
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:25:40.389
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:25:40.394
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Basys3 210183AB4397A]. Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:25:40.394
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==1}], Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:25:40.410
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:25:40.411
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:25:40.417
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Basys3 210183AB4397A]. Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:25:40.418
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==1}], Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:25:40.433
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:25:40.433
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent Basys3 210183AB4397A" && level == 0}], Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:25:40.450
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent Basys3 210183AB4397A" && level == 0}], Result: [null, ]. Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:25:40.450
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:25:40.451
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:25:40.452
+!MESSAGE XSCT Command: [configparams mdm-detect-bscan-mask 2], Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:25:40.460
+!MESSAGE XSCT command with result: [configparams mdm-detect-bscan-mask 2], Result: [null, ]. Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:25:40.460
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0], Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:25:40.489
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0], Result: [null, ]. Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:25:40.490
+!MESSAGE XSCT Command: [rst -processor], Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:25:40.542
+!MESSAGE XSCT command with result: [rst -processor], Result: [null, ]. Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:25:40.543
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0], Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:25:40.568
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0], Result: [null, ]. Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:25:40.569
+!MESSAGE XSCT Command: [dow C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf], Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:25:40.753
+!MESSAGE XSCT command with result: [dow C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf], Result: [null, ]. Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:25:40.805
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0], Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:25:40.837
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0], Result: [null, ]. Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:25:40.837
+!MESSAGE XSCT Command: [con], Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:25:40.844
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:29:29.330
+!MESSAGE XSCT Command: [disconnect tcfchan#178], Thread: Thread-9900
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:29:29.333
+!MESSAGE XSCT command with result: [disconnect tcfchan#178], Result: [null, ]. Thread: Thread-9900
+
+!ENTRY com.xilinx.sdk.utils 1 0 2023-12-28 19:29:30.340
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:29:30.340
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:29:30.346
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#179]. Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:29:30.346
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:29:30.353
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Basys3 210183AB4397A]. Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:29:30.356
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:29:30.361
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Basys3 210183AB4397A]. Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:29:30.361
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==1}], Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:29:30.374
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:29:30.374
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==0} -index 0], Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:29:30.396
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==0} -index 0], Result: [null, ]. Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:29:30.396
+!MESSAGE XSCT Command: [fpga -state], Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:29:30.396
+!MESSAGE XSCT command with result: [fpga -state], Result: [null, FPGA is configured]. Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:29:30.402
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:29:30.402
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#179]. Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:29:30.402
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:29:30.410
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Basys3 210183AB4397A]. Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:29:30.410
+!MESSAGE XSCT Command: [version -server], Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:29:30.412
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2018.3]. Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:29:30.412
+!MESSAGE XSCT Command: [version], Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:29:30.412
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2018.3
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:29:30.412
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:29:30.417
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Basys3 210183AB4397A]. Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:29:30.417
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==1}], Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:29:30.432
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:29:30.432
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:29:30.442
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Basys3 210183AB4397A]. Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:29:30.442
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==1}], Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:29:30.453
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:29:30.460
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:29:30.464
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Basys3 210183AB4397A]. Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:29:30.464
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==1}], Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:29:30.481
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:29:30.481
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:29:30.483
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Basys3 210183AB4397A]. Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:29:30.483
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==1}], Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:29:30.503
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:29:30.503
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent Basys3 210183AB4397A" && level == 0}], Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:29:30.515
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent Basys3 210183AB4397A" && level == 0}], Result: [null, ]. Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:29:30.515
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:29:30.515
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:29:30.515
+!MESSAGE XSCT Command: [configparams mdm-detect-bscan-mask 2], Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:29:30.515
+!MESSAGE XSCT command with result: [configparams mdm-detect-bscan-mask 2], Result: [null, ]. Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:29:30.524
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0], Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:29:30.548
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0], Result: [null, ]. Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:29:30.548
+!MESSAGE XSCT Command: [rst -processor], Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:29:30.589
+!MESSAGE XSCT command with result: [rst -processor], Result: [null, ]. Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:29:30.589
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0], Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:29:30.620
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0], Result: [null, ]. Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:29:30.620
+!MESSAGE XSCT Command: [dow C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf], Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:29:30.795
+!MESSAGE XSCT command with result: [dow C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf], Result: [null, ]. Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:29:30.844
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0], Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:29:30.874
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0], Result: [null, ]. Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:29:30.874
+!MESSAGE XSCT Command: [con], Thread: Worker-181
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-28 19:29:30.881
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-181
+
+!ENTRY org.eclipse.core.resources 4 568 2023-12-28 19:30:36.584
+!MESSAGE Could not write metadata for '/design_1_wrapper_hw_platform_3'.
+!STACK 0
+java.io.FileNotFoundException: C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\.metadata\.plugins\org.eclipse.core.resources\.projects\design_1_wrapper_hw_platform_3\.markers.snap (El sistema no puede encontrar la ruta especificada)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:133)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:45)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:41)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1768)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1852)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1224)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1165)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:52)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
