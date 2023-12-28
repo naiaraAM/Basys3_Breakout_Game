@@ -12,12 +12,13 @@ const color_t gold = G;			// Bar
 
 // Global variables
 volatile int *gpio0 = (int*)BASE_GPIO0; // dir base buttons
-position_t bar_pos = {((RESOLUTION_X / 2) - BAR_LENGTH / 2), 100}; // 75
-ball_t bola;
+
 map_t map;
 
 int main(){
-	int count1, speed_ball;
+	position_t bar_pos = {((RESOLUTION_X / 2) - BAR_LENGTH / 2), 100}; // 75
+	ball_t ball;
+	int bar_speed, ball_speed;
 	init_buttons();
 	int dir;
 	int lifes;
@@ -29,8 +30,8 @@ int main(){
 	while (1)
 	{
 		// Init variables
-		count1 = 0;
-		speed_ball = 0;
+		bar_speed = 0;
+		ball_speed = 0;
 		lifes = NUM_LIFES;
 		status = continues;
 
@@ -56,32 +57,42 @@ int main(){
 		remaining_blocks = map.destructible;
 
 		// Initialize the bar and the ball
-		init_ball();
-		move_bar(0);
-		bola.mov = 3;
+		init_ball(&ball, &bar_pos);
+		move_bar(0, &bar_pos);
+		ball.mov = 3;
 
 		while (status == continues) {
-			// Every 2 times, move the bar along the X-axis
-			if(count1==1){
-				count1=0;
+			// Every 1 times, move the bar along the X-axis
+			if(bar_speed == BALL_SPEED){
+				bar_speed = 0;
 				if ((dir = check_button()) != 0)
-					move_bar(dir);
-			} else count1++;
-			// Every 4 times, the ball moves to its next position
-			if(speed_ball == 3){
-				speed_ball=0;
-				status = move_ball();
+					move_bar(dir, &bar_pos);
+			} else bar_speed++;
+			// Every 3 times, the ball moves to its next position
+			if(ball_speed == BALL_SPEED){
+				ball_speed=0;
+				status = move_ball(&ball, &bar_pos);
 				if (status == lost_life)
 				{
-					count1 = 0;
-					speed_ball = 0;
+					bar_speed = 0;
+					ball_speed = 0;
 					lifes--;
 					if (lifes == 0)
 						status = game_over;
 					else
 					{
 						status = continues;
-						life_lost();
+
+						if (ball.mov == 1)
+						{
+							ball.mov = 0;
+						}
+						else {
+							ball.mov = 3;
+						}
+						paint(bar_pos.x, bar_pos.y, negro);
+						reset_bar_position(&bar_pos);
+						life_lost(&ball, &bar_pos);
 					}
 				}
 				else if (status == block_broken)
@@ -93,24 +104,24 @@ int main(){
 					else
 						status = continues;
 				}
-			} else speed_ball++;
+			} else ball_speed++;
 			usleep(10000);
 		}
 
 		if (status == game_over)
-			xil_printf("GAME OVER\n");	// Here goes the game_over_screen() function
+			xil_printf("\nGAME OVER!!!\n");	// Here goes the game_over_screen() function
 		else if (status == win)
-			xil_printf("YOU WON\n");	// Here goes the win_screen() function
+			xil_printf("\nYOU WON!!!\n");	// Here goes the win_screen() function
 	}
 
 	return 0;
 }
 
-void life_lost()
+void life_lost(ball_t *ball, position_t *bar_pos)
 {
-	position_t pos = {bola.x - SMOKE_WIDTH / 2, bola.y - SMOKE_HEIGHT+1};
+	position_t pos = {ball->x - SMOKE_WIDTH / 2, ball->y - SMOKE_HEIGHT+1};
 	paint_animation(pos, **smoke, SMOKE_FRAMES, SMOKE_TIME, SMOKE_HEIGHT, SMOKE_WIDTH);
-	init_ball();
+	init_ball(ball, bar_pos);
 }
 
 void init_buttons()
@@ -137,7 +148,7 @@ int check_button()
 	return btn;
 }
 
-game_status_t move_ball()
+game_status_t move_ball(ball_t *ball, position_t *bar_pos)
 {
 	game_status_t status = continues;
 	position_t next_pos;
@@ -148,23 +159,23 @@ game_status_t move_ball()
 	bool is_block = false;
 	color_t next_color;
 
-	switch(bola.mov)
+	switch(ball->mov)
 	{
 		case 0:
-			next_pos.x = bola.x+1;
-			next_pos.y = bola.y-1;
+			next_pos.x = ball->x+1;
+			next_pos.y = ball->y-1;
 			break;
 		case 1:
-			next_pos.x = bola.x+1;
-			next_pos.y = bola.y+1;
+			next_pos.x = ball->x+1;
+			next_pos.y = ball->y+1;
 			break;
 		case 2:
-			next_pos.x = bola.x-1;
-			next_pos.y = bola.y+1;
+			next_pos.x = ball->x-1;
+			next_pos.y = ball->y+1;
 			break;
 		case 3:
-			next_pos.x = bola.x-1;
-			next_pos.y = bola.y-1;
+			next_pos.x = ball->x-1;
+			next_pos.y = ball->y-1;
 			break;
 	}
 	next_color = get_color(next_pos.x, next_pos.y);
@@ -190,22 +201,22 @@ game_status_t move_ball()
 		}
 		else if (side == bottom)
 		{
-			paint(bola.x, bola.y, negro);
+			paint(ball->x, ball->y, negro);
 			return lost_life;
 		}
 		else
 			is_block = false;
 
-		next_mov = calculate_rebound(bola, side, is_block, *block, &next_pos);	// lo ha hecho Pablo el cutres
+		next_mov = calculate_rebound(ball, side, is_block, *block, &next_pos, bar_pos);	// lo ha hecho Pablo el cutres
 	} else
 	{
-		next_mov = bola.mov;
+		next_mov = ball->mov;
 	}
-	paint(bola.x, bola.y, negro);
-	bola.x = next_pos.x;
-	bola.y = next_pos.y;
-	bola.mov = next_mov;
-	paint(bola.x, bola.y, azul_claro);
+	paint(ball->x, ball->y, negro);
+	ball->x = next_pos.x;
+	ball->y = next_pos.y;
+	ball->mov = next_mov;
+	paint(ball->x, ball->y, azul_claro);
 
 	return status;
 }
@@ -289,19 +300,19 @@ side_t which_side_block(position_t next_pos, block_t block)
 	return res;
 }
 
-side_t which_side_bar(position_t next_pos)
+side_t which_side_bar(position_t next_pos, position_t *bar_pos)
 {
 	bool is_left = false, is_right = false, is_top = false;
 	side_t res;
 
-	if (next_pos.x >= bar_pos.x && next_pos.x < bar_pos.x + BAR_LENGTH &&
-			next_pos.y == bar_pos.y)
+	if (next_pos.x >= bar_pos->x && next_pos.x < bar_pos->x + BAR_LENGTH &&
+			next_pos.y == bar_pos->y)
 		is_top = true;
-	if (next_pos.x == bar_pos.x && next_pos.y >= bar_pos.y &&
-			next_pos.y < bar_pos.y + BAR_HEIGHT)
+	if (next_pos.x == bar_pos->x && next_pos.y >= bar_pos->y &&
+			next_pos.y < bar_pos->y + BAR_HEIGHT)
 		is_left = true;
-	if (next_pos.x == bar_pos.x + BAR_LENGTH - 1 && next_pos.y >= bar_pos.y &&
-			next_pos.y < bar_pos.y + BAR_HEIGHT)
+	if (next_pos.x == bar_pos->x + BAR_LENGTH - 1 && next_pos.y >= bar_pos->y &&
+			next_pos.y < bar_pos->y + BAR_HEIGHT)
 		is_right = true;
 
 	if (is_left)
@@ -339,56 +350,56 @@ bool calculate_block(position_t next_pos, block_t **block)
 	return false;
 }
 
-movement_t calculate_rebound(ball_t bola, side_t side, bool is_block, block_t block, position_t *next_pos)
+movement_t calculate_rebound(ball_t *ball, side_t side, bool is_block, block_t block, position_t *next_pos, position_t *bar_pos)
 {
-	movement_t mov = bola.mov;
+	movement_t mov = ball->mov;
 	if (side != not_border) 	// border
 	{
 		switch (side) {
 			case top_left:
 				mov = mov_bottom_right;
-				next_pos->x = bola.x + 1;
-				next_pos->y = bola.y + 1;
+				next_pos->x = ball->x + 1;
+				next_pos->y = ball->y + 1;
 				break;
 			case top_right:
 				mov = mov_bottom_left;
-				next_pos->x = bola.x - 1;
-				next_pos->y = bola.y + 1;
+				next_pos->x = ball->x - 1;
+				next_pos->y = ball->y + 1;
 				break;
 			case top:
-				if (bola.mov == mov_top_right) {
+				if (ball->mov == mov_top_right) {
 					mov = mov_bottom_right;
-					next_pos->x = bola.x + 1;
-					next_pos->y = bola.y + 1;
+					next_pos->x = ball->x + 1;
+					next_pos->y = ball->y + 1;
 				}
 				else {
 					mov = mov_bottom_left;
-					next_pos->x = bola.x - 1;
-					next_pos->y = bola.y + 1;
+					next_pos->x = ball->x - 1;
+					next_pos->y = ball->y + 1;
 				}
 				break;
 			case left:
-				if (bola.mov == mov_top_left) {
+				if (ball->mov == mov_top_left) {
 					mov = mov_top_right;
-					next_pos->x = bola.x + 1;
-					next_pos->y = bola.y - 1;
+					next_pos->x = ball->x + 1;
+					next_pos->y = ball->y - 1;
 				}
 				else {
 					mov = mov_bottom_right;
-					next_pos->x = bola.x + 1;
-					next_pos->y = bola.y + 1;
+					next_pos->x = ball->x + 1;
+					next_pos->y = ball->y + 1;
 				}
 				break;
 			case right:
-				if (bola.mov == mov_top_right) {
+				if (ball->mov == mov_top_right) {
 					mov = mov_top_left;
-					next_pos->x = bola.x - 1;
-					next_pos->y = bola.y - 1;
+					next_pos->x = ball->x - 1;
+					next_pos->y = ball->y - 1;
 				}
 				else {
 					mov = mov_bottom_left;
-					next_pos->x = bola.x - 1;
-					next_pos->y = bola.y + 1;
+					next_pos->x = ball->x - 1;
+					next_pos->y = ball->y + 1;
 				}
 				break;
 			default:
@@ -399,70 +410,70 @@ movement_t calculate_rebound(ball_t bola, side_t side, bool is_block, block_t bl
 		switch (which_side_block(*next_pos, block)) {
 			case top_left:
 				mov = mov_top_left;
-				next_pos->x = bola.x - 1;
-				next_pos->y = bola.y - 1;
+				next_pos->x = ball->x - 1;
+				next_pos->y = ball->y - 1;
 				break;
 			case top_right:
 				mov = mov_top_right;
-				next_pos->x = bola.x + 1;
-				next_pos->y = bola.y - 1;
+				next_pos->x = ball->x + 1;
+				next_pos->y = ball->y - 1;
 				break;
 			case bottom_left:
 				mov = mov_bottom_left;
-				next_pos->x = bola.x - 1;
-				next_pos->y = bola.y + 1;
+				next_pos->x = ball->x - 1;
+				next_pos->y = ball->y + 1;
 				break;
 			case bottom_right:
 				mov = mov_bottom_right;
-				next_pos->x = bola.x + 1;
-				next_pos->y = bola.y + 1;
+				next_pos->x = ball->x + 1;
+				next_pos->y = ball->y + 1;
 				break;
 			case top:
-				if (bola.mov == mov_bottom_right) {
+				if (ball->mov == mov_bottom_right) {
 					mov = mov_top_right;
-					next_pos->x = bola.x + 1;
-					next_pos->y = bola.y - 1;
+					next_pos->x = ball->x + 1;
+					next_pos->y = ball->y - 1;
 				}
 				else {
 					mov = mov_top_left;
-					next_pos->x = bola.x - 1;
-					next_pos->y = bola.y - 1;
+					next_pos->x = ball->x - 1;
+					next_pos->y = ball->y - 1;
 				}
 				break;
 			case bottom:
-				if (bola.mov == mov_top_right) {
+				if (ball->mov == mov_top_right) {
 					mov = mov_bottom_right;
-					next_pos->x = bola.x + 1;
-					next_pos->y = bola.y + 1;
+					next_pos->x = ball->x + 1;
+					next_pos->y = ball->y + 1;
 				}
 				else {
 					mov = mov_bottom_left;
-					next_pos->x = bola.x - 1;
-					next_pos->y = bola.y + 1;
+					next_pos->x = ball->x - 1;
+					next_pos->y = ball->y + 1;
 				}
 				break;
 			case left:
-				if (bola.mov == mov_bottom_right) {
+				if (ball->mov == mov_bottom_right) {
 					mov = mov_bottom_left;
-					next_pos->x = bola.x - 1;
-					next_pos->y = bola.y + 1;
+					next_pos->x = ball->x - 1;
+					next_pos->y = ball->y + 1;
 				}
 				else {
 					mov = mov_top_left;
-					next_pos->x = bola.x - 1;
-					next_pos->y = bola.y - 1;
+					next_pos->x = ball->x - 1;
+					next_pos->y = ball->y - 1;
 				}
 				break;
 			case right:
-				if (bola.mov == mov_bottom_left) {
+				if (ball->mov == mov_bottom_left) {
 					mov = mov_top_right;
-					next_pos->x = bola.x + 1;
-					next_pos->y = bola.y - 1;
+					next_pos->x = ball->x + 1;
+					next_pos->y = ball->y - 1;
 				}
 				else {
 					mov = mov_bottom_right;
-					next_pos->x = bola.x + 1;
-					next_pos->y = bola.y + 1;
+					next_pos->x = ball->x + 1;
+					next_pos->y = ball->y + 1;
 				}
 				break;
 			default:
@@ -470,51 +481,51 @@ movement_t calculate_rebound(ball_t bola, side_t side, bool is_block, block_t bl
 		}
 	} else if (next_pos->y < END_Y_BORDER)
 	{
-		switch (which_side_bar(*next_pos)) {
+		switch (which_side_bar(*next_pos, bar_pos)) {
 			case top_left:
 				mov = mov_top_left;
-				next_pos->x = bola.x - 1;
-				next_pos->y = bola.y - 1;
+				next_pos->x = ball->x - 1;
+				next_pos->y = ball->y - 1;
 				break;
 			case top_right:
 				mov = mov_top_right;
-				next_pos->x = bola.x + 1;
-				next_pos->y = bola.y - 1;
+				next_pos->x = ball->x + 1;
+				next_pos->y = ball->y - 1;
 				break;
 			case top:
-				if (bola.mov == mov_bottom_right) {
+				if (ball->mov == mov_bottom_right) {
 					mov = mov_top_right;
-					next_pos->x = bola.x + 1;
-					next_pos->y = bola.y - 1;
+					next_pos->x = ball->x + 1;
+					next_pos->y = ball->y - 1;
 				}
 				else {
 					mov = mov_top_left;
-					next_pos->x = bola.x - 1;
-					next_pos->y = bola.y - 1;
+					next_pos->x = ball->x - 1;
+					next_pos->y = ball->y - 1;
 				}
 				break;
 			case left:
-				if (bola.mov == mov_bottom_right) {
+				if (ball->mov == mov_bottom_right) {
 					mov = mov_bottom_left;
-					next_pos->x = bola.x - 1;
-					next_pos->y = bola.y + 1;
+					next_pos->x = ball->x - 1;
+					next_pos->y = ball->y + 1;
 				}
 				else {
 					mov = mov_top_left;
-					next_pos->x = bola.x - 1;
-					next_pos->y = bola.y - 1;
+					next_pos->x = ball->x - 1;
+					next_pos->y = ball->y - 1;
 				}
 				break;
 			case right:
-				if (bola.mov == mov_bottom_left) {
+				if (ball->mov == mov_bottom_left) {
 					mov = mov_top_right;
-					next_pos->x = bola.x + 1;
-					next_pos->y = bola.y - 1;
+					next_pos->x = ball->x + 1;
+					next_pos->y = ball->y - 1;
 				}
 				else {
 					mov = mov_bottom_right;
-					next_pos->x = bola.x + 1;
-					next_pos->y = bola.y + 1;
+					next_pos->x = ball->x + 1;
+					next_pos->y = ball->y + 1;
 				}
 				break;
 			default:
@@ -525,7 +536,7 @@ movement_t calculate_rebound(ball_t bola, side_t side, bool is_block, block_t bl
 }
 
 
-void move_bar(int dir){
+void move_bar(int dir, position_t *bar_pos){
 	int var;
 
 	if (dir == 1)
@@ -535,17 +546,17 @@ void move_bar(int dir){
 	else
 		var = 0;
 
-	if (bar_pos.x + var > INT_X_BORDER && bar_pos.x + var <= END_X_BORDER - BAR_LENGTH) {
-		rect(bar_pos, negro, BAR_LENGTH, BAR_HEIGHT);
-		bar_pos.x = bar_pos.x + var;
-		rect(bar_pos, gold, BAR_LENGTH, BAR_HEIGHT);
+	if (bar_pos->x + var > INT_X_BORDER && bar_pos->x + var <= END_X_BORDER - BAR_LENGTH) {
+		rect(*bar_pos, negro, BAR_LENGTH, BAR_HEIGHT);
+		bar_pos->x = bar_pos->x + var;
+		rect(*bar_pos, gold, BAR_LENGTH, BAR_HEIGHT);
 	}
 }
 
-void init_ball(){
-	bola.x = bar_pos.x + BAR_LENGTH / 2;
-	bola.y = bar_pos.y - 1;
-	paint(bola.x, bola.y, azul_claro);
+void init_ball(ball_t *ball, position_t *bar_pos){
+	ball->x = bar_pos->x + BAR_LENGTH / 2;
+	ball->y = bar_pos->y - 1;
+	paint(ball->x, ball->y, azul_claro);
 }
 
 levels_t level_selection() {
@@ -598,3 +609,8 @@ levels_t level_selection() {
 	return level;
 }
 
+void reset_bar_position(position_t *bar_pos) {
+	rect(*bar_pos, negro, BAR_LENGTH, BAR_HEIGHT);
+	bar_pos->x = ((RESOLUTION_X / 2) - BAR_LENGTH / 2);
+	rect(*bar_pos, gold, BAR_LENGTH, BAR_HEIGHT);
+}

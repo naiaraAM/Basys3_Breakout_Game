@@ -118,3 +118,3640 @@ make: Nothing to be done for 'all'.
 10:45:40 **** Auto Build of configuration Debug for project example ****
 make all 
 make: Nothing to be done for 'all'.
+10:56:04 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:20:9: warning: variable 'bola' set but not used [-Wunused-but-set-variable]
+  ball_t bola;
+         ^~~~
+../src/main.c:19:13: warning: unused variable 'bar_pos' [-Wunused-variable]
+  position_t bar_pos = {((RESOLUTION_X / 2) - BAR_LENGTH / 2), 100}; // 75
+             ^~~~~~~
+../src/main.c: In function 'life_lost':
+../src/main.c:112:20: error: 'bola' undeclared (first use in this function); did you mean 'gold'?
+  position_t pos = {bola.x - SMOKE_WIDTH / 2, bola.y - SMOKE_HEIGHT+1};
+                    ^~~~
+                    gold
+../src/main.c:112:20: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c: In function 'move_ball':
+../src/main.c:152:9: error: 'bola' undeclared (first use in this function); did you mean 'gold'?
+  switch(bola.mov)
+         ^~~~
+         gold
+../src/main.c: In function 'which_side_bar':
+../src/main.c:298:20: error: 'bar_pos' undeclared (first use in this function); did you mean 'next_pos'?
+  if (next_pos.x >= bar_pos.x && next_pos.x < bar_pos.x + BAR_LENGTH &&
+                    ^~~~~~~
+                    next_pos
+../src/main.c: In function 'move_bar':
+../src/main.c:539:6: error: 'bar_pos' undeclared (first use in this function)
+  if (bar_pos.x + var > INT_X_BORDER && bar_pos.x + var <= END_X_BORDER - BAR_LENGTH) {
+      ^~~~~~~
+../src/main.c: In function 'init_ball':
+../src/main.c:547:2: error: 'bola' undeclared (first use in this function); did you mean 'gold'?
+  bola.x = bar_pos.x + BAR_LENGTH / 2;
+  ^~~~
+  gold
+../src/main.c:547:11: error: 'bar_pos' undeclared (first use in this function)
+  bola.x = bar_pos.x + BAR_LENGTH / 2;
+           ^~~~~~~
+make: *** [src/subdir.mk:32: src/main.o] Error 1
+10:56:26 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:20:9: warning: variable 'bola' set but not used [-Wunused-but-set-variable]
+  ball_t bola;
+         ^~~~
+../src/main.c:19:13: warning: unused variable 'bar_pos' [-Wunused-variable]
+  position_t bar_pos = {((RESOLUTION_X / 2) - BAR_LENGTH / 2), 100}; // 75
+             ^~~~~~~
+../src/main.c: In function 'life_lost':
+../src/main.c:112:20: error: 'bola' undeclared (first use in this function); did you mean 'ball'?
+  position_t pos = {bola.x - SMOKE_WIDTH / 2, bola.y - SMOKE_HEIGHT+1};
+                    ^~~~
+                    ball
+../src/main.c:112:20: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c: In function 'move_ball':
+../src/main.c:152:9: error: 'bola' undeclared (first use in this function); did you mean 'gold'?
+  switch(bola.mov)
+         ^~~~
+         gold
+../src/main.c: In function 'which_side_bar':
+../src/main.c:298:20: error: 'bar_pos' undeclared (first use in this function); did you mean 'next_pos'?
+  if (next_pos.x >= bar_pos.x && next_pos.x < bar_pos.x + BAR_LENGTH &&
+                    ^~~~~~~
+                    next_pos
+../src/main.c: In function 'move_bar':
+../src/main.c:539:6: error: 'bar_pos' undeclared (first use in this function)
+  if (bar_pos.x + var > INT_X_BORDER && bar_pos.x + var <= END_X_BORDER - BAR_LENGTH) {
+      ^~~~~~~
+../src/main.c: In function 'init_ball':
+../src/main.c:547:2: error: 'bola' undeclared (first use in this function); did you mean 'gold'?
+  bola.x = bar_pos.x + BAR_LENGTH / 2;
+  ^~~~
+  gold
+../src/main.c:547:11: error: 'bar_pos' undeclared (first use in this function)
+  bola.x = bar_pos.x + BAR_LENGTH / 2;
+           ^~~~~~~
+make: *** [src/subdir.mk:32: src/main.o] Error 1
+10:56:33 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:20:9: warning: variable 'bola' set but not used [-Wunused-but-set-variable]
+  ball_t bola;
+         ^~~~
+../src/main.c:19:13: warning: unused variable 'bar_pos' [-Wunused-variable]
+  position_t bar_pos = {((RESOLUTION_X / 2) - BAR_LENGTH / 2), 100}; // 75
+             ^~~~~~~
+../src/main.c: In function 'move_ball':
+../src/main.c:152:9: error: 'bola' undeclared (first use in this function); did you mean 'gold'?
+  switch(bola.mov)
+         ^~~~
+         gold
+../src/main.c:152:9: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c: In function 'which_side_bar':
+../src/main.c:298:20: error: 'bar_pos' undeclared (first use in this function); did you mean 'next_pos'?
+  if (next_pos.x >= bar_pos.x && next_pos.x < bar_pos.x + BAR_LENGTH &&
+                    ^~~~~~~
+                    next_pos
+../src/main.c: In function 'move_bar':
+../src/main.c:539:6: error: 'bar_pos' undeclared (first use in this function)
+  if (bar_pos.x + var > INT_X_BORDER && bar_pos.x + var <= END_X_BORDER - BAR_LENGTH) {
+      ^~~~~~~
+../src/main.c: In function 'init_ball':
+../src/main.c:547:2: error: 'bola' undeclared (first use in this function); did you mean 'gold'?
+  bola.x = bar_pos.x + BAR_LENGTH / 2;
+  ^~~~
+  gold
+../src/main.c:547:11: error: 'bar_pos' undeclared (first use in this function)
+  bola.x = bar_pos.x + BAR_LENGTH / 2;
+           ^~~~~~~
+make: *** [src/subdir.mk:32: src/main.o] Error 1
+10:56:44 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:19:13: warning: unused variable 'bar_pos' [-Wunused-variable]
+  position_t bar_pos = {((RESOLUTION_X / 2) - BAR_LENGTH / 2), 100}; // 75
+             ^~~~~~~
+../src/main.c: In function 'move_ball':
+../src/main.c:152:9: error: 'bola' undeclared (first use in this function); did you mean 'gold'?
+  switch(bola.mov)
+         ^~~~
+         gold
+../src/main.c:152:9: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c: In function 'which_side_bar':
+../src/main.c:298:20: error: 'bar_pos' undeclared (first use in this function); did you mean 'next_pos'?
+  if (next_pos.x >= bar_pos.x && next_pos.x < bar_pos.x + BAR_LENGTH &&
+                    ^~~~~~~
+                    next_pos
+../src/main.c: In function 'move_bar':
+../src/main.c:539:6: error: 'bar_pos' undeclared (first use in this function)
+  if (bar_pos.x + var > INT_X_BORDER && bar_pos.x + var <= END_X_BORDER - BAR_LENGTH) {
+      ^~~~~~~
+../src/main.c: In function 'init_ball':
+../src/main.c:547:2: error: 'bola' undeclared (first use in this function); did you mean 'gold'?
+  bola.x = bar_pos.x + BAR_LENGTH / 2;
+  ^~~~
+  gold
+../src/main.c:547:11: error: 'bar_pos' undeclared (first use in this function)
+  bola.x = bar_pos.x + BAR_LENGTH / 2;
+           ^~~~~~~
+make: *** [src/subdir.mk:32: src/main.o] Error 1
+10:57:22 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:19:13: warning: unused variable 'bar_pos' [-Wunused-variable]
+  position_t bar_pos = {((RESOLUTION_X / 2) - BAR_LENGTH / 2), 100}; // 75
+             ^~~~~~~
+../src/main.c: In function 'move_ball':
+../src/main.c:156:17: error: 'bola' undeclared (first use in this function); did you mean 'ball'?
+    next_pos.y = bola.y-1;
+                 ^~~~
+                 ball
+../src/main.c:156:17: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c: In function 'which_side_bar':
+../src/main.c:298:20: error: 'bar_pos' undeclared (first use in this function); did you mean 'next_pos'?
+  if (next_pos.x >= bar_pos.x && next_pos.x < bar_pos.x + BAR_LENGTH &&
+                    ^~~~~~~
+                    next_pos
+../src/main.c: In function 'move_bar':
+../src/main.c:539:6: error: 'bar_pos' undeclared (first use in this function)
+  if (bar_pos.x + var > INT_X_BORDER && bar_pos.x + var <= END_X_BORDER - BAR_LENGTH) {
+      ^~~~~~~
+../src/main.c: In function 'init_ball':
+../src/main.c:547:2: error: 'bola' undeclared (first use in this function); did you mean 'gold'?
+  bola.x = bar_pos.x + BAR_LENGTH / 2;
+  ^~~~
+  gold
+../src/main.c:547:11: error: 'bar_pos' undeclared (first use in this function)
+  bola.x = bar_pos.x + BAR_LENGTH / 2;
+           ^~~~~~~
+make: *** [src/subdir.mk:32: src/main.o] Error 1
+10:57:42 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:19:13: warning: unused variable 'bar_pos' [-Wunused-variable]
+  position_t bar_pos = {((RESOLUTION_X / 2) - BAR_LENGTH / 2), 100}; // 75
+             ^~~~~~~
+../src/main.c: In function 'move_ball':
+../src/main.c:194:10: error: 'bola' undeclared (first use in this function); did you mean 'ball'?
+    paint(bola.x, bola.y, negro);
+          ^~~~
+          ball
+../src/main.c:194:10: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c: In function 'which_side_bar':
+../src/main.c:298:20: error: 'bar_pos' undeclared (first use in this function); did you mean 'next_pos'?
+  if (next_pos.x >= bar_pos.x && next_pos.x < bar_pos.x + BAR_LENGTH &&
+                    ^~~~~~~
+                    next_pos
+../src/main.c: In function 'move_bar':
+../src/main.c:539:6: error: 'bar_pos' undeclared (first use in this function)
+  if (bar_pos.x + var > INT_X_BORDER && bar_pos.x + var <= END_X_BORDER - BAR_LENGTH) {
+      ^~~~~~~
+../src/main.c: In function 'init_ball':
+../src/main.c:547:2: error: 'bola' undeclared (first use in this function); did you mean 'gold'?
+  bola.x = bar_pos.x + BAR_LENGTH / 2;
+  ^~~~
+  gold
+../src/main.c:547:11: error: 'bar_pos' undeclared (first use in this function)
+  bola.x = bar_pos.x + BAR_LENGTH / 2;
+           ^~~~~~~
+make: *** [src/subdir.mk:32: src/main.o] Error 1
+10:58:10 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:19:13: warning: unused variable 'bar_pos' [-Wunused-variable]
+  position_t bar_pos = {((RESOLUTION_X / 2) - BAR_LENGTH / 2), 100}; // 75
+             ^~~~~~~
+../src/main.c: In function 'which_side_bar':
+../src/main.c:298:20: error: 'bar_pos' undeclared (first use in this function); did you mean 'next_pos'?
+  if (next_pos.x >= bar_pos.x && next_pos.x < bar_pos.x + BAR_LENGTH &&
+                    ^~~~~~~
+                    next_pos
+../src/main.c:298:20: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c: In function 'move_bar':
+../src/main.c:539:6: error: 'bar_pos' undeclared (first use in this function)
+  if (bar_pos.x + var > INT_X_BORDER && bar_pos.x + var <= END_X_BORDER - BAR_LENGTH) {
+      ^~~~~~~
+../src/main.c: In function 'init_ball':
+../src/main.c:547:2: error: 'bola' undeclared (first use in this function); did you mean 'gold'?
+  bola.x = bar_pos.x + BAR_LENGTH / 2;
+  ^~~~
+  gold
+../src/main.c:547:11: error: 'bar_pos' undeclared (first use in this function)
+  bola.x = bar_pos.x + BAR_LENGTH / 2;
+           ^~~~~~~
+make: *** [src/subdir.mk:32: src/main.o] Error 1
+10:59:20 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:19:13: warning: unused variable 'bar_pos' [-Wunused-variable]
+  position_t bar_pos = {((RESOLUTION_X / 2) - BAR_LENGTH / 2), 100}; // 75
+             ^~~~~~~
+../src/main.c: At top level:
+../src/main.c:293:8: error: conflicting types for 'which_side_bar'
+ side_t which_side_bar(position_t next_pos, position_t bar_pos)
+        ^~~~~~~~~~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:50:8: note: previous declaration of 'which_side_bar' was here
+ side_t which_side_bar(position_t next_pos);
+        ^~~~~~~~~~~~~~
+../src/main.c: In function 'calculate_rebound':
+../src/main.c:474:11: error: too few arguments to function 'which_side_bar'
+   switch (which_side_bar(*next_pos)) {
+           ^~~~~~~~~~~~~~
+../src/main.c:293:8: note: declared here
+ side_t which_side_bar(position_t next_pos, position_t bar_pos)
+        ^~~~~~~~~~~~~~
+../src/main.c: In function 'move_bar':
+../src/main.c:539:6: error: 'bar_pos' undeclared (first use in this function)
+  if (bar_pos.x + var > INT_X_BORDER && bar_pos.x + var <= END_X_BORDER - BAR_LENGTH) {
+      ^~~~~~~
+../src/main.c:539:6: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c: In function 'init_ball':
+../src/main.c:547:2: error: 'bola' undeclared (first use in this function); did you mean 'gold'?
+  bola.x = bar_pos.x + BAR_LENGTH / 2;
+  ^~~~
+  gold
+../src/main.c:547:11: error: 'bar_pos' undeclared (first use in this function)
+  bola.x = bar_pos.x + BAR_LENGTH / 2;
+           ^~~~~~~
+make: *** [src/subdir.mk:32: src/main.o] Error 1
+11:00:35 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:19:13: warning: unused variable 'bar_pos' [-Wunused-variable]
+  position_t bar_pos = {((RESOLUTION_X / 2) - BAR_LENGTH / 2), 100}; // 75
+             ^~~~~~~
+../src/main.c: In function 'calculate_rebound':
+../src/main.c:474:11: error: too few arguments to function 'which_side_bar'
+   switch (which_side_bar(*next_pos)) {
+           ^~~~~~~~~~~~~~
+../src/main.c:293:8: note: declared here
+ side_t which_side_bar(position_t next_pos, position_t bar_pos)
+        ^~~~~~~~~~~~~~
+../src/main.c: In function 'move_bar':
+../src/main.c:539:6: error: 'bar_pos' undeclared (first use in this function)
+  if (bar_pos.x + var > INT_X_BORDER && bar_pos.x + var <= END_X_BORDER - BAR_LENGTH) {
+      ^~~~~~~
+../src/main.c:539:6: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c: In function 'init_ball':
+../src/main.c:547:2: error: 'bola' undeclared (first use in this function); did you mean 'gold'?
+  bola.x = bar_pos.x + BAR_LENGTH / 2;
+  ^~~~
+  gold
+../src/main.c:547:11: error: 'bar_pos' undeclared (first use in this function)
+  bola.x = bar_pos.x + BAR_LENGTH / 2;
+           ^~~~~~~
+make: *** [src/subdir.mk:32: src/main.o] Error 1
+11:01:35 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:19:13: warning: unused variable 'bar_pos' [-Wunused-variable]
+  position_t bar_pos = {((RESOLUTION_X / 2) - BAR_LENGTH / 2), 100}; // 75
+             ^~~~~~~
+../src/main.c: At top level:
+../src/main.c:343:12: error: conflicting types for 'calculate_rebound'
+ movement_t calculate_rebound(ball_t bola, side_t side, bool is_block, block_t block, position_t *next_pos, position_t *bar_pos)
+            ^~~~~~~~~~~~~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:49:12: note: previous declaration of 'calculate_rebound' was here
+ movement_t calculate_rebound(ball_t bola, side_t side, bool is_block, block_t block, position_t *next_pos);
+            ^~~~~~~~~~~~~~~~~
+../src/main.c: In function 'move_bar':
+../src/main.c:539:6: error: 'bar_pos' undeclared (first use in this function)
+  if (bar_pos.x + var > INT_X_BORDER && bar_pos.x + var <= END_X_BORDER - BAR_LENGTH) {
+      ^~~~~~~
+../src/main.c:539:6: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c: In function 'init_ball':
+../src/main.c:547:2: error: 'bola' undeclared (first use in this function); did you mean 'gold'?
+  bola.x = bar_pos.x + BAR_LENGTH / 2;
+  ^~~~
+  gold
+../src/main.c:547:11: error: 'bar_pos' undeclared (first use in this function)
+  bola.x = bar_pos.x + BAR_LENGTH / 2;
+           ^~~~~~~
+make: *** [src/subdir.mk:32: src/main.o] Error 1
+11:02:16 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:19:13: warning: unused variable 'bar_pos' [-Wunused-variable]
+  position_t bar_pos = {((RESOLUTION_X / 2) - BAR_LENGTH / 2), 100}; // 75
+             ^~~~~~~
+../src/main.c: At top level:
+../src/main.c:343:12: error: conflicting types for 'calculate_rebound'
+ movement_t calculate_rebound(ball_t bola, side_t side, bool is_block, block_t block, position_t *next_pos, position_t *bar_pos)
+            ^~~~~~~~~~~~~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:49:12: note: previous declaration of 'calculate_rebound' was here
+ movement_t calculate_rebound(ball_t bola, side_t side, bool is_block, block_t block, position_t *next_pos);
+            ^~~~~~~~~~~~~~~~~
+../src/main.c: In function 'move_bar':
+../src/main.c:539:6: error: 'bar_pos' undeclared (first use in this function)
+  if (bar_pos.x + var > INT_X_BORDER && bar_pos.x + var <= END_X_BORDER - BAR_LENGTH) {
+      ^~~~~~~
+../src/main.c:539:6: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c: In function 'init_ball':
+../src/main.c:547:2: error: 'bola' undeclared (first use in this function); did you mean 'gold'?
+  bola.x = bar_pos.x + BAR_LENGTH / 2;
+  ^~~~
+  gold
+../src/main.c:547:11: error: 'bar_pos' undeclared (first use in this function)
+  bola.x = bar_pos.x + BAR_LENGTH / 2;
+           ^~~~~~~
+make: *** [src/subdir.mk:32: src/main.o] Error 1
+11:02:41 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:19:13: warning: unused variable 'bar_pos' [-Wunused-variable]
+  position_t bar_pos = {((RESOLUTION_X / 2) - BAR_LENGTH / 2), 100}; // 75
+             ^~~~~~~
+../src/main.c: In function 'move_ball':
+../src/main.c:200:14: error: too many arguments to function 'calculate_rebound'
+   next_mov = calculate_rebound(ball, side, is_block, *block, &next_pos, &bar_pos); // lo ha hecho Pablo el cutres
+              ^~~~~~~~~~~~~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:49:12: note: declared here
+ movement_t calculate_rebound(ball_t bola, side_t side, bool is_block, block_t block, position_t *next_pos);
+            ^~~~~~~~~~~~~~~~~
+../src/main.c: At top level:
+../src/main.c:343:12: error: conflicting types for 'calculate_rebound'
+ movement_t calculate_rebound(ball_t bola, side_t side, bool is_block, block_t block, position_t *next_pos, position_t *bar_pos)
+            ^~~~~~~~~~~~~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:49:12: note: previous declaration of 'calculate_rebound' was here
+ movement_t calculate_rebound(ball_t bola, side_t side, bool is_block, block_t block, position_t *next_pos);
+            ^~~~~~~~~~~~~~~~~
+../src/main.c: In function 'move_bar':
+../src/main.c:539:6: error: 'bar_pos' undeclared (first use in this function)
+  if (bar_pos.x + var > INT_X_BORDER && bar_pos.x + var <= END_X_BORDER - BAR_LENGTH) {
+      ^~~~~~~
+../src/main.c:539:6: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c: In function 'init_ball':
+../src/main.c:547:2: error: 'bola' undeclared (first use in this function); did you mean 'gold'?
+  bola.x = bar_pos.x + BAR_LENGTH / 2;
+  ^~~~
+  gold
+../src/main.c:547:11: error: 'bar_pos' undeclared (first use in this function)
+  bola.x = bar_pos.x + BAR_LENGTH / 2;
+           ^~~~~~~
+make: *** [src/subdir.mk:32: src/main.o] Error 1
+11:03:41 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:19:13: warning: unused variable 'bar_pos' [-Wunused-variable]
+  position_t bar_pos = {((RESOLUTION_X / 2) - BAR_LENGTH / 2), 100}; // 75
+             ^~~~~~~
+../src/main.c: In function 'move_ball':
+../src/main.c:200:14: error: too many arguments to function 'calculate_rebound'
+   next_mov = calculate_rebound(ball, side, is_block, *block, &next_pos, &bar_pos); // lo ha hecho Pablo el cutres
+              ^~~~~~~~~~~~~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:49:12: note: declared here
+ movement_t calculate_rebound(ball_t bola, side_t side, bool is_block, block_t block, position_t *next_pos);
+            ^~~~~~~~~~~~~~~~~
+../src/main.c: At top level:
+../src/main.c:343:12: error: conflicting types for 'calculate_rebound'
+ movement_t calculate_rebound(ball_t bola, side_t side, bool is_block, block_t block, position_t *next_pos, position_t *bar_pos)
+            ^~~~~~~~~~~~~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:49:12: note: previous declaration of 'calculate_rebound' was here
+ movement_t calculate_rebound(ball_t bola, side_t side, bool is_block, block_t block, position_t *next_pos);
+            ^~~~~~~~~~~~~~~~~
+../src/main.c:529:6: error: conflicting types for 'move_bar'
+ void move_bar(int dir, position_t bar_pos){
+      ^~~~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:42:6: note: previous declaration of 'move_bar' was here
+ void move_bar(int dir);
+      ^~~~~~~~
+../src/main.c: In function 'init_ball':
+../src/main.c:547:2: error: 'bola' undeclared (first use in this function); did you mean 'gold'?
+  bola.x = bar_pos.x + BAR_LENGTH / 2;
+  ^~~~
+  gold
+../src/main.c:547:2: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:547:11: error: 'bar_pos' undeclared (first use in this function)
+  bola.x = bar_pos.x + BAR_LENGTH / 2;
+           ^~~~~~~
+make: *** [src/subdir.mk:32: src/main.o] Error 1
+11:04:10 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:19:13: warning: unused variable 'bar_pos' [-Wunused-variable]
+  position_t bar_pos = {((RESOLUTION_X / 2) - BAR_LENGTH / 2), 100}; // 75
+             ^~~~~~~
+../src/main.c: In function 'move_ball':
+../src/main.c:200:14: error: too many arguments to function 'calculate_rebound'
+   next_mov = calculate_rebound(ball, side, is_block, *block, &next_pos, &bar_pos); // lo ha hecho Pablo el cutres
+              ^~~~~~~~~~~~~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:49:12: note: declared here
+ movement_t calculate_rebound(ball_t bola, side_t side, bool is_block, block_t block, position_t *next_pos);
+            ^~~~~~~~~~~~~~~~~
+../src/main.c: At top level:
+../src/main.c:343:12: error: conflicting types for 'calculate_rebound'
+ movement_t calculate_rebound(ball_t bola, side_t side, bool is_block, block_t block, position_t *next_pos, position_t *bar_pos)
+            ^~~~~~~~~~~~~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:49:12: note: previous declaration of 'calculate_rebound' was here
+ movement_t calculate_rebound(ball_t bola, side_t side, bool is_block, block_t block, position_t *next_pos);
+            ^~~~~~~~~~~~~~~~~
+../src/main.c:529:6: error: conflicting types for 'move_bar'
+ void move_bar(int dir, position_t bar_pos){
+      ^~~~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:42:6: note: previous declaration of 'move_bar' was here
+ void move_bar(int dir);
+      ^~~~~~~~
+make: *** [src/subdir.mk:32: src/main.o] Error 1
+11:05:06 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:61:3: error: too few arguments to function 'move_bar'
+   move_bar(0);
+   ^~~~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:42:6: note: declared here
+ void move_bar(int dir, position_t bar_pos);
+      ^~~~~~~~
+../src/main.c:69:6: error: too few arguments to function 'move_bar'
+      move_bar(dir);
+      ^~~~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:42:6: note: declared here
+ void move_bar(int dir, position_t bar_pos);
+      ^~~~~~~~
+../src/main.c:19:13: warning: unused variable 'bar_pos' [-Wunused-variable]
+  position_t bar_pos = {((RESOLUTION_X / 2) - BAR_LENGTH / 2), 100}; // 75
+             ^~~~~~~
+../src/main.c: In function 'move_ball':
+../src/main.c:200:14: error: too many arguments to function 'calculate_rebound'
+   next_mov = calculate_rebound(ball, side, is_block, *block, &next_pos, &bar_pos); // lo ha hecho Pablo el cutres
+              ^~~~~~~~~~~~~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:49:12: note: declared here
+ movement_t calculate_rebound(ball_t bola, side_t side, bool is_block, block_t block, position_t *next_pos);
+            ^~~~~~~~~~~~~~~~~
+../src/main.c: At top level:
+../src/main.c:343:12: error: conflicting types for 'calculate_rebound'
+ movement_t calculate_rebound(ball_t bola, side_t side, bool is_block, block_t block, position_t *next_pos, position_t *bar_pos)
+            ^~~~~~~~~~~~~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:49:12: note: previous declaration of 'calculate_rebound' was here
+ movement_t calculate_rebound(ball_t bola, side_t side, bool is_block, block_t block, position_t *next_pos);
+            ^~~~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:32: src/main.o] Error 1
+11:05:24 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:61:3: error: too few arguments to function 'move_bar'
+   move_bar(0);
+   ^~~~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:42:6: note: declared here
+ void move_bar(int dir, position_t bar_pos);
+      ^~~~~~~~
+../src/main.c:69:6: error: too few arguments to function 'move_bar'
+      move_bar(dir);
+      ^~~~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:42:6: note: declared here
+ void move_bar(int dir, position_t bar_pos);
+      ^~~~~~~~
+../src/main.c:19:13: warning: unused variable 'bar_pos' [-Wunused-variable]
+  position_t bar_pos = {((RESOLUTION_X / 2) - BAR_LENGTH / 2), 100}; // 75
+             ^~~~~~~
+make: *** [src/subdir.mk:32: src/main.o] Error 1
+11:05:48 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:69:6: error: too few arguments to function 'move_bar'
+      move_bar(dir);
+      ^~~~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:42:6: note: declared here
+ void move_bar(int dir, position_t bar_pos);
+      ^~~~~~~~
+make: *** [src/subdir.mk:32: src/main.o] Error 1
+11:05:53 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  26932	   5472	   5332	  37736	   9368	example.elf
+'Finished building: example.elf.size'
+' '
+11:06:02 **** Incremental Build of configuration Debug for project example ****
+make all 
+make: Nothing to be done for 'all'.
+11:06:31 **** Incremental Build of configuration Debug for project example ****
+make all 
+make: Nothing to be done for 'all'.
+11:06:53 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  26932	   5472	   5332	  37736	   9368	example.elf
+'Finished building: example.elf.size'
+' '
+11:07:13 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:529:6: error: conflicting types for 'move_bar'
+ void move_bar(int dir, position_t *bar_pos){
+      ^~~~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:42:6: note: previous declaration of 'move_bar' was here
+ void move_bar(int dir, position_t bar_pos);
+      ^~~~~~~~
+../src/main.c: In function 'move_bar':
+../src/main.c:539:13: error: 'bar_pos' is a pointer; did you mean to use '->'?
+  if (bar_pos.x + var > INT_X_BORDER && bar_pos.x + var <= END_X_BORDER - BAR_LENGTH) {
+             ^
+             ->
+../src/main.c:539:47: error: 'bar_pos' is a pointer; did you mean to use '->'?
+  if (bar_pos.x + var > INT_X_BORDER && bar_pos.x + var <= END_X_BORDER - BAR_LENGTH) {
+                                               ^
+                                               ->
+../src/main.c:540:8: error: incompatible type for argument 1 of 'rect'
+   rect(bar_pos, negro, BAR_LENGTH, BAR_HEIGHT);
+        ^~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:26:6: note: expected 'position_t {aka struct position}' but argument is of type 'position_t * {aka struct position *}'
+ void rect (position_t pos, color_t col, int w, int h);
+      ^~~~
+../src/main.c:541:10: error: 'bar_pos' is a pointer; did you mean to use '->'?
+   bar_pos.x = bar_pos.x + var;
+          ^
+          ->
+../src/main.c:541:22: error: 'bar_pos' is a pointer; did you mean to use '->'?
+   bar_pos.x = bar_pos.x + var;
+                      ^
+                      ->
+../src/main.c:542:8: error: incompatible type for argument 1 of 'rect'
+   rect(bar_pos, gold, BAR_LENGTH, BAR_HEIGHT);
+        ^~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:26:6: note: expected 'position_t {aka struct position}' but argument is of type 'position_t * {aka struct position *}'
+ void rect (position_t pos, color_t col, int w, int h);
+      ^~~~
+make: *** [src/subdir.mk:32: src/main.o] Error 1
+11:07:27 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:61:15: error: incompatible type for argument 2 of 'move_bar'
+   move_bar(0, bar_pos);
+               ^~~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:42:6: note: expected 'position_t * {aka struct position *}' but argument is of type 'position_t {aka struct position}'
+ void move_bar(int dir, position_t *bar_pos);
+      ^~~~~~~~
+../src/main.c:69:20: error: incompatible type for argument 2 of 'move_bar'
+      move_bar(dir, bar_pos);
+                    ^~~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:42:6: note: expected 'position_t * {aka struct position *}' but argument is of type 'position_t {aka struct position}'
+ void move_bar(int dir, position_t *bar_pos);
+      ^~~~~~~~
+../src/main.c: In function 'move_bar':
+../src/main.c:539:13: error: 'bar_pos' is a pointer; did you mean to use '->'?
+  if (bar_pos.x + var > INT_X_BORDER && bar_pos.x + var <= END_X_BORDER - BAR_LENGTH) {
+             ^
+             ->
+../src/main.c:539:47: error: 'bar_pos' is a pointer; did you mean to use '->'?
+  if (bar_pos.x + var > INT_X_BORDER && bar_pos.x + var <= END_X_BORDER - BAR_LENGTH) {
+                                               ^
+                                               ->
+../src/main.c:540:8: error: incompatible type for argument 1 of 'rect'
+   rect(bar_pos, negro, BAR_LENGTH, BAR_HEIGHT);
+        ^~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:26:6: note: expected 'position_t {aka struct position}' but argument is of type 'position_t * {aka struct position *}'
+ void rect (position_t pos, color_t col, int w, int h);
+      ^~~~
+../src/main.c:541:10: error: 'bar_pos' is a pointer; did you mean to use '->'?
+   bar_pos.x = bar_pos.x + var;
+          ^
+          ->
+../src/main.c:541:22: error: 'bar_pos' is a pointer; did you mean to use '->'?
+   bar_pos.x = bar_pos.x + var;
+                      ^
+                      ->
+../src/main.c:542:8: error: incompatible type for argument 1 of 'rect'
+   rect(bar_pos, gold, BAR_LENGTH, BAR_HEIGHT);
+        ^~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:26:6: note: expected 'position_t {aka struct position}' but argument is of type 'position_t * {aka struct position *}'
+ void rect (position_t pos, color_t col, int w, int h);
+      ^~~~
+make: *** [src/subdir.mk:32: src/main.o] Error 1
+11:07:56 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:61:15: error: incompatible type for argument 2 of 'move_bar'
+   move_bar(0, bar_pos);
+               ^~~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:42:6: note: expected 'position_t * {aka struct position *}' but argument is of type 'position_t {aka struct position}'
+ void move_bar(int dir, position_t *bar_pos);
+      ^~~~~~~~
+../src/main.c:69:20: error: incompatible type for argument 2 of 'move_bar'
+      move_bar(dir, bar_pos);
+                    ^~~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:42:6: note: expected 'position_t * {aka struct position *}' but argument is of type 'position_t {aka struct position}'
+ void move_bar(int dir, position_t *bar_pos);
+      ^~~~~~~~
+../src/main.c: In function 'move_bar':
+../src/main.c:539:48: error: 'bar_pos' is a pointer; did you mean to use '->'?
+  if (bar_pos->x + var > INT_X_BORDER && bar_pos.x + var <= END_X_BORDER - BAR_LENGTH) {
+                                                ^
+                                                ->
+../src/main.c:540:8: error: incompatible type for argument 1 of 'rect'
+   rect(bar_pos, negro, BAR_LENGTH, BAR_HEIGHT);
+        ^~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:26:6: note: expected 'position_t {aka struct position}' but argument is of type 'position_t * {aka struct position *}'
+ void rect (position_t pos, color_t col, int w, int h);
+      ^~~~
+../src/main.c:541:10: error: 'bar_pos' is a pointer; did you mean to use '->'?
+   bar_pos.x = bar_pos.x + var;
+          ^
+          ->
+../src/main.c:541:22: error: 'bar_pos' is a pointer; did you mean to use '->'?
+   bar_pos.x = bar_pos.x + var;
+                      ^
+                      ->
+../src/main.c:542:8: error: incompatible type for argument 1 of 'rect'
+   rect(bar_pos, gold, BAR_LENGTH, BAR_HEIGHT);
+        ^~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:26:6: note: expected 'position_t {aka struct position}' but argument is of type 'position_t * {aka struct position *}'
+ void rect (position_t pos, color_t col, int w, int h);
+      ^~~~
+make: *** [src/subdir.mk:32: src/main.o] Error 1
+11:08:04 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:61:15: error: incompatible type for argument 2 of 'move_bar'
+   move_bar(0, bar_pos);
+               ^~~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:42:6: note: expected 'position_t * {aka struct position *}' but argument is of type 'position_t {aka struct position}'
+ void move_bar(int dir, position_t *bar_pos);
+      ^~~~~~~~
+../src/main.c:69:20: error: incompatible type for argument 2 of 'move_bar'
+      move_bar(dir, bar_pos);
+                    ^~~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:42:6: note: expected 'position_t * {aka struct position *}' but argument is of type 'position_t {aka struct position}'
+ void move_bar(int dir, position_t *bar_pos);
+      ^~~~~~~~
+../src/main.c: In function 'move_bar':
+../src/main.c:539:48: error: 'bar_pos' is a pointer; did you mean to use '->'?
+  if (bar_pos->x + var > INT_X_BORDER && bar_pos.x + var <= END_X_BORDER - BAR_LENGTH) {
+                                                ^
+                                                ->
+../src/main.c:540:8: error: incompatible type for argument 1 of 'rect'
+   rect(bar_pos, negro, BAR_LENGTH, BAR_HEIGHT);
+        ^~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:26:6: note: expected 'position_t {aka struct position}' but argument is of type 'position_t * {aka struct position *}'
+ void rect (position_t pos, color_t col, int w, int h);
+      ^~~~
+../src/main.c:541:10: error: 'bar_pos' is a pointer; did you mean to use '->'?
+   bar_pos.x = bar_pos.x + var;
+          ^
+          ->
+../src/main.c:541:22: error: 'bar_pos' is a pointer; did you mean to use '->'?
+   bar_pos.x = bar_pos.x + var;
+                      ^
+                      ->
+../src/main.c:542:8: error: incompatible type for argument 1 of 'rect'
+   rect(bar_pos, gold, BAR_LENGTH, BAR_HEIGHT);
+        ^~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:26:6: note: expected 'position_t {aka struct position}' but argument is of type 'position_t * {aka struct position *}'
+ void rect (position_t pos, color_t col, int w, int h);
+      ^~~~
+make: *** [src/subdir.mk:32: src/main.o] Error 1
+11:08:23 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:61:15: error: incompatible type for argument 2 of 'move_bar'
+   move_bar(0, bar_pos);
+               ^~~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:42:6: note: expected 'position_t * {aka struct position *}' but argument is of type 'position_t {aka struct position}'
+ void move_bar(int dir, position_t *bar_pos);
+      ^~~~~~~~
+../src/main.c:69:20: error: incompatible type for argument 2 of 'move_bar'
+      move_bar(dir, bar_pos);
+                    ^~~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:42:6: note: expected 'position_t * {aka struct position *}' but argument is of type 'position_t {aka struct position}'
+ void move_bar(int dir, position_t *bar_pos);
+      ^~~~~~~~
+../src/main.c: In function 'move_bar':
+../src/main.c:539:6: error: invalid type argument of unary '*' (have 'int')
+  if (*bar_pos->x + var > INT_X_BORDER && *bar_pos.x + var <= END_X_BORDER - BAR_LENGTH) {
+      ^~~~~~~~~~~
+../src/main.c:539:50: error: 'bar_pos' is a pointer; did you mean to use '->'?
+  if (*bar_pos->x + var > INT_X_BORDER && *bar_pos.x + var <= END_X_BORDER - BAR_LENGTH) {
+                                                  ^
+                                                  ->
+../src/main.c:540:8: error: incompatible type for argument 1 of 'rect'
+   rect(bar_pos, negro, BAR_LENGTH, BAR_HEIGHT);
+        ^~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:26:6: note: expected 'position_t {aka struct position}' but argument is of type 'position_t * {aka struct position *}'
+ void rect (position_t pos, color_t col, int w, int h);
+      ^~~~
+../src/main.c:541:10: error: 'bar_pos' is a pointer; did you mean to use '->'?
+   bar_pos.x = bar_pos.x + var;
+          ^
+          ->
+../src/main.c:541:22: error: 'bar_pos' is a pointer; did you mean to use '->'?
+   bar_pos.x = bar_pos.x + var;
+                      ^
+                      ->
+../src/main.c:542:8: error: incompatible type for argument 1 of 'rect'
+   rect(bar_pos, gold, BAR_LENGTH, BAR_HEIGHT);
+        ^~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:26:6: note: expected 'position_t {aka struct position}' but argument is of type 'position_t * {aka struct position *}'
+ void rect (position_t pos, color_t col, int w, int h);
+      ^~~~
+make: *** [src/subdir.mk:32: src/main.o] Error 1
+11:09:07 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:61:15: error: incompatible type for argument 2 of 'move_bar'
+   move_bar(0, bar_pos);
+               ^~~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:42:6: note: expected 'position_t * {aka struct position *}' but argument is of type 'position_t {aka struct position}'
+ void move_bar(int dir, position_t *bar_pos);
+      ^~~~~~~~
+../src/main.c:69:20: error: incompatible type for argument 2 of 'move_bar'
+      move_bar(dir, bar_pos);
+                    ^~~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:42:6: note: expected 'position_t * {aka struct position *}' but argument is of type 'position_t {aka struct position}'
+ void move_bar(int dir, position_t *bar_pos);
+      ^~~~~~~~
+../src/main.c: In function 'move_bar':
+../src/main.c:539:6: error: invalid type argument of unary '*' (have 'int')
+  if (*bar_pos->x + var > INT_X_BORDER && *bar_pos.x + var <= END_X_BORDER - BAR_LENGTH) {
+      ^~~~~~~~~~~
+../src/main.c:539:50: error: 'bar_pos' is a pointer; did you mean to use '->'?
+  if (*bar_pos->x + var > INT_X_BORDER && *bar_pos.x + var <= END_X_BORDER - BAR_LENGTH) {
+                                                  ^
+                                                  ->
+../src/main.c:540:8: error: incompatible type for argument 1 of 'rect'
+   rect(&bar_pos, negro, BAR_LENGTH, BAR_HEIGHT);
+        ^
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:26:6: note: expected 'position_t {aka struct position}' but argument is of type 'position_t ** {aka struct position **}'
+ void rect (position_t pos, color_t col, int w, int h);
+      ^~~~
+../src/main.c:541:11: error: 'bar_pos' is a pointer; did you mean to use '->'?
+   *bar_pos.x = *bar_pos.x + var;
+           ^
+           ->
+../src/main.c:541:24: error: 'bar_pos' is a pointer; did you mean to use '->'?
+   *bar_pos.x = *bar_pos.x + var;
+                        ^
+                        ->
+../src/main.c:542:8: error: incompatible type for argument 1 of 'rect'
+   rect(&bar_pos, gold, BAR_LENGTH, BAR_HEIGHT);
+        ^
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:26:6: note: expected 'position_t {aka struct position}' but argument is of type 'position_t ** {aka struct position **}'
+ void rect (position_t pos, color_t col, int w, int h);
+      ^~~~
+make: *** [src/subdir.mk:32: src/main.o] Error 1
+11:10:03 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:61:15: error: incompatible type for argument 2 of 'move_bar'
+   move_bar(0, bar_pos);
+               ^~~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:42:6: note: expected 'position_t * {aka struct position *}' but argument is of type 'position_t {aka struct position}'
+ void move_bar(int dir, position_t *bar_pos);
+      ^~~~~~~~
+../src/main.c:69:20: error: incompatible type for argument 2 of 'move_bar'
+      move_bar(dir, bar_pos);
+                    ^~~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:42:6: note: expected 'position_t * {aka struct position *}' but argument is of type 'position_t {aka struct position}'
+ void move_bar(int dir, position_t *bar_pos);
+      ^~~~~~~~
+../src/main.c: In function 'move_bar':
+../src/main.c:540:8: error: incompatible type for argument 1 of 'rect'
+   rect(&bar_pos, negro, BAR_LENGTH, BAR_HEIGHT);
+        ^
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:26:6: note: expected 'position_t {aka struct position}' but argument is of type 'position_t ** {aka struct position **}'
+ void rect (position_t pos, color_t col, int w, int h);
+      ^~~~
+../src/main.c:542:8: error: incompatible type for argument 1 of 'rect'
+   rect(&bar_pos, gold, BAR_LENGTH, BAR_HEIGHT);
+        ^
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:26:6: note: expected 'position_t {aka struct position}' but argument is of type 'position_t ** {aka struct position **}'
+ void rect (position_t pos, color_t col, int w, int h);
+      ^~~~
+make: *** [src/subdir.mk:32: src/main.o] Error 1
+11:10:13 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:61:15: error: incompatible type for argument 2 of 'move_bar'
+   move_bar(0, bar_pos);
+               ^~~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:42:6: note: expected 'position_t * {aka struct position *}' but argument is of type 'position_t {aka struct position}'
+ void move_bar(int dir, position_t *bar_pos);
+      ^~~~~~~~
+../src/main.c:69:20: error: incompatible type for argument 2 of 'move_bar'
+      move_bar(dir, bar_pos);
+                    ^~~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:42:6: note: expected 'position_t * {aka struct position *}' but argument is of type 'position_t {aka struct position}'
+ void move_bar(int dir, position_t *bar_pos);
+      ^~~~~~~~
+../src/main.c: In function 'move_bar':
+../src/main.c:542:8: error: incompatible type for argument 1 of 'rect'
+   rect(&bar_pos, gold, BAR_LENGTH, BAR_HEIGHT);
+        ^
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:26:6: note: expected 'position_t {aka struct position}' but argument is of type 'position_t ** {aka struct position **}'
+ void rect (position_t pos, color_t col, int w, int h);
+      ^~~~
+make: *** [src/subdir.mk:32: src/main.o] Error 1
+11:10:17 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:61:15: error: incompatible type for argument 2 of 'move_bar'
+   move_bar(0, bar_pos);
+               ^~~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:42:6: note: expected 'position_t * {aka struct position *}' but argument is of type 'position_t {aka struct position}'
+ void move_bar(int dir, position_t *bar_pos);
+      ^~~~~~~~
+../src/main.c:69:20: error: incompatible type for argument 2 of 'move_bar'
+      move_bar(dir, bar_pos);
+                    ^~~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:42:6: note: expected 'position_t * {aka struct position *}' but argument is of type 'position_t {aka struct position}'
+ void move_bar(int dir, position_t *bar_pos);
+      ^~~~~~~~
+../src/main.c: In function 'move_bar':
+../src/main.c:542:8: error: incompatible type for argument 1 of 'rect'
+   rect(bar_pos, gold, BAR_LENGTH, BAR_HEIGHT);
+        ^~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:26:6: note: expected 'position_t {aka struct position}' but argument is of type 'position_t * {aka struct position *}'
+ void rect (position_t pos, color_t col, int w, int h);
+      ^~~~
+make: *** [src/subdir.mk:32: src/main.o] Error 1
+11:10:21 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:61:15: error: incompatible type for argument 2 of 'move_bar'
+   move_bar(0, bar_pos);
+               ^~~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:42:6: note: expected 'position_t * {aka struct position *}' but argument is of type 'position_t {aka struct position}'
+ void move_bar(int dir, position_t *bar_pos);
+      ^~~~~~~~
+../src/main.c:69:20: error: incompatible type for argument 2 of 'move_bar'
+      move_bar(dir, bar_pos);
+                    ^~~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:42:6: note: expected 'position_t * {aka struct position *}' but argument is of type 'position_t {aka struct position}'
+ void move_bar(int dir, position_t *bar_pos);
+      ^~~~~~~~
+make: *** [src/subdir.mk:32: src/main.o] Error 1
+11:11:06 **** Incremental Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:61:15: error: incompatible type for argument 2 of 'move_bar'
+   move_bar(0, bar_pos);
+               ^~~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:42:6: note: expected 'position_t * {aka struct position *}' but argument is of type 'position_t {aka struct position}'
+ void move_bar(int dir, position_t *bar_pos);
+      ^~~~~~~~
+../src/main.c:69:20: error: incompatible type for argument 2 of 'move_bar'
+      move_bar(dir, bar_pos);
+                    ^~~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:42:6: note: expected 'position_t * {aka struct position *}' but argument is of type 'position_t {aka struct position}'
+ void move_bar(int dir, position_t *bar_pos);
+      ^~~~~~~~
+make: *** [src/subdir.mk:32: src/main.o] Error 1
+11:11:25 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:69:20: error: incompatible type for argument 2 of 'move_bar'
+      move_bar(dir, bar_pos);
+                    ^~~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:42:6: note: expected 'position_t * {aka struct position *}' but argument is of type 'position_t {aka struct position}'
+ void move_bar(int dir, position_t *bar_pos);
+      ^~~~~~~~
+make: *** [src/subdir.mk:32: src/main.o] Error 1
+11:11:30 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  26952	   5472	   5328	  37752	   9378	example.elf
+'Finished building: example.elf.size'
+' '
+11:11:33 **** Incremental Build of configuration Debug for project example ****
+make all 
+make: Nothing to be done for 'all'.
+11:13:17 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:74:24: error: incompatible type for argument 1 of 'move_ball'
+     status = move_ball(ball);
+                        ^~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:44:15: note: expected 'ball_t * {aka struct ball *}' but argument is of type 'ball_t {aka struct ball}'
+ game_status_t move_ball(ball_t *ball, position_t *bar_pos);
+               ^~~~~~~~~
+../src/main.c:74:14: error: too few arguments to function 'move_ball'
+     status = move_ball(ball);
+              ^~~~~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:44:15: note: declared here
+ game_status_t move_ball(ball_t *ball, position_t *bar_pos);
+               ^~~~~~~~~
+../src/main.c: At top level:
+../src/main.c:141:15: error: conflicting types for 'move_ball'
+ game_status_t move_ball(ball_t ball, position_t bar_pos)
+               ^~~~~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:44:15: note: previous declaration of 'move_ball' was here
+ game_status_t move_ball(ball_t *ball, position_t *bar_pos);
+               ^~~~~~~~~
+make: *** [src/subdir.mk:32: src/main.o] Error 1
+11:13:26 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'move_ball':
+../src/main.c:152:13: error: 'ball' is a pointer; did you mean to use '->'?
+  switch(ball.mov)
+             ^
+             ->
+../src/main.c:155:21: error: 'ball' is a pointer; did you mean to use '->'?
+    next_pos.x = ball.x+1;
+                     ^
+                     ->
+../src/main.c:156:21: error: 'ball' is a pointer; did you mean to use '->'?
+    next_pos.y = ball.y-1;
+                     ^
+                     ->
+../src/main.c:159:21: error: 'ball' is a pointer; did you mean to use '->'?
+    next_pos.x = ball.x+1;
+                     ^
+                     ->
+../src/main.c:160:21: error: 'ball' is a pointer; did you mean to use '->'?
+    next_pos.y = ball.y+1;
+                     ^
+                     ->
+../src/main.c:163:21: error: 'ball' is a pointer; did you mean to use '->'?
+    next_pos.x = ball.x-1;
+                     ^
+                     ->
+../src/main.c:164:21: error: 'ball' is a pointer; did you mean to use '->'?
+    next_pos.y = ball.y+1;
+                     ^
+                     ->
+../src/main.c:167:21: error: 'ball' is a pointer; did you mean to use '->'?
+    next_pos.x = ball.x-1;
+                     ^
+                     ->
+../src/main.c:168:21: error: 'ball' is a pointer; did you mean to use '->'?
+    next_pos.y = ball.y-1;
+                     ^
+                     ->
+../src/main.c:194:14: error: 'ball' is a pointer; did you mean to use '->'?
+    paint(ball.x, ball.y, negro);
+              ^
+              ->
+../src/main.c:194:22: error: 'ball' is a pointer; did you mean to use '->'?
+    paint(ball.x, ball.y, negro);
+                      ^
+                      ->
+../src/main.c:200:32: error: incompatible type for argument 1 of 'calculate_rebound'
+   next_mov = calculate_rebound(ball, side, is_block, *block, &next_pos, &bar_pos); // lo ha hecho Pablo el cutres
+                                ^~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:49:12: note: expected 'ball_t {aka struct ball}' but argument is of type 'ball_t * {aka struct ball *}'
+ movement_t calculate_rebound(ball_t bola, side_t side, bool is_block, block_t block, position_t *next_pos, position_t *bar_pos);
+            ^~~~~~~~~~~~~~~~~
+../src/main.c:200:73: warning: passing argument 6 of 'calculate_rebound' from incompatible pointer type [-Wincompatible-pointer-types]
+   next_mov = calculate_rebound(ball, side, is_block, *block, &next_pos, &bar_pos); // lo ha hecho Pablo el cutres
+                                                                         ^
+In file included from ../src/main.c:5:0:
+../src/main.h:49:12: note: expected 'position_t * {aka struct position *}' but argument is of type 'position_t ** {aka struct position **}'
+ movement_t calculate_rebound(ball_t bola, side_t side, bool is_block, block_t block, position_t *next_pos, position_t *bar_pos);
+            ^~~~~~~~~~~~~~~~~
+../src/main.c:203:18: error: 'ball' is a pointer; did you mean to use '->'?
+   next_mov = ball.mov;
+                  ^
+                  ->
+../src/main.c:205:12: error: 'ball' is a pointer; did you mean to use '->'?
+  paint(ball.x, ball.y, negro);
+            ^
+            ->
+../src/main.c:205:20: error: 'ball' is a pointer; did you mean to use '->'?
+  paint(ball.x, ball.y, negro);
+                    ^
+                    ->
+../src/main.c:206:6: error: 'ball' is a pointer; did you mean to use '->'?
+  ball.x = next_pos.x;
+      ^
+      ->
+../src/main.c:207:6: error: 'ball' is a pointer; did you mean to use '->'?
+  ball.y = next_pos.y;
+      ^
+      ->
+../src/main.c:208:6: error: 'ball' is a pointer; did you mean to use '->'?
+  ball.mov = next_mov;
+      ^
+      ->
+../src/main.c:209:12: error: 'ball' is a pointer; did you mean to use '->'?
+  paint(ball.x, ball.y, azul_claro);
+            ^
+            ->
+../src/main.c:209:20: error: 'ball' is a pointer; did you mean to use '->'?
+  paint(ball.x, ball.y, azul_claro);
+                    ^
+                    ->
+make: *** [src/subdir.mk:32: src/main.o] Error 1
+11:13:49 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'move_ball':
+../src/main.c:156:21: error: 'ball' is a pointer; did you mean to use '->'?
+    next_pos.y = ball.y-1;
+                     ^
+                     ->
+../src/main.c:159:21: error: 'ball' is a pointer; did you mean to use '->'?
+    next_pos.x = ball.x+1;
+                     ^
+                     ->
+../src/main.c:160:21: error: 'ball' is a pointer; did you mean to use '->'?
+    next_pos.y = ball.y+1;
+                     ^
+                     ->
+../src/main.c:163:21: error: 'ball' is a pointer; did you mean to use '->'?
+    next_pos.x = ball.x-1;
+                     ^
+                     ->
+../src/main.c:164:21: error: 'ball' is a pointer; did you mean to use '->'?
+    next_pos.y = ball.y+1;
+                     ^
+                     ->
+../src/main.c:167:21: error: 'ball' is a pointer; did you mean to use '->'?
+    next_pos.x = ball.x-1;
+                     ^
+                     ->
+../src/main.c:168:21: error: 'ball' is a pointer; did you mean to use '->'?
+    next_pos.y = ball.y-1;
+                     ^
+                     ->
+../src/main.c:194:14: error: 'ball' is a pointer; did you mean to use '->'?
+    paint(ball.x, ball.y, negro);
+              ^
+              ->
+../src/main.c:194:22: error: 'ball' is a pointer; did you mean to use '->'?
+    paint(ball.x, ball.y, negro);
+                      ^
+                      ->
+../src/main.c:200:32: error: incompatible type for argument 1 of 'calculate_rebound'
+   next_mov = calculate_rebound(ball, side, is_block, *block, &next_pos, &bar_pos); // lo ha hecho Pablo el cutres
+                                ^~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:49:12: note: expected 'ball_t {aka struct ball}' but argument is of type 'ball_t * {aka struct ball *}'
+ movement_t calculate_rebound(ball_t bola, side_t side, bool is_block, block_t block, position_t *next_pos, position_t *bar_pos);
+            ^~~~~~~~~~~~~~~~~
+../src/main.c:200:73: warning: passing argument 6 of 'calculate_rebound' from incompatible pointer type [-Wincompatible-pointer-types]
+   next_mov = calculate_rebound(ball, side, is_block, *block, &next_pos, &bar_pos); // lo ha hecho Pablo el cutres
+                                                                         ^
+In file included from ../src/main.c:5:0:
+../src/main.h:49:12: note: expected 'position_t * {aka struct position *}' but argument is of type 'position_t ** {aka struct position **}'
+ movement_t calculate_rebound(ball_t bola, side_t side, bool is_block, block_t block, position_t *next_pos, position_t *bar_pos);
+            ^~~~~~~~~~~~~~~~~
+../src/main.c:203:18: error: 'ball' is a pointer; did you mean to use '->'?
+   next_mov = ball.mov;
+                  ^
+                  ->
+../src/main.c:205:12: error: 'ball' is a pointer; did you mean to use '->'?
+  paint(ball.x, ball.y, negro);
+            ^
+            ->
+../src/main.c:205:20: error: 'ball' is a pointer; did you mean to use '->'?
+  paint(ball.x, ball.y, negro);
+                    ^
+                    ->
+../src/main.c:206:6: error: 'ball' is a pointer; did you mean to use '->'?
+  ball.x = next_pos.x;
+      ^
+      ->
+../src/main.c:207:6: error: 'ball' is a pointer; did you mean to use '->'?
+  ball.y = next_pos.y;
+      ^
+      ->
+../src/main.c:208:6: error: 'ball' is a pointer; did you mean to use '->'?
+  ball.mov = next_mov;
+      ^
+      ->
+../src/main.c:209:12: error: 'ball' is a pointer; did you mean to use '->'?
+  paint(ball.x, ball.y, azul_claro);
+            ^
+            ->
+../src/main.c:209:20: error: 'ball' is a pointer; did you mean to use '->'?
+  paint(ball.x, ball.y, azul_claro);
+                    ^
+                    ->
+make: *** [src/subdir.mk:32: src/main.o] Error 1
+11:14:50 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'move_ball':
+../src/main.c:194:14: error: 'ball' is a pointer; did you mean to use '->'?
+    paint(ball.x, ball.y, negro);
+              ^
+              ->
+../src/main.c:194:22: error: 'ball' is a pointer; did you mean to use '->'?
+    paint(ball.x, ball.y, negro);
+                      ^
+                      ->
+../src/main.c:200:32: error: incompatible type for argument 1 of 'calculate_rebound'
+   next_mov = calculate_rebound(ball, side, is_block, *block, &next_pos, &bar_pos); // lo ha hecho Pablo el cutres
+                                ^~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:49:12: note: expected 'ball_t {aka struct ball}' but argument is of type 'ball_t * {aka struct ball *}'
+ movement_t calculate_rebound(ball_t bola, side_t side, bool is_block, block_t block, position_t *next_pos, position_t *bar_pos);
+            ^~~~~~~~~~~~~~~~~
+../src/main.c:200:73: warning: passing argument 6 of 'calculate_rebound' from incompatible pointer type [-Wincompatible-pointer-types]
+   next_mov = calculate_rebound(ball, side, is_block, *block, &next_pos, &bar_pos); // lo ha hecho Pablo el cutres
+                                                                         ^
+In file included from ../src/main.c:5:0:
+../src/main.h:49:12: note: expected 'position_t * {aka struct position *}' but argument is of type 'position_t ** {aka struct position **}'
+ movement_t calculate_rebound(ball_t bola, side_t side, bool is_block, block_t block, position_t *next_pos, position_t *bar_pos);
+            ^~~~~~~~~~~~~~~~~
+../src/main.c:203:18: error: 'ball' is a pointer; did you mean to use '->'?
+   next_mov = ball.mov;
+                  ^
+                  ->
+../src/main.c:205:12: error: 'ball' is a pointer; did you mean to use '->'?
+  paint(ball.x, ball.y, negro);
+            ^
+            ->
+../src/main.c:205:20: error: 'ball' is a pointer; did you mean to use '->'?
+  paint(ball.x, ball.y, negro);
+                    ^
+                    ->
+../src/main.c:206:6: error: 'ball' is a pointer; did you mean to use '->'?
+  ball.x = next_pos.x;
+      ^
+      ->
+../src/main.c:207:6: error: 'ball' is a pointer; did you mean to use '->'?
+  ball.y = next_pos.y;
+      ^
+      ->
+../src/main.c:208:6: error: 'ball' is a pointer; did you mean to use '->'?
+  ball.mov = next_mov;
+      ^
+      ->
+../src/main.c:209:12: error: 'ball' is a pointer; did you mean to use '->'?
+  paint(ball.x, ball.y, azul_claro);
+            ^
+            ->
+../src/main.c:209:20: error: 'ball' is a pointer; did you mean to use '->'?
+  paint(ball.x, ball.y, azul_claro);
+                    ^
+                    ->
+make: *** [src/subdir.mk:32: src/main.o] Error 1
+11:15:17 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'move_ball':
+../src/main.c:200:32: error: incompatible type for argument 1 of 'calculate_rebound'
+   next_mov = calculate_rebound(ball, side, is_block, *block, &next_pos, &bar_pos); // lo ha hecho Pablo el cutres
+                                ^~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:49:12: note: expected 'ball_t {aka struct ball}' but argument is of type 'ball_t * {aka struct ball *}'
+ movement_t calculate_rebound(ball_t bola, side_t side, bool is_block, block_t block, position_t *next_pos, position_t *bar_pos);
+            ^~~~~~~~~~~~~~~~~
+../src/main.c:200:73: warning: passing argument 6 of 'calculate_rebound' from incompatible pointer type [-Wincompatible-pointer-types]
+   next_mov = calculate_rebound(ball, side, is_block, *block, &next_pos, &bar_pos); // lo ha hecho Pablo el cutres
+                                                                         ^
+In file included from ../src/main.c:5:0:
+../src/main.h:49:12: note: expected 'position_t * {aka struct position *}' but argument is of type 'position_t ** {aka struct position **}'
+ movement_t calculate_rebound(ball_t bola, side_t side, bool is_block, block_t block, position_t *next_pos, position_t *bar_pos);
+            ^~~~~~~~~~~~~~~~~
+../src/main.c:203:18: error: 'ball' is a pointer; did you mean to use '->'?
+   next_mov = ball.mov;
+                  ^
+                  ->
+../src/main.c:205:12: error: 'ball' is a pointer; did you mean to use '->'?
+  paint(ball.x, ball.y, negro);
+            ^
+            ->
+../src/main.c:205:20: error: 'ball' is a pointer; did you mean to use '->'?
+  paint(ball.x, ball.y, negro);
+                    ^
+                    ->
+../src/main.c:206:6: error: 'ball' is a pointer; did you mean to use '->'?
+  ball.x = next_pos.x;
+      ^
+      ->
+../src/main.c:207:6: error: 'ball' is a pointer; did you mean to use '->'?
+  ball.y = next_pos.y;
+      ^
+      ->
+../src/main.c:208:6: error: 'ball' is a pointer; did you mean to use '->'?
+  ball.mov = next_mov;
+      ^
+      ->
+../src/main.c:209:12: error: 'ball' is a pointer; did you mean to use '->'?
+  paint(ball.x, ball.y, azul_claro);
+            ^
+            ->
+../src/main.c:209:20: error: 'ball' is a pointer; did you mean to use '->'?
+  paint(ball.x, ball.y, azul_claro);
+                    ^
+                    ->
+make: *** [src/subdir.mk:32: src/main.o] Error 1
+11:16:12 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'move_ball':
+../src/main.c:200:32: error: incompatible type for argument 1 of 'calculate_rebound'
+   next_mov = calculate_rebound(&ball, side, is_block, *block, &next_pos, &bar_pos); // lo ha hecho Pablo el cutres
+                                ^
+In file included from ../src/main.c:5:0:
+../src/main.h:49:12: note: expected 'ball_t {aka struct ball}' but argument is of type 'ball_t ** {aka struct ball **}'
+ movement_t calculate_rebound(ball_t bola, side_t side, bool is_block, block_t block, position_t *next_pos, position_t *bar_pos);
+            ^~~~~~~~~~~~~~~~~
+../src/main.c:200:74: warning: passing argument 6 of 'calculate_rebound' from incompatible pointer type [-Wincompatible-pointer-types]
+   next_mov = calculate_rebound(&ball, side, is_block, *block, &next_pos, &bar_pos); // lo ha hecho Pablo el cutres
+                                                                          ^
+In file included from ../src/main.c:5:0:
+../src/main.h:49:12: note: expected 'position_t * {aka struct position *}' but argument is of type 'position_t ** {aka struct position **}'
+ movement_t calculate_rebound(ball_t bola, side_t side, bool is_block, block_t block, position_t *next_pos, position_t *bar_pos);
+            ^~~~~~~~~~~~~~~~~
+../src/main.c:203:18: error: 'ball' is a pointer; did you mean to use '->'?
+   next_mov = ball.mov;
+                  ^
+                  ->
+../src/main.c: At top level:
+../src/main.c:343:12: error: conflicting types for 'calculate_rebound'
+ movement_t calculate_rebound(ball_t *bola, side_t side, bool is_block, block_t block, position_t *next_pos, position_t *bar_pos)
+            ^~~~~~~~~~~~~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:49:12: note: previous declaration of 'calculate_rebound' was here
+ movement_t calculate_rebound(ball_t bola, side_t side, bool is_block, block_t block, position_t *next_pos, position_t *bar_pos);
+            ^~~~~~~~~~~~~~~~~
+../src/main.c: In function 'calculate_rebound':
+../src/main.c:345:23: error: 'bola' is a pointer; did you mean to use '->'?
+  movement_t mov = bola.mov;
+                       ^
+                       ->
+../src/main.c:351:23: error: 'bola' is a pointer; did you mean to use '->'?
+     next_pos->x = bola.x + 1;
+                       ^
+                       ->
+../src/main.c:352:23: error: 'bola' is a pointer; did you mean to use '->'?
+     next_pos->y = bola.y + 1;
+                       ^
+                       ->
+../src/main.c:356:23: error: 'bola' is a pointer; did you mean to use '->'?
+     next_pos->x = bola.x - 1;
+                       ^
+                       ->
+../src/main.c:357:23: error: 'bola' is a pointer; did you mean to use '->'?
+     next_pos->y = bola.y + 1;
+                       ^
+                       ->
+../src/main.c:360:13: error: 'bola' is a pointer; did you mean to use '->'?
+     if (bola.mov == mov_top_right) {
+             ^
+             ->
+../src/main.c:362:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->x = bola.x + 1;
+                        ^
+                        ->
+../src/main.c:363:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->y = bola.y + 1;
+                        ^
+                        ->
+../src/main.c:367:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->x = bola.x - 1;
+                        ^
+                        ->
+../src/main.c:368:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->y = bola.y + 1;
+                        ^
+                        ->
+../src/main.c:372:13: error: 'bola' is a pointer; did you mean to use '->'?
+     if (bola.mov == mov_top_left) {
+             ^
+             ->
+../src/main.c:374:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->x = bola.x + 1;
+                        ^
+                        ->
+../src/main.c:375:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->y = bola.y - 1;
+                        ^
+                        ->
+../src/main.c:379:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->x = bola.x + 1;
+                        ^
+                        ->
+../src/main.c:380:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->y = bola.y + 1;
+                        ^
+                        ->
+../src/main.c:384:13: error: 'bola' is a pointer; did you mean to use '->'?
+     if (bola.mov == mov_top_right) {
+             ^
+             ->
+../src/main.c:386:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->x = bola.x - 1;
+                        ^
+                        ->
+../src/main.c:387:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->y = bola.y - 1;
+                        ^
+                        ->
+../src/main.c:391:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->x = bola.x - 1;
+                        ^
+                        ->
+../src/main.c:392:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->y = bola.y + 1;
+                        ^
+                        ->
+../src/main.c:403:23: error: 'bola' is a pointer; did you mean to use '->'?
+     next_pos->x = bola.x - 1;
+                       ^
+                       ->
+../src/main.c:404:23: error: 'bola' is a pointer; did you mean to use '->'?
+     next_pos->y = bola.y - 1;
+                       ^
+                       ->
+../src/main.c:408:23: error: 'bola' is a pointer; did you mean to use '->'?
+     next_pos->x = bola.x + 1;
+                       ^
+                       ->
+../src/main.c:409:23: error: 'bola' is a pointer; did you mean to use '->'?
+     next_pos->y = bola.y - 1;
+                       ^
+                       ->
+../src/main.c:413:23: error: 'bola' is a pointer; did you mean to use '->'?
+     next_pos->x = bola.x - 1;
+                       ^
+                       ->
+../src/main.c:414:23: error: 'bola' is a pointer; did you mean to use '->'?
+     next_pos->y = bola.y + 1;
+                       ^
+                       ->
+../src/main.c:418:23: error: 'bola' is a pointer; did you mean to use '->'?
+     next_pos->x = bola.x + 1;
+                       ^
+                       ->
+../src/main.c:419:23: error: 'bola' is a pointer; did you mean to use '->'?
+     next_pos->y = bola.y + 1;
+                       ^
+                       ->
+../src/main.c:422:13: error: 'bola' is a pointer; did you mean to use '->'?
+     if (bola.mov == mov_bottom_right) {
+             ^
+             ->
+../src/main.c:424:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->x = bola.x + 1;
+                        ^
+                        ->
+../src/main.c:425:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->y = bola.y - 1;
+                        ^
+                        ->
+../src/main.c:429:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->x = bola.x - 1;
+                        ^
+                        ->
+../src/main.c:430:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->y = bola.y - 1;
+                        ^
+                        ->
+../src/main.c:434:13: error: 'bola' is a pointer; did you mean to use '->'?
+     if (bola.mov == mov_top_right) {
+             ^
+             ->
+../src/main.c:436:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->x = bola.x + 1;
+                        ^
+                        ->
+../src/main.c:437:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->y = bola.y + 1;
+                        ^
+                        ->
+../src/main.c:441:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->x = bola.x - 1;
+                        ^
+                        ->
+../src/main.c:442:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->y = bola.y + 1;
+                        ^
+                        ->
+../src/main.c:446:13: error: 'bola' is a pointer; did you mean to use '->'?
+     if (bola.mov == mov_bottom_right) {
+             ^
+             ->
+../src/main.c:448:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->x = bola.x - 1;
+                        ^
+                        ->
+../src/main.c:449:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->y = bola.y + 1;
+                        ^
+                        ->
+../src/main.c:453:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->x = bola.x - 1;
+                        ^
+                        ->
+../src/main.c:454:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->y = bola.y - 1;
+                        ^
+                        ->
+../src/main.c:458:13: error: 'bola' is a pointer; did you mean to use '->'?
+     if (bola.mov == mov_bottom_left) {
+             ^
+             ->
+../src/main.c:460:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->x = bola.x + 1;
+                        ^
+                        ->
+../src/main.c:461:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->y = bola.y - 1;
+                        ^
+                        ->
+../src/main.c:465:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->x = bola.x + 1;
+                        ^
+                        ->
+../src/main.c:466:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->y = bola.y + 1;
+                        ^
+                        ->
+../src/main.c:477:23: error: 'bola' is a pointer; did you mean to use '->'?
+     next_pos->x = bola.x - 1;
+                       ^
+                       ->
+../src/main.c:478:23: error: 'bola' is a pointer; did you mean to use '->'?
+     next_pos->y = bola.y - 1;
+                       ^
+                       ->
+../src/main.c:482:23: error: 'bola' is a pointer; did you mean to use '->'?
+     next_pos->x = bola.x + 1;
+                       ^
+                       ->
+../src/main.c:483:23: error: 'bola' is a pointer; did you mean to use '->'?
+     next_pos->y = bola.y - 1;
+                       ^
+                       ->
+../src/main.c:486:13: error: 'bola' is a pointer; did you mean to use '->'?
+     if (bola.mov == mov_bottom_right) {
+             ^
+             ->
+../src/main.c:488:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->x = bola.x + 1;
+                        ^
+                        ->
+../src/main.c:489:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->y = bola.y - 1;
+                        ^
+                        ->
+../src/main.c:493:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->x = bola.x - 1;
+                        ^
+                        ->
+../src/main.c:494:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->y = bola.y - 1;
+                        ^
+                        ->
+../src/main.c:498:13: error: 'bola' is a pointer; did you mean to use '->'?
+     if (bola.mov == mov_bottom_right) {
+             ^
+             ->
+../src/main.c:500:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->x = bola.x - 1;
+                        ^
+                        ->
+../src/main.c:501:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->y = bola.y + 1;
+                        ^
+                        ->
+../src/main.c:505:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->x = bola.x - 1;
+                        ^
+                        ->
+../src/main.c:506:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->y = bola.y - 1;
+                        ^
+                        ->
+../src/main.c:510:13: error: 'bola' is a pointer; did you mean to use '->'?
+     if (bola.mov == mov_bottom_left) {
+             ^
+             ->
+../src/main.c:512:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->x = bola.x + 1;
+                        ^
+                        ->
+../src/main.c:513:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->y = bola.y - 1;
+                        ^
+                        ->
+../src/main.c:517:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->x = bola.x + 1;
+                        ^
+                        ->
+../src/main.c:518:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->y = bola.y + 1;
+                        ^
+                        ->
+make: *** [src/subdir.mk:32: src/main.o] Error 1
+11:16:22 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'move_ball':
+../src/main.c:200:32: error: incompatible type for argument 1 of 'calculate_rebound'
+   next_mov = calculate_rebound(&ball, side, is_block, *block, &next_pos, &bar_pos); // lo ha hecho Pablo el cutres
+                                ^
+In file included from ../src/main.c:5:0:
+../src/main.h:49:12: note: expected 'ball_t {aka struct ball}' but argument is of type 'ball_t ** {aka struct ball **}'
+ movement_t calculate_rebound(ball_t bola, side_t side, bool is_block, block_t block, position_t *next_pos, position_t *bar_pos);
+            ^~~~~~~~~~~~~~~~~
+../src/main.c:200:74: warning: passing argument 6 of 'calculate_rebound' from incompatible pointer type [-Wincompatible-pointer-types]
+   next_mov = calculate_rebound(&ball, side, is_block, *block, &next_pos, &bar_pos); // lo ha hecho Pablo el cutres
+                                                                          ^
+In file included from ../src/main.c:5:0:
+../src/main.h:49:12: note: expected 'position_t * {aka struct position *}' but argument is of type 'position_t ** {aka struct position **}'
+ movement_t calculate_rebound(ball_t bola, side_t side, bool is_block, block_t block, position_t *next_pos, position_t *bar_pos);
+            ^~~~~~~~~~~~~~~~~
+../src/main.c: At top level:
+../src/main.c:343:12: error: conflicting types for 'calculate_rebound'
+ movement_t calculate_rebound(ball_t *bola, side_t side, bool is_block, block_t block, position_t *next_pos, position_t *bar_pos)
+            ^~~~~~~~~~~~~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:49:12: note: previous declaration of 'calculate_rebound' was here
+ movement_t calculate_rebound(ball_t bola, side_t side, bool is_block, block_t block, position_t *next_pos, position_t *bar_pos);
+            ^~~~~~~~~~~~~~~~~
+../src/main.c: In function 'calculate_rebound':
+../src/main.c:345:23: error: 'bola' is a pointer; did you mean to use '->'?
+  movement_t mov = bola.mov;
+                       ^
+                       ->
+../src/main.c:351:23: error: 'bola' is a pointer; did you mean to use '->'?
+     next_pos->x = bola.x + 1;
+                       ^
+                       ->
+../src/main.c:352:23: error: 'bola' is a pointer; did you mean to use '->'?
+     next_pos->y = bola.y + 1;
+                       ^
+                       ->
+../src/main.c:356:23: error: 'bola' is a pointer; did you mean to use '->'?
+     next_pos->x = bola.x - 1;
+                       ^
+                       ->
+../src/main.c:357:23: error: 'bola' is a pointer; did you mean to use '->'?
+     next_pos->y = bola.y + 1;
+                       ^
+                       ->
+../src/main.c:360:13: error: 'bola' is a pointer; did you mean to use '->'?
+     if (bola.mov == mov_top_right) {
+             ^
+             ->
+../src/main.c:362:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->x = bola.x + 1;
+                        ^
+                        ->
+../src/main.c:363:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->y = bola.y + 1;
+                        ^
+                        ->
+../src/main.c:367:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->x = bola.x - 1;
+                        ^
+                        ->
+../src/main.c:368:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->y = bola.y + 1;
+                        ^
+                        ->
+../src/main.c:372:13: error: 'bola' is a pointer; did you mean to use '->'?
+     if (bola.mov == mov_top_left) {
+             ^
+             ->
+../src/main.c:374:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->x = bola.x + 1;
+                        ^
+                        ->
+../src/main.c:375:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->y = bola.y - 1;
+                        ^
+                        ->
+../src/main.c:379:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->x = bola.x + 1;
+                        ^
+                        ->
+../src/main.c:380:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->y = bola.y + 1;
+                        ^
+                        ->
+../src/main.c:384:13: error: 'bola' is a pointer; did you mean to use '->'?
+     if (bola.mov == mov_top_right) {
+             ^
+             ->
+../src/main.c:386:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->x = bola.x - 1;
+                        ^
+                        ->
+../src/main.c:387:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->y = bola.y - 1;
+                        ^
+                        ->
+../src/main.c:391:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->x = bola.x - 1;
+                        ^
+                        ->
+../src/main.c:392:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->y = bola.y + 1;
+                        ^
+                        ->
+../src/main.c:403:23: error: 'bola' is a pointer; did you mean to use '->'?
+     next_pos->x = bola.x - 1;
+                       ^
+                       ->
+../src/main.c:404:23: error: 'bola' is a pointer; did you mean to use '->'?
+     next_pos->y = bola.y - 1;
+                       ^
+                       ->
+../src/main.c:408:23: error: 'bola' is a pointer; did you mean to use '->'?
+     next_pos->x = bola.x + 1;
+                       ^
+                       ->
+../src/main.c:409:23: error: 'bola' is a pointer; did you mean to use '->'?
+     next_pos->y = bola.y - 1;
+                       ^
+                       ->
+../src/main.c:413:23: error: 'bola' is a pointer; did you mean to use '->'?
+     next_pos->x = bola.x - 1;
+                       ^
+                       ->
+../src/main.c:414:23: error: 'bola' is a pointer; did you mean to use '->'?
+     next_pos->y = bola.y + 1;
+                       ^
+                       ->
+../src/main.c:418:23: error: 'bola' is a pointer; did you mean to use '->'?
+     next_pos->x = bola.x + 1;
+                       ^
+                       ->
+../src/main.c:419:23: error: 'bola' is a pointer; did you mean to use '->'?
+     next_pos->y = bola.y + 1;
+                       ^
+                       ->
+../src/main.c:422:13: error: 'bola' is a pointer; did you mean to use '->'?
+     if (bola.mov == mov_bottom_right) {
+             ^
+             ->
+../src/main.c:424:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->x = bola.x + 1;
+                        ^
+                        ->
+../src/main.c:425:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->y = bola.y - 1;
+                        ^
+                        ->
+../src/main.c:429:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->x = bola.x - 1;
+                        ^
+                        ->
+../src/main.c:430:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->y = bola.y - 1;
+                        ^
+                        ->
+../src/main.c:434:13: error: 'bola' is a pointer; did you mean to use '->'?
+     if (bola.mov == mov_top_right) {
+             ^
+             ->
+../src/main.c:436:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->x = bola.x + 1;
+                        ^
+                        ->
+../src/main.c:437:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->y = bola.y + 1;
+                        ^
+                        ->
+../src/main.c:441:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->x = bola.x - 1;
+                        ^
+                        ->
+../src/main.c:442:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->y = bola.y + 1;
+                        ^
+                        ->
+../src/main.c:446:13: error: 'bola' is a pointer; did you mean to use '->'?
+     if (bola.mov == mov_bottom_right) {
+             ^
+             ->
+../src/main.c:448:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->x = bola.x - 1;
+                        ^
+                        ->
+../src/main.c:449:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->y = bola.y + 1;
+                        ^
+                        ->
+../src/main.c:453:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->x = bola.x - 1;
+                        ^
+                        ->
+../src/main.c:454:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->y = bola.y - 1;
+                        ^
+                        ->
+../src/main.c:458:13: error: 'bola' is a pointer; did you mean to use '->'?
+     if (bola.mov == mov_bottom_left) {
+             ^
+             ->
+../src/main.c:460:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->x = bola.x + 1;
+                        ^
+                        ->
+../src/main.c:461:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->y = bola.y - 1;
+                        ^
+                        ->
+../src/main.c:465:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->x = bola.x + 1;
+                        ^
+                        ->
+../src/main.c:466:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->y = bola.y + 1;
+                        ^
+                        ->
+../src/main.c:477:23: error: 'bola' is a pointer; did you mean to use '->'?
+     next_pos->x = bola.x - 1;
+                       ^
+                       ->
+../src/main.c:478:23: error: 'bola' is a pointer; did you mean to use '->'?
+     next_pos->y = bola.y - 1;
+                       ^
+                       ->
+../src/main.c:482:23: error: 'bola' is a pointer; did you mean to use '->'?
+     next_pos->x = bola.x + 1;
+                       ^
+                       ->
+../src/main.c:483:23: error: 'bola' is a pointer; did you mean to use '->'?
+     next_pos->y = bola.y - 1;
+                       ^
+                       ->
+../src/main.c:486:13: error: 'bola' is a pointer; did you mean to use '->'?
+     if (bola.mov == mov_bottom_right) {
+             ^
+             ->
+../src/main.c:488:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->x = bola.x + 1;
+                        ^
+                        ->
+../src/main.c:489:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->y = bola.y - 1;
+                        ^
+                        ->
+../src/main.c:493:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->x = bola.x - 1;
+                        ^
+                        ->
+../src/main.c:494:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->y = bola.y - 1;
+                        ^
+                        ->
+../src/main.c:498:13: error: 'bola' is a pointer; did you mean to use '->'?
+     if (bola.mov == mov_bottom_right) {
+             ^
+             ->
+../src/main.c:500:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->x = bola.x - 1;
+                        ^
+                        ->
+../src/main.c:501:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->y = bola.y + 1;
+                        ^
+                        ->
+../src/main.c:505:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->x = bola.x - 1;
+                        ^
+                        ->
+../src/main.c:506:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->y = bola.y - 1;
+                        ^
+                        ->
+../src/main.c:510:13: error: 'bola' is a pointer; did you mean to use '->'?
+     if (bola.mov == mov_bottom_left) {
+             ^
+             ->
+../src/main.c:512:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->x = bola.x + 1;
+                        ^
+                        ->
+../src/main.c:513:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->y = bola.y - 1;
+                        ^
+                        ->
+../src/main.c:517:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->x = bola.x + 1;
+                        ^
+                        ->
+../src/main.c:518:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->y = bola.y + 1;
+                        ^
+                        ->
+make: *** [src/subdir.mk:32: src/main.o] Error 1
+11:16:29 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'move_ball':
+../src/main.c:200:32: warning: passing argument 1 of 'calculate_rebound' from incompatible pointer type [-Wincompatible-pointer-types]
+   next_mov = calculate_rebound(&ball, side, is_block, *block, &next_pos, &bar_pos); // lo ha hecho Pablo el cutres
+                                ^
+In file included from ../src/main.c:5:0:
+../src/main.h:49:12: note: expected 'ball_t * {aka struct ball *}' but argument is of type 'ball_t ** {aka struct ball **}'
+ movement_t calculate_rebound(ball_t *bola, side_t side, bool is_block, block_t block, position_t *next_pos, position_t *bar_pos);
+            ^~~~~~~~~~~~~~~~~
+../src/main.c:200:74: warning: passing argument 6 of 'calculate_rebound' from incompatible pointer type [-Wincompatible-pointer-types]
+   next_mov = calculate_rebound(&ball, side, is_block, *block, &next_pos, &bar_pos); // lo ha hecho Pablo el cutres
+                                                                          ^
+In file included from ../src/main.c:5:0:
+../src/main.h:49:12: note: expected 'position_t * {aka struct position *}' but argument is of type 'position_t ** {aka struct position **}'
+ movement_t calculate_rebound(ball_t *bola, side_t side, bool is_block, block_t block, position_t *next_pos, position_t *bar_pos);
+            ^~~~~~~~~~~~~~~~~
+../src/main.c: In function 'calculate_rebound':
+../src/main.c:345:23: error: 'bola' is a pointer; did you mean to use '->'?
+  movement_t mov = bola.mov;
+                       ^
+                       ->
+../src/main.c:351:23: error: 'bola' is a pointer; did you mean to use '->'?
+     next_pos->x = bola.x + 1;
+                       ^
+                       ->
+../src/main.c:352:23: error: 'bola' is a pointer; did you mean to use '->'?
+     next_pos->y = bola.y + 1;
+                       ^
+                       ->
+../src/main.c:356:23: error: 'bola' is a pointer; did you mean to use '->'?
+     next_pos->x = bola.x - 1;
+                       ^
+                       ->
+../src/main.c:357:23: error: 'bola' is a pointer; did you mean to use '->'?
+     next_pos->y = bola.y + 1;
+                       ^
+                       ->
+../src/main.c:360:13: error: 'bola' is a pointer; did you mean to use '->'?
+     if (bola.mov == mov_top_right) {
+             ^
+             ->
+../src/main.c:362:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->x = bola.x + 1;
+                        ^
+                        ->
+../src/main.c:363:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->y = bola.y + 1;
+                        ^
+                        ->
+../src/main.c:367:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->x = bola.x - 1;
+                        ^
+                        ->
+../src/main.c:368:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->y = bola.y + 1;
+                        ^
+                        ->
+../src/main.c:372:13: error: 'bola' is a pointer; did you mean to use '->'?
+     if (bola.mov == mov_top_left) {
+             ^
+             ->
+../src/main.c:374:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->x = bola.x + 1;
+                        ^
+                        ->
+../src/main.c:375:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->y = bola.y - 1;
+                        ^
+                        ->
+../src/main.c:379:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->x = bola.x + 1;
+                        ^
+                        ->
+../src/main.c:380:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->y = bola.y + 1;
+                        ^
+                        ->
+../src/main.c:384:13: error: 'bola' is a pointer; did you mean to use '->'?
+     if (bola.mov == mov_top_right) {
+             ^
+             ->
+../src/main.c:386:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->x = bola.x - 1;
+                        ^
+                        ->
+../src/main.c:387:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->y = bola.y - 1;
+                        ^
+                        ->
+../src/main.c:391:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->x = bola.x - 1;
+                        ^
+                        ->
+../src/main.c:392:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->y = bola.y + 1;
+                        ^
+                        ->
+../src/main.c:403:23: error: 'bola' is a pointer; did you mean to use '->'?
+     next_pos->x = bola.x - 1;
+                       ^
+                       ->
+../src/main.c:404:23: error: 'bola' is a pointer; did you mean to use '->'?
+     next_pos->y = bola.y - 1;
+                       ^
+                       ->
+../src/main.c:408:23: error: 'bola' is a pointer; did you mean to use '->'?
+     next_pos->x = bola.x + 1;
+                       ^
+                       ->
+../src/main.c:409:23: error: 'bola' is a pointer; did you mean to use '->'?
+     next_pos->y = bola.y - 1;
+                       ^
+                       ->
+../src/main.c:413:23: error: 'bola' is a pointer; did you mean to use '->'?
+     next_pos->x = bola.x - 1;
+                       ^
+                       ->
+../src/main.c:414:23: error: 'bola' is a pointer; did you mean to use '->'?
+     next_pos->y = bola.y + 1;
+                       ^
+                       ->
+../src/main.c:418:23: error: 'bola' is a pointer; did you mean to use '->'?
+     next_pos->x = bola.x + 1;
+                       ^
+                       ->
+../src/main.c:419:23: error: 'bola' is a pointer; did you mean to use '->'?
+     next_pos->y = bola.y + 1;
+                       ^
+                       ->
+../src/main.c:422:13: error: 'bola' is a pointer; did you mean to use '->'?
+     if (bola.mov == mov_bottom_right) {
+             ^
+             ->
+../src/main.c:424:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->x = bola.x + 1;
+                        ^
+                        ->
+../src/main.c:425:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->y = bola.y - 1;
+                        ^
+                        ->
+../src/main.c:429:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->x = bola.x - 1;
+                        ^
+                        ->
+../src/main.c:430:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->y = bola.y - 1;
+                        ^
+                        ->
+../src/main.c:434:13: error: 'bola' is a pointer; did you mean to use '->'?
+     if (bola.mov == mov_top_right) {
+             ^
+             ->
+../src/main.c:436:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->x = bola.x + 1;
+                        ^
+                        ->
+../src/main.c:437:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->y = bola.y + 1;
+                        ^
+                        ->
+../src/main.c:441:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->x = bola.x - 1;
+                        ^
+                        ->
+../src/main.c:442:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->y = bola.y + 1;
+                        ^
+                        ->
+../src/main.c:446:13: error: 'bola' is a pointer; did you mean to use '->'?
+     if (bola.mov == mov_bottom_right) {
+             ^
+             ->
+../src/main.c:448:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->x = bola.x - 1;
+                        ^
+                        ->
+../src/main.c:449:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->y = bola.y + 1;
+                        ^
+                        ->
+../src/main.c:453:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->x = bola.x - 1;
+                        ^
+                        ->
+../src/main.c:454:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->y = bola.y - 1;
+                        ^
+                        ->
+../src/main.c:458:13: error: 'bola' is a pointer; did you mean to use '->'?
+     if (bola.mov == mov_bottom_left) {
+             ^
+             ->
+../src/main.c:460:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->x = bola.x + 1;
+                        ^
+                        ->
+../src/main.c:461:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->y = bola.y - 1;
+                        ^
+                        ->
+../src/main.c:465:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->x = bola.x + 1;
+                        ^
+                        ->
+../src/main.c:466:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->y = bola.y + 1;
+                        ^
+                        ->
+../src/main.c:477:23: error: 'bola' is a pointer; did you mean to use '->'?
+     next_pos->x = bola.x - 1;
+                       ^
+                       ->
+../src/main.c:478:23: error: 'bola' is a pointer; did you mean to use '->'?
+     next_pos->y = bola.y - 1;
+                       ^
+                       ->
+../src/main.c:482:23: error: 'bola' is a pointer; did you mean to use '->'?
+     next_pos->x = bola.x + 1;
+                       ^
+                       ->
+../src/main.c:483:23: error: 'bola' is a pointer; did you mean to use '->'?
+     next_pos->y = bola.y - 1;
+                       ^
+                       ->
+../src/main.c:486:13: error: 'bola' is a pointer; did you mean to use '->'?
+     if (bola.mov == mov_bottom_right) {
+             ^
+             ->
+../src/main.c:488:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->x = bola.x + 1;
+                        ^
+                        ->
+../src/main.c:489:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->y = bola.y - 1;
+                        ^
+                        ->
+../src/main.c:493:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->x = bola.x - 1;
+                        ^
+                        ->
+../src/main.c:494:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->y = bola.y - 1;
+                        ^
+                        ->
+../src/main.c:498:13: error: 'bola' is a pointer; did you mean to use '->'?
+     if (bola.mov == mov_bottom_right) {
+             ^
+             ->
+../src/main.c:500:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->x = bola.x - 1;
+                        ^
+                        ->
+../src/main.c:501:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->y = bola.y + 1;
+                        ^
+                        ->
+../src/main.c:505:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->x = bola.x - 1;
+                        ^
+                        ->
+../src/main.c:506:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->y = bola.y - 1;
+                        ^
+                        ->
+../src/main.c:510:13: error: 'bola' is a pointer; did you mean to use '->'?
+     if (bola.mov == mov_bottom_left) {
+             ^
+             ->
+../src/main.c:512:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->x = bola.x + 1;
+                        ^
+                        ->
+../src/main.c:513:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->y = bola.y - 1;
+                        ^
+                        ->
+../src/main.c:517:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->x = bola.x + 1;
+                        ^
+                        ->
+../src/main.c:518:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->y = bola.y + 1;
+                        ^
+                        ->
+make: *** [src/subdir.mk:32: src/main.o] Error 1
+11:18:49 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'move_ball':
+../src/main.c:200:32: warning: passing argument 1 of 'calculate_rebound' from incompatible pointer type [-Wincompatible-pointer-types]
+   next_mov = calculate_rebound(&ball, side, is_block, *block, &next_pos, &bar_pos); // lo ha hecho Pablo el cutres
+                                ^
+In file included from ../src/main.c:5:0:
+../src/main.h:49:12: note: expected 'ball_t * {aka struct ball *}' but argument is of type 'ball_t ** {aka struct ball **}'
+ movement_t calculate_rebound(ball_t *bola, side_t side, bool is_block, block_t block, position_t *next_pos, position_t *bar_pos);
+            ^~~~~~~~~~~~~~~~~
+../src/main.c:200:74: warning: passing argument 6 of 'calculate_rebound' from incompatible pointer type [-Wincompatible-pointer-types]
+   next_mov = calculate_rebound(&ball, side, is_block, *block, &next_pos, &bar_pos); // lo ha hecho Pablo el cutres
+                                                                          ^
+In file included from ../src/main.c:5:0:
+../src/main.h:49:12: note: expected 'position_t * {aka struct position *}' but argument is of type 'position_t ** {aka struct position **}'
+ movement_t calculate_rebound(ball_t *bola, side_t side, bool is_block, block_t block, position_t *next_pos, position_t *bar_pos);
+            ^~~~~~~~~~~~~~~~~
+../src/main.c: In function 'calculate_rebound':
+../src/main.c:345:19: error: 'ball' undeclared (first use in this function)
+  movement_t mov = ball->mov;
+                   ^~~~
+../src/main.c:345:19: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:372:13: error: 'bola' is a pointer; did you mean to use '->'?
+     if (bola.mov == mov_top_left) {
+             ^
+             ->
+../src/main.c:384:13: error: 'bola' is a pointer; did you mean to use '->'?
+     if (bola.mov == mov_top_right) {
+             ^
+             ->
+../src/main.c:434:13: error: 'bola' is a pointer; did you mean to use '->'?
+     if (bola.mov == mov_top_right) {
+             ^
+             ->
+../src/main.c:436:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->x = bola.x + 1;
+                        ^
+                        ->
+../src/main.c:437:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->y = bola.y + 1;
+                        ^
+                        ->
+../src/main.c:441:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->x = bola.x - 1;
+                        ^
+                        ->
+../src/main.c:442:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->y = bola.y + 1;
+                        ^
+                        ->
+../src/main.c:446:13: error: 'bola' is a pointer; did you mean to use '->'?
+     if (bola.mov == mov_bottom_right) {
+             ^
+             ->
+../src/main.c:448:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->x = bola.x - 1;
+                        ^
+                        ->
+../src/main.c:449:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->y = bola.y + 1;
+                        ^
+                        ->
+../src/main.c:453:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->x = bola.x - 1;
+                        ^
+                        ->
+../src/main.c:454:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->y = bola.y - 1;
+                        ^
+                        ->
+../src/main.c:458:13: error: 'bola' is a pointer; did you mean to use '->'?
+     if (bola.mov == mov_bottom_left) {
+             ^
+             ->
+../src/main.c:460:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->x = bola.x + 1;
+                        ^
+                        ->
+../src/main.c:461:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->y = bola.y - 1;
+                        ^
+                        ->
+../src/main.c:465:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->x = bola.x + 1;
+                        ^
+                        ->
+../src/main.c:466:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->y = bola.y + 1;
+                        ^
+                        ->
+../src/main.c:477:23: error: 'bola' is a pointer; did you mean to use '->'?
+     next_pos->x = bola.x - 1;
+                       ^
+                       ->
+../src/main.c:478:23: error: 'bola' is a pointer; did you mean to use '->'?
+     next_pos->y = bola.y - 1;
+                       ^
+                       ->
+../src/main.c:482:23: error: 'bola' is a pointer; did you mean to use '->'?
+     next_pos->x = bola.x + 1;
+                       ^
+                       ->
+../src/main.c:483:23: error: 'bola' is a pointer; did you mean to use '->'?
+     next_pos->y = bola.y - 1;
+                       ^
+                       ->
+../src/main.c:486:13: error: 'bola' is a pointer; did you mean to use '->'?
+     if (bola.mov == mov_bottom_right) {
+             ^
+             ->
+../src/main.c:488:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->x = bola.x + 1;
+                        ^
+                        ->
+../src/main.c:489:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->y = bola.y - 1;
+                        ^
+                        ->
+../src/main.c:493:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->x = bola.x - 1;
+                        ^
+                        ->
+../src/main.c:494:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->y = bola.y - 1;
+                        ^
+                        ->
+../src/main.c:498:13: error: 'bola' is a pointer; did you mean to use '->'?
+     if (bola.mov == mov_bottom_right) {
+             ^
+             ->
+../src/main.c:500:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->x = bola.x - 1;
+                        ^
+                        ->
+../src/main.c:501:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->y = bola.y + 1;
+                        ^
+                        ->
+../src/main.c:505:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->x = bola.x - 1;
+                        ^
+                        ->
+../src/main.c:506:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->y = bola.y - 1;
+                        ^
+                        ->
+../src/main.c:510:13: error: 'bola' is a pointer; did you mean to use '->'?
+     if (bola.mov == mov_bottom_left) {
+             ^
+             ->
+../src/main.c:512:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->x = bola.x + 1;
+                        ^
+                        ->
+../src/main.c:513:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->y = bola.y - 1;
+                        ^
+                        ->
+../src/main.c:517:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->x = bola.x + 1;
+                        ^
+                        ->
+../src/main.c:518:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->y = bola.y + 1;
+                        ^
+                        ->
+make: *** [src/subdir.mk:32: src/main.o] Error 1
+11:19:44 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'move_ball':
+../src/main.c:200:32: warning: passing argument 1 of 'calculate_rebound' from incompatible pointer type [-Wincompatible-pointer-types]
+   next_mov = calculate_rebound(&ball, side, is_block, *block, &next_pos, &bar_pos); // lo ha hecho Pablo el cutres
+                                ^
+In file included from ../src/main.c:5:0:
+../src/main.h:49:12: note: expected 'ball_t * {aka struct ball *}' but argument is of type 'ball_t ** {aka struct ball **}'
+ movement_t calculate_rebound(ball_t *bola, side_t side, bool is_block, block_t block, position_t *next_pos, position_t *bar_pos);
+            ^~~~~~~~~~~~~~~~~
+../src/main.c:200:74: warning: passing argument 6 of 'calculate_rebound' from incompatible pointer type [-Wincompatible-pointer-types]
+   next_mov = calculate_rebound(&ball, side, is_block, *block, &next_pos, &bar_pos); // lo ha hecho Pablo el cutres
+                                                                          ^
+In file included from ../src/main.c:5:0:
+../src/main.h:49:12: note: expected 'position_t * {aka struct position *}' but argument is of type 'position_t ** {aka struct position **}'
+ movement_t calculate_rebound(ball_t *bola, side_t side, bool is_block, block_t block, position_t *next_pos, position_t *bar_pos);
+            ^~~~~~~~~~~~~~~~~
+../src/main.c: In function 'calculate_rebound':
+../src/main.c:345:19: error: 'ball' undeclared (first use in this function)
+  movement_t mov = ball->mov;
+                   ^~~~
+../src/main.c:345:19: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:372:13: error: 'bola' is a pointer; did you mean to use '->'?
+     if (bola.mov == mov_top_left) {
+             ^
+             ->
+../src/main.c:384:13: error: 'bola' is a pointer; did you mean to use '->'?
+     if (bola.mov == mov_top_right) {
+             ^
+             ->
+../src/main.c:453:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->x = bola.x - 1;
+                        ^
+                        ->
+../src/main.c:454:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->y = bola.y - 1;
+                        ^
+                        ->
+../src/main.c:458:13: error: 'bola' is a pointer; did you mean to use '->'?
+     if (bola.mov == mov_bottom_left) {
+             ^
+             ->
+../src/main.c:460:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->x = bola.x + 1;
+                        ^
+                        ->
+../src/main.c:461:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->y = bola.y - 1;
+                        ^
+                        ->
+../src/main.c:465:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->x = bola.x + 1;
+                        ^
+                        ->
+../src/main.c:466:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->y = bola.y + 1;
+                        ^
+                        ->
+../src/main.c:477:23: error: 'bola' is a pointer; did you mean to use '->'?
+     next_pos->x = bola.x - 1;
+                       ^
+                       ->
+../src/main.c:478:23: error: 'bola' is a pointer; did you mean to use '->'?
+     next_pos->y = bola.y - 1;
+                       ^
+                       ->
+../src/main.c:482:23: error: 'bola' is a pointer; did you mean to use '->'?
+     next_pos->x = bola.x + 1;
+                       ^
+                       ->
+../src/main.c:483:23: error: 'bola' is a pointer; did you mean to use '->'?
+     next_pos->y = bola.y - 1;
+                       ^
+                       ->
+../src/main.c:486:13: error: 'bola' is a pointer; did you mean to use '->'?
+     if (bola.mov == mov_bottom_right) {
+             ^
+             ->
+../src/main.c:488:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->x = bola.x + 1;
+                        ^
+                        ->
+../src/main.c:489:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->y = bola.y - 1;
+                        ^
+                        ->
+../src/main.c:493:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->x = bola.x - 1;
+                        ^
+                        ->
+../src/main.c:494:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->y = bola.y - 1;
+                        ^
+                        ->
+../src/main.c:498:13: error: 'bola' is a pointer; did you mean to use '->'?
+     if (bola.mov == mov_bottom_right) {
+             ^
+             ->
+../src/main.c:500:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->x = bola.x - 1;
+                        ^
+                        ->
+../src/main.c:501:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->y = bola.y + 1;
+                        ^
+                        ->
+../src/main.c:505:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->x = bola.x - 1;
+                        ^
+                        ->
+../src/main.c:506:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->y = bola.y - 1;
+                        ^
+                        ->
+../src/main.c:510:13: error: 'bola' is a pointer; did you mean to use '->'?
+     if (bola.mov == mov_bottom_left) {
+             ^
+             ->
+../src/main.c:512:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->x = bola.x + 1;
+                        ^
+                        ->
+../src/main.c:513:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->y = bola.y - 1;
+                        ^
+                        ->
+../src/main.c:517:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->x = bola.x + 1;
+                        ^
+                        ->
+../src/main.c:518:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->y = bola.y + 1;
+                        ^
+                        ->
+make: *** [src/subdir.mk:32: src/main.o] Error 1
+11:21:05 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'move_ball':
+../src/main.c:200:32: warning: passing argument 1 of 'calculate_rebound' from incompatible pointer type [-Wincompatible-pointer-types]
+   next_mov = calculate_rebound(&ball, side, is_block, *block, &next_pos, &bar_pos); // lo ha hecho Pablo el cutres
+                                ^
+In file included from ../src/main.c:5:0:
+../src/main.h:49:12: note: expected 'ball_t * {aka struct ball *}' but argument is of type 'ball_t ** {aka struct ball **}'
+ movement_t calculate_rebound(ball_t *bola, side_t side, bool is_block, block_t block, position_t *next_pos, position_t *bar_pos);
+            ^~~~~~~~~~~~~~~~~
+../src/main.c:200:74: warning: passing argument 6 of 'calculate_rebound' from incompatible pointer type [-Wincompatible-pointer-types]
+   next_mov = calculate_rebound(&ball, side, is_block, *block, &next_pos, &bar_pos); // lo ha hecho Pablo el cutres
+                                                                          ^
+In file included from ../src/main.c:5:0:
+../src/main.h:49:12: note: expected 'position_t * {aka struct position *}' but argument is of type 'position_t ** {aka struct position **}'
+ movement_t calculate_rebound(ball_t *bola, side_t side, bool is_block, block_t block, position_t *next_pos, position_t *bar_pos);
+            ^~~~~~~~~~~~~~~~~
+../src/main.c: In function 'calculate_rebound':
+../src/main.c:345:19: error: 'ball' undeclared (first use in this function)
+  movement_t mov = ball->mov;
+                   ^~~~
+../src/main.c:345:19: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:372:13: error: 'bola' is a pointer; did you mean to use '->'?
+     if (bola.mov == mov_top_left) {
+             ^
+             ->
+../src/main.c:501:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->y = bola.y + 1;
+                        ^
+                        ->
+../src/main.c:505:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->x = bola.x - 1;
+                        ^
+                        ->
+../src/main.c:506:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->y = bola.y - 1;
+                        ^
+                        ->
+../src/main.c:510:13: error: 'bola' is a pointer; did you mean to use '->'?
+     if (bola.mov == mov_bottom_left) {
+             ^
+             ->
+../src/main.c:512:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->x = bola.x + 1;
+                        ^
+                        ->
+../src/main.c:513:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->y = bola.y - 1;
+                        ^
+                        ->
+../src/main.c:517:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->x = bola.x + 1;
+                        ^
+                        ->
+../src/main.c:518:24: error: 'bola' is a pointer; did you mean to use '->'?
+      next_pos->y = bola.y + 1;
+                        ^
+                        ->
+make: *** [src/subdir.mk:32: src/main.o] Error 1
+11:21:29 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'move_ball':
+../src/main.c:200:32: warning: passing argument 1 of 'calculate_rebound' from incompatible pointer type [-Wincompatible-pointer-types]
+   next_mov = calculate_rebound(&ball, side, is_block, *block, &next_pos, &bar_pos); // lo ha hecho Pablo el cutres
+                                ^
+In file included from ../src/main.c:5:0:
+../src/main.h:49:12: note: expected 'ball_t * {aka struct ball *}' but argument is of type 'ball_t ** {aka struct ball **}'
+ movement_t calculate_rebound(ball_t *bola, side_t side, bool is_block, block_t block, position_t *next_pos, position_t *bar_pos);
+            ^~~~~~~~~~~~~~~~~
+../src/main.c:200:74: warning: passing argument 6 of 'calculate_rebound' from incompatible pointer type [-Wincompatible-pointer-types]
+   next_mov = calculate_rebound(&ball, side, is_block, *block, &next_pos, &bar_pos); // lo ha hecho Pablo el cutres
+                                                                          ^
+In file included from ../src/main.c:5:0:
+../src/main.h:49:12: note: expected 'position_t * {aka struct position *}' but argument is of type 'position_t ** {aka struct position **}'
+ movement_t calculate_rebound(ball_t *bola, side_t side, bool is_block, block_t block, position_t *next_pos, position_t *bar_pos);
+            ^~~~~~~~~~~~~~~~~
+../src/main.c: In function 'calculate_rebound':
+../src/main.c:345:19: error: 'ball' undeclared (first use in this function)
+  movement_t mov = ball->mov;
+                   ^~~~
+../src/main.c:345:19: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:372:13: error: 'bola' is a pointer; did you mean to use '->'?
+     if (bola.mov == mov_top_left) {
+             ^
+             ->
+make: *** [src/subdir.mk:32: src/main.o] Error 1
+11:21:50 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'move_ball':
+../src/main.c:200:32: warning: passing argument 1 of 'calculate_rebound' from incompatible pointer type [-Wincompatible-pointer-types]
+   next_mov = calculate_rebound(&ball, side, is_block, *block, &next_pos, &bar_pos); // lo ha hecho Pablo el cutres
+                                ^
+In file included from ../src/main.c:5:0:
+../src/main.h:49:12: note: expected 'ball_t * {aka struct ball *}' but argument is of type 'ball_t ** {aka struct ball **}'
+ movement_t calculate_rebound(ball_t *bola, side_t side, bool is_block, block_t block, position_t *next_pos, position_t *bar_pos);
+            ^~~~~~~~~~~~~~~~~
+../src/main.c:200:74: warning: passing argument 6 of 'calculate_rebound' from incompatible pointer type [-Wincompatible-pointer-types]
+   next_mov = calculate_rebound(&ball, side, is_block, *block, &next_pos, &bar_pos); // lo ha hecho Pablo el cutres
+                                                                          ^
+In file included from ../src/main.c:5:0:
+../src/main.h:49:12: note: expected 'position_t * {aka struct position *}' but argument is of type 'position_t ** {aka struct position **}'
+ movement_t calculate_rebound(ball_t *bola, side_t side, bool is_block, block_t block, position_t *next_pos, position_t *bar_pos);
+            ^~~~~~~~~~~~~~~~~
+../src/main.c: In function 'calculate_rebound':
+../src/main.c:372:9: error: 'bola' undeclared (first use in this function); did you mean 'ball'?
+     if (bola.mov == mov_top_left) {
+         ^~~~
+         ball
+../src/main.c:372:9: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/subdir.mk:32: src/main.o] Error 1
+11:22:04 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'move_ball':
+../src/main.c:200:32: warning: passing argument 1 of 'calculate_rebound' from incompatible pointer type [-Wincompatible-pointer-types]
+   next_mov = calculate_rebound(&ball, side, is_block, *block, &next_pos, &bar_pos); // lo ha hecho Pablo el cutres
+                                ^
+In file included from ../src/main.c:5:0:
+../src/main.h:49:12: note: expected 'ball_t * {aka struct ball *}' but argument is of type 'ball_t ** {aka struct ball **}'
+ movement_t calculate_rebound(ball_t *ball, side_t side, bool is_block, block_t block, position_t *next_pos, position_t *bar_pos);
+            ^~~~~~~~~~~~~~~~~
+../src/main.c:200:74: warning: passing argument 6 of 'calculate_rebound' from incompatible pointer type [-Wincompatible-pointer-types]
+   next_mov = calculate_rebound(&ball, side, is_block, *block, &next_pos, &bar_pos); // lo ha hecho Pablo el cutres
+                                                                          ^
+In file included from ../src/main.c:5:0:
+../src/main.h:49:12: note: expected 'position_t * {aka struct position *}' but argument is of type 'position_t ** {aka struct position **}'
+ movement_t calculate_rebound(ball_t *ball, side_t side, bool is_block, block_t block, position_t *next_pos, position_t *bar_pos);
+            ^~~~~~~~~~~~~~~~~
+../src/main.c: In function 'calculate_rebound':
+../src/main.c:372:9: error: 'bola' undeclared (first use in this function); did you mean 'ball'?
+     if (bola.mov == mov_top_left) {
+         ^~~~
+         ball
+../src/main.c:372:9: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/subdir.mk:32: src/main.o] Error 1
+11:22:15 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'move_ball':
+../src/main.c:200:32: warning: passing argument 1 of 'calculate_rebound' from incompatible pointer type [-Wincompatible-pointer-types]
+   next_mov = calculate_rebound(&ball, side, is_block, *block, &next_pos, &bar_pos); // lo ha hecho Pablo el cutres
+                                ^
+In file included from ../src/main.c:5:0:
+../src/main.h:49:12: note: expected 'ball_t * {aka struct ball *}' but argument is of type 'ball_t ** {aka struct ball **}'
+ movement_t calculate_rebound(ball_t *ball, side_t side, bool is_block, block_t block, position_t *next_pos, position_t *bar_pos);
+            ^~~~~~~~~~~~~~~~~
+../src/main.c:200:74: warning: passing argument 6 of 'calculate_rebound' from incompatible pointer type [-Wincompatible-pointer-types]
+   next_mov = calculate_rebound(&ball, side, is_block, *block, &next_pos, &bar_pos); // lo ha hecho Pablo el cutres
+                                                                          ^
+In file included from ../src/main.c:5:0:
+../src/main.h:49:12: note: expected 'position_t * {aka struct position *}' but argument is of type 'position_t ** {aka struct position **}'
+ movement_t calculate_rebound(ball_t *ball, side_t side, bool is_block, block_t block, position_t *next_pos, position_t *bar_pos);
+            ^~~~~~~~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27276	   5472	   5332	  38080	   94c0	example.elf
+'Finished building: example.elf.size'
+' '
+11:22:48 **** Incremental Build of configuration Debug for project example ****
+make all 
+make: Nothing to be done for 'all'.
+11:24:13 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'move_ball':
+../src/main.c:200:32: warning: passing argument 1 of 'calculate_rebound' from incompatible pointer type [-Wincompatible-pointer-types]
+   next_mov = calculate_rebound(&ball, side, is_block, *block, &next_pos, &bar_pos); // lo ha hecho Pablo el cutres
+                                ^
+In file included from ../src/main.c:5:0:
+../src/main.h:49:12: note: expected 'ball_t * {aka struct ball *}' but argument is of type 'ball_t ** {aka struct ball **}'
+ movement_t calculate_rebound(ball_t *ball, side_t side, bool is_block, block_t block, position_t *next_pos, position_t *bar_pos);
+            ^~~~~~~~~~~~~~~~~
+../src/main.c:200:74: warning: passing argument 6 of 'calculate_rebound' from incompatible pointer type [-Wincompatible-pointer-types]
+   next_mov = calculate_rebound(&ball, side, is_block, *block, &next_pos, &bar_pos); // lo ha hecho Pablo el cutres
+                                                                          ^
+In file included from ../src/main.c:5:0:
+../src/main.h:49:12: note: expected 'position_t * {aka struct position *}' but argument is of type 'position_t ** {aka struct position **}'
+ movement_t calculate_rebound(ball_t *ball, side_t side, bool is_block, block_t block, position_t *next_pos, position_t *bar_pos);
+            ^~~~~~~~~~~~~~~~~
+../src/main.c: In function 'init_ball':
+../src/main.c:547:6: error: 'ball' is a pointer; did you mean to use '->'?
+  ball.x = bar_pos.x + BAR_LENGTH / 2;
+      ^
+      ->
+../src/main.c:548:6: error: 'ball' is a pointer; did you mean to use '->'?
+  ball.y = bar_pos.y - 1;
+      ^
+      ->
+../src/main.c:549:12: error: 'ball' is a pointer; did you mean to use '->'?
+  paint(ball.x, ball.y, azul_claro);
+            ^
+            ->
+../src/main.c:549:20: error: 'ball' is a pointer; did you mean to use '->'?
+  paint(ball.x, ball.y, azul_claro);
+                    ^
+                    ->
+make: *** [src/subdir.mk:32: src/main.o] Error 1
+11:24:46 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'move_ball':
+../src/main.c:200:32: warning: passing argument 1 of 'calculate_rebound' from incompatible pointer type [-Wincompatible-pointer-types]
+   next_mov = calculate_rebound(&ball, side, is_block, *block, &next_pos, &bar_pos); // lo ha hecho Pablo el cutres
+                                ^
+In file included from ../src/main.c:5:0:
+../src/main.h:49:12: note: expected 'ball_t * {aka struct ball *}' but argument is of type 'ball_t ** {aka struct ball **}'
+ movement_t calculate_rebound(ball_t *ball, side_t side, bool is_block, block_t block, position_t *next_pos, position_t *bar_pos);
+            ^~~~~~~~~~~~~~~~~
+../src/main.c:200:74: warning: passing argument 6 of 'calculate_rebound' from incompatible pointer type [-Wincompatible-pointer-types]
+   next_mov = calculate_rebound(&ball, side, is_block, *block, &next_pos, &bar_pos); // lo ha hecho Pablo el cutres
+                                                                          ^
+In file included from ../src/main.c:5:0:
+../src/main.h:49:12: note: expected 'position_t * {aka struct position *}' but argument is of type 'position_t ** {aka struct position **}'
+ movement_t calculate_rebound(ball_t *ball, side_t side, bool is_block, block_t block, position_t *next_pos, position_t *bar_pos);
+            ^~~~~~~~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27300	   5472	   5332	  38104	   94d8	example.elf
+'Finished building: example.elf.size'
+' '
+11:25:25 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'move_ball':
+../src/main.c:200:32: warning: passing argument 1 of 'calculate_rebound' from incompatible pointer type [-Wincompatible-pointer-types]
+   next_mov = calculate_rebound(&ball, side, is_block, *block, &next_pos, &bar_pos); // lo ha hecho Pablo el cutres
+                                ^
+In file included from ../src/main.c:5:0:
+../src/main.h:49:12: note: expected 'ball_t * {aka struct ball *}' but argument is of type 'ball_t ** {aka struct ball **}'
+ movement_t calculate_rebound(ball_t *ball, side_t side, bool is_block, block_t block, position_t *next_pos, position_t *bar_pos);
+            ^~~~~~~~~~~~~~~~~
+../src/main.c:200:74: warning: passing argument 6 of 'calculate_rebound' from incompatible pointer type [-Wincompatible-pointer-types]
+   next_mov = calculate_rebound(&ball, side, is_block, *block, &next_pos, &bar_pos); // lo ha hecho Pablo el cutres
+                                                                          ^
+In file included from ../src/main.c:5:0:
+../src/main.h:49:12: note: expected 'position_t * {aka struct position *}' but argument is of type 'position_t ** {aka struct position **}'
+ movement_t calculate_rebound(ball_t *ball, side_t side, bool is_block, block_t block, position_t *next_pos, position_t *bar_pos);
+            ^~~~~~~~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27320	   5472	   5328	  38120	   94e8	example.elf
+'Finished building: example.elf.size'
+' '
+11:25:34 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'move_ball':
+../src/main.c:200:32: warning: passing argument 1 of 'calculate_rebound' from incompatible pointer type [-Wincompatible-pointer-types]
+   next_mov = calculate_rebound(&ball, side, is_block, *block, &next_pos, &bar_pos); // lo ha hecho Pablo el cutres
+                                ^
+In file included from ../src/main.c:5:0:
+../src/main.h:49:12: note: expected 'ball_t * {aka struct ball *}' but argument is of type 'ball_t ** {aka struct ball **}'
+ movement_t calculate_rebound(ball_t *ball, side_t side, bool is_block, block_t block, position_t *next_pos, position_t *bar_pos);
+            ^~~~~~~~~~~~~~~~~
+../src/main.c:200:74: warning: passing argument 6 of 'calculate_rebound' from incompatible pointer type [-Wincompatible-pointer-types]
+   next_mov = calculate_rebound(&ball, side, is_block, *block, &next_pos, &bar_pos); // lo ha hecho Pablo el cutres
+                                                                          ^
+In file included from ../src/main.c:5:0:
+../src/main.h:49:12: note: expected 'position_t * {aka struct position *}' but argument is of type 'position_t ** {aka struct position **}'
+ movement_t calculate_rebound(ball_t *ball, side_t side, bool is_block, block_t block, position_t *next_pos, position_t *bar_pos);
+            ^~~~~~~~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27328	   5472	   5328	  38128	   94f0	example.elf
+'Finished building: example.elf.size'
+' '
+11:25:56 **** Incremental Build of configuration Debug for project example ****
+make all 
+make: Nothing to be done for 'all'.
+11:26:39 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'life_lost':
+../src/main.c:114:12: warning: passing argument 1 of 'init_ball' from incompatible pointer type [-Wincompatible-pointer-types]
+  init_ball(&ball, &bar_pos);
+            ^
+In file included from ../src/main.c:5:0:
+../src/main.h:43:6: note: expected 'ball_t * {aka struct ball *}' but argument is of type 'ball_t ** {aka struct ball **}'
+ void init_ball(ball_t *ball, position_t *bar_pos);
+      ^~~~~~~~~
+../src/main.c:114:19: warning: passing argument 2 of 'init_ball' from incompatible pointer type [-Wincompatible-pointer-types]
+  init_ball(&ball, &bar_pos);
+                   ^
+In file included from ../src/main.c:5:0:
+../src/main.h:43:6: note: expected 'position_t * {aka struct position *}' but argument is of type 'position_t ** {aka struct position **}'
+ void init_ball(ball_t *ball, position_t *bar_pos);
+      ^~~~~~~~~
+../src/main.c: In function 'move_ball':
+../src/main.c:200:32: warning: passing argument 1 of 'calculate_rebound' from incompatible pointer type [-Wincompatible-pointer-types]
+   next_mov = calculate_rebound(&ball, side, is_block, *block, &next_pos, &bar_pos); // lo ha hecho Pablo el cutres
+                                ^
+In file included from ../src/main.c:5:0:
+../src/main.h:49:12: note: expected 'ball_t * {aka struct ball *}' but argument is of type 'ball_t ** {aka struct ball **}'
+ movement_t calculate_rebound(ball_t *ball, side_t side, bool is_block, block_t block, position_t *next_pos, position_t *bar_pos);
+            ^~~~~~~~~~~~~~~~~
+../src/main.c:200:74: warning: passing argument 6 of 'calculate_rebound' from incompatible pointer type [-Wincompatible-pointer-types]
+   next_mov = calculate_rebound(&ball, side, is_block, *block, &next_pos, &bar_pos); // lo ha hecho Pablo el cutres
+                                                                          ^
+In file included from ../src/main.c:5:0:
+../src/main.h:49:12: note: expected 'position_t * {aka struct position *}' but argument is of type 'position_t ** {aka struct position **}'
+ movement_t calculate_rebound(ball_t *ball, side_t side, bool is_block, block_t block, position_t *next_pos, position_t *bar_pos);
+            ^~~~~~~~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27328	   5472	   5328	  38128	   94f0	example.elf
+'Finished building: example.elf.size'
+' '
+11:29:02 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'life_lost':
+../src/main.c:114:12: warning: passing argument 1 of 'init_ball' from incompatible pointer type [-Wincompatible-pointer-types]
+  init_ball(&ball, &bar_pos);
+            ^
+In file included from ../src/main.c:5:0:
+../src/main.h:43:6: note: expected 'ball_t * {aka struct ball *}' but argument is of type 'ball_t ** {aka struct ball **}'
+ void init_ball(ball_t *ball, position_t *bar_pos);
+      ^~~~~~~~~
+../src/main.c:114:19: warning: passing argument 2 of 'init_ball' from incompatible pointer type [-Wincompatible-pointer-types]
+  init_ball(&ball, &bar_pos);
+                   ^
+In file included from ../src/main.c:5:0:
+../src/main.h:43:6: note: expected 'position_t * {aka struct position *}' but argument is of type 'position_t ** {aka struct position **}'
+ void init_ball(ball_t *ball, position_t *bar_pos);
+      ^~~~~~~~~
+../src/main.c: In function 'move_ball':
+../src/main.c:200:32: warning: passing argument 1 of 'calculate_rebound' from incompatible pointer type [-Wincompatible-pointer-types]
+   next_mov = calculate_rebound(&ball, side, is_block, *block, &next_pos, &bar_pos); // lo ha hecho Pablo el cutres
+                                ^
+In file included from ../src/main.c:5:0:
+../src/main.h:49:12: note: expected 'ball_t * {aka struct ball *}' but argument is of type 'ball_t ** {aka struct ball **}'
+ movement_t calculate_rebound(ball_t *ball, side_t side, bool is_block, block_t block, position_t *next_pos, position_t *bar_pos);
+            ^~~~~~~~~~~~~~~~~
+../src/main.c:200:74: warning: passing argument 6 of 'calculate_rebound' from incompatible pointer type [-Wincompatible-pointer-types]
+   next_mov = calculate_rebound(&ball, side, is_block, *block, &next_pos, &bar_pos); // lo ha hecho Pablo el cutres
+                                                                          ^
+In file included from ../src/main.c:5:0:
+../src/main.h:49:12: note: expected 'position_t * {aka struct position *}' but argument is of type 'position_t ** {aka struct position **}'
+ movement_t calculate_rebound(ball_t *ball, side_t side, bool is_block, block_t block, position_t *next_pos, position_t *bar_pos);
+            ^~~~~~~~~~~~~~~~~
+../src/main.c: At top level:
+../src/main.c:293:8: error: conflicting types for 'which_side_bar'
+ side_t which_side_bar(position_t next_pos, position_t *bar_pos)
+        ^~~~~~~~~~~~~~
+In file included from ../src/main.c:5:0:
+../src/main.h:50:8: note: previous declaration of 'which_side_bar' was here
+ side_t which_side_bar(position_t next_pos, position_t bar_pos);
+        ^~~~~~~~~~~~~~
+../src/main.c: In function 'calculate_rebound':
+../src/main.c:474:37: error: incompatible type for argument 2 of 'which_side_bar'
+   switch (which_side_bar(*next_pos, *bar_pos)) {
+                                     ^
+../src/main.c:293:8: note: expected 'position_t * {aka struct position *}' but argument is of type 'position_t {aka struct position}'
+ side_t which_side_bar(position_t next_pos, position_t *bar_pos)
+        ^~~~~~~~~~~~~~
+make: *** [src/subdir.mk:32: src/main.o] Error 1
+11:29:09 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'life_lost':
+../src/main.c:114:12: warning: passing argument 1 of 'init_ball' from incompatible pointer type [-Wincompatible-pointer-types]
+  init_ball(&ball, &bar_pos);
+            ^
+In file included from ../src/main.c:5:0:
+../src/main.h:43:6: note: expected 'ball_t * {aka struct ball *}' but argument is of type 'ball_t ** {aka struct ball **}'
+ void init_ball(ball_t *ball, position_t *bar_pos);
+      ^~~~~~~~~
+../src/main.c:114:19: warning: passing argument 2 of 'init_ball' from incompatible pointer type [-Wincompatible-pointer-types]
+  init_ball(&ball, &bar_pos);
+                   ^
+In file included from ../src/main.c:5:0:
+../src/main.h:43:6: note: expected 'position_t * {aka struct position *}' but argument is of type 'position_t ** {aka struct position **}'
+ void init_ball(ball_t *ball, position_t *bar_pos);
+      ^~~~~~~~~
+../src/main.c: In function 'move_ball':
+../src/main.c:200:32: warning: passing argument 1 of 'calculate_rebound' from incompatible pointer type [-Wincompatible-pointer-types]
+   next_mov = calculate_rebound(&ball, side, is_block, *block, &next_pos, &bar_pos); // lo ha hecho Pablo el cutres
+                                ^
+In file included from ../src/main.c:5:0:
+../src/main.h:49:12: note: expected 'ball_t * {aka struct ball *}' but argument is of type 'ball_t ** {aka struct ball **}'
+ movement_t calculate_rebound(ball_t *ball, side_t side, bool is_block, block_t block, position_t *next_pos, position_t *bar_pos);
+            ^~~~~~~~~~~~~~~~~
+../src/main.c:200:74: warning: passing argument 6 of 'calculate_rebound' from incompatible pointer type [-Wincompatible-pointer-types]
+   next_mov = calculate_rebound(&ball, side, is_block, *block, &next_pos, &bar_pos); // lo ha hecho Pablo el cutres
+                                                                          ^
+In file included from ../src/main.c:5:0:
+../src/main.h:49:12: note: expected 'position_t * {aka struct position *}' but argument is of type 'position_t ** {aka struct position **}'
+ movement_t calculate_rebound(ball_t *ball, side_t side, bool is_block, block_t block, position_t *next_pos, position_t *bar_pos);
+            ^~~~~~~~~~~~~~~~~
+../src/main.c: In function 'calculate_rebound':
+../src/main.c:474:37: error: incompatible type for argument 2 of 'which_side_bar'
+   switch (which_side_bar(*next_pos, *bar_pos)) {
+                                     ^
+../src/main.c:293:8: note: expected 'position_t * {aka struct position *}' but argument is of type 'position_t {aka struct position}'
+ side_t which_side_bar(position_t next_pos, position_t *bar_pos)
+        ^~~~~~~~~~~~~~
+make: *** [src/subdir.mk:32: src/main.o] Error 1
+11:29:27 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'life_lost':
+../src/main.c:114:12: warning: passing argument 1 of 'init_ball' from incompatible pointer type [-Wincompatible-pointer-types]
+  init_ball(&ball, &bar_pos);
+            ^
+In file included from ../src/main.c:5:0:
+../src/main.h:43:6: note: expected 'ball_t * {aka struct ball *}' but argument is of type 'ball_t ** {aka struct ball **}'
+ void init_ball(ball_t *ball, position_t *bar_pos);
+      ^~~~~~~~~
+../src/main.c:114:19: warning: passing argument 2 of 'init_ball' from incompatible pointer type [-Wincompatible-pointer-types]
+  init_ball(&ball, &bar_pos);
+                   ^
+In file included from ../src/main.c:5:0:
+../src/main.h:43:6: note: expected 'position_t * {aka struct position *}' but argument is of type 'position_t ** {aka struct position **}'
+ void init_ball(ball_t *ball, position_t *bar_pos);
+      ^~~~~~~~~
+../src/main.c: In function 'move_ball':
+../src/main.c:200:32: warning: passing argument 1 of 'calculate_rebound' from incompatible pointer type [-Wincompatible-pointer-types]
+   next_mov = calculate_rebound(&ball, side, is_block, *block, &next_pos, &bar_pos); // lo ha hecho Pablo el cutres
+                                ^
+In file included from ../src/main.c:5:0:
+../src/main.h:49:12: note: expected 'ball_t * {aka struct ball *}' but argument is of type 'ball_t ** {aka struct ball **}'
+ movement_t calculate_rebound(ball_t *ball, side_t side, bool is_block, block_t block, position_t *next_pos, position_t *bar_pos);
+            ^~~~~~~~~~~~~~~~~
+../src/main.c:200:74: warning: passing argument 6 of 'calculate_rebound' from incompatible pointer type [-Wincompatible-pointer-types]
+   next_mov = calculate_rebound(&ball, side, is_block, *block, &next_pos, &bar_pos); // lo ha hecho Pablo el cutres
+                                                                          ^
+In file included from ../src/main.c:5:0:
+../src/main.h:49:12: note: expected 'position_t * {aka struct position *}' but argument is of type 'position_t ** {aka struct position **}'
+ movement_t calculate_rebound(ball_t *ball, side_t side, bool is_block, block_t block, position_t *next_pos, position_t *bar_pos);
+            ^~~~~~~~~~~~~~~~~
+../src/main.c: In function 'calculate_rebound':
+../src/main.c:474:37: warning: passing argument 2 of 'which_side_bar' from incompatible pointer type [-Wincompatible-pointer-types]
+   switch (which_side_bar(*next_pos, &bar_pos)) {
+                                     ^
+../src/main.c:293:8: note: expected 'position_t * {aka struct position *}' but argument is of type 'position_t ** {aka struct position **}'
+ side_t which_side_bar(position_t next_pos, position_t *bar_pos)
+        ^~~~~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27356	   5472	   5332	  38160	   9510	example.elf
+'Finished building: example.elf.size'
+' '
+11:29:38 **** Incremental Build of configuration Debug for project example ****
+make all 
+make: Nothing to be done for 'all'.
+11:32:19 **** Incremental Build of configuration Debug for project example ****
+make all 
+make: Nothing to be done for 'all'.
+11:34:10 **** Incremental Build of configuration Debug for project example ****
+make all 
+make: Nothing to be done for 'all'.
+11:36:24 **** Incremental Build of configuration Debug for project example ****
+make all 
+make: Nothing to be done for 'all'.
+11:37:10 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'life_lost':
+../src/main.c:114:12: warning: passing argument 1 of 'init_ball' from incompatible pointer type [-Wincompatible-pointer-types]
+  init_ball(&ball, &bar_pos);
+            ^
+In file included from ../src/main.c:5:0:
+../src/main.h:43:6: note: expected 'ball_t * {aka struct ball *}' but argument is of type 'ball_t ** {aka struct ball **}'
+ void init_ball(ball_t *ball, position_t *bar_pos);
+      ^~~~~~~~~
+../src/main.c:114:19: warning: passing argument 2 of 'init_ball' from incompatible pointer type [-Wincompatible-pointer-types]
+  init_ball(&ball, &bar_pos);
+                   ^
+In file included from ../src/main.c:5:0:
+../src/main.h:43:6: note: expected 'position_t * {aka struct position *}' but argument is of type 'position_t ** {aka struct position **}'
+ void init_ball(ball_t *ball, position_t *bar_pos);
+      ^~~~~~~~~
+../src/main.c: In function 'calculate_rebound':
+../src/main.c:474:37: warning: passing argument 2 of 'which_side_bar' from incompatible pointer type [-Wincompatible-pointer-types]
+   switch (which_side_bar(*next_pos, &bar_pos)) {
+                                     ^
+../src/main.c:293:8: note: expected 'position_t * {aka struct position *}' but argument is of type 'position_t ** {aka struct position **}'
+ side_t which_side_bar(position_t next_pos, position_t *bar_pos)
+        ^~~~~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27352	   5472	   5328	  38152	   9508	example.elf
+'Finished building: example.elf.size'
+' '
+11:37:15 **** Incremental Build of configuration Debug for project example ****
+make all 
+make: Nothing to be done for 'all'.
+11:37:51 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'calculate_rebound':
+../src/main.c:474:37: warning: passing argument 2 of 'which_side_bar' from incompatible pointer type [-Wincompatible-pointer-types]
+   switch (which_side_bar(*next_pos, &bar_pos)) {
+                                     ^
+../src/main.c:293:8: note: expected 'position_t * {aka struct position *}' but argument is of type 'position_t ** {aka struct position **}'
+ side_t which_side_bar(position_t next_pos, position_t *bar_pos)
+        ^~~~~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27344	   5472	   5328	  38144	   9500	example.elf
+'Finished building: example.elf.size'
+' '
+11:37:53 **** Incremental Build of configuration Debug for project example ****
+make all 
+make: Nothing to be done for 'all'.
+11:38:57 **** Incremental Build of configuration Debug for project example ****
+make all 
+make: Nothing to be done for 'all'.
+11:39:12 **** Incremental Build of configuration Debug for project example ****
+make all 
+make: Nothing to be done for 'all'.
+11:42:35 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'calculate_rebound':
+../src/main.c:481:37: warning: passing argument 2 of 'which_side_bar' from incompatible pointer type [-Wincompatible-pointer-types]
+   switch (which_side_bar(*next_pos, &bar_pos)) {
+                                     ^
+../src/main.c:300:8: note: expected 'position_t * {aka struct position *}' but argument is of type 'position_t ** {aka struct position **}'
+ side_t which_side_bar(position_t next_pos, position_t *bar_pos)
+        ^~~~~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27376	   5472	   5328	  38176	   9520	example.elf
+'Finished building: example.elf.size'
+' '
+11:42:37 **** Incremental Build of configuration Debug for project example ****
+make all 
+make: Nothing to be done for 'all'.
+11:43:02 **** Incremental Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'calculate_rebound':
+../src/main.c:481:37: warning: passing argument 2 of 'which_side_bar' from incompatible pointer type [-Wincompatible-pointer-types]
+   switch (which_side_bar(*next_pos, &bar_pos)) {
+                                     ^
+../src/main.c:300:8: note: expected 'position_t * {aka struct position *}' but argument is of type 'position_t ** {aka struct position **}'
+ side_t which_side_bar(position_t next_pos, position_t *bar_pos)
+        ^~~~~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27372	   5472	   5332	  38176	   9520	example.elf
+'Finished building: example.elf.size'
+' '
+11:45:11 **** Auto Build of configuration Debug for project example ****
+make all 
+make: Nothing to be done for 'all'.
+11:45:45 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'calculate_rebound':
+../src/main.c:482:37: warning: passing argument 2 of 'which_side_bar' from incompatible pointer type [-Wincompatible-pointer-types]
+   switch (which_side_bar(*next_pos, &bar_pos)) {
+                                     ^
+../src/main.c:301:8: note: expected 'position_t * {aka struct position *}' but argument is of type 'position_t ** {aka struct position **}'
+ side_t which_side_bar(position_t next_pos, position_t *bar_pos)
+        ^~~~~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27380	   5472	   5332	  38184	   9528	example.elf
+'Finished building: example.elf.size'
+' '
+11:45:47 **** Incremental Build of configuration Debug for project example ****
+make all 
+make: Nothing to be done for 'all'.
+11:46:25 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'calculate_rebound':
+../src/main.c:483:37: warning: passing argument 2 of 'which_side_bar' from incompatible pointer type [-Wincompatible-pointer-types]
+   switch (which_side_bar(*next_pos, &bar_pos)) {
+                                     ^
+../src/main.c:302:8: note: expected 'position_t * {aka struct position *}' but argument is of type 'position_t ** {aka struct position **}'
+ side_t which_side_bar(position_t next_pos, position_t *bar_pos)
+        ^~~~~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27404	   5472	   5332	  38208	   9540	example.elf
+'Finished building: example.elf.size'
+' '
+11:46:28 **** Incremental Build of configuration Debug for project example ****
+make all 
+make: Nothing to be done for 'all'.
+11:48:54 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'calculate_rebound':
+../src/main.c:484:37: warning: passing argument 2 of 'which_side_bar' from incompatible pointer type [-Wincompatible-pointer-types]
+   switch (which_side_bar(*next_pos, &bar_pos)) {
+                                     ^
+../src/main.c:303:8: note: expected 'position_t * {aka struct position *}' but argument is of type 'position_t ** {aka struct position **}'
+ side_t which_side_bar(position_t next_pos, position_t *bar_pos)
+        ^~~~~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27440	   5472	   5328	  38240	   9560	example.elf
+'Finished building: example.elf.size'
+' '
+11:49:19 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:94:7: warning: implicit declaration of function 'reset_bar_position' [-Wimplicit-function-declaration]
+       reset_bar_position(&bar_pos);
+       ^~~~~~~~~~~~~~~~~~
+../src/main.c: In function 'calculate_rebound':
+../src/main.c:483:37: warning: passing argument 2 of 'which_side_bar' from incompatible pointer type [-Wincompatible-pointer-types]
+   switch (which_side_bar(*next_pos, &bar_pos)) {
+                                     ^
+../src/main.c:302:8: note: expected 'position_t * {aka struct position *}' but argument is of type 'position_t ** {aka struct position **}'
+ side_t which_side_bar(position_t next_pos, position_t *bar_pos)
+        ^~~~~~~~~~~~~~
+../src/main.c: At top level:
+../src/main.c:611:6: warning: conflicting types for 'reset_bar_position'
+ void reset_bar_position(position_t *bar_pos) {
+      ^~~~~~~~~~~~~~~~~~
+../src/main.c:94:7: note: previous implicit declaration of 'reset_bar_position' was here
+       reset_bar_position(&bar_pos);
+       ^~~~~~~~~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27576	   5472	   5328	  38376	   95e8	example.elf
+'Finished building: example.elf.size'
+' '
+11:49:27 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'calculate_rebound':
+../src/main.c:483:37: warning: passing argument 2 of 'which_side_bar' from incompatible pointer type [-Wincompatible-pointer-types]
+   switch (which_side_bar(*next_pos, &bar_pos)) {
+                                     ^
+../src/main.c:302:8: note: expected 'position_t * {aka struct position *}' but argument is of type 'position_t ** {aka struct position **}'
+ side_t which_side_bar(position_t next_pos, position_t *bar_pos)
+        ^~~~~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27576	   5472	   5328	  38376	   95e8	example.elf
+'Finished building: example.elf.size'
+' '
+11:49:46 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27572	   5472	   5332	  38376	   95e8	example.elf
+'Finished building: example.elf.size'
+' '
+11:49:48 **** Incremental Build of configuration Debug for project example ****
+make all 
+make: Nothing to be done for 'all'.
+11:50:38 **** Incremental Build of configuration Debug for project example ****
+make all 
+make: Nothing to be done for 'all'.
+11:50:38 **** Incremental Build of configuration Debug for project task_05_int ****
+make all 
+make: Nothing to be done for 'all'.
+11:50:39 **** Incremental Build of configuration Debug for project task_06_1 ****
+make all 
+make: Nothing to be done for 'all'.
+11:50:39 **** Incremental Build of configuration Debug for project task_06_2 ****
+make all 
+make: Nothing to be done for 'all'.
+11:50:40 **** Incremental Build of configuration Debug for project task_07 ****
+make all 
+make: Nothing to be done for 'all'.
+11:51:04 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'reset_bar_position':
+../src/main.c:612:7: error: incompatible type for argument 1 of 'rect'
+  rect(bar_pos, negro, BAR_LENGTH, BAR_HEIGHT);
+       ^~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:26:6: note: expected 'position_t {aka struct position}' but argument is of type 'position_t * {aka struct position *}'
+ void rect (position_t pos, color_t col, int w, int h);
+      ^~~~
+../src/main.c:614:7: error: incompatible type for argument 1 of 'rect'
+  rect(bar_pos, gold, BAR_LENGTH, BAR_HEIGHT);
+       ^~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:26:6: note: expected 'position_t {aka struct position}' but argument is of type 'position_t * {aka struct position *}'
+ void rect (position_t pos, color_t col, int w, int h);
+      ^~~~
+make: *** [src/subdir.mk:32: src/main.o] Error 1
+11:51:16 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'reset_bar_position':
+../src/main.c:612:7: error: incompatible type for argument 1 of 'rect'
+  rect(&bar_pos, negro, BAR_LENGTH, BAR_HEIGHT);
+       ^
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:26:6: note: expected 'position_t {aka struct position}' but argument is of type 'position_t ** {aka struct position **}'
+ void rect (position_t pos, color_t col, int w, int h);
+      ^~~~
+../src/main.c:614:7: error: incompatible type for argument 1 of 'rect'
+  rect(bar_pos, gold, BAR_LENGTH, BAR_HEIGHT);
+       ^~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:26:6: note: expected 'position_t {aka struct position}' but argument is of type 'position_t * {aka struct position *}'
+ void rect (position_t pos, color_t col, int w, int h);
+      ^~~~
+make: *** [src/subdir.mk:32: src/main.o] Error 1
+11:51:18 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'reset_bar_position':
+../src/main.c:614:7: error: incompatible type for argument 1 of 'rect'
+  rect(bar_pos, gold, BAR_LENGTH, BAR_HEIGHT);
+       ^~~~~~~
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:26:6: note: expected 'position_t {aka struct position}' but argument is of type 'position_t * {aka struct position *}'
+ void rect (position_t pos, color_t col, int w, int h);
+      ^~~~
+make: *** [src/subdir.mk:32: src/main.o] Error 1
+11:51:21 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27564	   5472	   5332	  38368	   95e0	example.elf
+'Finished building: example.elf.size'
+' '
+11:51:23 **** Incremental Build of configuration Debug for project example ****
+make all 
+make: Nothing to be done for 'all'.
+11:52:27 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27564	   5472	   5332	  38368	   95e0	example.elf
+'Finished building: example.elf.size'
+' '
+11:52:28 **** Incremental Build of configuration Debug for project example ****
+make all 
+make: Nothing to be done for 'all'.
+11:53:38 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27564	   5472	   5332	  38368	   95e0	example.elf
+'Finished building: example.elf.size'
+' '
+11:53:41 **** Incremental Build of configuration Debug for project example ****
+make all 
+make: Nothing to be done for 'all'.
+11:56:27 **** Incremental Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27572	   5472	   5332	  38376	   95e8	example.elf
+'Finished building: example.elf.size'
+' '
+11:58:38 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27572	   5472	   5332	  38376	   95e8	example.elf
+'Finished building: example.elf.size'
+' '
+11:59:23 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27572	   5472	   5332	  38376	   95e8	example.elf
+'Finished building: example.elf.size'
+' '

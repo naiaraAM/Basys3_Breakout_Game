@@ -1,21 +1,6 @@
-19:00:31 **** Build of configuration Debug for project task_06_1 ****
+11:50:39 **** Incremental Build of configuration Debug for project task_06_1 ****
 make all 
-'Building file: ../src/main.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../task_06_1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-'Finished building: ../src/main.c'
-' '
-'Building target: task_06_1.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../task_06_1_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "task_06_1.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: task_06_1.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size task_06_1.elf  |tee "task_06_1.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-   2584	    312	   3104	   6000	   1770	task_06_1.elf
-'Finished building: task_06_1.elf.size'
-' '
+make: Nothing to be done for 'all'.
 
-19:00:32 Build Finished (took 1s.498ms)
+11:50:39 Build Finished (took 176ms)
 
