@@ -47,6 +47,7 @@ int main(){
 		init_map(&map, level);
 		print_map(map.blocks);
 		remaining_blocks = map.destructible;
+		print_blocks_info(remaining_blocks, *blocks, **numbers);
 
 		// Initialize the bar and the ball
 		init_ball(&ball, &bar_pos);
@@ -90,6 +91,7 @@ int main(){
 				else if (status == block_broken)
 				{
 					remaining_blocks--;
+					print_blocks_info(remaining_blocks, *blocks, **numbers);
 					xil_printf("Remaining blocks: %d\r", remaining_blocks);
 					if (remaining_blocks == 0)
 						status = win;
@@ -562,17 +564,17 @@ levels_t level_selection() {
 	paint_object(aux, *choose_level, 5, 47);
 	aux.x = 50;
 	aux.y = 50;
-	paint_object(aux, *number_1, 12, 9);
+	paint_object(aux, *number_1_level, 12, 9);
 	aux.y = 65;
 	paint_object(aux, *button_left, 10, 9);
 	aux.x = 75;
 	aux.y = 40;
-	paint_object(aux, *number_2, 12, 10);
+	paint_object(aux, *number_2_level, 12, 10);
 	aux.y = 55;
 	paint_object(aux, *button_top, 10, 9);
 	aux.x = 100;
 	aux.y = 50;
-	paint_object(aux, *number_3, 12,9);
+	paint_object(aux, *number_3_level, 12,9);
 	aux.y = 65;
 	paint_object(aux, *button_right, 10, 9);
 	aux.x = 5;

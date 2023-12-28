@@ -64,7 +64,7 @@ color_t heart[HEART_HEIGHT][HEART_WIDTH] = {
 };
 
 // Level selection numbers
-color_t number_1[12][9] = {
+color_t number_1_level[12][9] = {
 		{N,N,N,GI,GI,GI,N,N,N},
 		{N,N,GI,W,W,GC,GI,N,N},
 		{N,GI,W,W,W,GC,GI,N,N},
@@ -78,7 +78,7 @@ color_t number_1[12][9] = {
 		{GO,W,W,W,W,W,W,GC,GO},
 		{N,GO,GO,GO,GO,GO,GO,N}
 };
-color_t number_2[12][10] = {
+color_t number_2_level[12][10] = {
     {N,N,GI,GI,GI,GI,GI,GI,N,N},
 	{N,GI,W,W,W,W,W,GC,GI,N},
 	{GI,W,W,W,W,W,W,GC,GI},
@@ -93,7 +93,7 @@ color_t number_2[12][10] = {
 	{N,GO,GO,GO,GO,GO,GO,GO,GO,N}
 
 };
-color_t number_3[12][9] = {
+color_t number_3_level[12][9] = {
     {N,N,GI,GI,GI,GI,GI,N,N},
 	{N,GI,W,W,W,W,GC,GI,N},
 	{GI,W,W,W,W,W,W,GC,GI},
@@ -220,6 +220,90 @@ color_t breakout[7][38] = {
 		{W,N,N,W, N, W,N,W,N, N, W,N,N,N, N, W,N,N,W, N, W,N,W,N, N, W,N,N,W, N, W,N,N,W, N, N,W,N},
 		{W,N,N,W, N, W,N,N,W, N, W,N,N,N, N, W,N,N,W, N, W,N,W,N, N, W,N,N,W, N, W,N,N,W, N, N,W,N},
 		{W,W,W,N, N, W,N,N,W, N, W,W,W,W, N, W,N,N,W, N, W,N,N,W, N, W,W,W,W, N, W,W,W,W, N, N,W,N}
+};
+
+color_t blocks[5][24] = {
+		{W,W,N, N, W,N, N, N,W,N, N, W,W, N, W,N,W, N, W,W,N, N, N,N},
+		{W,N,W, N, W,N, N, W,N,W, N, W,N, N, W,N,W, N, W,N,N, N, W,N},
+		{W,W,N, N, W,N, N, W,N,W, N, W,N, N, W,W,N, N, W,W,W, N, N,N},
+		{W,N,W, N, W,N, N, W,N,W, N, W,N, N, W,N,W, N, N,N,W, N, W,N},
+		{W,W,N, N, W,W, N, N,W,N, N, W,W, N, W,N,W, N, W,W,W, N, N,N}
+};
+
+#define NUMBERS_NUM		10
+#define NUMBERS_HEIGHT	5
+#define NUMBERS_WIDTH	3
+color_t numbers[NUMBERS_NUM][NUMBERS_HEIGHT][NUMBERS_WIDTH] = {
+		{
+				{W,W,W},
+				{W,N,W},
+				{W,N,W},
+				{W,N,W},
+				{W,W,W}
+		},
+		{
+				{W,W,N},
+				{N,W,N},
+				{N,W,N},
+				{N,W,N},
+				{W,W,W}
+		},
+		{
+				{N,W,W},
+				{N,N,W},
+				{W,W,W},
+				{W,N,N},
+				{W,W,W}
+		},
+		{
+				{N,W,W},
+				{N,N,W},
+				{N,W,W},
+				{N,N,W},
+				{W,W,W}
+		},
+		{
+				{W,N,N},
+				{W,N,W},
+				{W,W,W},
+				{N,N,W},
+				{N,N,W}
+		},
+		{
+				{W,W,N},
+				{W,N,N},
+				{W,W,W},
+				{N,N,W},
+				{W,W,W}
+		},
+		{
+				{W,W,N},
+				{W,N,N},
+				{W,W,W},
+				{W,N,W},
+				{W,W,W}
+		},
+		{
+				{W,W,W},
+				{N,N,W},
+				{N,N,W},
+				{N,N,W},
+				{N,N,W}
+		},
+		{
+				{W,W,W},
+				{W,N,W},
+				{W,W,W},
+				{W,N,W},
+				{W,W,W}
+		},
+		{
+				{W,W,W},
+				{W,N,W},
+				{W,W,W},
+				{N,N,W},
+				{N,W,W}
+		},
 };
 
 // Smoke animation

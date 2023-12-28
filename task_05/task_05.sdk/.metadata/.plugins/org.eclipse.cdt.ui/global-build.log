@@ -5657,3 +5657,1325 @@ mb-size example.elf  |tee "example.elf.size"
 14:38:13 **** Incremental Build of configuration Debug for project example ****
 make all 
 make: Nothing to be done for 'all'.
+15:10:42 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'level_selection':
+../src/main.c:565:21: error: 'number_1' undeclared (first use in this function); did you mean 'timer_t'?
+  paint_object(aux, *number_1, 12, 9);
+                     ^~~~~~~~
+                     timer_t
+../src/main.c:565:21: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:570:21: error: 'number_2' undeclared (first use in this function); did you mean 'number_1'?
+  paint_object(aux, *number_2, 12, 10);
+                     ^~~~~~~~
+                     number_1
+../src/main.c:575:21: error: 'number_3' undeclared (first use in this function); did you mean 'number_2'?
+  paint_object(aux, *number_3, 12,9);
+                     ^~~~~~~~
+                     number_2
+make: *** [src/subdir.mk:32: src/main.o] Error 1
+15:11:18 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28080	   6960	   5328	  40368	   9db0	example.elf
+'Finished building: example.elf.size'
+' '
+15:14:02 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/blocks.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/blocks.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/blocks.d" -MT"src/blocks.o" -o "src/blocks.o" "../src/blocks.c"
+'Finished building: ../src/blocks.c'
+' '
+'Building file: ../src/colors.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/colors.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/colors.d" -MT"src/colors.o" -o "src/colors.o" "../src/colors.c"
+'Finished building: ../src/colors.c'
+' '
+'Building file: ../src/graphics.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/graphics.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/graphics.d" -MT"src/graphics.o" -o "src/graphics.o" "../src/graphics.c"
+'Finished building: ../src/graphics.c'
+' '
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28080	   6960	   5328	  40368	   9db0	example.elf
+'Finished building: example.elf.size'
+' '
+15:14:05 **** Incremental Build of configuration Debug for project example ****
+make all 
+make: Nothing to be done for 'all'.
+15:16:47 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/blocks.h:5:0,
+                 from ../src/main.h:4,
+                 from ../src/main.c:5:
+../src/colors.h:8:11: warning: excess elements in array initializer
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:226:62: note: in expansion of macro 'N'
+   {W,W,N, N, W,N, N, N,W,N, N, W,W, N, W,N,W, N, W,W,N, N, N,N},
+                                                              ^
+../src/colors.h:8:11: note: (near initialization for 'blocks[0]')
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:226:62: note: in expansion of macro 'N'
+   {W,W,N, N, W,N, N, N,W,N, N, W,W, N, W,N,W, N, W,W,N, N, N,N},
+                                                              ^
+../src/colors.h:8:11: warning: excess elements in array initializer
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:227:62: note: in expansion of macro 'N'
+   {W,N,W, N, W,N, N, W,N,W, N, W,N, N, W,N,W, N, W,N,N, N, W,N},
+                                                              ^
+../src/colors.h:8:11: note: (near initialization for 'blocks[1]')
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:227:62: note: in expansion of macro 'N'
+   {W,N,W, N, W,N, N, W,N,W, N, W,N, N, W,N,W, N, W,N,N, N, W,N},
+                                                              ^
+../src/colors.h:8:11: warning: excess elements in array initializer
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:228:62: note: in expansion of macro 'N'
+   {W,W,N, N, W,N, N, W,N,W, N, W,N, N, W,W,N, N, W,W,W, N, N,N},
+                                                              ^
+../src/colors.h:8:11: note: (near initialization for 'blocks[2]')
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:228:62: note: in expansion of macro 'N'
+   {W,W,N, N, W,N, N, W,N,W, N, W,N, N, W,W,N, N, W,W,W, N, N,N},
+                                                              ^
+../src/colors.h:8:11: warning: excess elements in array initializer
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:229:62: note: in expansion of macro 'N'
+   {W,N,W, N, W,N, N, W,N,W, N, W,N, N, W,N,W, N, N,N,W, N, W,N},
+                                                              ^
+../src/colors.h:8:11: note: (near initialization for 'blocks[3]')
+ #define N {0x00, 0x00, 0x00}
+           ^
+../src/main.h:229:62: note: in expansion of macro 'N'
+   {W,N,W, N, W,N, N, W,N,W, N, W,N, N, W,N,W, N, N,N,W, N, W,N},
+                                                              ^
+'Finished building: ../src/main.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28080	   6960	   5328	  40368	   9db0	example.elf
+'Finished building: example.elf.size'
+' '
+15:17:25 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28080	   6960	   5328	  40368	   9db0	example.elf
+'Finished building: example.elf.size'
+' '
+15:24:30 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:5:0:
+../src/main.h:260:9: error: redefinition of 'number_1_blocks'
+ color_t number_1_blocks[5][3] = {
+         ^~~~~~~~~~~~~~~
+../src/main.h:239:9: note: previous definition of 'number_1_blocks' was here
+ color_t number_1_blocks[5][3] = {
+         ^~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:32: src/main.o] Error 1
+15:24:41 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28080	   6960	   5328	  40368	   9db0	example.elf
+'Finished building: example.elf.size'
+' '
+15:25:14 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/graphics.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/graphics.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/graphics.d" -MT"src/graphics.o" -o "src/graphics.o" "../src/graphics.c"
+'Finished building: ../src/graphics.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28080	   6960	   5328	  40368	   9db0	example.elf
+'Finished building: example.elf.size'
+' '
+15:25:22 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/blocks.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/blocks.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/blocks.d" -MT"src/blocks.o" -o "src/blocks.o" "../src/blocks.c"
+'Finished building: ../src/blocks.c'
+' '
+'Building file: ../src/graphics.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/graphics.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/graphics.d" -MT"src/graphics.o" -o "src/graphics.o" "../src/graphics.c"
+'Finished building: ../src/graphics.c'
+' '
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28080	   6960	   5328	  40368	   9db0	example.elf
+'Finished building: example.elf.size'
+' '
+15:37:36 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/blocks.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/blocks.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/blocks.d" -MT"src/blocks.o" -o "src/blocks.o" "../src/blocks.c"
+'Finished building: ../src/blocks.c'
+' '
+'Building file: ../src/graphics.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/graphics.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/graphics.d" -MT"src/graphics.o" -o "src/graphics.o" "../src/graphics.c"
+'Finished building: ../src/graphics.c'
+' '
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28080	   6960	   5328	  40368	   9db0	example.elf
+'Finished building: example.elf.size'
+' '
+15:38:56 **** Incremental Build of configuration Debug for project example ****
+make all 
+make: Nothing to be done for 'all'.
+15:38:57 **** Incremental Build of configuration Debug for project task_05_int ****
+make all 
+make: Nothing to be done for 'all'.
+15:38:57 **** Incremental Build of configuration Debug for project task_06_1 ****
+make all 
+make: Nothing to be done for 'all'.
+15:38:58 **** Incremental Build of configuration Debug for project task_06_2 ****
+make all 
+make: Nothing to be done for 'all'.
+15:38:58 **** Incremental Build of configuration Debug for project task_07 ****
+make all 
+make: Nothing to be done for 'all'.
+15:40:11 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/graphics.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/graphics.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/graphics.d" -MT"src/graphics.o" -o "src/graphics.o" "../src/graphics.c"
+../src/graphics.c: In function 'print_blocks':
+../src/graphics.c:90:28: error: 'blocks' undeclared (first use in this function); did you mean 'block'?
+  paint_object(blocks_info, blocks, 5, 24);
+                            ^~~~~~
+                            block
+../src/graphics.c:90:28: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/subdir.mk:32: src/graphics.o] Error 1
+15:41:17 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/graphics.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/graphics.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/graphics.d" -MT"src/graphics.o" -o "src/graphics.o" "../src/graphics.c"
+../src/graphics.c:86:6: error: conflicting types for 'print_blocks'
+ void print_blocks(int left_blocks, color_t *blocks){
+      ^~~~~~~~~~~~
+In file included from ../src/graphics.c:3:0:
+../src/graphics.h:32:6: note: previous declaration of 'print_blocks' was here
+ void print_blocks(int left_blocks);
+      ^~~~~~~~~~~~
+make: *** [src/subdir.mk:32: src/graphics.o] Error 1
+15:42:00 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/blocks.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/blocks.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/blocks.d" -MT"src/blocks.o" -o "src/blocks.o" "../src/blocks.c"
+'Finished building: ../src/blocks.c'
+' '
+'Building file: ../src/graphics.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/graphics.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/graphics.d" -MT"src/graphics.o" -o "src/graphics.o" "../src/graphics.c"
+'Finished building: ../src/graphics.c'
+' '
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28088	   6960	   5328	  40376	   9db8	example.elf
+'Finished building: example.elf.size'
+' '
+15:44:33 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:5:0:
+../src/main.h:243:4: error: expected '}' before ';' token
+   };
+    ^
+make: *** [src/subdir.mk:32: src/main.o] Error 1
+15:44:44 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28088	   6960	   5328	  40376	   9db8	example.elf
+'Finished building: example.elf.size'
+' '
+15:47:11 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28088	   6960	   5328	  40376	   9db8	example.elf
+'Finished building: example.elf.size'
+' '
+15:48:33 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/graphics.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/graphics.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/graphics.d" -MT"src/graphics.o" -o "src/graphics.o" "../src/graphics.c"
+../src/graphics.c:86:6: error: conflicting types for 'print_blocks'
+ void print_blocks(int left_blocks, color_t *blocks, color_t *numbers){
+      ^~~~~~~~~~~~
+In file included from ../src/graphics.c:3:0:
+../src/graphics.h:32:6: note: previous declaration of 'print_blocks' was here
+ void print_blocks(int left_blocks, color_t *blocks);
+      ^~~~~~~~~~~~
+make: *** [src/subdir.mk:32: src/graphics.o] Error 1
+15:48:52 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/blocks.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/blocks.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/blocks.d" -MT"src/blocks.o" -o "src/blocks.o" "../src/blocks.c"
+'Finished building: ../src/blocks.c'
+' '
+'Building file: ../src/graphics.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/graphics.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/graphics.d" -MT"src/graphics.o" -o "src/graphics.o" "../src/graphics.c"
+'Finished building: ../src/graphics.c'
+' '
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28088	   6960	   5328	  40376	   9db8	example.elf
+'Finished building: example.elf.size'
+' '
+15:49:11 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/graphics.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/graphics.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/graphics.d" -MT"src/graphics.o" -o "src/graphics.o" "../src/graphics.c"
+../src/graphics.c: In function 'print_blocks':
+../src/graphics.c:90:15: error: incompatible type for argument 1 of 'paint_object'
+  paint_object(blocks, blocks, 5, 24);
+               ^~~~~~
+../src/graphics.c:16:6: note: expected 'position_t {aka struct position}' but argument is of type 'color_t * {aka struct color *}'
+ void paint_object(position_t pos, color_t *object, int rows, int cols) {
+      ^~~~~~~~~~~~
+make: *** [src/subdir.mk:32: src/graphics.o] Error 1
+15:49:26 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/graphics.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/graphics.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/graphics.d" -MT"src/graphics.o" -o "src/graphics.o" "../src/graphics.c"
+'Finished building: ../src/graphics.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28088	   6960	   5328	  40376	   9db8	example.elf
+'Finished building: example.elf.size'
+' '
+15:49:31 **** Incremental Build of configuration Debug for project example ****
+make all 
+make: Nothing to be done for 'all'.
+15:50:10 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/graphics.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/graphics.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/graphics.d" -MT"src/graphics.o" -o "src/graphics.o" "../src/graphics.c"
+'Finished building: ../src/graphics.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28088	   6960	   5328	  40376	   9db8	example.elf
+'Finished building: example.elf.size'
+' '
+15:50:13 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/blocks.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/blocks.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/blocks.d" -MT"src/blocks.o" -o "src/blocks.o" "../src/blocks.c"
+'Finished building: ../src/blocks.c'
+' '
+'Building file: ../src/graphics.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/graphics.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/graphics.d" -MT"src/graphics.o" -o "src/graphics.o" "../src/graphics.c"
+'Finished building: ../src/graphics.c'
+' '
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28088	   6960	   5328	  40376	   9db8	example.elf
+'Finished building: example.elf.size'
+' '
+15:50:57 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:50:48: warning: passing argument 3 of 'print_blocks_info' from incompatible pointer type [-Wincompatible-pointer-types]
+   print_blocks_info(remaining_blocks, *blocks, *numbers);
+                                                ^
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:32:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[3] {aka struct color (*)[3]}'
+ void print_blocks_info(int left_blocks, color_t *blocks, color_t *numbers);
+      ^~~~~~~~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28276	   7772	   5336	  41384	   a1a8	example.elf
+'Finished building: example.elf.size'
+' '
+15:51:11 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:50:39: warning: passing argument 2 of 'print_blocks_info' from incompatible pointer type [-Wincompatible-pointer-types]
+   print_blocks_info(remaining_blocks, &blocks, &numbers);
+                                       ^
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:32:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[5][24] {aka struct color (*)[5][24]}'
+ void print_blocks_info(int left_blocks, color_t *blocks, color_t *numbers);
+      ^~~~~~~~~~~~~~~~~
+../src/main.c:50:48: warning: passing argument 3 of 'print_blocks_info' from incompatible pointer type [-Wincompatible-pointer-types]
+   print_blocks_info(remaining_blocks, &blocks, &numbers);
+                                                ^
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:32:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[10][5][3] {aka struct color (*)[10][5][3]}'
+ void print_blocks_info(int left_blocks, color_t *blocks, color_t *numbers);
+      ^~~~~~~~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28276	   7772	   5336	  41384	   a1a8	example.elf
+'Finished building: example.elf.size'
+' '
+15:51:46 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:50:48: warning: passing argument 3 of 'print_blocks_info' from incompatible pointer type [-Wincompatible-pointer-types]
+   print_blocks_info(remaining_blocks, *blocks, &numbers);
+                                                ^
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:32:6: note: expected 'color_t * {aka struct color *}' but argument is of type 'color_t (*)[10][5][3] {aka struct color (*)[10][5][3]}'
+ void print_blocks_info(int left_blocks, color_t *blocks, color_t *numbers);
+      ^~~~~~~~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28276	   7772	   5336	  41384	   a1a8	example.elf
+'Finished building: example.elf.size'
+' '
+15:52:04 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/blocks.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/blocks.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/blocks.d" -MT"src/blocks.o" -o "src/blocks.o" "../src/blocks.c"
+'Finished building: ../src/blocks.c'
+' '
+'Building file: ../src/graphics.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/graphics.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/graphics.d" -MT"src/graphics.o" -o "src/graphics.o" "../src/graphics.c"
+../src/graphics.c:86:6: error: conflicting types for 'print_blocks_info'
+ void print_blocks_info(int left_blocks, color_t *blocks, color_t *numbers){
+      ^~~~~~~~~~~~~~~~~
+In file included from ../src/graphics.c:3:0:
+../src/graphics.h:32:6: note: previous declaration of 'print_blocks_info' was here
+ void print_blocks_info(int left_blocks, color_t *blocks, color_t **numbers);
+      ^~~~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:32: src/graphics.o] Error 1
+15:52:11 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/graphics.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/graphics.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/graphics.d" -MT"src/graphics.o" -o "src/graphics.o" "../src/graphics.c"
+'Finished building: ../src/graphics.c'
+' '
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:50:48: warning: passing argument 3 of 'print_blocks_info' from incompatible pointer type [-Wincompatible-pointer-types]
+   print_blocks_info(remaining_blocks, *blocks, &numbers);
+                                                ^
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:32:6: note: expected 'color_t ** {aka struct color **}' but argument is of type 'color_t (*)[10][5][3] {aka struct color (*)[10][5][3]}'
+ void print_blocks_info(int left_blocks, color_t *blocks, color_t **numbers);
+      ^~~~~~~~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28276	   7772	   5336	  41384	   a1a8	example.elf
+'Finished building: example.elf.size'
+' '
+15:52:23 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:50:48: warning: passing argument 3 of 'print_blocks_info' from incompatible pointer type [-Wincompatible-pointer-types]
+   print_blocks_info(remaining_blocks, *blocks, *numbers);
+                                                ^
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:32:6: note: expected 'color_t ** {aka struct color **}' but argument is of type 'color_t (*)[3] {aka struct color (*)[3]}'
+ void print_blocks_info(int left_blocks, color_t *blocks, color_t **numbers);
+      ^~~~~~~~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28276	   7772	   5336	  41384	   a1a8	example.elf
+'Finished building: example.elf.size'
+' '
+15:52:30 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:50:48: warning: passing argument 3 of 'print_blocks_info' from incompatible pointer type [-Wincompatible-pointer-types]
+   print_blocks_info(remaining_blocks, *blocks, **numbers);
+                                                ^
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:32:6: note: expected 'color_t ** {aka struct color **}' but argument is of type 'color_t * {aka struct color *}'
+ void print_blocks_info(int left_blocks, color_t *blocks, color_t **numbers);
+      ^~~~~~~~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28276	   7772	   5336	  41384	   a1a8	example.elf
+'Finished building: example.elf.size'
+' '
+15:52:51 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/blocks.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/blocks.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/blocks.d" -MT"src/blocks.o" -o "src/blocks.o" "../src/blocks.c"
+'Finished building: ../src/blocks.c'
+' '
+'Building file: ../src/graphics.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/graphics.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/graphics.d" -MT"src/graphics.o" -o "src/graphics.o" "../src/graphics.c"
+../src/graphics.c:86:6: error: conflicting types for 'print_blocks_info'
+ void print_blocks_info(int left_blocks, color_t *blocks, color_t **numbers){
+      ^~~~~~~~~~~~~~~~~
+In file included from ../src/graphics.c:3:0:
+../src/graphics.h:32:6: note: previous declaration of 'print_blocks_info' was here
+ void print_blocks_info(int left_blocks, color_t *blocks, color_t *numbers);
+      ^~~~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:32: src/graphics.o] Error 1
+15:53:14 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/blocks.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/blocks.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/blocks.d" -MT"src/blocks.o" -o "src/blocks.o" "../src/blocks.c"
+'Finished building: ../src/blocks.c'
+' '
+'Building file: ../src/graphics.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/graphics.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/graphics.d" -MT"src/graphics.o" -o "src/graphics.o" "../src/graphics.c"
+'Finished building: ../src/graphics.c'
+' '
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:50:48: warning: passing argument 3 of 'print_blocks_info' from incompatible pointer type [-Wincompatible-pointer-types]
+   print_blocks_info(remaining_blocks, *blocks, **numbers);
+                                                ^
+In file included from ../src/main.h:6:0,
+                 from ../src/main.c:5:
+../src/graphics.h:32:6: note: expected 'color_t ** {aka struct color **}' but argument is of type 'color_t * {aka struct color *}'
+ void print_blocks_info(int left_blocks, color_t *blocks, color_t **numbers);
+      ^~~~~~~~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28276	   7772	   5336	  41384	   a1a8	example.elf
+'Finished building: example.elf.size'
+' '
+15:53:17 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/blocks.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/blocks.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/blocks.d" -MT"src/blocks.o" -o "src/blocks.o" "../src/blocks.c"
+'Finished building: ../src/blocks.c'
+' '
+'Building file: ../src/graphics.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/graphics.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/graphics.d" -MT"src/graphics.o" -o "src/graphics.o" "../src/graphics.c"
+../src/graphics.c:86:6: error: conflicting types for 'print_blocks_info'
+ void print_blocks_info(int left_blocks, color_t *blocks, color_t **numbers){
+      ^~~~~~~~~~~~~~~~~
+In file included from ../src/graphics.c:3:0:
+../src/graphics.h:32:6: note: previous declaration of 'print_blocks_info' was here
+ void print_blocks_info(int left_blocks, color_t *blocks, color_t *numbers);
+      ^~~~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:32: src/graphics.o] Error 1
+15:53:22 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/graphics.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/graphics.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/graphics.d" -MT"src/graphics.o" -o "src/graphics.o" "../src/graphics.c"
+'Finished building: ../src/graphics.c'
+' '
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28276	   7772	   5336	  41384	   a1a8	example.elf
+'Finished building: example.elf.size'
+' '
+15:53:25 **** Incremental Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28276	   7772	   5336	  41384	   a1a8	example.elf
+'Finished building: example.elf.size'
+' '
+15:53:56 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/blocks.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/blocks.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/blocks.d" -MT"src/blocks.o" -o "src/blocks.o" "../src/blocks.c"
+'Finished building: ../src/blocks.c'
+' '
+'Building file: ../src/graphics.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/graphics.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/graphics.d" -MT"src/graphics.o" -o "src/graphics.o" "../src/graphics.c"
+'Finished building: ../src/graphics.c'
+' '
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28276	   7772	   5336	  41384	   a1a8	example.elf
+'Finished building: example.elf.size'
+' '
+15:53:58 **** Incremental Build of configuration Debug for project example ****
+make all 
+make: Nothing to be done for 'all'.
+15:54:37 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/blocks.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/blocks.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/blocks.d" -MT"src/blocks.o" -o "src/blocks.o" "../src/blocks.c"
+'Finished building: ../src/blocks.c'
+' '
+'Building file: ../src/graphics.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/graphics.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/graphics.d" -MT"src/graphics.o" -o "src/graphics.o" "../src/graphics.c"
+'Finished building: ../src/graphics.c'
+' '
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28276	   7772	   5336	  41384	   a1a8	example.elf
+'Finished building: example.elf.size'
+' '
+15:54:56 **** Incremental Build of configuration Debug for project example ****
+make all 
+make: Nothing to be done for 'all'.
+16:00:37 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/graphics.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/graphics.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/graphics.d" -MT"src/graphics.o" -o "src/graphics.o" "../src/graphics.c"
+../src/graphics.c: In function 'print_blocks_info':
+../src/graphics.c:96:7: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+   if (i = 1)
+       ^
+'Finished building: ../src/graphics.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28672	   7772	   5332	  41776	   a330	example.elf
+'Finished building: example.elf.size'
+' '
+16:00:42 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/graphics.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/graphics.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/graphics.d" -MT"src/graphics.o" -o "src/graphics.o" "../src/graphics.c"
+'Finished building: ../src/graphics.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28676	   7772	   5336	  41784	   a338	example.elf
+'Finished building: example.elf.size'
+' '
+16:02:51 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/graphics.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/graphics.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/graphics.d" -MT"src/graphics.o" -o "src/graphics.o" "../src/graphics.c"
+../src/graphics.c: In function 'print_blocks_info':
+../src/graphics.c:100:4: error: too few arguments to function 'paint_object'
+    paint_object(pos, &numbers[units])
+    ^~~~~~~~~~~~
+../src/graphics.c:16:6: note: declared here
+ void paint_object(position_t pos, color_t *object, int rows, int cols) {
+      ^~~~~~~~~~~~
+../src/graphics.c:101:4: error: expected ';' before 'break'
+    break;
+    ^~~~~
+make: *** [src/subdir.mk:32: src/graphics.o] Error 1
+16:03:13 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/graphics.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/graphics.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/graphics.d" -MT"src/graphics.o" -o "src/graphics.o" "../src/graphics.c"
+'Finished building: ../src/graphics.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28736	   7772	   5332	  41840	   a370	example.elf
+'Finished building: example.elf.size'
+' '
+16:03:50 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/graphics.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/graphics.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/graphics.d" -MT"src/graphics.o" -o "src/graphics.o" "../src/graphics.c"
+'Finished building: ../src/graphics.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28640	   7772	   5332	  41744	   a310	example.elf
+'Finished building: example.elf.size'
+' '
+16:03:52 **** Incremental Build of configuration Debug for project example ****
+make all 
+make: Nothing to be done for 'all'.
+16:04:16 **** Incremental Build of configuration Debug for project example ****
+make all 
+make: Nothing to be done for 'all'.
+16:06:15 **** Incremental Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/blocks.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/blocks.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/blocks.d" -MT"src/blocks.o" -o "src/blocks.o" "../src/blocks.c"
+'Finished building: ../src/blocks.c'
+' '
+'Building file: ../src/graphics.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/graphics.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/graphics.d" -MT"src/graphics.o" -o "src/graphics.o" "../src/graphics.c"
+'Finished building: ../src/graphics.c'
+' '
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28640	   7772	   5332	  41744	   a310	example.elf
+'Finished building: example.elf.size'
+' '
+16:07:50 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28672	   7772	   5332	  41776	   a330	example.elf
+'Finished building: example.elf.size'
+' '
+16:07:53 **** Incremental Build of configuration Debug for project example ****
+make all 
+make: Nothing to be done for 'all'.
+16:08:45 **** Incremental Build of configuration Debug for project example ****
+make all 
+make: Nothing to be done for 'all'.
+16:15:35 **** Incremental Build of configuration Debug for project example ****
+make all 
+make: Nothing to be done for 'all'.
+16:16:51 **** Incremental Build of configuration Debug for project example ****
+make all 
+make: Nothing to be done for 'all'.
+16:18:39 **** Incremental Build of configuration Debug for project example ****
+make all 
+make: Nothing to be done for 'all'.
+16:19:41 **** Incremental Build of configuration Debug for project example ****
+make all 
+make: Nothing to be done for 'all'.
+16:25:37 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/blocks.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/blocks.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/blocks.d" -MT"src/blocks.o" -o "src/blocks.o" "../src/blocks.c"
+'Finished building: ../src/blocks.c'
+' '
+'Building file: ../src/graphics.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/graphics.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/graphics.d" -MT"src/graphics.o" -o "src/graphics.o" "../src/graphics.c"
+'Finished building: ../src/graphics.c'
+' '
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28672	   7772	   5332	  41776	   a330	example.elf
+'Finished building: example.elf.size'
+' '
+16:25:39 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/graphics.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/graphics.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/graphics.d" -MT"src/graphics.o" -o "src/graphics.o" "../src/graphics.c"
+'Finished building: ../src/graphics.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28676	   7772	   5336	  41784	   a338	example.elf
+'Finished building: example.elf.size'
+' '
+16:25:42 **** Incremental Build of configuration Debug for project example ****
+make all 
+make: Nothing to be done for 'all'.
+16:26:32 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/graphics.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/graphics.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/graphics.d" -MT"src/graphics.o" -o "src/graphics.o" "../src/graphics.c"
+'Finished building: ../src/graphics.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28676	   7772	   5336	  41784	   a338	example.elf
+'Finished building: example.elf.size'
+' '
+16:26:33 **** Incremental Build of configuration Debug for project example ****
+make all 
+make: Nothing to be done for 'all'.
+16:27:22 **** Incremental Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/graphics.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/graphics.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/graphics.d" -MT"src/graphics.o" -o "src/graphics.o" "../src/graphics.c"
+'Finished building: ../src/graphics.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28696	   7772	   5332	  41800	   a348	example.elf
+'Finished building: example.elf.size'
+' '
+16:28:41 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/graphics.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/graphics.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/graphics.d" -MT"src/graphics.o" -o "src/graphics.o" "../src/graphics.c"
+'Finished building: ../src/graphics.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28708	   7772	   5336	  41816	   a358	example.elf
+'Finished building: example.elf.size'
+' '
+16:28:43 **** Incremental Build of configuration Debug for project example ****
+make all 
+make: Nothing to be done for 'all'.
+16:28:54 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/graphics.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/graphics.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/graphics.d" -MT"src/graphics.o" -o "src/graphics.o" "../src/graphics.c"
+'Finished building: ../src/graphics.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28708	   7772	   5336	  41816	   a358	example.elf
+'Finished building: example.elf.size'
+' '
+16:28:56 **** Incremental Build of configuration Debug for project example ****
+make all 
+make: Nothing to be done for 'all'.
+16:30:45 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/graphics.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/graphics.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/graphics.d" -MT"src/graphics.o" -o "src/graphics.o" "../src/graphics.c"
+'Finished building: ../src/graphics.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28712	   7772	   5332	  41816	   a358	example.elf
+'Finished building: example.elf.size'
+' '
+16:30:48 **** Incremental Build of configuration Debug for project example ****
+make all 
+make: Nothing to be done for 'all'.
+16:31:38 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/graphics.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/graphics.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/graphics.d" -MT"src/graphics.o" -o "src/graphics.o" "../src/graphics.c"
+'Finished building: ../src/graphics.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28700	   7772	   5336	  41808	   a350	example.elf
+'Finished building: example.elf.size'
+' '
+16:31:41 **** Incremental Build of configuration Debug for project example ****
+make all 
+make: Nothing to be done for 'all'.
+16:32:31 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/blocks.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/blocks.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/blocks.d" -MT"src/blocks.o" -o "src/blocks.o" "../src/blocks.c"
+'Finished building: ../src/blocks.c'
+' '
+'Building file: ../src/graphics.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/graphics.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/graphics.d" -MT"src/graphics.o" -o "src/graphics.o" "../src/graphics.c"
+'Finished building: ../src/graphics.c'
+' '
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28700	   7772	   5336	  41808	   a350	example.elf
+'Finished building: example.elf.size'
+' '
+16:32:54 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/blocks.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/blocks.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/blocks.d" -MT"src/blocks.o" -o "src/blocks.o" "../src/blocks.c"
+'Finished building: ../src/blocks.c'
+' '
+'Building file: ../src/graphics.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/graphics.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/graphics.d" -MT"src/graphics.o" -o "src/graphics.o" "../src/graphics.c"
+'Finished building: ../src/graphics.c'
+' '
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28700	   7772	   5336	  41808	   a350	example.elf
+'Finished building: example.elf.size'
+' '
+16:32:56 **** Incremental Build of configuration Debug for project example ****
+make all 
+make: Nothing to be done for 'all'.
+16:33:06 **** Auto Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/blocks.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/blocks.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/blocks.d" -MT"src/blocks.o" -o "src/blocks.o" "../src/blocks.c"
+'Finished building: ../src/blocks.c'
+' '
+'Building file: ../src/graphics.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/graphics.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/graphics.d" -MT"src/graphics.o" -o "src/graphics.o" "../src/graphics.c"
+'Finished building: ../src/graphics.c'
+' '
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28700	   7772	   5336	  41808	   a350	example.elf
+'Finished building: example.elf.size'
+' '
+16:33:08 **** Incremental Build of configuration Debug for project example ****
+make all 
+make: Nothing to be done for 'all'.
+16:33:20 **** Incremental Build of configuration Debug for project example ****
+make all 
+'Building file: ../src/blocks.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/blocks.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/blocks.d" -MT"src/blocks.o" -o "src/blocks.o" "../src/blocks.c"
+'Finished building: ../src/blocks.c'
+' '
+'Building file: ../src/graphics.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/graphics.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/graphics.d" -MT"src/graphics.o" -o "src/graphics.o" "../src/graphics.c"
+'Finished building: ../src/graphics.c'
+' '
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: example.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: example.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size example.elf  |tee "example.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28700	   7772	   5336	  41808	   a350	example.elf
+'Finished building: example.elf.size'
+' '

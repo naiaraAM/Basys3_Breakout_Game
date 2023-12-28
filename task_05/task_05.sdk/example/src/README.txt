@@ -15,6 +15,6 @@ To-do list and new proposals:
 
  
  - [IDEA] The ball could be thrown with different angles. // IMPOSSIBLE
- - [IDEA] The buttons could have arrows. // PABLO
+ - [IDEA] The buttons could have arrows. // DONE
  - [IDEA] Add a wait after a button is pressed in the 'check_button()' function. // DONE
- - [IDEA] Add animation when pressed button // PABLO
+ - [IDEA] Add animation when pressed button // DONE

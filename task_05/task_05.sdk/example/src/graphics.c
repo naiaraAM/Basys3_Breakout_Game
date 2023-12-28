@@ -82,3 +82,20 @@ void print_lives(int lives, int max_lives, color_t *heart) {
 		lives_pos.x += HEART_WIDTH + HEART_DISTANCE;
 	}
 }
+
+void print_blocks_info(int left_blocks, color_t *blocks, color_t *numbers){
+	const color_t black = N;
+	position_t pos = {BLOCKS_POS_X, BLOCKS_POS_Y};
+	int init_pos = pos.x;
+	rect(pos, black, BLOCKS_WIDTH + (NUMBERS_WIDTH * 2 + 1), BLOCKS_HEIGHT);
+	paint_object(pos, blocks, BLOCKS_HEIGHT, BLOCKS_WIDTH);
+	int tens = left_blocks / 10;
+	int units = left_blocks % 10;
+	for (int i = 0; i < 2; i++) {
+		int aux = tens;
+		pos.x = init_pos + BLOCKS_WIDTH + ((NUMBERS_WIDTH + 1) * i);
+		if (i == 1)
+			aux = units;
+		paint_object(pos, &numbers[aux * NUMBERS_WIDTH * NUMBERS_HEIGHT], 5, NUMBERS_WIDTH);
+	}
+}
