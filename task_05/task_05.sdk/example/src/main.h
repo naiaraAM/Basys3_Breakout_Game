@@ -7,6 +7,34 @@
 #include "timer.h"
 #include "leds.h"
 
+// Device constants
+#define MAX_LED 		0x8000
+#define BASE_GPIO0 		0x40000000
+#define BASE_GPIO1 		0x40010000
+#define MASK_BUTTONS	0xF
+
+// Bar specification constants
+#define BAR_LENGTH		13
+#define BAR_HEIGHT		2
+#define BAR_SPEED		2
+
+// Ball specification constants
+#define BALL_SPEED		3
+
+// Game parameters
+#define NUM_LIVES		3
+#define NUM_LED_LAPS	3
+
+// Smoke animation
+#define SMOKE_TIME      100	    // miliseconds
+#define SMOKE_FRAMES    5
+#define SMOKE_WIDTH     3
+#define SMOKE_HEIGHT    6
+
+// Remaining blocks numbers
+#define NUMBERS_NUM		10
+#define NUMBERS_HEIGHT	5
+#define NUMBERS_WIDTH	3
 
 typedef struct ball {
 	int x, y, mov;
@@ -19,41 +47,6 @@ typedef enum side {top, bottom, right, left,
 typedef enum movement {mov_top_right, mov_bottom_right, mov_bottom_left, mov_top_left} movement_t;
 
 typedef enum game_status {continues, lost_life, block_broken, win, game_over} game_status_t;
-
-// Device constants
-#define MAX_LED 		0x8000
-#define BASE_GPIO0 		0x40000000
-#define BASE_GPIO1 		0x40010000
-#define MASK_BUTTONS	0xF
-
-// Bar specification constants
-#define BAR_LENGTH			13
-#define BAR_HEIGHT			2
-#define BAR_SPEED			2
-
-// Ball specification constants
-#define BALL_SPEED			3
-
-// Game parameters
-#define NUM_LIVES			3
-#define NUM_LED_LAPS		3
-
-// Function definitions
-void move_bar(int dir, position_t *bar_pos);
-void init_ball(ball_t *ball, position_t *bar_pos);
-game_status_t move_ball(ball_t *ball, position_t *bar_pos, map_t *map);
-void init_buttons();
-int check_button();
-void wait_button();
-side_t calculate_border(position_t next_pos);
-bool calculate_block(position_t next_pos, block_t **block, map_t *map);
-movement_t calculate_rebound(ball_t *ball, side_t side, bool is_block, block_t block, position_t *next_pos, position_t *bar_pos);
-side_t which_side_bar(position_t next_pos, position_t *bar_pos);
-levels_t level_selection(bool game_finished, color_t *win_lose_title);
-void life_lost(int lives, ball_t *ball, position_t *bar_pos);
-void reset_bar_position(position_t *bar_pos);
-void game_win();
-
 
 // ###################################
 // ###   CUSTOM GRAPHIC ELEMENTS   ###
@@ -228,7 +221,6 @@ color_t breakout[7][38] = {
 };
 
 // Remaining blocks title
-
 color_t blocks[5][24] = {
 		{W,W,N, N, W,N, N, N,W,N, N, W,W, N, W,N,W, N, W,W,N, N, N,N},
 		{W,N,W, N, W,N, N, W,N,W, N, W,N, N, W,N,W, N, W,N,N, N, W,N},
@@ -237,11 +229,6 @@ color_t blocks[5][24] = {
 		{W,W,N, N, W,W, N, N,W,N, N, W,W, N, W,N,W, N, W,W,W, N, N,N}
 };
 
-// Remaining blocks numbers
-
-#define NUMBERS_NUM		10
-#define NUMBERS_HEIGHT	5
-#define NUMBERS_WIDTH	3
 color_t numbers[NUMBERS_NUM][NUMBERS_HEIGHT][NUMBERS_WIDTH] = {
 		{
 			{W,W,W},
@@ -316,7 +303,6 @@ color_t numbers[NUMBERS_NUM][NUMBERS_HEIGHT][NUMBERS_WIDTH] = {
 };
 
 // You won title
-
 color_t you_won_title[5][46] = {
 		{N,N,N,N,N,N, N, W,N,W, N, W,W,W, N, W,N,W, N, N,N,N, N, W,N,N,N,W, N, W,W,W, N, W,N,N,N,W, N, W, N, N,N,N,N,N},
 		{N,N,N,N,N,N, N, W,N,W, N, W,N,W, N, W,N,W, N, N,N,N, N, W,N,N,N,W, N, W,N,W, N, W,W,N,N,W, N, W, N, N,N,N,N,N},
@@ -326,7 +312,6 @@ color_t you_won_title[5][46] = {
 };
 
 // Game over title
-
 color_t game_over_title[5][46] = {
 		{W,W,W, N, W,W,W, N, W,N,N,N,W, N, W,W,W, N, N,N,N, N, W,W,W, N, W,N,W, N, W,W,W, N, W,W,W, N, N,N,N, N, N,N,N,W},
 		{W,N,N, N, W,N,W, N, W,W,N,W,W, N, W,N,N, N, N,N,N, N, W,N,W, N, W,N,W, N, W,N,N, N, W,N,W, N, N,N,N, N, W,N,W,N},
@@ -334,12 +319,6 @@ color_t game_over_title[5][46] = {
 		{W,N,W, N, W,N,W, N, W,N,N,N,W, N, W,N,N, N, N,N,N, N, W,N,W, N, W,N,W, N, W,N,N, N, W,N,W, N, N,N,N, N, W,N,W,N},
 		{W,W,W, N, W,N,W, N, W,N,N,N,W, N, W,W,W, N, N,N,N, N, W,W,W, N, N,W,N, N, W,W,W, N, W,N,W, N, N,N,N, N, N,N,N,W}
 };
-
-// Smoke animation
-#define SMOKE_TIME      100	    // miliseconds
-#define SMOKE_FRAMES    5
-#define SMOKE_WIDTH     3
-#define SMOKE_HEIGHT    6
 
 color_t smoke[SMOKE_FRAMES][SMOKE_HEIGHT][SMOKE_WIDTH] = {
     {
@@ -383,5 +362,27 @@ color_t smoke[SMOKE_FRAMES][SMOKE_HEIGHT][SMOKE_WIDTH] = {
         {G_BL,G_BL,G_BL}
     }
 };
+
+// Function definitions
+game_status_t move_ball(ball_t *ball, position_t *bar_pos, map_t *map);
+
+side_t calculate_border(position_t next_pos);
+side_t which_side_bar(position_t next_pos, position_t *bar_pos);
+
+movement_t calculate_rebound(ball_t *ball, side_t side, bool is_block, block_t block, position_t *next_pos, position_t *bar_pos);
+
+levels_t level_selection(bool game_finished, color_t *win_lose_title);
+
+void move_bar(int dir, position_t *bar_pos);
+void init_ball(ball_t *ball, position_t *bar_pos);
+void init_buttons();
+void wait_button();
+void life_lost(int lives, ball_t *ball, position_t *bar_pos);
+void reset_bar_position(position_t *bar_pos);
+void game_win();
+
+int check_button();
+
+bool calculate_block(position_t next_pos, block_t **block, map_t *map);
 
 #endif
