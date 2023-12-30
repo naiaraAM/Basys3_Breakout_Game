@@ -5,7 +5,7 @@
 #include "colors.h"
 
 // Peripherals constants
-#define VGA_CTRL_BASE 0x44A00000
+#define VGA_CTRL_BASE       0x44A00000
 
 // Borders (frame) constants
 #define INT_X_BORDER		1
@@ -13,6 +13,24 @@
 #define INT_Y_BORDER		1
 #define END_Y_BORDER		108
 #define BORDER_THICKNESS	1
+
+// Heart
+#define HEART_WIDTH         7
+#define HEART_HEIGHT        6
+#define HEART_DISTANCE      2
+#define LIVES_POS_X         HEART_DISTANCE
+#define LIVES_POS_Y         RESOLUTION_Y - HEART_HEIGHT - HEART_DISTANCE
+
+// Numbers
+#define NUMBERS_WIDTH	    3
+#define NUMBERS_HEIGHT	    5
+
+// Blocks
+#define BLOCKS_WIDTH	    24
+#define BLOCKS_HEIGHT	    5
+#define BLOCKS_DISTANCE     2
+#define BLOCKS_POS_X	    RESOLUTION_X - (NUMBERS_WIDTH * 4) - BLOCKS_WIDTH + 1
+#define BLOCKS_POS_Y	    RESOLUTION_Y - BLOCKS_HEIGHT - BLOCKS_DISTANCE
 
 // ################################
 // ###   FUNCTION DEFINITIONS   ###
@@ -31,23 +49,4 @@ void print_frame();
 void print_lives(int lives, int max_lives, color_t *heart);
 void print_blocks_info(int left_blocks, color_t *blocks, color_t *numbers);
 
-// Heart
-#define HEART_WIDTH     7
-#define HEART_HEIGHT    6
-#define HEART_DISTANCE  2
-#define LIVES_POS_X     HEART_DISTANCE
-#define LIVES_POS_Y     RESOLUTION_Y - HEART_HEIGHT - HEART_DISTANCE
-
-// Numbers
-#define NUMBERS_WIDTH	3
-#define NUMBERS_HEIGHT	5
-// Blocks
-#define BLOCKS_WIDTH	24
-#define BLOCKS_HEIGHT	5
-#define BLOCKS_DISTANCE 2
-#define BLOCKS_POS_X	RESOLUTION_X - (NUMBERS_WIDTH * 4) - BLOCKS_WIDTH + 1
-#define BLOCKS_POS_Y	RESOLUTION_Y - BLOCKS_HEIGHT - BLOCKS_DISTANCE
-
-
 #endif
-

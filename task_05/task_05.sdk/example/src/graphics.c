@@ -8,9 +8,9 @@
 
 void print_background(color_t color) {
 	color_t negro = N;
-    for(int i=0;i<160;i++)
-    	for(int j=0;j<120;j++)
-    		paint(i,j,negro);
+    for(int i = 0; i < 160; i++) //TODO: constante de resolucion de pantalla?
+    	for(int j = 0; j < 120; j++)
+    		paint(i, j, negro);
 }
 
 void paint_object(position_t pos, color_t *object, int rows, int cols) {
@@ -30,24 +30,23 @@ void paint_animation(position_t pos, color_t *animation, int frames, int period,
 
 void paint(int x, int y, color_t rgb) {
 	int *ptr = (int *)VGA_CTRL_BASE;
-	int val = (rgb.r>>4) | (rgb.b&0xf0) | ((rgb.g&0xf0)<<4);
-	ptr[(y<<8)| x]=val;
+	int val = (rgb.r >> 4) | (rgb.b & 0xf0) | ((rgb.g & 0xf0) << 4);
+	ptr[(y << 8)| x] = val;
 }
 
 void rect(position_t pos, color_t col, int w, int h) {
-	int i,j;
-	for(i=0;i<w;i++)
-		for(j=0;j<h;j++)
-			paint(pos.x+i,pos.y+j,col);
+	for (int i = 0; i < w; i++)
+		for (int j = 0 ;j < h; j++)
+			paint(pos.x + i, pos.y + j, col);
 }
 
 color_t get_color(int x, int y) {
 	color_t col;
 	int *ptr = (int*) VGA_CTRL_BASE;
-	int val = ptr[(y<<8) | x];
-	col.r = (val&0xf)<<4;
-	col.b = (val&0xf0);
-	col.g = (val&0xf00)>>4;
+	int val = ptr[(y << 8) | x];
+	col.r = (val & 0xf) << 4;
+	col.b = (val & 0xf0);
+	col.g = (val & 0xf00) >> 4;
 	return col;
 }
 
@@ -74,7 +73,7 @@ void print_lives(int lives, int max_lives, color_t *heart) {
 	position_t lives_pos = {LIVES_POS_X, LIVES_POS_Y};
 	const color_t black = N;
 
-	for(int i=0; i < max_lives; i++) {
+	for (int i = 0; i < max_lives; i++) {
 		if (i < lives)
 			paint_object(lives_pos, heart, HEART_HEIGHT, HEART_WIDTH);
 		else
@@ -87,10 +86,13 @@ void print_blocks_info(int left_blocks, color_t *blocks, color_t *numbers){
 	const color_t black = N;
 	position_t pos = {BLOCKS_POS_X, BLOCKS_POS_Y};
 	int init_pos = pos.x;
+
 	rect(pos, black, BLOCKS_WIDTH + (NUMBERS_WIDTH * 2 + 1), BLOCKS_HEIGHT);
 	paint_object(pos, blocks, BLOCKS_HEIGHT, BLOCKS_WIDTH);
+
 	int tens = left_blocks / 10;
 	int units = left_blocks % 10;
+
 	for (int i = 0; i < 2; i++) {
 		int aux = tens;
 		pos.x = init_pos + BLOCKS_WIDTH + ((NUMBERS_WIDTH + 1) * i);
