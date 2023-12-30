@@ -4,12 +4,12 @@
 #include <stdbool.h>
 #include "colors.h"
 
-#define RESOLUTION_X	160
-#define RESOLUTION_Y	120
+#define RESOLUTION_X	    160
+#define RESOLUTION_Y	    120
 
 // Map properties
-#define N_BLOCKS_X      11
-#define N_BLOCKS_Y      7
+#define N_BLOCKS_X          11
+#define N_BLOCKS_Y          7
 
 // Block properties
 #define BLOCK_LENGTH        12    // by default, 12
@@ -18,7 +18,7 @@
 #define BLOCK_COLOR_DIFF    0x3C  // decimal: 60
 
 // Technical parameters
-#define MAX_COLLISIONS  3
+#define MAX_COLLISIONS      3
 
 /**
  * LEVEL DESCRIPTION:
@@ -41,6 +41,7 @@ typedef struct block {
     position_t location;
     bool indestructible;
 } block_t;
+
 typedef struct map {
 	block_t blocks[N_BLOCKS_X][N_BLOCKS_Y];
     int destructible;	// number of destructible blocks

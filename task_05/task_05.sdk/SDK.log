@@ -16850,3 +16850,4 @@ con
 ----------------End of Script----------------
 
 19:29:30 INFO  : Launch script is exported to file 'C:\Users\LIO\Documents\UC\4\repo\Basys3_Breakout_Game\task_05\task_05.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_example.elf_on_local.tcl'
+19:37:46 INFO  : Disconnected from the channel tcfchan#179.
