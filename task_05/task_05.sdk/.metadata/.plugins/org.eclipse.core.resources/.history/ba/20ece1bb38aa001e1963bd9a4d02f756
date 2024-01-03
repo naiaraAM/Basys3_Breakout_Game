@@ -5,8 +5,8 @@
 void print_background(color_t color)
 {
 	color_t negro = N;
-	for (int i = 0; i < RESOLUTION_X; i++)
-		for (int j = 0; j < RESOLUTION_Y; j++)
+	for (int i = 0; i < 160; i++) // TODO: constante de resolucion de pantalla?
+		for (int j = 0; j < 120; j++)
 			paint(i, j, negro);
 }
 

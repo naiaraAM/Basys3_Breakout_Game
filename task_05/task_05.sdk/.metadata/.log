@@ -2637,3 +2637,811 @@ Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-12
 
 !ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:17:04.482
 !MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-12
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:19:25.882
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/task_05_1_bsp/system.mss ], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:19:25.893
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/task_05_1_bsp/system.mss ], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:19:25.893
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/task_05_1_bsp/system.mss], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:19:25.901
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/task_05_1_bsp/system.mss], Result: [null, {"procname": "microblaze_0",
+"osname": "standalone",
+"osver": "6.8",
+}]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:19:25.901
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/task_05_1_bsp/system.mss], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:19:25.911
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/task_05_1_bsp/system.mss], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:19:26.135
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/design_1_wrapper_hw_platform_2/system.hdf C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/task_05_int_bsp/system.mss ], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:19:26.142
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/design_1_wrapper_hw_platform_2/system.hdf C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/task_05_int_bsp/system.mss ], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:19:26.142
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/design_1_wrapper_hw_platform_2/system.hdf C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/task_05_int_bsp/system.mss], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:19:26.149
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/design_1_wrapper_hw_platform_2/system.hdf C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/task_05_int_bsp/system.mss], Result: [null, {"procname": "microblaze_0",
+"osname": "standalone",
+"osver": "6.8",
+}]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:19:26.150
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/task_05_int_bsp/system.mss], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:19:26.151
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/task_05_int_bsp/system.mss], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:19:26.318
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/design_1_wrapper_hw_platform_2/system.hdf C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/task_06_1_bsp/system.mss ], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:19:26.324
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/design_1_wrapper_hw_platform_2/system.hdf C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/task_06_1_bsp/system.mss ], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:19:26.324
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/design_1_wrapper_hw_platform_2/system.hdf C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/task_06_1_bsp/system.mss], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:19:26.331
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/design_1_wrapper_hw_platform_2/system.hdf C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/task_06_1_bsp/system.mss], Result: [null, {"procname": "microblaze_0",
+"osname": "standalone",
+"osver": "6.8",
+}]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:19:26.331
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/task_06_1_bsp/system.mss], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:19:26.331
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/task_06_1_bsp/system.mss], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:19:26.495
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/design_1_wrapper_hw_platform_2/system.hdf C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/task_06_2_bsp/system.mss ], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:19:26.503
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/design_1_wrapper_hw_platform_2/system.hdf C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/task_06_2_bsp/system.mss ], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:19:26.503
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/design_1_wrapper_hw_platform_2/system.hdf C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/task_06_2_bsp/system.mss], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:19:26.512
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/design_1_wrapper_hw_platform_2/system.hdf C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/task_06_2_bsp/system.mss], Result: [null, {"procname": "microblaze_0",
+"osname": "standalone",
+"osver": "6.8",
+}]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:19:26.512
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/task_06_2_bsp/system.mss], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:19:26.515
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/task_06_2_bsp/system.mss], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:19:26.679
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/design_1_wrapper_hw_platform_2/system.hdf C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/task_07_bsp/system.mss ], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:19:26.686
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/design_1_wrapper_hw_platform_2/system.hdf C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/task_07_bsp/system.mss ], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:19:26.686
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/design_1_wrapper_hw_platform_2/system.hdf C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/task_07_bsp/system.mss], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:19:26.692
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/design_1_wrapper_hw_platform_2/system.hdf C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/task_07_bsp/system.mss], Result: [null, {"procname": "microblaze_0",
+"osname": "standalone",
+"osver": "6.8",
+}]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:19:26.692
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/task_07_bsp/system.mss], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:19:26.692
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/task_07_bsp/system.mss], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:19:31.200
+!MESSAGE XSCT Command: [disconnect tcfchan#4], Thread: Thread-231
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:19:31.213
+!MESSAGE XSCT command with result: [disconnect tcfchan#4], Result: [null, ]. Thread: Thread-231
+
+!ENTRY com.xilinx.sdk.utils 1 0 2024-01-03 13:19:32.205
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:19:32.207
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-13
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:19:32.219
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#5]. Thread: Worker-13
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:19:32.220
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-13
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:19:32.255
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Basys3 210183AB4397A]. Thread: Worker-13
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:19:32.255
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-13
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:19:32.264
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Basys3 210183AB4397A]. Thread: Worker-13
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:19:32.266
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==1}], Thread: Worker-13
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:19:32.296
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-13
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:19:32.296
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==0} -index 0], Thread: Worker-13
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:19:32.352
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==0} -index 0], Result: [null, ]. Thread: Worker-13
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:19:32.353
+!MESSAGE XSCT Command: [fpga -state], Thread: Worker-13
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:19:32.357
+!MESSAGE XSCT command with result: [fpga -state], Result: [null, FPGA is configured]. Thread: Worker-13
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:19:32.358
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-13
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:19:32.360
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#5]. Thread: Worker-13
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:19:32.362
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-13
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:19:32.376
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Basys3 210183AB4397A]. Thread: Worker-13
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:19:32.377
+!MESSAGE XSCT Command: [version -server], Thread: Worker-13
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:19:32.379
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2018.3]. Thread: Worker-13
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:19:32.379
+!MESSAGE XSCT Command: [version], Thread: Worker-13
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:19:32.380
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2018.3
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-13
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:19:32.381
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-13
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:19:32.393
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Basys3 210183AB4397A]. Thread: Worker-13
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:19:32.394
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==1}], Thread: Worker-13
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:19:32.432
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-13
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:19:32.432
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-13
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:19:32.446
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Basys3 210183AB4397A]. Thread: Worker-13
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:19:32.447
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==1}], Thread: Worker-13
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:19:32.480
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-13
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:19:32.482
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-13
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:19:32.492
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Basys3 210183AB4397A]. Thread: Worker-13
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:19:32.493
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==1}], Thread: Worker-13
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:19:32.522
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-13
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:19:32.523
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-13
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:19:32.533
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Basys3 210183AB4397A]. Thread: Worker-13
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:19:32.534
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==1}], Thread: Worker-13
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:19:32.565
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-13
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:19:32.566
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent Basys3 210183AB4397A" && level == 0}], Thread: Worker-13
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:19:32.597
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent Basys3 210183AB4397A" && level == 0}], Result: [null, ]. Thread: Worker-13
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:19:32.598
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-13
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:19:32.600
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-13
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:19:32.601
+!MESSAGE XSCT Command: [configparams mdm-detect-bscan-mask 2], Thread: Worker-13
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:19:32.603
+!MESSAGE XSCT command with result: [configparams mdm-detect-bscan-mask 2], Result: [null, ]. Thread: Worker-13
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:19:32.604
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0], Thread: Worker-13
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:19:32.658
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0], Result: [null, ]. Thread: Worker-13
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:19:32.660
+!MESSAGE XSCT Command: [rst -processor], Thread: Worker-13
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:19:32.782
+!MESSAGE XSCT command with result: [rst -processor], Result: [null, ]. Thread: Worker-13
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:19:32.783
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0], Thread: Worker-13
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:19:32.855
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0], Result: [null, ]. Thread: Worker-13
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:19:32.857
+!MESSAGE XSCT Command: [dow C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf], Thread: Worker-13
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:19:33.064
+!MESSAGE XSCT command with result: [dow C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf], Result: [null, ]. Thread: Worker-13
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:19:33.150
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0], Thread: Worker-13
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:19:33.228
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0], Result: [null, ]. Thread: Worker-13
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:19:33.230
+!MESSAGE XSCT Command: [con], Thread: Worker-13
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:19:33.242
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-13
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:20:03.312
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/design_1_wrapper_hw_platform_2/system.hdf C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example_bsp/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:20:03.322
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/design_1_wrapper_hw_platform_2/system.hdf C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example_bsp/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:20:03.326
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/design_1_wrapper_hw_platform_2/system.hdf C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:20:03.332
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/design_1_wrapper_hw_platform_2/system.hdf C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example_bsp/system.mss], Result: [null, {"procname": "microblaze_0",
+"osname": "standalone",
+"osver": "6.8",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:20:03.333
+!MESSAGE XSCT Command: [hsi::utils::get_supported_os -json C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/design_1_wrapper_hw_platform_2/system.hdf], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:20:03.353
+!MESSAGE XSCT command with result: [hsi::utils::get_supported_os -json C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/design_1_wrapper_hw_platform_2/system.hdf], Result: [null, {"microblaze_0": {"freertos10_xilinx_v1_2": {"name": "freertos10_xilinx",
+"version": "1.2",
+"desc": "FreeRTOS is a market leading open source RTOS",
+"compilerflags": "",
+"linkerflags": "-Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group",
+"repo": "C:/Xilinx/SDK/2018.3/data/embeddedsw/ThirdParty/bsp/freertos10_xilinx_v1_2",
+},
+"standalone_v6_8": {"name": "standalone",
+"version": "6.8",
+"desc": "Standalone is a simple, low-level software layer. It provides access to basic processor features such as caches, interrupts and exceptions as well as the basic features of a hosted environment, such as standard input and output, profiling, abort and exit.",
+"compilerflags": "",
+"linkerflags": "-Wl,--start-group,-lxil,-lgcc,-lc,--end-group",
+"repo": "C:/Xilinx/SDK/2018.3/data/embeddedsw/lib/bsp/standalone_v6_8",
+},
+},
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:20:03.363
+!MESSAGE XSCT Command: [::hsi::utils::get_libs_from_sw C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/design_1_wrapper_hw_platform_2/system.hdf C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:20:03.365
+!MESSAGE XSCT command with result: [::hsi::utils::get_libs_from_sw C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/design_1_wrapper_hw_platform_2/system.hdf C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example_bsp/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:20:03.369
+!MESSAGE XSCT Command: [::hsi::utils::get_sw_libs -json C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/design_1_wrapper_hw_platform_2/system.hdf C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:20:03.374
+!MESSAGE XSCT command with result: [::hsi::utils::get_sw_libs -json C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/design_1_wrapper_hw_platform_2/system.hdf C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example_bsp/system.mss], Result: [null, {}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:20:03.374
+!MESSAGE XSCT Command: [::hsi::utils::get_connected_periphs C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/design_1_wrapper_hw_platform_2/system.hdf microblaze_0], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:20:03.377
+!MESSAGE XSCT command with result: [::hsi::utils::get_connected_periphs C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/design_1_wrapper_hw_platform_2/system.hdf microblaze_0], Result: [null, axi_gpio_0 axi_gpio_1 axi_intc_0 axi_timer_0 mdm_1 microblaze_0_local_memory_dlmb_bram_if_cntlr microblaze_0_local_memory_ilmb_bram_if_cntlr task_07_0 vga_control_0]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:20:03.377
+!MESSAGE XSCT Command: [::hsi::utils::get_drivers_for_sw -json C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/design_1_wrapper_hw_platform_2/system.hdf C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:20:03.385
+!MESSAGE XSCT command with result: [::hsi::utils::get_drivers_for_sw -json C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/design_1_wrapper_hw_platform_2/system.hdf C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example_bsp/system.mss], Result: [null, {"axi_gpio_0": {"name": "gpio",
+"ver": "4.3",
+},
+"axi_gpio_1": {"name": "gpio",
+"ver": "4.3",
+},
+"axi_intc_0": {"name": "intc",
+"ver": "3.8",
+},
+"axi_timer_0": {"name": "tmrctr",
+"ver": "4.5",
+},
+"mdm_1": {"name": "uartlite",
+"ver": "3.2",
+},
+"microblaze_0_local_memory_dlmb_bram_if_cntlr": {"name": "bram",
+"ver": "4.2",
+},
+"microblaze_0_local_memory_ilmb_bram_if_cntlr": {"name": "bram",
+"ver": "4.2",
+},
+"task_07_0": {"name": "task_07",
+"ver": "1.0",
+},
+"vga_control_0": {"name": "vga_control",
+"ver": "1.0",
+},
+"microblaze_0": {"name": "cpu",
+"ver": "2.8",
+},
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:20:03.387
+!MESSAGE XSCT Command: [hsi::utils::get_drivers_for_hw -json C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/design_1_wrapper_hw_platform_2/system.hdf], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:20:03.453
+!MESSAGE XSCT command with result: [hsi::utils::get_drivers_for_hw -json C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/design_1_wrapper_hw_platform_2/system.hdf], Result: [null, {"axi_gpio_0": {"version": "2.0",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2018.3/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+"gpio_v4_3": {"name": "gpio",
+"version": "4.3",
+"repo": "C:/Xilinx/SDK/2018.3/data/embeddedsw/XilinxProcessorIPLib/drivers/gpio_v4_3",
+"compilerflags": "",
+"linkerflags": "",
+},
+},
+},
+"axi_gpio_1": {"version": "2.0",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2018.3/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+"gpio_v4_3": {"name": "gpio",
+"version": "4.3",
+"repo": "C:/Xilinx/SDK/2018.3/data/embeddedsw/XilinxProcessorIPLib/drivers/gpio_v4_3",
+"compilerflags": "",
+"linkerflags": "",
+},
+},
+},
+"axi_intc_0": {"version": "4.1",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2018.3/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+"intc_v3_8": {"name": "intc",
+"version": "3.8",
+"repo": "C:/Xilinx/SDK/2018.3/data/embeddedsw/XilinxProcessorIPLib/drivers/intc_v3_8",
+"compilerflags": "",
+"linkerflags": "",
+},
+},
+},
+"axi_timer_0": {"version": "2.0",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2018.3/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+"tmrctr_v4_5": {"name": "tmrctr",
+"version": "4.5",
+"repo": "C:/Xilinx/SDK/2018.3/data/embeddedsw/XilinxProcessorIPLib/drivers/tmrctr_v4_5",
+"compilerflags": "",
+"linkerflags": "",
+},
+},
+},
+"mdm_1": {"version": "3.2",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2018.3/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+"uartlite_v3_2": {"name": "uartlite",
+"version": "3.2",
+"repo": "C:/Xilinx/SDK/2018.3/data/embeddedsw/XilinxProcessorIPLib/drivers/uartlite_v3_2",
+"compilerflags": "",
+"linkerflags": "",
+},
+},
+},
+"microblaze_0": {"version": "11.0",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2018.3/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+"cpu_v2_8": {"name": "cpu",
+"version": "2.8",
+"repo": "C:/Xilinx/SDK/2018.3/data/embeddedsw/XilinxProcessorIPLib/drivers/cpu_v2_8",
+"compilerflags": "",
+"linkerflags": "",
+},
+},
+},
+"microblaze_0_axi_periph": {"version": "2.1",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2018.3/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+},
+},
+"microblaze_0_local_memory_dlmb_bram_if_cntlr": {"version": "4.0",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2018.3/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+"bram_v4_2": {"name": "bram",
+"version": "4.2",
+"repo": "C:/Xilinx/SDK/2018.3/data/embeddedsw/XilinxProcessorIPLib/drivers/bram_v4_2",
+"compilerflags": "",
+"linkerflags": "",
+},
+},
+},
+"microblaze_0_local_memory_dlmb_v10": {"version": "3.0",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2018.3/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+},
+},
+"microblaze_0_local_memory_ilmb_bram_if_cntlr": {"version": "4.0",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2018.3/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+"bram_v4_2": {"name": "bram",
+"version": "4.2",
+"repo": "C:/Xilinx/SDK/2018.3/data/embeddedsw/XilinxProcessorIPLib/drivers/bram_v4_2",
+"compilerflags": "",
+"linkerflags": "",
+},
+},
+},
+"microblaze_0_local_memory_ilmb_v10": {"version": "3.0",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2018.3/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+},
+},
+"microblaze_0_local_memory_lmb_bram": {"version": "8.4",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2018.3/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+},
+},
+"rst_Clk_100M": {"version": "5.0",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2018.3/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+},
+},
+"task_07_0": {"version": "1.0",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2018.3/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+"task_07_v1_0": {"name": "task_07",
+"version": "1.0",
+"repo": "C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/design_1_wrapper_hw_platform_2/drivers/task_07_v1_0",
+"compilerflags": "",
+"linkerflags": "",
+},
+},
+},
+"vga_control_0": {"version": "1.0",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2018.3/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+"vga_control_v1_0": {"name": "vga_control",
+"version": "1.0",
+"repo": "C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/design_1_wrapper_hw_platform_2/drivers/vga_control_v1_0",
+"compilerflags": "",
+"linkerflags": "",
+},
+},
+},
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:20:03.462
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:20:03.466
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example_bsp/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:20:05.039
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/design_1_wrapper_hw_platform_2/system.hdf C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example_bsp/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:20:05.044
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/design_1_wrapper_hw_platform_2/system.hdf C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example_bsp/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:20:05.045
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/design_1_wrapper_hw_platform_2/system.hdf C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:20:05.050
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/design_1_wrapper_hw_platform_2/system.hdf C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example_bsp/system.mss], Result: [null, {"procname": "microblaze_0",
+"osname": "standalone",
+"osver": "6.8",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:20:05.071
+!MESSAGE XSCT Command: [::hsi::utils::get_drivers_for_sw -json C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/design_1_wrapper_hw_platform_2/system.hdf C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:20:05.078
+!MESSAGE XSCT command with result: [::hsi::utils::get_drivers_for_sw -json C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/design_1_wrapper_hw_platform_2/system.hdf C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example_bsp/system.mss], Result: [null, {"axi_gpio_0": {"name": "gpio",
+"ver": "4.3",
+},
+"axi_gpio_1": {"name": "gpio",
+"ver": "4.3",
+},
+"axi_intc_0": {"name": "intc",
+"ver": "3.8",
+},
+"axi_timer_0": {"name": "tmrctr",
+"ver": "4.5",
+},
+"mdm_1": {"name": "uartlite",
+"ver": "3.2",
+},
+"microblaze_0_local_memory_dlmb_bram_if_cntlr": {"name": "bram",
+"ver": "4.2",
+},
+"microblaze_0_local_memory_ilmb_bram_if_cntlr": {"name": "bram",
+"ver": "4.2",
+},
+"task_07_0": {"name": "task_07",
+"ver": "1.0",
+},
+"vga_control_0": {"name": "vga_control",
+"ver": "1.0",
+},
+"microblaze_0": {"name": "cpu",
+"ver": "2.8",
+},
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:20:05.397
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/design_1_wrapper_hw_platform_2/system.hdf C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example_bsp/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:20:05.401
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/design_1_wrapper_hw_platform_2/system.hdf C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example_bsp/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:20:05.402
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/design_1_wrapper_hw_platform_2/system.hdf C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:20:05.408
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/design_1_wrapper_hw_platform_2/system.hdf C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example_bsp/system.mss], Result: [null, {"procname": "microblaze_0",
+"osname": "standalone",
+"osver": "6.8",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:20:05.417
+!MESSAGE XSCT Command: [::hsi::utils::get_libs_from_sw C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/design_1_wrapper_hw_platform_2/system.hdf C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:20:05.423
+!MESSAGE XSCT command with result: [::hsi::utils::get_libs_from_sw C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/design_1_wrapper_hw_platform_2/system.hdf C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example_bsp/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:20:05.426
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:20:05.429
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example_bsp/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:20:24.812
+!MESSAGE XSCT Command: [::hsi::utils::closehw C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/design_1_wrapper_hw_platform_0/system.hdf], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:20:24.820
+!MESSAGE XSCT command with result: [::hsi::utils::closehw C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/design_1_wrapper_hw_platform_0/system.hdf], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:20:24.841
+!MESSAGE XSCT Command: [::hsi::utils::closehw C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/design_1_wrapper_hw_platform_1/system.hdf], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:20:24.852
+!MESSAGE XSCT command with result: [::hsi::utils::closehw C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/design_1_wrapper_hw_platform_1/system.hdf], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:20:35.075
+!MESSAGE XSCT Command: [disconnect tcfchan#5], Thread: Thread-287
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:20:35.079
+!MESSAGE XSCT command with result: [disconnect tcfchan#5], Result: [null, ]. Thread: Thread-287
+
+!ENTRY com.xilinx.sdk.utils 1 0 2024-01-03 13:20:36.090
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:20:36.092
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:20:36.103
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#6]. Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:20:36.104
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:20:36.125
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Basys3 210183AB4397A]. Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:20:36.127
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:20:36.137
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Basys3 210183AB4397A]. Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:20:36.138
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==1}], Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:20:36.175
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:20:36.177
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==0} -index 0], Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:20:36.216
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==0} -index 0], Result: [null, ]. Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:20:36.217
+!MESSAGE XSCT Command: [fpga -state], Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:20:36.221
+!MESSAGE XSCT command with result: [fpga -state], Result: [null, FPGA is configured]. Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:20:36.222
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:20:36.223
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#6]. Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:20:36.224
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:20:36.235
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Basys3 210183AB4397A]. Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:20:36.236
+!MESSAGE XSCT Command: [version -server], Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:20:36.238
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2018.3]. Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:20:36.238
+!MESSAGE XSCT Command: [version], Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:20:36.240
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2018.3
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:20:36.241
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:20:36.254
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Basys3 210183AB4397A]. Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:20:36.254
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==1}], Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:20:36.285
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:20:36.286
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:20:36.296
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Basys3 210183AB4397A]. Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:20:36.298
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==1}], Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:20:36.332
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:20:36.334
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:20:36.348
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Basys3 210183AB4397A]. Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:20:36.349
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==1}], Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:20:36.381
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:20:36.382
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:20:36.393
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Basys3 210183AB4397A]. Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:20:36.393
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==1}], Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:20:36.427
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4397A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:20:36.428
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent Basys3 210183AB4397A" && level == 0}], Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:20:36.461
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent Basys3 210183AB4397A" && level == 0}], Result: [null, ]. Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:20:36.462
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:20:36.464
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:20:36.465
+!MESSAGE XSCT Command: [configparams mdm-detect-bscan-mask 2], Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:20:36.468
+!MESSAGE XSCT command with result: [configparams mdm-detect-bscan-mask 2], Result: [null, ]. Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:20:36.470
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0], Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:20:36.549
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0], Result: [null, ]. Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:20:36.551
+!MESSAGE XSCT Command: [rst -processor], Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:20:36.616
+!MESSAGE XSCT command with result: [rst -processor], Result: [null, ]. Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:20:36.617
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0], Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:20:36.673
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0], Result: [null, ]. Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:20:36.674
+!MESSAGE XSCT Command: [dow C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf], Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:20:36.875
+!MESSAGE XSCT command with result: [dow C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.sdk/example/Debug/example.elf], Result: [null, ]. Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:20:36.939
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0], Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:20:37.014
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4397A"} -index 0], Result: [null, ]. Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:20:37.015
+!MESSAGE XSCT Command: [con], Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-01-03 13:20:37.038
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-10
