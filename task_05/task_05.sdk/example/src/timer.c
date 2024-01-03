@@ -2,22 +2,16 @@
 #include "mb_interface.h"
 #include "timer.h"
 
-// Global variables
-int cycles = 0;
+int cycles = 0; // global variable to count the number of cycles
 
-/**
- * @brief Sleep miliseconds.
- * @param milisegundos time in ms to sleep
- */
-void msleep(int milisegundos) {
+void msleep(int miliseconds)
+{
 	int temp = cycles;
-	while (cycles != milisegundos + temp);
+	while (cycles != miliseconds + temp);
 }
 
-/**
- * @brief Timer initialization.
- */
-void init_timer() {
+void init_timer()
+{
 	TLR0 = RST_VALUE;
 	TCSR0 = 0x20; // Timer Load and Clear any Pending Ints
 	TCSR0 = 0xD2; // Timer Clear Load Bit
@@ -30,18 +24,12 @@ void init_timer() {
 	microblaze_enable_interrupts();
 }
 
-/**
- * @brief Interrupt Service Routine.
- */
 void myISR()
 {
 	if (INTC_IPR & TIMER_INT)
 		timer_ISR();
 }
 
-/**
- * @brief Interrupt Service Routine for the timer.
- */
 void timer_ISR()
 {
 	cycles++;
@@ -50,6 +38,7 @@ void timer_ISR()
 	INTC_IAR = TIMER_INT;
 }
 
-int get_cycles() {
+int get_cycles()
+{
 	return cycles;
 }
