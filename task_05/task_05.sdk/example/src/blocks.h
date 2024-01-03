@@ -4,9 +4,6 @@
 #include <stdbool.h>
 #include "colors.h"
 
-#define RESOLUTION_X        160
-#define RESOLUTION_Y        120
-
 // Map properties
 #define N_BLOCKS_X          11
 #define N_BLOCKS_Y          7
@@ -20,6 +17,11 @@
 // Technical parameters
 #define MAX_COLLISIONS 3
 
+typedef struct position
+{
+	int x, y;
+} position_t;
+
 /**
  * LEVEL EXPLAINATION
  * Every level has a different map, and the same lives.
@@ -27,17 +29,7 @@
  * 2. The same than lvl 1, but random blocks in the map will increase their collisions.
  * 3. The same than lvl 2, plus random indestructible blocks that will appear.
  */
-typedef enum levels
-{
-    first_lvl,
-    second_lvl,
-    third_lvl
-} levels_t;
-
-typedef struct position
-{
-    int x, y;
-} position_t;
+typedef enum levels {first_lvl, second_lvl, third_lvl} levels_t;
 
 // The block structure defines its current properties
 typedef struct block
@@ -98,5 +90,14 @@ void print_map(block_t blocks[N_BLOCKS_X][N_BLOCKS_Y]);
  * @param block The block to be reprinted.
  */
 void reprint_block(block_t *block);
+
+/**
+ * Calculates the collision between the next position and the blocks on the map.
+ * @param next_pos The next position to check for collision.
+ * @param block Pointer to the block object.
+ * @param map Pointer to the map object.
+ * @return true if there is a collision, false otherwise.
+ */
+bool calculate_block(position_t next_pos, block_t **block, map_t *map);
 
 #endif

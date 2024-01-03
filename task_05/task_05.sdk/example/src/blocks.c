@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "blocks.h"
 #include "graphics.h"
-#include "timer.h"
+#include "peripherals/timer.h"
 
 const color_t map_colors[N_BLOCKS_Y] = {M_RED, M_ORANGE, M_YELLOW, M_GREEN, M_DBLUE, M_PURPLE, M_CYAN};
 
@@ -90,4 +90,22 @@ void print_map(block_t blocks[N_BLOCKS_X][N_BLOCKS_Y])
             print_block(pos, blocks[j][i].color);
         }
     }
+}
+
+bool calculate_block(position_t next_pos, block_t **block, map_t *map)
+{
+	for (int i = N_BLOCKS_Y - 1; i >= 0; i--)
+	{
+		for (int j = N_BLOCKS_X - 1; j >= 0; j--)
+		{
+			block_t *res = &map->blocks[j][i];
+			if (next_pos.x >= res->location.x && next_pos.x < res->location.x + BLOCK_LENGTH &&
+				next_pos.y >= res->location.y && next_pos.y < res->location.y + BLOCK_HEIGHT) // inside block
+			{
+				*block = res;
+				return true;
+			}
+		}
+	}
+	return false;
 }

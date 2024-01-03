@@ -1,12 +1,9 @@
 #include <stdio.h>
+#include "xparameters.h"
+#include "leds.h"
 #include "timer.h"
 
-#define NUM_LEDS 		16
-#define MAX_LED 		0x8000
-#define BASE_GPIO1 		0x40010000
-#define MASK_BUTTONS 	0xF
-
-volatile int *gpio1 = (int *)BASE_GPIO1;
+volatile int *gpio1 = (int *)XPAR_AXI_GPIO_1_BASEADDR;
 
 void init_leds()
 {

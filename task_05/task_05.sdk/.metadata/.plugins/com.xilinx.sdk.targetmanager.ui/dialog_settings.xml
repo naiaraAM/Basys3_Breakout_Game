@@ -8,7 +8,7 @@
 	<item value="Local" key="design_1_wrapper_hw_platform_2-target"/>
 	<item value="Local" key="design_1_wrapper_hw_platform_0-target"/>
 	<item value="Auto Detect" key="design_1_wrapper_hw_platform_0-device"/>
-	<item value="design_1_wrapper_hw_platform_2" key="programfpga.hwplatform"/>
+	<item value="design_1_wrapper_hw_platform_0" key="programfpga.hwplatform"/>
 	<item value="Auto Detect" key="design_1_wrapper_hw_platform_2-device"/>
 	<item value="bootloop" key="design_1_wrapper_hw_platform_2-microblaze_0-initElf"/>
 	<item value="false" key="design_1_wrapper_hw_platform_0-partial_bit"/>

@@ -1,18 +1,7 @@
-src/main.o src/main.o: ../src/main.c \
- ../../example_bsp/microblaze_0/include/xil_printf.h \
- ../../example_bsp/microblaze_0/include/xil_types.h \
+src/main.o src/main.o: ../src/main.c ../src/main.h ../src/blocks.h \
+ ../src/colors.h ../src/graphics.h ../src/peripherals/timer.h \
  ../../example_bsp/microblaze_0/include/xparameters.h \
- ../../example_bsp/microblaze_0/include/bspconfig.h ../src/main.h \
- ../src/blocks.h ../src/colors.h ../src/graphics.h ../src/timer.h \
- ../../example_bsp/microblaze_0/include/xparameters.h ../src/leds.h
-
-../../example_bsp/microblaze_0/include/xil_printf.h:
-
-../../example_bsp/microblaze_0/include/xil_types.h:
-
-../../example_bsp/microblaze_0/include/xparameters.h:
-
-../../example_bsp/microblaze_0/include/bspconfig.h:
+ ../src/peripherals/leds.h ../src/peripherals/buttons.h
 
 ../src/main.h:
 
@@ -22,8 +11,10 @@ src/main.o src/main.o: ../src/main.c \
 
 ../src/graphics.h:
 
-../src/timer.h:
+../src/peripherals/timer.h:
 
 ../../example_bsp/microblaze_0/include/xparameters.h:
 
-../src/leds.h:
+../src/peripherals/leds.h:
+
+../src/peripherals/buttons.h:

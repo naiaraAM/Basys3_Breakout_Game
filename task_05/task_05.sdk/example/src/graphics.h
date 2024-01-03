@@ -1,11 +1,13 @@
-#ifndef GRAPHICS_H
-#define GRAPHICS_H
+#ifndef __GRAPHICS_H__
+#define __GRAPHICS_H__
 
 #include "blocks.h"
 #include "colors.h"
 
-// Peripherals constants
-#define VGA_CTRL_BASE 0x44A00000
+// VGA peripheral constants
+#define VGA_CTRL_BASE 		0x44A00000
+#define RESOLUTION_X        160
+#define RESOLUTION_Y        120
 
 // Borders (frame) constants
 #define INT_X_BORDER        1
@@ -32,6 +34,25 @@
 #define BLOCKS_POS_X        RESOLUTION_X - (NUMBERS_WIDTH * 4) - BLOCKS_WIDTH + 1
 #define BLOCKS_POS_Y        RESOLUTION_Y - BLOCKS_HEIGHT - BLOCKS_DISTANCE
 
+/**
+ * @brief Prints the background color on the screen.
+ *
+ * This function prints the background color on the screen.
+ *
+ * @param color The color to be printed as the background.
+ */
+void print_background(color_t color);
+
+/**
+ * @brief Paints a pixel on the screen at the specified coordinates.
+ *
+ * This function paints a pixel on the screen at the specified coordinates.
+ *
+ * @param x The x-coordinate of the pixel.
+ * @param y The y-coordinate of the pixel.
+ * @param rgb The color of the pixel.
+ */
+void paint(int x, int y, color_t rgb);
 
 /**
  * @brief Paints an object on the screen at the specified position.
@@ -60,24 +81,16 @@ void paint_object(position_t pos, color_t *object, int height, int width);
 void paint_animation(position_t pos, color_t *animation, int frames, int period, int height, int width);
 
 /**
- * @brief Prints the background color on the screen.
+ * @brief Draws a rectangle on the screen at the specified position.
  *
- * This function prints the background color on the screen.
+ * This function draws a rectangle on the screen at the specified position.
  *
- * @param color The color to be printed as the background.
+ * @param pos The position where the rectangle should be drawn.
+ * @param col The color of the rectangle.
+ * @param width The width of the rectangle.
+ * @param height The height of the rectangle.
  */
-void print_background(color_t color);
-
-/**
- * @brief Paints a pixel on the screen at the specified coordinates.
- *
- * This function paints a pixel on the screen at the specified coordinates.
- *
- * @param x The x-coordinate of the pixel.
- * @param y The y-coordinate of the pixel.
- * @param rgb The color of the pixel.
- */
-void paint(int x, int y, color_t rgb);
+void rect(position_t pos, color_t col, int width, int height);
 
 /**
  * @brief Retrieves the color of the pixel at the specified coordinates.
@@ -89,18 +102,6 @@ void paint(int x, int y, color_t rgb);
  * @return The color of the pixel.
  */
 color_t get_color(int x, int y);
-
-/**
- * @brief Draws a rectangle on the screen at the specified position.
- *
- * This function draws a rectangle on the screen at the specified position.
- *
- * @param pos The position where the rectangle should be drawn.
- * @param col The color of the rectangle.
- * @param width The width of the rectangle.
- * @param height The height of the rectangle.
- */
-void rect(position_t pos, color_t col, int width, int height);
 
 /**
  * @brief Prints the frames on the screen.

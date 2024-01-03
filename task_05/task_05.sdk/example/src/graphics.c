@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include "graphics.h"
-#include "timer.h"
+#include "peripherals/timer.h"
 
 void print_background(color_t color)
 {
@@ -8,6 +8,13 @@ void print_background(color_t color)
 	for (int i = 0; i < RESOLUTION_X; i++)
 		for (int j = 0; j < RESOLUTION_Y; j++)
 			paint(i, j, negro);
+}
+
+void paint(int x, int y, color_t rgb)
+{
+	int *ptr = (int *)VGA_CTRL_BASE;
+	int val = (rgb.r >> 4) | (rgb.b & 0xf0) | ((rgb.g & 0xf0) << 4);
+	ptr[(y << 8) | x] = val;
 }
 
 void paint_object(position_t pos, color_t *object, int rows, int cols)
@@ -26,13 +33,6 @@ void paint_animation(position_t pos, color_t *animation, int frames, int period,
 		paint_object(pos, &animation[f * height * width], height, width);
 		msleep(period);
 	}
-}
-
-void paint(int x, int y, color_t rgb)
-{
-	int *ptr = (int *)VGA_CTRL_BASE;
-	int val = (rgb.r >> 4) | (rgb.b & 0xf0) | ((rgb.g & 0xf0) << 4);
-	ptr[(y << 8) | x] = val;
 }
 
 void rect(position_t pos, color_t col, int w, int h)
