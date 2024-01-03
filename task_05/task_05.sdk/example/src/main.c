@@ -77,14 +77,13 @@ int main(){
 						status = continues;
 						if (ball.mov == 1) {
 							ball.mov = 0;
-						}else {
+						} else {
 							ball.mov = 3;
 						}
 						reset_bar_position(&bar_pos);
 						life_lost(lives, &ball, &bar_pos);
 					}
-				} else if (status == block_broken)
-				{
+				} else if (status == block_broken) {
 					remaining_blocks--;
 					print_blocks_info(remaining_blocks, *blocks, **numbers);
 					xil_printf("Remaining blocks: %d\r", remaining_blocks);

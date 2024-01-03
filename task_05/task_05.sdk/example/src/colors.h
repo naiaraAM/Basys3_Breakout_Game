@@ -40,6 +40,9 @@ typedef struct color {
 } color_t;
 
 // Function definitions
+/**
+ *
+ */
 bool equals_color(color_t color1, color_t color2);
 
 #endif
