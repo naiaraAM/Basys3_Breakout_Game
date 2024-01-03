@@ -13,13 +13,13 @@ void print_block(position_t pos, color_t col)
             paint(pos.x + i, pos.y + j, col);
 }
 
-void reprint_block(block_t block)
+void reprint_block(block_t *block)
 {
-    block.color.r -= BLOCK_COLOR_DIFF;
-    block.color.g -= BLOCK_COLOR_DIFF;
-    block.color.b -= BLOCK_COLOR_DIFF;
+    block->color.r -= BLOCK_COLOR_DIFF;
+    block->color.g -= BLOCK_COLOR_DIFF;
+    block->color.b -= BLOCK_COLOR_DIFF;
 
-    print_block(block.location, block.color);
+    print_block(block->location, block->color);
 }
 
 void init_map(map_t *map, levels_t level)

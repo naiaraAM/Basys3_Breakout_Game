@@ -97,6 +97,6 @@ void print_map(block_t blocks[N_BLOCKS_X][N_BLOCKS_Y]);
  *
  * @param block The block to be reprinted.
  */
-void reprint_block(block_t block);
+void reprint_block(block_t *block);
 
 #endif

@@ -39,10 +39,15 @@ typedef struct color {
 	unsigned char r, g, b;
 } color_t;
 
-// Function definitions
 /**
+ * @brief Compares two color_t objects for equality.
  *
+ * This function compares two color_t objects, color1 and color2, and returns true if they are equal, and false otherwise.
+ *
+ * @param color_1 The first color_t object to compare.
+ * @param color_2 The second color_t object to compare.
+ * @return true if color1 is equal to color2, false otherwise.
  */
-bool equals_color(color_t color1, color_t color2);
+bool equals_color(color_t color_1, color_t color_2);
 
 #endif

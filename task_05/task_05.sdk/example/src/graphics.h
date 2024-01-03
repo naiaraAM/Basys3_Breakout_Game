@@ -5,14 +5,14 @@
 #include "colors.h"
 
 // Peripherals constants
-#define VGA_CTRL_BASE       0x44A00000
+#define VGA_CTRL_BASE 0x44A00000
 
 // Borders (frame) constants
-#define INT_X_BORDER		1
-#define END_X_BORDER		158
-#define INT_Y_BORDER		1
-#define END_Y_BORDER		108
-#define BORDER_THICKNESS	1
+#define INT_X_BORDER        1
+#define END_X_BORDER        158
+#define INT_Y_BORDER        1
+#define END_Y_BORDER        108
+#define BORDER_THICKNESS    1
 
 // Heart
 #define HEART_WIDTH         7
@@ -22,31 +22,113 @@
 #define LIVES_POS_Y         RESOLUTION_Y - HEART_HEIGHT - HEART_DISTANCE
 
 // Numbers
-#define NUMBERS_WIDTH	    3
-#define NUMBERS_HEIGHT	    5
+#define NUMBERS_WIDTH       3
+#define NUMBERS_HEIGHT      5
 
 // Blocks
-#define BLOCKS_WIDTH	    24
-#define BLOCKS_HEIGHT	    5
+#define BLOCKS_WIDTH        24
+#define BLOCKS_HEIGHT       5
 #define BLOCKS_DISTANCE     2
-#define BLOCKS_POS_X	    RESOLUTION_X - (NUMBERS_WIDTH * 4) - BLOCKS_WIDTH + 1
-#define BLOCKS_POS_Y	    RESOLUTION_Y - BLOCKS_HEIGHT - BLOCKS_DISTANCE
+#define BLOCKS_POS_X        RESOLUTION_X - (NUMBERS_WIDTH * 4) - BLOCKS_WIDTH + 1
+#define BLOCKS_POS_Y        RESOLUTION_Y - BLOCKS_HEIGHT - BLOCKS_DISTANCE
 
-// ################################
-// ###   FUNCTION DEFINITIONS   ###
-// ################################
 
-// Generic functions
+/**
+ * @brief Paints an object on the screen at the specified position.
+ *
+ * This function paints an object on the screen at the specified position.
+ *
+ * @param pos The position where the object should be painted.
+ * @param object Pointer to the array of colors representing the object.
+ * @param height The height of the object.
+ * @param width The width of the object.
+ */
 void paint_object(position_t pos, color_t *object, int height, int width);
-void paint_animation(position_t pos, color_t *animation, int frames, int period, int rows, int cols);
-void print_background(color_t color);
-void paint(int x, int y, color_t rgb);
-color_t get_color(int x, int y);
-void rect(position_t pos, color_t col, int w, int h);
 
-// Custom graphic element functions
+/**
+ * @brief Paints an animation on the screen at the specified position.
+ *
+ * This function paints an animation on the screen at the specified position.
+ *
+ * @param pos The position where the animation should be painted.
+ * @param animation Pointer to the array of colors representing the animation frames.
+ * @param frames The number of frames in the animation.
+ * @param period The time period between each frame in milliseconds.
+ * @param height The height of each frame.
+ * @param width The width of each frame.
+ */
+void paint_animation(position_t pos, color_t *animation, int frames, int period, int height, int width);
+
+/**
+ * @brief Prints the background color on the screen.
+ *
+ * This function prints the background color on the screen.
+ *
+ * @param color The color to be printed as the background.
+ */
+void print_background(color_t color);
+
+/**
+ * @brief Paints a pixel on the screen at the specified coordinates.
+ *
+ * This function paints a pixel on the screen at the specified coordinates.
+ *
+ * @param x The x-coordinate of the pixel.
+ * @param y The y-coordinate of the pixel.
+ * @param rgb The color of the pixel.
+ */
+void paint(int x, int y, color_t rgb);
+
+/**
+ * @brief Retrieves the color of the pixel at the specified coordinates.
+ *
+ * This function retrieves the color of the pixel at the specified coordinates.
+ *
+ * @param x The x-coordinate of the pixel.
+ * @param y The y-coordinate of the pixel.
+ * @return The color of the pixel.
+ */
+color_t get_color(int x, int y);
+
+/**
+ * @brief Draws a rectangle on the screen at the specified position.
+ *
+ * This function draws a rectangle on the screen at the specified position.
+ *
+ * @param pos The position where the rectangle should be drawn.
+ * @param col The color of the rectangle.
+ * @param width The width of the rectangle.
+ * @param height The height of the rectangle.
+ */
+void rect(position_t pos, color_t col, int width, int height);
+
+/**
+ * @brief Prints the frames on the screen.
+ *
+ * This function prints the frames on the screen.
+ */
 void print_frame();
+
+/**
+ * @brief Prints the number of lives on the screen using heart symbols.
+ *
+ * This function prints the number of lives on the screen using heart symbols.
+ *
+ * @param lives The current number of lives.
+ * @param max_lives The maximum number of lives.
+ * @param heart Pointer to the array of colors representing the heart symbol.
+ */
 void print_lives(int lives, int max_lives, color_t *heart);
+
+/**
+ * @brief Prints the number of remaining blocks on the screen.
+ *
+ * This function prints the number of remaining blocks on the screen.
+ *
+ * @param left_blocks The number of remaining blocks.
+ * @param blocks Pointer to the array of colors representing the blocks.
+ * @param numbers Pointer to the array of colors representing the numbers.
+ */
 void print_blocks_info(int left_blocks, color_t *blocks, color_t *numbers);
 
 #endif
