@@ -51,6 +51,6 @@ typedef struct map {
 void print_block(position_t pos, color_t col);
 void init_map(map_t *map, levels_t level);
 void print_map(block_t blocks[N_BLOCKS_X][N_BLOCKS_Y]);
-void reprint_block(block_t block);
+void reprint_block(block_t *block);
 
 #endif
