@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdbool.h>
-#include "xil_printf.h"
 #include "main.h"
 
 // Colors used in the game
@@ -99,7 +98,6 @@ int main()
 				{
 					remaining_blocks--;
 					print_blocks_info(remaining_blocks, *blocks, **numbers);
-					xil_printf("Remaining blocks: %d\r", remaining_blocks);
 					if (remaining_blocks == 0)
 						status = win;
 					else
@@ -186,19 +184,19 @@ game_status_t move_ball(ball_t *ball, position_t *bar_pos, map_t *map)
 
 	switch (ball->mov)
 	{
-	case 0: // top right
+	case mov_top_right:
 		next_pos.x = ball->x + 1;
 		next_pos.y = ball->y - 1;
 		break;
-	case 1: // bottom right
+	case mov_bottom_right:
 		next_pos.x = ball->x + 1;
 		next_pos.y = ball->y + 1;
 		break;
-	case 2: // bottom left
+	case mov_bottom_left:
 		next_pos.x = ball->x - 1;
 		next_pos.y = ball->y + 1;
 		break;
-	case 3: // top left
+	case mov_top_left:
 		next_pos.x = ball->x - 1;
 		next_pos.y = ball->y - 1;
 		break;
