@@ -37,10 +37,6 @@
 #define NUMBERS_HEIGHT	5
 #define NUMBERS_WIDTH	3
 
-typedef struct ball {
-	int x, y, mov;
-} ball_t;
-
 typedef enum side {top, bottom, right, left,
 					top_left, top_right, bottom_left, bottom_right,
 					not_border} side_t;
@@ -49,33 +45,38 @@ typedef enum movement {mov_top_right, mov_bottom_right, mov_bottom_left, mov_top
 
 typedef enum game_status {continues, lost_life, block_broken, win, game_over} game_status_t;
 
+typedef struct ball {
+	int x, y;
+	movement_t mov;
+} ball_t;
+
 // ###################################
 // ###   CUSTOM GRAPHIC ELEMENTS   ###
 // ###################################
 
 color_t heart[HEART_HEIGHT][HEART_WIDTH] = {
-		{H_BL,H_DR,H_DR,H_BL,H_DR,H_DR,H_BL},
-		{H_DR,H_MR,H_MR,H_DR,H_MR,H_LR,H_DR},
-		{H_DR,H_MR,H_MR,H_MR,H_MR,H_MR,H_DR},
-		{H_BL,H_DR,H_MR,H_MR,H_MR,H_DR,H_BL},
-		{H_BL,H_BL,H_DR,H_MR,H_DR,H_BL,H_BL},
-		{H_BL,H_BL,H_BL,H_DR,H_BL,H_BL,H_BL}
+	{H_BL,H_DR,H_DR,H_BL,H_DR,H_DR,H_BL},
+	{H_DR,H_MR,H_MR,H_DR,H_MR,H_LR,H_DR},
+	{H_DR,H_MR,H_MR,H_MR,H_MR,H_MR,H_DR},
+	{H_BL,H_DR,H_MR,H_MR,H_MR,H_DR,H_BL},
+	{H_BL,H_BL,H_DR,H_MR,H_DR,H_BL,H_BL},
+	{H_BL,H_BL,H_BL,H_DR,H_BL,H_BL,H_BL}
 };
 
 // Level selection numbers
 color_t number_1_level[12][9] = {
-		{N,N,N,GI,GI,GI,N,N,N},
-		{N,N,GI,W,W,GC,GI,N,N},
-		{N,GI,W,W,W,GC,GI,N,N},
-		{GI,W,W,W,W,GC,GI,N,N},
-		{GI,W,W,W,W,GC,GI,N,N},
-		{N,GI,GI,W,W,GC,GI,N,N},
-		{N,N,GI,W,W,GC,GI,N,N},
-		{N,N,GI,W,W,GC,GI,N,N},
-		{N,GO,GO,W,W,GC,GO,GO,N},
-		{GO,W,W,W,W,W,W,GC,GO},
-		{GO,W,W,W,W,W,W,GC,GO},
-		{N,GO,GO,GO,GO,GO,GO,N}
+	{N,N,N,GI,GI,GI,N,N,N},
+	{N,N,GI,W,W,GC,GI,N,N},
+	{N,GI,W,W,W,GC,GI,N,N},
+	{GI,W,W,W,W,GC,GI,N,N},
+	{GI,W,W,W,W,GC,GI,N,N},
+	{N,GI,GI,W,W,GC,GI,N,N},
+	{N,N,GI,W,W,GC,GI,N,N},
+	{N,N,GI,W,W,GC,GI,N,N},
+	{N,GO,GO,W,W,GC,GO,GO,N},
+	{GO,W,W,W,W,W,W,GC,GO},
+	{GO,W,W,W,W,W,W,GC,GO},
+	{N,GO,GO,GO,GO,GO,GO,N}
 };
 color_t number_2_level[12][10] = {
     {N,N,GI,GI,GI,GI,GI,GI,N,N},
@@ -110,215 +111,215 @@ color_t number_3_level[12][9] = {
 
 // Level selection buttons
 color_t button_left[10][9] = {
-		{N,N,GC,GC,GC,GC,GC,N,N},
-		{N,GC,GC,GC,GC,GC,GC,GC,N},
-		{GC,GC,GC,GO,GC,GC,GC,GC,GC},
-		{GC,GC,GO,GO,GC,GC,GC,GC,GC},
-		{GC,GO,GO,GO,GO,GC,GO,GC,GC},
-		{GC,GC,GO,GO,GC,GC,GC,GC,GC},
-		{GI,GC,GC,GO,GC,GC,GC,GC,GI},
-		{GO,GI,GC,GC,GC,GC,GC,GI,GO},
-		{N,GO,GI,GI,GI,GI,GI,GO,N},
-		{N,N,GO,GO,GO,GO,GO,N,N}
+	{N,N,GC,GC,GC,GC,GC,N,N},
+	{N,GC,GC,GC,GC,GC,GC,GC,N},
+	{GC,GC,GC,GO,GC,GC,GC,GC,GC},
+	{GC,GC,GO,GO,GC,GC,GC,GC,GC},
+	{GC,GO,GO,GO,GO,GC,GO,GC,GC},
+	{GC,GC,GO,GO,GC,GC,GC,GC,GC},
+	{GI,GC,GC,GO,GC,GC,GC,GC,GI},
+	{GO,GI,GC,GC,GC,GC,GC,GI,GO},
+	{N,GO,GI,GI,GI,GI,GI,GO,N},
+	{N,N,GO,GO,GO,GO,GO,N,N}
 };
 color_t button_left_pressed[10][9] = {
-		{N,N,N,N,N,N,N,N,N},
-		{N,N,GC,GC,GC,GC,GC,N,N},
-		{N,GC,GC,GC,GC,GC,GC,GC,N},
-		{GC,GC,GC,GO,GC,GC,GC,GC,GC},
-		{GC,GC,GO,GO,GC,GC,GC,GC,GC},
-		{GC,GO,GO,GO,GO,GC,GO,GC,GC},
-		{GC,GC,GO,GO,GC,GC,GC,GC,GC},
-		{GI,GC,GC,GO,GC,GC,GC,GC,GI},
-		{N,GI,GC,GC,GC,GC,GC,GI,N},
-		{N,N,GI,GI,GI,GI,GI,N,N}
+	{N,N,N,N,N,N,N,N,N},
+	{N,N,GC,GC,GC,GC,GC,N,N},
+	{N,GC,GC,GC,GC,GC,GC,GC,N},
+	{GC,GC,GC,GO,GC,GC,GC,GC,GC},
+	{GC,GC,GO,GO,GC,GC,GC,GC,GC},
+	{GC,GO,GO,GO,GO,GC,GO,GC,GC},
+	{GC,GC,GO,GO,GC,GC,GC,GC,GC},
+	{GI,GC,GC,GO,GC,GC,GC,GC,GI},
+	{N,GI,GC,GC,GC,GC,GC,GI,N},
+	{N,N,GI,GI,GI,GI,GI,N,N}
 };
 color_t button_top[10][9] = {
-		{N,N,GC,GC,GC,GC,GC,N,N},
-		{N,GC,GC,GC,GO,GC,GC,GC,N},
-		{GC,GC,GC,GO,GO,GO,GC,GC,GC},
-		{GC,GC,GO,GO,GO,GO,GO,GC,GC},
-		{GC,GC,GC,GC,GO,GC,GC,GC,GC},
-		{GC,GC,GC,GC,GC,GC,GC,GC,GC},
-		{GI,GC,GC,GC,GO,GC,GC,GC,GI},
-		{GO,GI,GC,GC,GC,GC,GC,GI,GO},
-		{N,GO,GI,GI,GI,GI,GI,GO,N},
-		{N,N,GO,GO,GO,GO,GO,N,N}
+	{N,N,GC,GC,GC,GC,GC,N,N},
+	{N,GC,GC,GC,GO,GC,GC,GC,N},
+	{GC,GC,GC,GO,GO,GO,GC,GC,GC},
+	{GC,GC,GO,GO,GO,GO,GO,GC,GC},
+	{GC,GC,GC,GC,GO,GC,GC,GC,GC},
+	{GC,GC,GC,GC,GC,GC,GC,GC,GC},
+	{GI,GC,GC,GC,GO,GC,GC,GC,GI},
+	{GO,GI,GC,GC,GC,GC,GC,GI,GO},
+	{N,GO,GI,GI,GI,GI,GI,GO,N},
+	{N,N,GO,GO,GO,GO,GO,N,N}
 };
 color_t button_top_pressed[10][9] = {
-		{N,N,N,N,N,N,N,N,N},
-		{N,N,GC,GC,GC,GC,GC,N,N},
-		{N,GC,GC,GC,GO,GC,GC,GC,N},
-		{GC,GC,GC,GO,GO,GO,GC,GC,GC},
-		{GC,GC,GO,GO,GO,GO,GO,GC,GC},
-		{GC,GC,GC,GC,GO,GC,GC,GC,GC},
-		{GC,GC,GC,GC,GC,GC,GC,GC,GC},
-		{GI,GC,GC,GC,GO,GC,GC,GC,GI},
-		{N,GI,GC,GC,GC,GC,GC,GI,N},
-		{N,N,GI,GI,GI,GI,GI,N,N}
+	{N,N,N,N,N,N,N,N,N},
+	{N,N,GC,GC,GC,GC,GC,N,N},
+	{N,GC,GC,GC,GO,GC,GC,GC,N},
+	{GC,GC,GC,GO,GO,GO,GC,GC,GC},
+	{GC,GC,GO,GO,GO,GO,GO,GC,GC},
+	{GC,GC,GC,GC,GO,GC,GC,GC,GC},
+	{GC,GC,GC,GC,GC,GC,GC,GC,GC},
+	{GI,GC,GC,GC,GO,GC,GC,GC,GI},
+	{N,GI,GC,GC,GC,GC,GC,GI,N},
+	{N,N,GI,GI,GI,GI,GI,N,N}
 };
 color_t button_right[10][9] = {
-		{N,N,GC,GC,GC,GC,GC,N,N},
-		{N,GC,GC,GC,GC,GC,GC,GC,N},
-		{GC,GC,GC,GC,GC,GO,GC,GC,GC},
-		{GC,GC,GC,GC,GC,GO,GO,GC,GC},
-		{GC,GC,GO,GC,GO,GO,GO,GO,GC},
-		{GC,GC,GC,GC,GC,GO,GO,GC,GC},
-		{GI,GC,GC,GC,GC,GO,GC,GC,GI},
-		{GO,GI,GC,GC,GC,GC,GC,GI,GO},
-		{N,GO,GI,GI,GI,GI,GI,GO,N},
-		{N,N,GO,GO,GO,GO,GO,N,N}
+	{N,N,GC,GC,GC,GC,GC,N,N},
+	{N,GC,GC,GC,GC,GC,GC,GC,N},
+	{GC,GC,GC,GC,GC,GO,GC,GC,GC},
+	{GC,GC,GC,GC,GC,GO,GO,GC,GC},
+	{GC,GC,GO,GC,GO,GO,GO,GO,GC},
+	{GC,GC,GC,GC,GC,GO,GO,GC,GC},
+	{GI,GC,GC,GC,GC,GO,GC,GC,GI},
+	{GO,GI,GC,GC,GC,GC,GC,GI,GO},
+	{N,GO,GI,GI,GI,GI,GI,GO,N},
+	{N,N,GO,GO,GO,GO,GO,N,N}
 };
 color_t button_right_pressed[10][9] = {
-		{N,N,N,N,N,N,N,N,N},
-		{N,N,GC,GC,GC,GC,GC,N,N},
-		{N,GC,GC,GC,GC,GC,GC,GC,N},
-		{GC,GC,GC,GC,GC,GO,GC,GC,GC},
-		{GC,GC,GC,GC,GC,GO,GO,GC,GC},
-		{GC,GC,GO,GC,GO,GO,GO,GO,GC},
-		{GC,GC,GC,GC,GC,GO,GO,GC,GC},
-		{GI,GC,GC,GC,GC,GO,GC,GC,GI},
-		{N,GI,GC,GC,GC,GC,GC,GI,N},
-		{N,N,GI,GI,GI,GI,GI,N,N}
+	{N,N,N,N,N,N,N,N,N},
+	{N,N,GC,GC,GC,GC,GC,N,N},
+	{N,GC,GC,GC,GC,GC,GC,GC,N},
+	{GC,GC,GC,GC,GC,GO,GC,GC,GC},
+	{GC,GC,GC,GC,GC,GO,GO,GC,GC},
+	{GC,GC,GO,GC,GO,GO,GO,GO,GC},
+	{GC,GC,GC,GC,GC,GO,GO,GC,GC},
+	{GI,GC,GC,GC,GC,GO,GC,GC,GI},
+	{N,GI,GC,GC,GC,GC,GC,GI,N},
+	{N,N,GI,GI,GI,GI,GI,N,N}
 };
 
 // Level selection phrase
 color_t choose_level[5][47] = {
-		{W,W,W,N,W,N,W,N,W,W,W,N,W,W,W,N,W,W,W,N,W,W,W,N,N,N,W,N,N,N,W,W,W,N,W,N,W,N,W,W,W,N,W,N,N,N,N},
-		{W,N,N,N,W,N,W,N,W,N,W,N,W,N,W,N,W,N,N,N,W,N,N,N,N,N,W,N,N,N,W,N,N,N,W,N,W,N,W,N,N,N,W,N,N,N,W},
-		{W,N,N,N,W,W,W,N,W,N,W,N,W,N,W,N,W,W,W,N,W,W,N,N,N,N,W,N,N,N,W,W,N,N,W,N,W,N,W,W,N,N,W,N,N,N,N},
-		{W,N,N,N,W,N,W,N,W,N,W,N,W,N,W,N,N,N,W,N,W,N,N,N,N,N,W,N,N,N,W,N,N,N,W,N,W,N,W,N,N,N,W,N,N,N,W},
-		{W,W,W,N,W,N,W,N,W,W,W,N,W,W,W,N,W,W,W,N,W,W,W,N,N,N,W,W,W,N,W,W,W,N,N,W,N,N,W,W,W,N,W,W,W,N,N}
+	{W,W,W,N,W,N,W,N,W,W,W,N,W,W,W,N,W,W,W,N,W,W,W,N,N,N,W,N,N,N,W,W,W,N,W,N,W,N,W,W,W,N,W,N,N,N,N},
+	{W,N,N,N,W,N,W,N,W,N,W,N,W,N,W,N,W,N,N,N,W,N,N,N,N,N,W,N,N,N,W,N,N,N,W,N,W,N,W,N,N,N,W,N,N,N,W},
+	{W,N,N,N,W,W,W,N,W,N,W,N,W,N,W,N,W,W,W,N,W,W,N,N,N,N,W,N,N,N,W,W,N,N,W,N,W,N,W,W,N,N,W,N,N,N,N},
+	{W,N,N,N,W,N,W,N,W,N,W,N,W,N,W,N,N,N,W,N,W,N,N,N,N,N,W,N,N,N,W,N,N,N,W,N,W,N,W,N,N,N,W,N,N,N,W},
+	{W,W,W,N,W,N,W,N,W,W,W,N,W,W,W,N,W,W,W,N,W,W,W,N,N,N,W,W,W,N,W,W,W,N,N,W,N,N,W,W,W,N,W,W,W,N,N}
 };
 
 // Level selection authors
 color_t authors[14][25] = {
-		{M_CYAN,M_CYAN,M_CYAN,N,N,N,M_CYAN,M_CYAN,M_CYAN,N,M_CYAN,N,N,M_CYAN,M_CYAN,M_CYAN,N,M_CYAN,N,M_CYAN,N,N,M_CYAN,M_CYAN,M_CYAN},
-		{M_CYAN,N,N,M_CYAN,N,M_CYAN,N,N,M_CYAN,N,N,N,M_CYAN,N,N,M_CYAN,N,M_CYAN,M_CYAN,N,N,M_CYAN,N,N,M_CYAN},
-		{M_CYAN,N,N,M_CYAN,N,M_CYAN,N,N,M_CYAN,N,M_CYAN,N,M_CYAN,N,N,M_CYAN,N,M_CYAN,N,N,N,M_CYAN,N,N,M_CYAN},
-		{M_CYAN,N,N,M_CYAN,N,N,M_CYAN,M_CYAN,M_CYAN,N,M_CYAN,N,N,M_CYAN,M_CYAN,M_CYAN,N,M_CYAN,N,N,N,N,M_CYAN,M_CYAN,M_CYAN},
+	{M_CYAN,M_CYAN,M_CYAN,N,N,N,M_CYAN,M_CYAN,M_CYAN,N,M_CYAN,N,N,M_CYAN,M_CYAN,M_CYAN,N,M_CYAN,N,M_CYAN,N,N,M_CYAN,M_CYAN,M_CYAN},
+	{M_CYAN,N,N,M_CYAN,N,M_CYAN,N,N,M_CYAN,N,N,N,M_CYAN,N,N,M_CYAN,N,M_CYAN,M_CYAN,N,N,M_CYAN,N,N,M_CYAN},
+	{M_CYAN,N,N,M_CYAN,N,M_CYAN,N,N,M_CYAN,N,M_CYAN,N,M_CYAN,N,N,M_CYAN,N,M_CYAN,N,N,N,M_CYAN,N,N,M_CYAN},
+	{M_CYAN,N,N,M_CYAN,N,N,M_CYAN,M_CYAN,M_CYAN,N,M_CYAN,N,N,M_CYAN,M_CYAN,M_CYAN,N,M_CYAN,N,N,N,N,M_CYAN,M_CYAN,M_CYAN},
 
-		{N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N},
-		{N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N},
-		{N,N,N,N,N,N,N,N,N,N,M_GREEN,N,N,N,N,M_GREEN,N,N,N,N,N,N,N,N,N},
-		{N,N,N,N,N,N,N,N,N,N,M_GREEN,N,N,N,N,M_GREEN,N,N,N,N,N,N,N,N,N},
-		{M_GREEN,M_GREEN,M_GREEN,N,N,N,M_GREEN,M_GREEN,M_GREEN,N,M_GREEN,M_GREEN,M_GREEN,N,N,M_GREEN,N,N,M_GREEN,M_GREEN,N,N,N,N,N},
-		{M_GREEN,N,N,M_GREEN,N,M_GREEN,N,N,M_GREEN,N,M_GREEN,N,N,M_GREEN,N,M_GREEN,N,M_GREEN,N,N,M_GREEN,N,N,N,N},
-		{M_GREEN,N,N,M_GREEN,N,M_GREEN,N,N,M_GREEN,N,M_GREEN,N,N,M_GREEN,N,M_GREEN,N,M_GREEN,N,N,M_GREEN,N,N,N,N},
-		{M_GREEN,M_GREEN,M_GREEN,N,N,N,M_GREEN,M_GREEN,M_GREEN,N,M_GREEN,M_GREEN,M_GREEN,N,N,M_GREEN,N,N,M_GREEN,M_GREEN,N,N,N,N,N},
-		{M_GREEN,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N},
-		{M_GREEN,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N}
+	{N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N},
+	{N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N},
+	{N,N,N,N,N,N,N,N,N,N,M_GREEN,N,N,N,N,M_GREEN,N,N,N,N,N,N,N,N,N},
+	{N,N,N,N,N,N,N,N,N,N,M_GREEN,N,N,N,N,M_GREEN,N,N,N,N,N,N,N,N,N},
+	{M_GREEN,M_GREEN,M_GREEN,N,N,N,M_GREEN,M_GREEN,M_GREEN,N,M_GREEN,M_GREEN,M_GREEN,N,N,M_GREEN,N,N,M_GREEN,M_GREEN,N,N,N,N,N},
+	{M_GREEN,N,N,M_GREEN,N,M_GREEN,N,N,M_GREEN,N,M_GREEN,N,N,M_GREEN,N,M_GREEN,N,M_GREEN,N,N,M_GREEN,N,N,N,N},
+	{M_GREEN,N,N,M_GREEN,N,M_GREEN,N,N,M_GREEN,N,M_GREEN,N,N,M_GREEN,N,M_GREEN,N,M_GREEN,N,N,M_GREEN,N,N,N,N},
+	{M_GREEN,M_GREEN,M_GREEN,N,N,N,M_GREEN,M_GREEN,M_GREEN,N,M_GREEN,M_GREEN,M_GREEN,N,N,M_GREEN,N,N,M_GREEN,M_GREEN,N,N,N,N,N},
+	{M_GREEN,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N},
+	{M_GREEN,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N}
 };
 
 // Level selection logo
 color_t breakout[7][38] = {
-		{W,W,W,N, N, W,W,W,N, N, W,W,W,W, N, W,W,W,W, N, W,N,N,W, N, W,W,W,W, N, W,N,N,W, N, W,W,W},
-		{W,N,N,W, N, W,N,N,W, N, W,N,N,N, N, W,N,N,W, N, W,N,W,N, N, W,N,N,W, N, W,N,N,W, N, N,W,N},
-		{W,N,N,W, N, W,N,N,W, N, W,N,N,N, N, W,N,N,W, N, W,N,W,N, N, W,N,N,W, N, W,N,N,W, N, N,W,N},
-		{W,W,W,N, N, W,W,W,N, N, W,W,W,N, N, W,W,W,W, N, W,W,N,N, N, W,N,N,W, N, W,N,N,W, N, N,W,N},
-		{W,N,N,W, N, W,N,W,N, N, W,N,N,N, N, W,N,N,W, N, W,N,W,N, N, W,N,N,W, N, W,N,N,W, N, N,W,N},
-		{W,N,N,W, N, W,N,N,W, N, W,N,N,N, N, W,N,N,W, N, W,N,W,N, N, W,N,N,W, N, W,N,N,W, N, N,W,N},
-		{W,W,W,N, N, W,N,N,W, N, W,W,W,W, N, W,N,N,W, N, W,N,N,W, N, W,W,W,W, N, W,W,W,W, N, N,W,N}
+	{W,W,W,N, N, W,W,W,N, N, W,W,W,W, N, W,W,W,W, N, W,N,N,W, N, W,W,W,W, N, W,N,N,W, N, W,W,W},
+	{W,N,N,W, N, W,N,N,W, N, W,N,N,N, N, W,N,N,W, N, W,N,W,N, N, W,N,N,W, N, W,N,N,W, N, N,W,N},
+	{W,N,N,W, N, W,N,N,W, N, W,N,N,N, N, W,N,N,W, N, W,N,W,N, N, W,N,N,W, N, W,N,N,W, N, N,W,N},
+	{W,W,W,N, N, W,W,W,N, N, W,W,W,N, N, W,W,W,W, N, W,W,N,N, N, W,N,N,W, N, W,N,N,W, N, N,W,N},
+	{W,N,N,W, N, W,N,W,N, N, W,N,N,N, N, W,N,N,W, N, W,N,W,N, N, W,N,N,W, N, W,N,N,W, N, N,W,N},
+	{W,N,N,W, N, W,N,N,W, N, W,N,N,N, N, W,N,N,W, N, W,N,W,N, N, W,N,N,W, N, W,N,N,W, N, N,W,N},
+	{W,W,W,N, N, W,N,N,W, N, W,W,W,W, N, W,N,N,W, N, W,N,N,W, N, W,W,W,W, N, W,W,W,W, N, N,W,N}
 };
 
 // Remaining blocks title
 color_t blocks[5][24] = {
-		{W,W,N, N, W,N, N, N,W,N, N, W,W, N, W,N,W, N, W,W,N, N, N,N},
-		{W,N,W, N, W,N, N, W,N,W, N, W,N, N, W,N,W, N, W,N,N, N, W,N},
-		{W,W,N, N, W,N, N, W,N,W, N, W,N, N, W,W,N, N, W,W,W, N, N,N},
-		{W,N,W, N, W,N, N, W,N,W, N, W,N, N, W,N,W, N, N,N,W, N, W,N},
-		{W,W,N, N, W,W, N, N,W,N, N, W,W, N, W,N,W, N, W,W,W, N, N,N}
+	{W,W,N, N, W,N, N, N,W,N, N, W,W, N, W,N,W, N, W,W,N, N, N,N},
+	{W,N,W, N, W,N, N, W,N,W, N, W,N, N, W,N,W, N, W,N,N, N, W,N},
+	{W,W,N, N, W,N, N, W,N,W, N, W,N, N, W,W,N, N, W,W,W, N, N,N},
+	{W,N,W, N, W,N, N, W,N,W, N, W,N, N, W,N,W, N, N,N,W, N, W,N},
+	{W,W,N, N, W,W, N, N,W,N, N, W,W, N, W,N,W, N, W,W,W, N, N,N}
 };
 
 color_t numbers[NUMBERS_NUM][NUMBERS_HEIGHT][NUMBERS_WIDTH] = {
-		{
-			{W,W,W},
-			{W,N,W},
-			{W,N,W},
-			{W,N,W},
-			{W,W,W}
-		},
-		{
-			{W,W,N},
-			{N,W,N},
-			{N,W,N},
-			{N,W,N},
-			{W,W,W}
-		},
-		{
-			{N,W,W},
-			{N,N,W},
-			{W,W,W},
-			{W,N,N},
-			{W,W,W}
-		},
-		{
-			{N,W,W},
-			{N,N,W},
-			{N,W,W},
-			{N,N,W},
-			{W,W,W}
-		},
-		{
-			{W,N,N},
-			{W,N,W},
-			{W,W,W},
-			{N,N,W},
-			{N,N,W}
-		},
-		{
-			{W,W,N},
-			{W,N,N},
-			{W,W,W},
-			{N,N,W},
-			{W,W,W}
-		},
-		{
-			{W,W,N},
-			{W,N,N},
-			{W,W,W},
-			{W,N,W},
-			{W,W,W}
-		},
-		{
-			{W,W,W},
-			{N,N,W},
-			{N,N,W},
-			{N,N,W},
-			{N,N,W}
-		},
-		{
-			{W,W,W},
-			{W,N,W},
-			{W,W,W},
-			{W,N,W},
-			{W,W,W}
-		},
-		{
-			{W,W,W},
-			{W,N,W},
-			{W,W,W},
-			{N,N,W},
-			{N,W,W}
-		},
+	{
+		{W,W,W},
+		{W,N,W},
+		{W,N,W},
+		{W,N,W},
+		{W,W,W}
+	},
+	{
+		{W,W,N},
+		{N,W,N},
+		{N,W,N},
+		{N,W,N},
+		{W,W,W}
+	},
+	{
+		{N,W,W},
+		{N,N,W},
+		{W,W,W},
+		{W,N,N},
+		{W,W,W}
+	},
+	{
+		{N,W,W},
+		{N,N,W},
+		{N,W,W},
+		{N,N,W},
+		{W,W,W}
+	},
+	{
+		{W,N,N},
+		{W,N,W},
+		{W,W,W},
+		{N,N,W},
+		{N,N,W}
+	},
+	{
+		{W,W,N},
+		{W,N,N},
+		{W,W,W},
+		{N,N,W},
+		{W,W,W}
+	},
+	{
+		{W,W,N},
+		{W,N,N},
+		{W,W,W},
+		{W,N,W},
+		{W,W,W}
+	},
+	{
+		{W,W,W},
+		{N,N,W},
+		{N,N,W},
+		{N,N,W},
+		{N,N,W}
+	},
+	{
+		{W,W,W},
+		{W,N,W},
+		{W,W,W},
+		{W,N,W},
+		{W,W,W}
+	},
+	{
+		{W,W,W},
+		{W,N,W},
+		{W,W,W},
+		{N,N,W},
+		{N,W,W}
+	},
 };
 
 // You won title
 color_t you_won_title[5][46] = {
-		{N,N,N,N,N,N, N, W,N,W, N, W,W,W, N, W,N,W, N, N,N,N, N, W,N,N,N,W, N, W,W,W, N, W,N,N,N,W, N, W, N, N,N,N,N,N},
-		{N,N,N,N,N,N, N, W,N,W, N, W,N,W, N, W,N,W, N, N,N,N, N, W,N,N,N,W, N, W,N,W, N, W,W,N,N,W, N, W, N, N,N,N,N,N},
-		{N,N,N,N,N,N, N, W,W,W, N, W,N,W, N, W,N,W, N, N,N,N, N, W,N,N,N,W, N, W,N,W, N, W,N,W,N,W, N, W, N, N,N,N,N,N},
-		{N,N,N,N,N,N, N, N,N,W, N, W,N,W, N, W,N,W, N, N,N,N, N, W,N,W,N,W, N, W,N,W, N, W,N,N,W,W, N, N, N, N,N,N,N,N},
-		{N,N,N,N,N,N, N, W,W,W, N, W,W,W, N, W,W,W, N, N,N,N, N, N,W,N,W,N, N, W,W,W, N, W,N,N,N,W, N, W, N, N,N,N,N,N}
+	{N,N,N,N,N,N, N, W,N,W, N, W,W,W, N, W,N,W, N, N,N,N, N, W,N,N,N,W, N, W,W,W, N, W,N,N,N,W, N, W, N, N,N,N,N,N},
+	{N,N,N,N,N,N, N, W,N,W, N, W,N,W, N, W,N,W, N, N,N,N, N, W,N,N,N,W, N, W,N,W, N, W,W,N,N,W, N, W, N, N,N,N,N,N},
+	{N,N,N,N,N,N, N, W,W,W, N, W,N,W, N, W,N,W, N, N,N,N, N, W,N,N,N,W, N, W,N,W, N, W,N,W,N,W, N, W, N, N,N,N,N,N},
+	{N,N,N,N,N,N, N, N,N,W, N, W,N,W, N, W,N,W, N, N,N,N, N, W,N,W,N,W, N, W,N,W, N, W,N,N,W,W, N, N, N, N,N,N,N,N},
+	{N,N,N,N,N,N, N, W,W,W, N, W,W,W, N, W,W,W, N, N,N,N, N, N,W,N,W,N, N, W,W,W, N, W,N,N,N,W, N, W, N, N,N,N,N,N}
 };
 
 // Game over title
 color_t game_over_title[5][46] = {
-		{W,W,W, N, W,W,W, N, W,N,N,N,W, N, W,W,W, N, N,N,N, N, W,W,W, N, W,N,W, N, W,W,W, N, W,W,W, N, N,N,N, N, N,N,N,W},
-		{W,N,N, N, W,N,W, N, W,W,N,W,W, N, W,N,N, N, N,N,N, N, W,N,W, N, W,N,W, N, W,N,N, N, W,N,W, N, N,N,N, N, W,N,W,N},
-		{W,N,W, N, W,W,W, N, W,N,W,N,W, N, W,W,W, N, N,N,N, N, W,N,W, N, W,N,W, N, W,W,W, N, W,W,N, N, N,N,N, N, N,N,W,N},
-		{W,N,W, N, W,N,W, N, W,N,N,N,W, N, W,N,N, N, N,N,N, N, W,N,W, N, W,N,W, N, W,N,N, N, W,N,W, N, N,N,N, N, W,N,W,N},
-		{W,W,W, N, W,N,W, N, W,N,N,N,W, N, W,W,W, N, N,N,N, N, W,W,W, N, N,W,N, N, W,W,W, N, W,N,W, N, N,N,N, N, N,N,N,W}
+	{W,W,W, N, W,W,W, N, W,N,N,N,W, N, W,W,W, N, N,N,N, N, W,W,W, N, W,N,W, N, W,W,W, N, W,W,W, N, N,N,N, N, N,N,N,W},
+	{W,N,N, N, W,N,W, N, W,W,N,W,W, N, W,N,N, N, N,N,N, N, W,N,W, N, W,N,W, N, W,N,N, N, W,N,W, N, N,N,N, N, W,N,W,N},
+	{W,N,W, N, W,W,W, N, W,N,W,N,W, N, W,W,W, N, N,N,N, N, W,N,W, N, W,N,W, N, W,W,W, N, W,W,N, N, N,N,N, N, N,N,W,N},
+	{W,N,W, N, W,N,W, N, W,N,N,N,W, N, W,N,N, N, N,N,N, N, W,N,W, N, W,N,W, N, W,N,N, N, W,N,W, N, N,N,N, N, W,N,W,N},
+	{W,W,W, N, W,N,W, N, W,N,N,N,W, N, W,W,W, N, N,N,N, N, W,W,W, N, N,W,N, N, W,W,W, N, W,N,W, N, N,N,N, N, N,N,N,W}
 };
 
 color_t smoke[SMOKE_FRAMES][SMOKE_HEIGHT][SMOKE_WIDTH] = {
