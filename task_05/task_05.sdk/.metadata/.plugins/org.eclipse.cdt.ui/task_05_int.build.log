@@ -1,4 +1,4 @@
-18:45:24 **** Auto Build of configuration Debug for project task_05_int ****
+13:10:57 **** Build of configuration Debug for project task_05_int ****
 make all 
 'Building file: ../src/main.c'
 'Invoking: MicroBlaze gcc compiler'
@@ -17,5 +17,5 @@ mb-size task_05_int.elf  |tee "task_05_int.elf.size"
 'Finished building: task_05_int.elf.size'
 ' '
 
-18:45:25 Build Finished (took 731ms)
+13:10:58 Build Finished (took 1s.153ms)
 

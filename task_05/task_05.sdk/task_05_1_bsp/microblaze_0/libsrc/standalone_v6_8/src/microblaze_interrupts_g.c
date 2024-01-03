@@ -5,7 +5,7 @@
 * Version: 2018.3
 * DO NOT EDIT.
 *
-* Copyright (C) 2010-2023 Xilinx, Inc. All Rights Reserved.*
+* Copyright (C) 2010-2024 Xilinx, Inc. All Rights Reserved.*
 *Permission is hereby granted, free of charge, to any person obtaining a copy
 *of this software and associated documentation files (the Software), to deal
 *in the Software without restriction, including without limitation the rights
@@ -37,7 +37,7 @@
 #include "xparameters.h"
 
 
-extern void XNullHandler (void *);
+extern void XIntc_DeviceInterruptHandler (void *);
 
 /*
 * The interrupt handler table for microblaze processor
@@ -45,7 +45,7 @@ extern void XNullHandler (void *);
 
 MB_InterruptVectorTableEntry MB_InterruptVectorTable[] =
 {
-{	XNullHandler,
-	(void*) XNULL}
+{	XIntc_DeviceInterruptHandler,
+	(void*) XPAR_AXI_INTC_0_DEVICE_ID}
 };
 

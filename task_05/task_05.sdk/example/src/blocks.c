@@ -42,21 +42,20 @@ void init_map(map_t *map, levels_t level)
             if (level == third_lvl)
             {
                 map->blocks[j][i].indestructible = (rand() % 4 == 0) ? true : false; // approx. 25% of indestructible blocks
-                if (map->blocks[j][i].indestructible)
-                {
-                    map->blocks[j][i].collisions = 0;
-                    map->blocks[j][i].color = indest_color;
-                    destructibles--;
-                }
             }
             else
                 map->blocks[j][i].indestructible = false;
 
             // Decide the number of collisions of each block depending on the level
-            else if (level == second_lvl || level == third_lvl)
+			if (map->blocks[j][i].indestructible)
+			{
+				map->blocks[j][i].collisions = 0;
+				map->blocks[j][i].color = indest_color;
+				destructibles--;
+			}
+			else if (level == second_lvl || level == third_lvl)
             {
-                collisions = (rand() % 10 < 7) ? 1 : (rand() % 10 < 9) ? 2
-                                                                       : 3; // 70% chance for 1, 15% chance for 2, 15% chance for 3
+                collisions = (rand() % 10 < 7) ? 1 : (rand() % 10 < 9) ? 2 : 3; // 70% chance for 1, 15% chance for 2, 15% chance for 3
                 // Calculate the color of the block depending on the number of collisions. The more collisions, the darker the color.
                 map->blocks[j][i].color.r = map_colors[i].r + (collisions - 1) * BLOCK_COLOR_DIFF;
                 map->blocks[j][i].color.g = map_colors[i].g + (collisions - 1) * BLOCK_COLOR_DIFF;

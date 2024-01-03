@@ -1,21 +1,6 @@
-19:31:11 **** Auto Build of configuration Debug for project example ****
+13:17:01 **** Incremental Build of configuration Debug for project example ****
 make all 
-'Building file: ../src/main.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../example_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-'Finished building: ../src/main.c'
-' '
-'Building target: example.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../example_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "example.elf"  ./src/blocks.o ./src/colors.o ./src/graphics.o ./src/leds.o ./src/main.o ./src/timer.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: example.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size example.elf  |tee "example.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  29244	   9108	   3176	  41528	   a238	example.elf
-'Finished building: example.elf.size'
-' '
+make: Nothing to be done for 'all'.
 
-19:31:12 Build Finished (took 683ms)
+13:17:02 Build Finished (took 300ms)
 

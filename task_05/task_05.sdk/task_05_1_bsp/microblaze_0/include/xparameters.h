@@ -586,6 +586,62 @@
 
 /******************************************************************/
 
+#define XPAR_INTC_MAX_NUM_INTR_INPUTS 1
+#define XPAR_XINTC_HAS_IPR 1
+#define XPAR_XINTC_HAS_SIE 1
+#define XPAR_XINTC_HAS_CIE 1
+#define XPAR_XINTC_HAS_IVR 1
+/* Definitions for driver INTC */
+#define XPAR_XINTC_NUM_INSTANCES 1
+
+/* Definitions for peripheral AXI_INTC_0 */
+#define XPAR_AXI_INTC_0_DEVICE_ID 0
+#define XPAR_AXI_INTC_0_BASEADDR 0x41200000
+#define XPAR_AXI_INTC_0_HIGHADDR 0x4120FFFF
+#define XPAR_AXI_INTC_0_KIND_OF_INTR 0xFFFFFFFE
+#define XPAR_AXI_INTC_0_HAS_FAST 0
+#define XPAR_AXI_INTC_0_IVAR_RESET_VALUE 0x0000000000000010
+#define XPAR_AXI_INTC_0_NUM_INTR_INPUTS 1
+#define XPAR_AXI_INTC_0_ADDR_WIDTH 32
+
+
+/******************************************************************/
+
+#define XPAR_INTC_SINGLE_BASEADDR 0x41200000
+#define XPAR_INTC_SINGLE_HIGHADDR 0x4120FFFF
+#define XPAR_INTC_SINGLE_DEVICE_ID XPAR_AXI_INTC_0_DEVICE_ID
+#define XPAR_AXI_INTC_0_TYPE 0U
+#define XPAR_AXI_TIMER_0_INTERRUPT_MASK 0X000001U
+#define XPAR_AXI_INTC_0_AXI_TIMER_0_INTERRUPT_INTR 0U
+
+/******************************************************************/
+
+/* Canonical definitions for peripheral AXI_INTC_0 */
+#define XPAR_INTC_0_DEVICE_ID XPAR_AXI_INTC_0_DEVICE_ID
+#define XPAR_INTC_0_BASEADDR 0x41200000U
+#define XPAR_INTC_0_HIGHADDR 0x4120FFFFU
+#define XPAR_INTC_0_KIND_OF_INTR 0xFFFFFFFEU
+#define XPAR_INTC_0_HAS_FAST 0U
+#define XPAR_INTC_0_IVAR_RESET_VALUE 0x0000000000000010U
+#define XPAR_INTC_0_NUM_INTR_INPUTS 1U
+#define XPAR_INTC_0_ADDR_WIDTH 32U
+#define XPAR_INTC_0_INTC_TYPE 0U
+
+#define XPAR_INTC_0_TMRCTR_0_VEC_ID XPAR_AXI_INTC_0_AXI_TIMER_0_INTERRUPT_INTR
+
+/******************************************************************/
+
+/* Definitions for driver TASK_07 */
+#define XPAR_TASK_07_NUM_INSTANCES 1
+
+/* Definitions for peripheral TASK_07_0 */
+#define XPAR_TASK_07_0_DEVICE_ID 0
+#define XPAR_TASK_07_0_S00_AXI_BASEADDR 0x44A40000
+#define XPAR_TASK_07_0_S00_AXI_HIGHADDR 0x44A4FFFF
+
+
+/******************************************************************/
+
 /* Definitions for driver TMRCTR */
 #define XPAR_XTMRCTR_NUM_INSTANCES 1U
 
@@ -629,6 +685,17 @@
 #define XPAR_UARTLITE_0_USE_PARITY 0
 #define XPAR_UARTLITE_0_ODD_PARITY 0
 #define XPAR_UARTLITE_0_DATA_BITS 0
+
+
+/******************************************************************/
+
+/* Definitions for driver VGA_CONTROL */
+#define XPAR_VGA_CONTROL_NUM_INSTANCES 1
+
+/* Definitions for peripheral VGA_CONTROL_0 */
+#define XPAR_VGA_CONTROL_0_DEVICE_ID 0
+#define XPAR_VGA_CONTROL_0_S00_AXI_BASEADDR 0x44A00000
+#define XPAR_VGA_CONTROL_0_S00_AXI_HIGHADDR 0x44A1FFFF
 
 
 /******************************************************************/

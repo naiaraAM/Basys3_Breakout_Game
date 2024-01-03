@@ -1,4 +1,4 @@
-19:00:02 **** Build of project task_05_int_bsp ****
+13:10:45 **** Build of project task_05_int_bsp ****
 make -k all 
 "Running Make include in microblaze_0/libsrc/bram_v4_2/src"
 make -C microblaze_0/libsrc/bram_v4_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
@@ -64,5 +64,5 @@ vga_control_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable
       ^~~~~
 'Finished building libraries'
 
-19:00:15 Build Finished (took 13s.312ms)
+13:10:57 Build Finished (took 12s.52ms)
 

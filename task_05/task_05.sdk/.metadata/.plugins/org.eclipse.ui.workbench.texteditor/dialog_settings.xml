@@ -6,12 +6,13 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="map.des" key="selection"/>
+		<item value="reprint_block" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="reprint_block"/>
 			<item value="map.des"/>
 			<item value="cutres"/>
 			<item value="game_o"/>
@@ -19,7 +20,6 @@
 			<item value="map"/>
 			<item value="move_ball"/>
 			<item value="level"/>
-			<item value="led"/>
 		</list>
 		<list key="replacehistory">
 			<item value="block_t"/>

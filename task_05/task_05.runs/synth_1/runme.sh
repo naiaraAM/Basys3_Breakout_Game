@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/LIO/Documents/UC/4/Embebidos/task_05/task_05.runs/synth_1'
+HD_PWD='C:/Users/LIO/Documents/UC/4/repo/Basys3_Breakout_Game/task_05/task_05.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
