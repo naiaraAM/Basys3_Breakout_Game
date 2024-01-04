@@ -1,0 +1,20 @@
+#ifndef __BUTTONS_H__
+#define __BUTTONS_H__
+
+/**
+ * Initializes the buttons.
+ */
+void init_buttons();
+
+/**
+ * Waits for a button release.
+ */
+void wait_button();
+
+/**
+ * Checks which if the button is pressed.
+ * @return 1 if left button is pressed, 2 if top button is pressed, 3 if right button is pressed, 0 otherwise.
+ */
+int check_button();
+
+#endif

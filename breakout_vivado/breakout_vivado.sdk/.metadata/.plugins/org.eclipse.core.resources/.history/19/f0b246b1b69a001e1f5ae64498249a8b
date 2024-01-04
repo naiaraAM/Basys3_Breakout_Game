@@ -1,0 +1,5 @@
+src/blocks.o src/blocks.o: ../src/blocks.c ../src/main.h ../src/blocks.h
+
+../src/main.h:
+
+../src/blocks.h:

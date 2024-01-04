@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include "colors.h"
+
+int equals_color(color_t color1, color_t color2)
+{
+	return ((color1.r == color2.r) && (color1.g == color2.g) && (color1.b == color2.b));
+}
+
+color_t get_color(int x, int y){
+	color_t col;
+	int *ptr = (int*) VGA_CTRL_BASE;
+	int val = ptr[(y<<8) | x];
+	col.r = (val&0xf)<<4;
+	col.b = (val&0xf0);
+	col.g = (val&0xf00)>>4;
+	return col;
+}

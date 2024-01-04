@@ -1,0 +1,103 @@
+#ifndef __BLOCKS_H__
+#define __BLOCKS_H__
+
+#include <stdbool.h>
+#include "colors.h"
+
+// Map properties
+#define N_BLOCKS_X          11
+#define N_BLOCKS_Y          7
+
+// Block properties
+#define BLOCK_LENGTH        12 // by default, 12
+#define BLOCK_HEIGHT        3
+#define BLOCK_SEPARATION    2
+#define BLOCK_COLOR_DIFF    0x3C // decimal: 60
+
+// Technical parameters
+#define MAX_COLLISIONS 3
+
+typedef struct position
+{
+	int x, y;
+} position_t;
+
+/**
+ * LEVEL EXPLAINATION
+ * Every level has a different map, and the same lives.
+ * 1. Every block in the map can be broken with one collision.
+ * 2. The same than lvl 1, but random blocks in the map will increase their collisions.
+ * 3. The same than lvl 2, plus random indestructible blocks that will appear.
+ */
+typedef enum levels {first_lvl, second_lvl, third_lvl} levels_t;
+
+// The block structure defines its current properties
+typedef struct block
+{
+    color_t color;
+    int collisions;
+    int i, j;
+    position_t location;
+    bool indestructible;
+} block_t;
+
+typedef struct map
+{
+    block_t blocks[N_BLOCKS_X][N_BLOCKS_Y];
+    int destructible; // number of destructible blocks
+} map_t;
+
+/**
+ * @brief Prints a block at the specified position with the given color.
+ *
+ * This function is responsible for printing a block on the screen at the specified position
+ * using the specified color.
+ *
+ * @param pos The position of the block.
+ * @param col The color of the block.
+ */
+void print_block(position_t pos, color_t col);
+
+/**
+ * @brief Initializes a map with the specified level.
+ * 
+ * Depending on the level, the map will be initialized with different properties. In the first level, 
+ * all blocks will be destructible with one collision. In the second level, some blocks will be 
+ * destructible with one collision (~70%), and others with 2 or 3 (~15%). Blocks with more than one 
+ * collision will have a darker color. In the third level, some blocks will be also indestructible 
+ * (~25%), and painted with a dark grey color.
+ *
+ * @param map The map to be initialized.
+ * @param level The level to be set.
+ */
+void init_map(map_t *map, levels_t level);
+
+/**
+ * @brief Prints the map of blocks.
+ *
+ * This function takes a 2D array of block_t structures representing the map of blocks
+ * and prints it to the screen.
+ *
+ * @param blocks The 2D array of blocks.
+ */
+void print_map(block_t blocks[N_BLOCKS_X][N_BLOCKS_Y]);
+
+/**
+ * @brief Reprints the specified block after a collision.
+ *
+ * This function takes a block as input and reprints it with a lighter color.
+ *
+ * @param block The block to be reprinted.
+ */
+void reprint_block(block_t *block);
+
+/**
+ * Calculates the collision between the next position and the blocks on the map.
+ * @param next_pos The next position to check for collision.
+ * @param block Pointer to the block object.
+ * @param map Pointer to the map object.
+ * @return true if there is a collision, false otherwise.
+ */
+bool calculate_block(position_t next_pos, block_t **block, map_t *map);
+
+#endif

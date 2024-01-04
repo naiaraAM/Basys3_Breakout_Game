@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<Project Version="1" Minor="3" DIGEST="">
+	<TOOL_VERSION Version="2018.3"/>
+	<MODE Name="Post-Synthesis"/>
+	<SYSTEMINFO BOARD="digilentinc.com:basys3:1.2" PART="xc7a35tcpg236-1" ARCH="artix7" PACKAGE="cpg236" DEVICE="7a35t" SPEED="-1" LUT="20800" FF="41600" BRAM="50" DSP="90"/>
+	<HIERARCHY Name="design_1_wrapper"/>
+	<File Type="HW_HANDOFF" Name="design_1.hwh" DESIGN_HIERARCHY="design_1_i" BD_TYPE="DEFAULT_BD"/>
+	<File Type="BD_TCL" Name="design_1_bd.tcl"/>
+	<File Type="BIT" Name="design_1_wrapper.bit"/>
+	<File Type="MMI" Name="design_1_wrapper.mmi"/>
+	<DRIVERS>
+		<DRIVER IP_VLNV="xilinx.com:user:task_07:1.0">
+			<File PATH="drivers/task_07_v1_0/data/task_07.mdd"/>
+			<File PATH="drivers/task_07_v1_0/data/task_07.tcl"/>
+			<File PATH="drivers/task_07_v1_0/src/Makefile"/>
+			<File PATH="drivers/task_07_v1_0/src/task_07.h"/>
+			<File PATH="drivers/task_07_v1_0/src/task_07.c"/>
+			<File PATH="drivers/task_07_v1_0/src/task_07_selftest.c"/>
+		</DRIVER>
+		<DRIVER IP_VLNV="xilinx.com:user:vga_control:1.0">
+			<File PATH="drivers/vga_control_v1_0/data/vga_control.mdd"/>
+			<File PATH="drivers/vga_control_v1_0/data/vga_control.tcl"/>
+			<File PATH="drivers/vga_control_v1_0/src/Makefile"/>
+			<File PATH="drivers/vga_control_v1_0/src/vga_control.h"/>
+			<File PATH="drivers/vga_control_v1_0/src/vga_control.c"/>
+			<File PATH="drivers/vga_control_v1_0/src/vga_control_selftest.c"/>
+		</DRIVER>
+	</DRIVERS>
+	<BOARD Type="NotIntegrated">
+		<BASEBOARD Name="digilentinc.com:basys3:1.2">
+		</BASEBOARD>
+	</BOARD>
+	<USEDRESOURCES LUT="2346" FF="2791" BRAM="28" DSP="0"/>
+</Project>
+
