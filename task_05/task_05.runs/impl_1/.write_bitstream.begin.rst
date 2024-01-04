@@ -1,5 +1,0 @@
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command=".planAhead." Owner="LIO" Host="DESKTOP-LIO" Pid="16268">
-    </Process>
-</ProcessHandle>

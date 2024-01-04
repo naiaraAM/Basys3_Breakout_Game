@@ -1,6 +1,0 @@
-- blocks
-- colors
-- graphics
-- leds
-- main
-- timer

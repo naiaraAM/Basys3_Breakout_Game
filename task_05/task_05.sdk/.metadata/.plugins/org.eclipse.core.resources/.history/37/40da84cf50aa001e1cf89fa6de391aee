@@ -1,7 +1,0 @@
-#include <stdio.h>
-#include "ball.h"
-#include "colors.h"
-#include "blocks.h"
-#include "bar.h"
-
-const color_t black = N;	  // Background

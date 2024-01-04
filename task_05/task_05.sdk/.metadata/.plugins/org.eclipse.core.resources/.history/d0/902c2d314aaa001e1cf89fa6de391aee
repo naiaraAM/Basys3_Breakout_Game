@@ -1,8 +1,0 @@
-
-
-void init_ball(ball_t *ball, position_t *bar_pos)
-{
-	ball->x = bar_pos->x + BAR_LENGTH / 2;
-	ball->y = bar_pos->y - 1;
-	paint(ball->x, ball->y, light_blue);
-}
